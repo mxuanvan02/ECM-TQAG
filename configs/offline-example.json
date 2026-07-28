@@ -1,0 +1,13 @@
+{
+  "schema": "ecm-tqag.run-config.v1",
+  "name": "synthetic-offline-example",
+  "packages": "../fixtures/packages",
+  "output": "../run-output/summary.json",
+  "conditions": [
+    "text_only",
+    "text_layout",
+    "full_pixels"
+  ],
+  "mode": "offline",
+  "timeout_seconds": 60
+}

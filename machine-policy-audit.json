@@ -1,0 +1,9 @@
+{
+  "audit_kind": "deterministic-string-and-boundary-check",
+  "checked_file_count": 37,
+  "findings": [],
+  "repo_tree_digest": "cbb09c584cddf3b3bacab7b3f23d0b1de1da8506a3a125ef0ae9f91d4da2b826",
+  "schema": "ecm-tqag.machine-policy-audit.v1",
+  "semantic_validation": false,
+  "status": "PASS"
+}

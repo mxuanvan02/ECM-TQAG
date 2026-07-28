@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mxuanvan02/ECM-TQAG/schemas/receipt.schema.json",
+  "title": "ECM-TQAG package receipt v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "item_id",
+    "condition",
+    "package_sha256"
+  ],
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+    },
+    "condition": {
+      "enum": [
+        "text_only",
+        "text_layout",
+        "full_pixels"
+      ]
+    },
+    "package_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

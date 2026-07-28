@@ -1,0 +1,1 @@
+{"schema":"ecm-tqag.condition-package.v1","item_id":"synthetic-rights-cleared-001","condition":"text_layout","evidence":{"text":"A triangle has three sides.","layout":{"nodes":["top","left","right"],"edges":[["top","left"],["top","right"],["left","right"]]}},"question":"How many sides does the described shape have?"}

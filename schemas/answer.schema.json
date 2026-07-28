@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mxuanvan02/ECM-TQAG/schemas/answer.schema.json",
+  "title": "ECM-TQAG answer record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "item_id",
+    "condition",
+    "package_sha256",
+    "answer",
+    "source"
+  ],
+  "properties": {
+    "schema": {
+      "const": "ecm-tqag.answer.v1"
+    },
+    "item_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+    },
+    "condition": {
+      "enum": [
+        "text_only",
+        "text_layout",
+        "full_pixels"
+      ]
+    },
+    "package_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "answer": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    }
+  }
+}
