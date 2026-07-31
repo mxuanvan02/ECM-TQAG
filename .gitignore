@@ -7,3 +7,8 @@ dist/
 *.egg-info/
 run-output/
 .coverage
+.env
+.env.*
+*.local.json
+*.private.json
+configs/openai-compatible.json

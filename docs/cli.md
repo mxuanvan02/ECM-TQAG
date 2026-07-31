@@ -44,10 +44,21 @@ ecm-tqag run configs/offline-example.json
 ```
 
 Offline mode validates request construction and output/receipt handling without
-claiming model quality. `openai-compatible` mode requires an explicit HTTP(S)
-endpoint, model name, and the name of an environment variable containing the
-credential. The configured endpoint is trusted by the user and receives the
-evidence packages and authorization header; do not use an untrusted endpoint.
+claiming model quality. It makes no network request.
+
+For an opt-in remote run, copy the non-routable template instead of editing a
+tracked configuration:
+
+```bash
+cp configs/openai-compatible.template.json configs/openai-compatible.local.json
+# Replace endpoint and model placeholders locally, then export the named key variable.
+ecm-tqag run configs/openai-compatible.local.json
+```
+
+`openai-compatible` mode requires an explicit HTTP(S) endpoint, a model name,
+and the name of an environment variable containing the credential. No credential
+value is read from a configuration file. The configured endpoint receives the
+evidence packages and authorization header; use only an endpoint you trust.
 
 ## Verify a generated summary
 

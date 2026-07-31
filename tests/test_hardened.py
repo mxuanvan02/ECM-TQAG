@@ -46,7 +46,7 @@ def test_export_dataset_is_deterministic(tmp_path):
 
 def test_openai_mode_requires_explicit_credentials(tmp_path):
     cfg = tmp_path / "config.json"
-    cfg.write_text(json.dumps({"schema":"ecm-tqag.run-config.v1", "name":"test", "packages":str(ROOT / "fixtures/packages"), "output":str(tmp_path / "out.json"), "mode":"openai-compatible", "endpoint":"http://127.0.0.1:1/v1/chat/completions", "model":"test", "api_key_env":"ECM_TEST_MISSING"}))
+    cfg.write_text(json.dumps({"schema":"ecm-tqag.run-config.v1", "name":"test", "packages":str(ROOT / "fixtures/packages"), "output":str(tmp_path / "out.json"), "mode":"openai-compatible", "endpoint":"https://api.example.invalid/v1/chat/completions", "model":"MODEL_NAME_PLACEHOLDER", "api_key_env":"ECM_TQAG_API_KEY"}))
     with pytest.raises(ValueError, match="API key"):
         run(cfg)
 

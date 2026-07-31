@@ -1,106 +1,118 @@
 # ECM-TQAG
 
-ECM-TQAG is a reproducible implementation of an **evidence-first protocol for
-constructing traceable multimodal textbook question-answering (TQA) items**.
-The protocol requires evidence selection and answer derivation before question
-wording:
+ECM-TQAG is research software for **evidence-first construction of traceable multimodal textbook question-answering (TQA) items**. It provides public contracts, validators, deterministic receipts, and synthetic fixtures for implementing and auditing the construction process; it is not a release of the source textbook corpus or experimental model outputs.
+
+The method represents a construction path as
 
 \[
 G_m \rightarrow z \rightarrow (A, \Gamma) \rightarrow q \rightarrow \mathcal{C},
 \]
 
-where a typed document-graph motif \(G_m\) and restricted program \(z\) yield
-answer atoms \(A\) and source-region traces \(\Gamma\); only then is a
-multiple-choice question realised and checked by \(\mathcal{C}\).
+where a matched document-graph motif \(G_m\) and a restricted derivation \(z\) produce answer atoms \(A\) and item-level provenance traces \(\Gamma\) before a multiple-choice question \(q\) is realised and checked by \(\mathcal{C}\).
 
-The accompanying study uses Vietnamese law textbooks from the legal-training
-curriculum at the Institute of Open Education and Information Technology, Hue
-University. The experimental input comprises eight multimodal textbook chunks
-from five textbooks, associated with ten source figures or tables. Each chunk
-is represented as three paired evidence packages: text (`T`), text with
-document structure (`TL`), and text with document structure and original image
-pixels (`TLV`), yielding 24 input packages. Those source-derived inputs are not
-redistributed in this repository; the public release contains rights-cleared
-synthetic fixtures that exercise the same contracts.
+## Research artifact scope
 
-## What this repository provides
+This repository implements three methodological artifacts:
 
-- strict condition-package validation for `T`, `TL`, and `TLV` evidence;
-- a typed construction-item contract recording a motif, restricted derivation,
-  answer atoms, provenance traces, question, options, key, and rationale;
-- canonical SHA-256 receipts for package and constructed-item records;
-- deterministic dataset export and run-summary verification;
-- synthetic fixtures, unit tests, an offline execution configuration, and an
-  OpenAI-compatible transport interface for local experiments.
+1. **Source-grounded evidence representation.** Evidence packages encode text (`T`), text with document structure (`TL`), and text with structure plus a visual asset (`TLV`) while retaining package identity and integrity receipts.
+2. **Evidence-first item contract.** A constructed item records its motif, restricted derivation, answer atoms, one provenance trace per atom, four answer choices, answer index, answer text, and rationale.
+3. **Deterministic structural verification.** Validators check package and item contracts, canonical SHA-256 receipts, run summaries, and deterministic exports.
 
-The code validates provenance and structural invariants. It does not itself
-certify legal correctness, semantic grounding, or the necessity of a modality.
+The implementation verifies structural and provenance-recording invariants. It does not independently establish semantic correctness, legal accuracy, pedagogical value, distractor quality, or whether a modality is necessary for an item.
 
-## Evidence packages
+## Installation
 
-| Symbol | Repository condition | Evidence exposed |
+Requires Python 3.10 or later. The commands below use [uv](https://docs.astral.sh/uv/).
+
+```bash
+uv sync --extra test
+```
+
+Alternatively:
+
+```bash
+python -m pip install -e '.[test]'
+```
+
+## Reproduce the offline checks
+
+All fixtures committed to this repository are synthetic and the default workflow is offline.
+
+```bash
+uv run pytest
+uv run ecm-tqag validate fixtures/packages
+uv run ecm-tqag validate-items fixtures/constructed-items
+uv run ecm-tqag run configs/offline-example.json
+uv run ecm-tqag verify-run run-output/summary.json \
+  --config configs/offline-example.json
+uv run ecm-tqag export-dataset run-output/summary.json run-output/dataset.jsonl
+python tools/machine_semantic_audit.py --repo . --output machine-policy-audit.json
+```
+
+The offline runner exercises request construction, receipt generation, and verification. It does not call a model or make a network request.
+
+## Optional remote execution
+
+Remote execution is opt-in. No endpoint, API key, or model identifier is stored in the repository. Start from the intentionally non-routable template:
+
+```bash
+cp configs/openai-compatible.template.json configs/openai-compatible.local.json
+```
+
+Edit only the local copy: replace the endpoint and model placeholders, and choose the name of an environment variable that holds the credential. Export that variable in your shell, then run:
+
+```bash
+uv run ecm-tqag run configs/openai-compatible.local.json
+```
+
+`*.local.json`, private configuration files, and `.env` files are ignored by Git. Never commit credentials or a deployment-specific endpoint. In `openai-compatible` mode, the configured endpoint receives the selected evidence package and authorization header; use only an endpoint you trust.
+
+## Evidence conditions
+
+| Symbol | Repository condition | Exposed evidence |
 |---|---|---|
 | `T` | `text_only` | textual chunk evidence |
 | `TL` | `text_layout` | text and declared document structure |
 | `TLV` | `full_pixels` | text, structure, and an embedded visual asset |
 
-`TLV` assets are checked for media type, byte length, dimensions, and SHA-256.
-Public fixtures contain only synthetic images and no host paths, credentials,
-reference corpus files, or source-derived images.
+`TLV` assets are checked for media type, byte length, dimensions, and SHA-256. The committed fixtures use only synthetic, rights-cleared content.
 
-## Constructed-item contract
+## Core commands
 
-A valid `ecm-tqag.constructed-item.v1` record includes:
+| Command | Purpose |
+|---|---|
+| `ecm-tqag validate <directory>` | Validate `T`, `TL`, and `TLV` evidence packages and their receipts. |
+| `ecm-tqag validate-items <directory>` | Validate constructed-item structure and atom--trace correspondence. |
+| `ecm-tqag parse <file>` | Parse JSON or server-sent-event response payloads. |
+| `ecm-tqag run <config>` | Run an offline transport check or an explicitly configured remote experiment. |
+| `ecm-tqag verify-run <summary>` | Verify a run summary, receipts, and package identities. |
+| `ecm-tqag export-dataset <summary> <output>` | Verify a summary and write deterministic JSON Lines. |
 
-- `motif`: a typed evidence pattern selected from the package;
-- `derivation`: a restricted, ordered sequence of operations;
-- `answer_atoms`: typed answer components derived before question wording;
-- `provenance_trace`: source-region references linked one-to-one to answer
-  atoms;
-- a four-option question, `answer_index`, verbatim `answer`, and `rationale`.
-
-The contract is deliberately structural: it makes every generated item
-inspectable and tamper-evident without treating a receipt as a semantic-quality
-score.
-
-## Quick start
-
-```bash
-uv sync --extra test
-uv run pytest
-uv run ecm-tqag validate fixtures/packages
-uv run ecm-tqag validate-items fixtures/constructed-items
-uv run ecm-tqag run configs/offline-example.json
-uv run ecm-tqag verify-run run-output/summary.json --config configs/offline-example.json
-uv run ecm-tqag export-dataset run-output/summary.json run-output/dataset.jsonl
-```
+Detailed command semantics are in [docs/cli.md](docs/cli.md). Public JSON Schemas are in [schemas/](schemas/).
 
 ## Repository layout
 
 ```text
-src/ecm_tqag/         installable library and CLI
-fixtures/packages/    synthetic T/TL/TLV evidence packages
-fixtures/constructed-items/
-                       synthetic evidence-first constructed TQA item
-schemas/              public JSON schemas for packages, items, and receipts
-tests/                unit and integration tests
-configs/              offline example configuration
-docs/                 contract and fixture documentation
-tools/                deterministic release-boundary audit
+src/ecm_tqag/                Installable library and command-line interface
+schemas/                     JSON Schemas for packages, items, receipts, and runs
+fixtures/packages/           Synthetic T/TL/TLV evidence packages
+fixtures/constructed-items/  Synthetic traceable constructed item
+configs/                     Offline config and non-routable remote template
+tests/                       Unit and integration tests
+docs/                        CLI and fixture documentation
+tools/                       Deterministic release-boundary audit
 ```
 
-## Reproduction and data boundary
+## Data governance and reproducibility boundary
 
-All checked-in fixtures and default tests are offline and synthetic. The
-repository does not publish textbook PDFs, source-derived chunks, source images,
-historical model outputs, private receipts, or credentials. Researchers with
-legitimate local access to a corpus can map their material into the documented
-package contract and retain their own provenance records. Users are responsible
-for confirming redistribution rights before adding any external document or
-image.
+The public release contains code, schemas, documentation, and synthetic fixtures only. It does not redistribute textbook PDFs, source-derived chunks, source images, historical model outputs, private experiment records, endpoints, or credentials. Researchers using external material are responsible for obtaining redistribution permission and for maintaining provenance records for their local data.
 
-## License and citation
+See [RIGHTS_AND_LIMITATIONS.md](RIGHTS_AND_LIMITATIONS.md) for the release boundary.
 
-Code and documentation are licensed under Apache-2.0; see [LICENSE](LICENSE).
-See [RIGHTS_AND_LIMITATIONS.md](RIGHTS_AND_LIMITATIONS.md) for release
-boundaries and [CITATION.cff](CITATION.cff) for citation metadata.
+## Citation
+
+Use the repository metadata in [CITATION.cff](CITATION.cff) when citing this software. The associated manuscript source is distributed separately from this code repository.
+
+## License
+
+Code and documentation are released under the [Apache-2.0 License](LICENSE).
