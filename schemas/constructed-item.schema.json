@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mxuanvan02/ECM-TQAG/schemas/constructed-item.schema.json",
+  "title": "ECM-TQAG constructed item v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "item_id", "package_sha256", "motif", "derivation", "answer_atoms", "provenance_trace", "question", "choices", "answer_index", "answer", "rationale"],
+  "properties": {
+    "schema": {"const": "ecm-tqag.constructed-item.v1"},
+    "item_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"},
+    "package_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "motif": {
+      "type": "object", "additionalProperties": false,
+      "required": ["type", "evidence_nodes"],
+      "properties": {
+        "type": {"type": "string", "minLength": 1, "maxLength": 100},
+        "evidence_nodes": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "derivation": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1, "maxLength": 1000}},
+    "answer_atoms": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["atom_id", "value", "kind"], "properties": {"atom_id": {"type": "string"}, "value": {"type": "string", "minLength": 1}, "kind": {"type": "string", "minLength": 1}}}},
+    "provenance_trace": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["atom_id", "source_ref"], "properties": {"atom_id": {"type": "string"}, "source_ref": {"type": "string", "minLength": 1}}}},
+    "question": {"type": "string", "minLength": 1, "maxLength": 4000},
+    "choices": {"type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 4000}},
+    "answer_index": {"type": "integer", "minimum": 0, "maximum": 3},
+    "answer": {"type": "string", "minLength": 1, "maxLength": 4000},
+    "rationale": {"type": "string", "minLength": 1, "maxLength": 8000}
+  }
+}
