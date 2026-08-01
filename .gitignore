@@ -12,3 +12,10 @@ run-output/
 *.local.json
 *.private.json
 configs/openai-compatible.json
+# LaTeX build artifacts
+manuscript/*.aux
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.fdb_latexmk
+manuscript/*.fls
+manuscript/*.log

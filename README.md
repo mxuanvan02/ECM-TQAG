@@ -116,3 +116,7 @@ Use the repository metadata in [CITATION.cff](CITATION.cff) when citing this sof
 ## License
 
 Code and documentation are released under the [Apache-2.0 License](LICENSE).
+
+## Manuscript
+
+The public manuscript source, compiled PDF, figures, evaluation guide, and results summary are available in [`manuscript/`](manuscript/). The manuscript package is intentionally separate from the software implementation and contains no source textbook corpus, page images, private model records, credentials, or restricted data.

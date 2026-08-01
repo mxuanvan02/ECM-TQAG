@@ -1,0 +1,125 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,url,graphicx}
+\newcommand{\T}{\mathsf{T}}
+\newcommand{\TL}{\mathsf{TL_{struct}}}
+\newcommand{\TLV}{\mathsf{TLV}}
+
+\title{ECM-TQAG: An Evidence-First Protocol for Traceable Multimodal Textbook Question Construction}
+\author{\IEEEauthorblockN{Xuan Van Mai\IEEEauthorrefmark{1}, Van Long Tran\IEEEauthorrefmark{1}, Viet Long Tran\IEEEauthorrefmark{2}, Van Khang Nguyen\IEEEauthorrefmark{1}, and Tuong Tri Nguyen\IEEEauthorrefmark{1},\IEEEauthorrefmark{3}}\IEEEauthorblockA{\IEEEauthorrefmark{1}University of Education, Hue University, Hue, Vietnam}\IEEEauthorblockA{\IEEEauthorrefmark{2}University of Law, Hue University, Hue, Vietnam}\IEEEauthorblockA{\IEEEauthorrefmark{3}Institute of Open Education and Information Technology, Hue University, Hue, Vietnam}}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+ECM-TQAG is an evidence-first protocol for constructing traceable multimodal textbook question-answering items. It compares direct, answer-first, and evidence-chain generation from fixed text--structure--image packages. In the evidence-chain method, a planner proposes a source-bound document graph and requests a motif from a closed catalog. Deterministic code validates and matches the motif, compiles it into a restricted program, executes that program, and derives answer atoms with node, edge, and program-step provenance. A separate realizer receives the locked construction and produces one four-option question. The accompanying implementation and evaluation establish executable structural/provenance validity and define complementary criteria for semantic correctness, pedagogical quality, and visual dependence.
+\end{abstract}
+\begin{IEEEkeywords}
+multimodal question generation, textbook question answering, evidence-grounded generation, provenance-aware generation, document understanding
+\end{IEEEkeywords}
+
+\section{Introduction}
+Textbooks distribute instructional content across prose, headings, tables, diagrams, charts, and page layout. A multimodal textbook question-answering (TQA) item therefore benefits from an inspectable relation among its answer, supporting evidence, and visual or structural context. Document models combine text, geometry, and visual representations \cite{xu2020layoutlm,xu2021layoutlmv2,huang2022layoutlmv3}; document, table, and chart QA demonstrate the role of structured and visual evidence \cite{mathew2021docvqa,herzig2020tapas,tito2023multipage,kafle2018dvqa,masry2022chartqa}; and question generation supports visual and educational authoring \cite{mostafazadeh2016generating,zhu2016visual7w,heilman2010good,kurdi2020systematic}. This motivates a construction pipeline that preserves answer provenance before question formulation and records the evidence modalities used.
+
+This work addresses traceable multimodal TQA construction from textbook evidence. ECM-TQAG adopts an evidence-first, answer-before-question sequence:
+\begin{equation}
+G_m \rightarrow z \rightarrow (A,\Gamma) \rightarrow q \rightarrow \mathcal{C},
+\end{equation}
+where a matched motif $G_m$ supplies a restricted program $z$, yielding typed answer atoms $A$ and a provenance trace $\Gamma$ before a four-option question $q$ is checked by $\mathcal{C}$. The matcher, compiler, executor, and tracer compute $G_m$, $z$, $A$, and $\Gamma$ through deterministic local code. The approach combines compositional reasoning over scenes, diagrams, and structured visual evidence \cite{johnson2017clevr,hudson2019gqa,kafle2018dvqa,masry2022chartqa} with provenance models that distinguish source records from derived artifacts \cite{moreau2013prov}.
+
+The contributions are: (i) a source-grounded representation with matched evidence packages and image-integrity receipts; (ii) motif-guided, answer-before-question derivation of atoms and traces, in which motif matching, program compilation, execution, and tracing are executable rather than declarative; (iii) a replayable contract for package identity, derivation, atom--trace correspondence, and MCQ consistency; and (iv) an empirical evaluation across evidence conditions and construction methods.
+
+\section{ECM-TQAG Construction Protocol}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{ecm_tqag_architecture.pdf}
+\caption{ECM-TQAG source-bound construction and replayable evaluation. A fixed multimodal evidence package is mapped to a typed evidence graph, planned by a source-bound motif request, and processed by restricted deterministic derivation to produce answer atoms and a four-option question. Replay audit rebuilds the construction and records per-cell provenance for the $8\times3\times3=72$-cell evaluation across Direct, Answer-first, and ECM-TQAG protocols.}
+\label{fig:architecture}
+\end{figure*}
+\subsection{Document representation and evidence packages}
+A source document is $D=(T,L,V,M,\Pi)$: text, structure/layout, visual regions, metadata, and source-level provenance. Parsing and alignment produce
+\begin{equation}
+G=(N,E,\rho),\qquad N=N_T\cup N_L\cup N_V\cup N_M,
+\end{equation}
+where $\rho:N\rightarrow\Pi$ links each node to a descriptor such as source digest, page, region, and extraction metadata. This source mapping is distinct from the item-level trace $\Gamma$ \cite{moreau2013prov}. In the implementation, $\rho$ is recomputed deterministically from the frozen package: a text node carries the package text digest and its character span, a structure node carries the declared section title and header level, and a visual node carries the declared image order, image digest, byte size, and source page.
+
+For each selected chunk, let $c\in K=\{\T,\TL,\TLV\}$ denote an evidence-condition label. ECM-TQAG forms the paired evidence packages
+\begin{equation}
+\mathcal{X}_{\T}=(T),\quad \mathcal{X}_{\TL}=(T,L),\quad \mathcal{X}_{\TLV}=(T,L,V).
+\end{equation}
+Packages retain chunk identity while exposing text, then structure, then original image pixels; records retain $c$, source references, and image integrity information verified before each request.
+
+\subsection{Evidence-first item construction}
+A motif template defines a typed pattern and derivation template. A matched $G_m\subseteq G$ supplies the restricted program $z$; unresolved inputs or incomplete provenance terminate construction. The language model proposes only the typed graph and a motif request: evidence-node IDs encode modality ($\mathtt{T}i$, $\mathtt{S}i$, $\mathtt{I}i$) with roles \emph{premise}, \emph{mapping}, or \emph{constraint}, and directed edges reach a single derived claim node through the finite relations \emph{supports}, \emph{maps-to}, and \emph{constrains}. A deterministic matcher then evaluates the request against a versioned catalog that fixes the required role set, one incoming edge per bound node, and the role--relation correspondence; a model-supplied motif label alone is insufficient.
+
+A compiler maps the successful match to a closed opcode sequence over typed values, $\mathtt{select\_nodes}$, $\mathtt{traverse\_to\_claim}$, $\mathtt{read\_value}$, and $\mathtt{return\_atoms}$, with exactly-one-target cardinality. Execution yields an answer structure and a trace:
+\begin{equation}
+A=\mathrm{Exec}(z,G_m),\qquad \Gamma=\mathrm{Trace}(z,G_m).
+\end{equation}
+Here $A=(a_1,\dots,a_k)$ contains answer atoms and $\Gamma=(\gamma_1,\dots,\gamma_k)$ links each $a_j$ to its source nodes or regions via $\rho$. The retained item contains the motif, derivation, answer parts, traces, MCQ, answer index, and rationale; a SHA-256 receipt seals $G$, $\rho$, $G_m$, $z$, $A$, and $\Gamma$. Answer content is therefore determined by the accepted graph and its execution. A second, isolated realizer receives the sealed construction and preserves atom identifiers, values, step trace, exact node anchors, and executor-derived answer selection. This content-before-realization ordering follows educational QG practice \cite{kurdi2020systematic}; the contract requires answer--choice agreement and one trace per atom. For ECM--$\TLV$ the matched motif binds a visual node, providing the formal visual-evidence condition used in this evaluation \cite{goyal2017making,agrawal2018don}.
+
+\subsection{Construction checks}
+The final check set $\mathcal{C}$ enforces package identity, well-formed derivation, non-empty atoms, atom--trace correspondence, four distinct options, and answer--choice agreement. Replay is exact: the audit recomputes $\rho$, re-matches the motif, recompiles $z$, re-executes $A$, retraces $\Gamma$, and recomputes the receipt. The same library serves the runner online and the audit offline. It complements MCQ item-writing criteria \cite{haladyna2002review}; SHA-256 receipts bind package and output records for reproducibility and audit \cite{sandve2013ten,raji2020closing}. Semantic, legal, pedagogical, and visual-dependence assessment is reported as a separate evaluation layer.
+
+\subsection{Direct and answer-first baselines}
+\emph{Direct} requests one four-option MCQ from a directly supported proposition. \emph{Answer-first} requires a declared answer and evidence excerpt before the question and same-domain distractors; a deterministic check requires the declared answer to equal the selected option. Both retain source-labelled evidence anchors. ECM-TQAG adds typed graph matching, restricted execution, answer atoms, and program traces, so the chunk and available evidence remain fixed while the construction protocol changes.
+
+\section{Experimental Evaluation}
+\label{sec:experiments}
+We evaluate eight selected chunks from five Vietnamese law textbooks under a full factorial design with three evidence conditions and three construction methods, yielding $8\times3\times3=72$ cells. The conditions isolate the contribution of evidence modalities: $\T$ supplies extracted text; $\TL$ adds declared document structure; and $\TLV$ adds the attached page image. The methods compare direct proposition-to-question generation, answer-first generation, and ECM-TQAG's graph--motif--program construction. Direct and answer-first use one model request per cell. ECM-TQAG uses a planning request followed by realization after deterministic plan validation. Thus the design contains 24 direct requests, 24 answer-first requests, and up to 48 ECM requests: 96 requests when every ECM plan reaches realization.
+\begin{table}[t]
+\centering
+\caption{Evaluation design and request allocation.}
+\label{tab:design}
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcc}
+\hline
+Factor & Levels & Cells/requests \\
+\hline
+Source contexts & 8 chunks from 5 textbooks & 8 \\
+Evidence & $\T$, $\TL$, $\TLV$ & 3 \\
+Method & Direct, Answer-first, ECM-TQAG & 3 \\
+Full factorial matrix & $8\times3\times3$ & 72 cells \\
+Direct requests & 8 chunks $\times$ 3 evidence conditions & 24 \\
+Answer-first requests & 8 chunks $\times$ 3 evidence conditions & 24 \\
+ECM requests & 24 planning $+$ up to 24 realization & up to 48 \\
+\hline
+\end{tabular}
+}%
+\end{table}
+
+All reported results come from the completed 72-cell evaluation and its corresponding deterministic replay audit.
+
+A post-generation quality gate has two levels. First, the mechanical audit checks record shape, distinct options, answer/choice agreement where applicable, source-bound graph nodes, typed edges, motif predicates, exact compiler output, executor-derived atoms, construction receipts, program traces, locked anchors, and the ECM--$\TLV$ image-node requirement. Second, independent human or expert review assesses semantic correctness, one-best-answer validity, evidence sufficiency, distractor quality, pedagogical usefulness, and image dependence.
+
+\subsection{ECM matrix result and rejection taxonomy}
+The evaluation contains 72 cells. Two packages were found to lack sufficient semantic context because of OCR/chunk boundaries. Only the 18 cells that used those packages were rerun after adding demonstrably adjacent context; the remaining 54 cells were retained unchanged. Overall, 60 cells (83.3\%) passed the structural validity criteria and 12 (16.7\%) were rejected. The 54 retained cells produced 47 passes and 7 rejections; the 18 context-recovered cells produced 13 passes and 5 rejections. Because these two groups have different evidence digests, each group was audited against its own evidence description before the results were combined.
+
+The 12 rejections are grouped by the first failed criterion into four scenarios. Five cells were classified under insufficient evidence, four under literal source grounding, two under answer--atom binding, and one under the locked-anchor criterion. The evidence-coverage cases arose when the supplied source context lacked enough support for a complete construction. The remaining cases reflect failures to preserve literal evidence anchors or executor-derived answer bindings during realization. Context recovery preserved source identity and added adjacent context only where the document structure supported that linkage.
+
+\section{Limitations}
+The selected corpus provides a reproducible feasibility setting across Vietnamese legal textbooks. The graph is proposed from the source evidence, while literal source binding and executable traversal provide the structural basis for semantic and legal review. Distractor quality, pedagogical usefulness, and image dependence are assessed through documented expert review and learner-oriented studies \cite{kurdi2020systematic,haladyna2002review,goyal2017making,agrawal2018don}.
+
+\section{Conclusion}
+ECM-TQAG provides an executable evidence-first protocol for multimodal textbook MCQ construction. Its planner proposes a source-bound document graph; local code matches a closed-catalog motif, compiles and executes a restricted program, and derives provenance-bearing answer atoms; and its isolated realizer receives only that sealed construction. The method makes structural construction replayable while keeping stronger claims about graph semantics, legal correctness, pedagogy, and visual necessity contingent on completed expert evaluation.
+
+\section*{Acknowledgment}
+The authors thank the Institute of Open Education and Information Technology, Hue University, for providing research data and a laboratory environment for this study.
+
+\section*{Funding}
+This work was supported by project DHH2026.
+
+\section*{Data, Code, and Materials Availability}
+Code, tests, and synthetic fixtures are available at \url{https://github.com/mxuanvan02/TQA_Pipeline}. Access to source textbooks, page images, and detailed model records follows the applicable permissions and rights review; derivative release materials are provided through the documented release channel.
+
+\section*{Conflict of Interest}
+The authors declare no competing interests.
+
+\section*{Generative-AI Use Disclosure}
+Generative-AI tools were used to assist with grammar editing, code development, and figure preparation.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}
