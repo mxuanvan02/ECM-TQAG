@@ -182,7 +182,19 @@ configs/                     Offline config and non-routable remote template
 tests/                       Unit and integration tests
 docs/                        CLI, fixture, and reproducibility documentation
 tools/                       Deterministic release-boundary audit
+artifacts/stage_a_model_evaluation/
+                             De-identified Stage A ratings and reproducible model-family agreement summary
 ```
+
+### Stage A model-based evaluation artifact
+
+The public artifact at [`artifacts/stage_a_model_evaluation/`](artifacts/stage_a_model_evaluation/) contains de-identified protocol fields for 24 frozen items rated independently by GPT- and Claude-family models. Both runs completed 24/24 locally schema-validated ratings. The included script deterministically regenerates the descriptive agreement summary:
+
+```bash
+python3 artifacts/stage_a_model_evaluation/reproduce_stage_a.py
+```
+
+These are model-based protocol checks, not human/expert ratings, semantic validation, or factual/legal accuracy. Evidence text, source images, free-text notes, raw provider envelopes, credentials, and restricted materials are excluded.
 
 ## 9. Reproducibility and data boundary
 

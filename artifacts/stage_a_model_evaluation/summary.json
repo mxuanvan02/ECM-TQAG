@@ -1,0 +1,105 @@
+{
+  "evaluation_kind": "model_based_blinded_rating",
+  "human_or_expert_evaluation": false,
+  "interpretation": "Exact agreement is descriptive model-family agreement, not human reliability, semantic validity, factual/legal accuracy, or expert adjudication.",
+  "item_count": 24,
+  "metrics": {
+    "choice_quality": {
+      "claude_distribution": {
+        "0": 4,
+        "1": 5,
+        "2": 15
+      },
+      "exact_agreement_count": 15,
+      "exact_agreement_rate": 0.625,
+      "gpt_distribution": {
+        "0": 7,
+        "1": 1,
+        "2": 16
+      },
+      "item_count": 24,
+      "within_one_count": 21,
+      "within_one_rate": 0.875
+    },
+    "correctness": {
+      "claude_distribution": {
+        "1": 12,
+        "not_determinable": 12
+      },
+      "exact_agreement_count": 14,
+      "exact_agreement_rate": 0.5833,
+      "gpt_distribution": {
+        "0": 3,
+        "1": 19,
+        "not_determinable": 2
+      },
+      "item_count": 24
+    },
+    "evidence_sufficiency": {
+      "claude_distribution": {
+        "0": 10,
+        "1": 2,
+        "2": 12
+      },
+      "exact_agreement_count": 12,
+      "exact_agreement_rate": 0.5,
+      "gpt_distribution": {
+        "1": 4,
+        "2": 20
+      },
+      "item_count": 24,
+      "within_one_count": 18,
+      "within_one_rate": 0.75
+    },
+    "question_clarity": {
+      "claude_distribution": {
+        "1": 8,
+        "2": 16
+      },
+      "exact_agreement_count": 17,
+      "exact_agreement_rate": 0.7083,
+      "gpt_distribution": {
+        "1": 5,
+        "2": 19
+      },
+      "item_count": 24,
+      "within_one_count": 24,
+      "within_one_rate": 1.0
+    },
+    "required_modality": {
+      "claude_distribution": {
+        "image": 10,
+        "multiple": 1,
+        "text": 13
+      },
+      "exact_agreement_count": 22,
+      "exact_agreement_rate": 0.9167,
+      "gpt_distribution": {
+        "image": 9,
+        "multiple": 1,
+        "text": 14
+      },
+      "item_count": 24
+    },
+    "unscorable": {
+      "claude_distribution": {
+        "false": 14,
+        "true": 10
+      },
+      "exact_agreement_count": 16,
+      "exact_agreement_rate": 0.6667,
+      "gpt_distribution": {
+        "false": 22,
+        "true": 2
+      },
+      "item_count": 24
+    }
+  },
+  "model_families": [
+    "gpt",
+    "claude"
+  ],
+  "packet_sha256": "ef68612891484e1d41bc5b96e75e5a499a58ccb4152f9827e1f5a1812bd3fe3a",
+  "schema": "ecm-tqag.stage-a-model-evaluation-summary.v1",
+  "status": "COMPLETE"
+}
