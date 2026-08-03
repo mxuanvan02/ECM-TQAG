@@ -1,0 +1,29 @@
+{
+  "credential_recorded": false,
+  "files": {
+    "README.md": {
+      "bytes": 771,
+      "sha256": "5c5a21a9b2d28e581788e3e0684283ec0a11ff21d0d0146c250e3d52daeecab9"
+    },
+    "claude_stage_b_ratings.csv": {
+      "bytes": 990,
+      "sha256": "d870a1faa8753cad7736971edcf044a5df7fa27556855c895fcad9af4eff3173"
+    },
+    "gpt_stage_b_ratings.csv": {
+      "bytes": 974,
+      "sha256": "cbe1843c6e24b6ef5d47b64fba1d523de21b528b1c37aec65d49d28166fca81e"
+    },
+    "reproduce_stage_b.py": {
+      "bytes": 1688,
+      "sha256": "f6c3f58994ca3efca01b7bef47906ab4002f497550decf16219e2e87fa3d7138"
+    },
+    "summary.json": {
+      "bytes": 1790,
+      "sha256": "c5f3f6c2ea4a698fbd8e14c76488c3fb0a736d0bf4f0a4647656324f608dff6d"
+    }
+  },
+  "free_text_notes_included": false,
+  "packet_sha256": "4e63ad2beae0f90c0df683260e70208f8573d149fc3f20bcfb8ee2df3646602f",
+  "restricted_source_content_included": false,
+  "schema": "ecm-tqag.stage-b-public-artifact-manifest.v1"
+}
