@@ -107,13 +107,29 @@ def validate_package(package: dict) -> dict:
     if condition in {"text_layout", "full_pixels"}:
         layout = _object(evidence.get("layout"), {"nodes", "edges"}, {"nodes", "edges"}, "evidence.layout")
         nodes = layout["nodes"]
-        if not isinstance(nodes, list) or not nodes or any(not isinstance(x, str) or not x for x in nodes):
-            raise ValueError("layout.nodes must contain non-empty strings")
-        if len(nodes) != len(set(nodes)):
-            raise ValueError("layout.nodes must be unique")
-        edges = layout["edges"]
-        if not isinstance(edges, list) or any(not isinstance(x, list) or len(x) != 2 or any(y not in nodes for y in x) for x in edges):
-            raise ValueError("invalid layout.edges")
+        if not isinstance(nodes, list) or not nodes:
+            raise ValueError("layout.nodes must be a non-empty array")
+        if all(isinstance(x, str) and x for x in nodes):  # legacy public package
+            node_ids = nodes
+            edges = layout["edges"]
+            if not isinstance(edges, list) or any(not isinstance(x, list) or len(x) != 2 or any(y not in node_ids for y in x) for x in edges):
+                raise ValueError("invalid legacy layout.edges")
+        else:
+            node_ids = []
+            for node in nodes:
+                n = _object(node, {"id", "label", "value"}, {"id", "label", "value"}, "layout node")
+                node_ids.append(_string(n["id"], "layout node id", max_len=128))
+                _string(n["label"], "layout node label", max_len=500)
+                _string(n["value"], "layout node value")
+            edges = layout["edges"]
+            for edge in edges if isinstance(edges, list) else [None]:
+                e = _object(edge, {"id", "type", "source", "target", "relation", "directed"}, {"id", "type", "source", "target", "relation", "directed"}, "layout edge")
+                if e["type"] != "layout_relation" or e["directed"] is not True or e["source"] not in node_ids or e["target"] not in node_ids:
+                    raise ValueError("invalid typed directed layout edge")
+                _string(e["id"], "layout edge id", max_len=128)
+                _string(e["relation"], "layout edge relation", max_len=128)
+        if len(node_ids) != len(set(node_ids)):
+            raise ValueError("layout node ids must be unique")
     if condition != "full_pixels" and "pixel_asset" in p:
         raise ValueError("pixel asset is not allowed outside full_pixels")
     if condition == "full_pixels":

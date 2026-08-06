@@ -1,0 +1,15 @@
+{
+  "schema": "ecm-tqag.normalized-document.v2",
+  "document_id": "pixel-demo",
+  "nodes": [
+    {"id":"t1","type":"text","label":"Caption","value":"A uniformly colored synthetic square."},
+    {"id":"figure","type":"layout","label":"Figure region","value":"square"},
+    {"id":"pixel","type":"visual","label":"Square pixels","value":{"encoding":"base64","media_type":"image/png","data":"iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAEElEQVR42mP4z8AARAwQCgAf7gP9Y167WwAAAABJRU5ErkJggg==","byte_length":73,"sha256":"68c41bb798155f8ad4c0280b6540e49f18457b263986fa6edbf58dc0821f3cb1","dimensions":{"width":2,"height":2},"provenance":"original synthetic fixture; Apache-2.0"}}
+  ],
+  "edges": [
+    {"id":"e-attach","type":"visual_attachment","source":"figure","target":"pixel","relation":"depicted_by","directed":true}
+  ],
+  "motifs": [
+    {"id":"m-pixel","operation":"dominant_rgb","target":"pixel","relation":null,"prompt_label":"the square","color_map":{"#0000FF":"blue","#FF0000":"red"}}
+  ]
+}

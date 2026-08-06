@@ -133,27 +133,20 @@
             "nodes": {
               "type": "array",
               "minItems": 1,
-              "uniqueItems": true,
               "items": {
-                "type": "string",
-                "minLength": 1
+                "oneOf": [
+                  {"type":"string","minLength":1},
+                  {"type":"object","additionalProperties":false,"required":["id","label","value"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"label":{"type":"string","minLength":1,"maxLength":500},"value":{"type":"string","minLength":1,"maxLength":10000}}}
+                ]
               }
             },
             "edges": {
               "type": "array",
               "items": {
-                "type": "array",
-                "prefixItems": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ],
-                "items": false,
-                "minItems": 2,
-                "maxItems": 2
+                "oneOf": [
+                  {"type":"array","prefixItems":[{"type":"string"},{"type":"string"}],"items":false,"minItems":2,"maxItems":2},
+                  {"type":"object","additionalProperties":false,"required":["id","type","source","target","relation","directed"],"properties":{"id":{"type":"string","minLength":1,"maxLength":128},"type":{"const":"layout_relation"},"source":{"type":"string","minLength":1},"target":{"type":"string","minLength":1},"relation":{"type":"string","minLength":1,"maxLength":128},"directed":{"const":true}}}
+                ]
               }
             }
           }

@@ -1,0 +1,18 @@
+{
+  "schema": "ecm-tqag.normalized-document.v2",
+  "document_id": "layout-demo",
+  "nodes": [
+    {"id": "t1", "type": "text", "label": "Context", "value": "A two-column measurement table is shown."},
+    {"id": "header", "type": "layout", "label": "Metric header", "value": "Recorded metric"},
+    {"id": "cell-a", "type": "layout", "label": "First data cell", "value": "42"},
+    {"id": "cell-b", "type": "layout", "label": "Second data cell", "value": "17"},
+    {"id": "page", "type": "visual", "label": "Synthetic page", "value": {"encoding":"base64","media_type":"image/png","data":"iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAEElEQVR42mP4z8AARAwQCgAf7gP9Y167WwAAAABJRU5ErkJggg==","byte_length":73,"sha256":"68c41bb798155f8ad4c0280b6540e49f18457b263986fa6edbf58dc0821f3cb1","dimensions":{"width":2,"height":2},"provenance":"original synthetic fixture; Apache-2.0"}}
+  ],
+  "edges": [
+    {"id":"e-right","type":"layout_relation","source":"header","target":"cell-a","relation":"right_of","directed":true},
+    {"id":"e-attach","type":"visual_attachment","source":"t1","target":"page","relation":"depicted_by","directed":true}
+  ],
+  "motifs": [
+    {"id":"m-layout","operation":"layout_relation_value","target":"header","relation":"right_of","prompt_label":"the metric header","color_map":null}
+  ]
+}

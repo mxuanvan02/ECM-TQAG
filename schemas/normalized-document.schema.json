@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"ecm-tqag.normalized-document.v2","title":"Normalized document v2","type":"object","additionalProperties":false,
+  "required":["schema","document_id","nodes","edges","motifs"],
+  "properties":{
+    "schema":{"const":"ecm-tqag.normalized-document.v2"},"document_id":{"$ref":"#/$defs/id"},
+    "nodes":{"type":"array","minItems":1,"items":{"oneOf":[{"$ref":"#/$defs/textLayoutNode"},{"$ref":"#/$defs/visualNode"}]}},
+    "edges":{"type":"array","items":{"$ref":"#/$defs/edge"}},"motifs":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/motif"}}
+  },
+  "$defs":{
+    "id":{"type":"string","pattern":"^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"},
+    "textLayoutNode":{"type":"object","additionalProperties":false,"required":["id","type","label","value"],"properties":{"id":{"$ref":"#/$defs/id"},"type":{"enum":["text","layout"]},"label":{"type":"string","minLength":1,"maxLength":500},"value":{"type":"string","minLength":1,"maxLength":10000}}},
+    "visualNode":{"type":"object","additionalProperties":false,"required":["id","type","label","value"],"properties":{"id":{"$ref":"#/$defs/id"},"type":{"const":"visual"},"label":{"type":"string","minLength":1,"maxLength":500},"value":{"$ref":"condition-package.schema.json#/$defs/pixel"}}},
+    "edge":{"type":"object","additionalProperties":false,"required":["id","type","source","target","relation","directed"],"properties":{"id":{"$ref":"#/$defs/id"},"type":{"enum":["layout_relation","visual_attachment"]},"source":{"$ref":"#/$defs/id"},"target":{"$ref":"#/$defs/id"},"relation":{"$ref":"#/$defs/id"},"directed":{"const":true}}},
+    "motif":{"type":"object","additionalProperties":false,"required":["id","operation","target","relation","prompt_label","color_map"],"properties":{"id":{"$ref":"#/$defs/id"},"operation":{"enum":["layout_relation_value","dominant_rgb"]},"target":{"$ref":"#/$defs/id"},"relation":{"oneOf":[{"$ref":"#/$defs/id"},{"type":"null"}]},"prompt_label":{"type":"string","minLength":1,"maxLength":500},"color_map":{"oneOf":[{"type":"null"},{"type":"object","minProperties":1,"propertyNames":{"pattern":"^#[0-9A-F]{6}$"},"additionalProperties":{"type":"string","minLength":1,"maxLength":100}}]}}}
+  }
+}
