@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "ECM-TQAG experiment tooling"
+title: "ECM-TQAG: evidence-first tooling for traceable multimodal textbook question construction"
 message: "If you use this software, please cite this repository."
 type: software
 authors:
@@ -13,4 +13,5 @@ authors:
     given-names: Tuong Tri
     email: ntuongtri@hueuni.edu.vn
 license: Apache-2.0
-version: 1.5.0
+version: 1.6.0
+repository-code: "https://github.com/mxuanvan02/ECM-TQAG"

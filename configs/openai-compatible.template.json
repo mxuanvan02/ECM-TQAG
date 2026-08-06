@@ -1,0 +1,16 @@
+{
+  "schema": "ecm-tqag.run-config.v1",
+  "name": "replace-with-local-experiment-name",
+  "packages": "../fixtures/packages",
+  "output": "../run-output/remote-summary.json",
+  "conditions": [
+    "text_only",
+    "text_layout",
+    "full_pixels"
+  ],
+  "mode": "openai-compatible",
+  "endpoint": "https://api.example.invalid/v1/chat/completions",
+  "model": "MODEL_NAME_PLACEHOLDER",
+  "api_key_env": "ECM_TQAG_API_KEY",
+  "timeout_seconds": 60
+}

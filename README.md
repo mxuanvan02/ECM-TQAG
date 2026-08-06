@@ -1,30 +1,177 @@
 # ECM-TQAG
 
-ECM-TQAG is an offline reference implementation for constructing traceable multimodal textbook-question-answering (TQA) records from a documented normalized-document representation. It also supports evaluation of the resulting records under progressively richer evidence conditions:
+**Evidence-first construction and structural audit of traceable multimodal textbook question-answering (TQA) items.**
 
-- **T** (`text_only`): text evidence
-- **TL** (`text_layout`): text plus layout or structure
-- **TLV** (`full_pixels`): text, layout, and an embedded visual asset
+This repository is the reproducible **research-software artifact** for ECM-TQAG. It contains executable contracts, validators, deterministic receipt logic, a command-line runner, JSON Schemas, tests, documentation, and synthetic fixtures. It does **not** contain source textbooks, restricted page images, private experiment records, credentials, or manuscript files.
 
-The repository provides a standard-library implementation, strict JSON validation, canonical SHA-256 receipts, executable synthetic examples, and tests. Construction and validation run offline without network access, API credentials, proprietary software, or source-derived images. Deterministic integrity checks are reported separately from semantic judgments made by an answering model.
+> **Scope.** The software verifies structural and provenance-recording invariants. A successful verification is not, by itself, evidence of legal or semantic correctness, pedagogical quality, distractor quality, or visual necessity.
 
-## Quick start
+## 1. Research pipeline: input → output
 
-```bash
-python -m venv .venv
-. .venv/bin/activate
-python -m pip install -e '.[test]'
-pytest
-ecm-tqag validate fixtures/packages
-ecm-tqag run configs/offline-example.json
-ecm-tqag verify-run run-output/summary.json --config configs/offline-example.json
-ecm-tqag export-dataset run-output/summary.json run-output/dataset.jsonl
-ecm-tqag generate fixtures/documents/layout.json run-output/generated-layout
+```text
+Evidence package(s)
+  → contract and integrity validation
+  → evidence-conditioned request construction
+  → offline transport check OR opt-in model call
+  → answer record with package receipt
+  → run summary with canonical receipt
+  → verification and deterministic JSONL export
 ```
 
-The package can also be used directly from a checkout with `PYTHONPATH=src`.
+For independently constructed items, the evidence-first path is represented as:
 
-## End-to-end generator
+```text
+matched evidence motif G_m
+  → restricted derivation z
+  → answer atoms A + provenance traces Γ
+  → four-option question q
+  → structural checker C
+```
+
+Every answer record carries the item identity, evidence condition, and SHA-256 receipt of the package used to produce it.
+
+## 2. Inputs
+
+### 2.1 Evidence packages
+
+Provide a directory of JSON packages conforming to [`schemas/condition-package.schema.json`](schemas/condition-package.schema.json):
+
+| Field | Required content |
+|---|---|
+| `schema` | `ecm-tqag.condition-package.v1` |
+| `item_id` | Stable identifier using letters, numbers, `.`, `_`, and `-` |
+| `question` | Question supplied to the answering/transport stage |
+| `condition` | `text_only`, `text_layout`, or `full_pixels` |
+| `evidence.text` | Text evidence, 1–10,000 characters |
+| `evidence.layout` | Required for `text_layout` and `full_pixels`; typed nodes and edges |
+| `pixel_asset` | Required for `full_pixels`; base64 PNG with dimensions, byte length, SHA-256, and provenance |
+
+| Condition | Evidence supplied |
+|---|---|
+| `text_only` (`T`) | Text only |
+| `text_layout` (`TL`) | Text plus declared document structure |
+| `full_pixels` (`TLV`) | Text, structure, and visual PNG asset |
+
+External documents must be converted into these packages locally. This repository does not prescribe OCR, layout parsing, or image encoding. Do not commit copyrighted source material without redistribution permission.
+
+### 2.2 Run configuration
+
+Provide a JSON configuration conforming to `ecm-tqag.run-config.v1`, such as [`configs/offline-example.json`](configs/offline-example.json):
+
+```json
+{
+  "schema": "ecm-tqag.run-config.v1",
+  "name": "synthetic-offline-example",
+  "packages": "../fixtures/packages",
+  "output": "../run-output/summary.json",
+  "conditions": ["text_only", "text_layout", "full_pixels"],
+  "mode": "offline",
+  "timeout_seconds": 60
+}
+```
+
+Paths are resolved relative to the configuration file unless absolute. `conditions` selects a non-empty subset of the three conditions.
+
+### 2.3 Optional remote-provider settings
+
+Remote execution is opt-in. Copy the non-routable template to an ignored local file:
+
+```bash
+cp configs/openai-compatible.template.json configs/openai-compatible.local.json
+```
+
+The local configuration requires an HTTPS/HTTP OpenAI-compatible endpoint, a model identifier, the **name** of an environment variable containing the credential, package/output paths, selected conditions, and a timeout. Keep the credential only in the environment; never place it in JSON, Git, logs, or this README. The endpoint receives the selected evidence and, for `full_pixels`, the embedded PNG. Provider behavior, quota, context limits, and image support are provider-specific.
+
+## 3. Outputs
+
+A successful `run` writes the configured summary, containing:
+
+- schema `ecm-tqag.run-summary.v1`;
+- run name and mode;
+- configuration SHA-256 receipt, which hashes configuration metadata and never the secret value;
+- one answer record per selected package/condition;
+- each record's item ID, condition, package SHA-256, answer text, and source mode;
+- a canonical `summary_sha256` receipt.
+
+`verify-run` returns a JSON PASS record after checking receipts, identities, answer contracts, and (when supplied) package/config membership. `export-dataset` writes deterministic JSON Lines, one validated answer record per line, and reports its dataset SHA-256. Invalid input returns a non-zero exit code and a JSON error record.
+
+For constructed-item records, `validate-items` checks a typed motif, ordered derivation, answer atoms, one provenance trace per atom, four unique choices, answer index, answer text, and rationale. See [`schemas/constructed-item.schema.json`](schemas/constructed-item.schema.json).
+
+## 4. Required equipment and software
+
+### Offline reproduction
+
+No GPU, camera, scanner, or model-serving machine is required. Minimum practical setup:
+
+- Linux, macOS, or Windows with a shell;
+- Python **3.10 or later**;
+- [`uv`](https://docs.astral.sh/uv/) (recommended) or Python `pip`;
+- approximately 1 GB free disk and 2 GB RAM for the synthetic workflow.
+
+The offline workflow makes no network request and uses only the synthetic, rights-cleared fixtures committed here.
+
+### Remote execution
+
+Additionally required:
+
+- network access to a trusted endpoint;
+- an OpenAI-compatible provider and available model;
+- multimodal model support when using `full_pixels`;
+- a valid environment-supplied credential and provider quota.
+
+The runner is CPU-light and does not require a local GPU. Local-model hardware requirements are determined by that model and are not bundled by this repository.
+
+### Preparing visual input
+
+For `full_pixels`, provide a valid PNG embedded in the package. The package records media type, byte length, dimensions, SHA-256, and provenance. Any upstream scanner, OCR, layout parser, or image encoder is outside this repository; retain rights documentation for external material.
+
+## 5. Installation
+
+Using `uv`:
+
+```bash
+uv sync --extra test
+```
+
+Using `pip`:
+
+```bash
+python -m pip install -e '.[test]'
+```
+
+This installs the `ecm-tqag` command-line entry point.
+
+## 6. Reproduce the complete offline software check
+
+Run from the repository root:
+
+```bash
+uv run pytest
+uv run ecm-tqag validate fixtures/packages
+uv run ecm-tqag validate-items fixtures/constructed-items
+uv run ecm-tqag run configs/offline-example.json
+uv run ecm-tqag verify-run run-output/summary.json \
+  --config configs/offline-example.json
+uv run ecm-tqag export-dataset run-output/summary.json run-output/dataset.jsonl
+python tools/machine_semantic_audit.py --repo . --output machine-policy-audit.json
+```
+
+Successful commands return exit code `0`; malformed input or failed verification returns non-zero. The offline runner does not call a model or make a network request.
+
+## 7. Command reference
+
+| Command | Input | Output/check |
+|---|---|---|
+| `ecm-tqag validate <directory>` | Evidence-package directory | Package report and canonical receipts |
+| `ecm-tqag validate-items <directory>` | Constructed-item JSON directory | Item report and receipts |
+| `ecm-tqag parse <file>` | JSON or SSE response file | Parsed records; no semantic validation |
+| `ecm-tqag run <config>` | Run configuration plus packages | Summary with answer records and receipt |
+| `ecm-tqag verify-run <summary>` | Summary, optionally config/packages | Structural and receipt verification |
+| `ecm-tqag export-dataset <summary> <output>` | Verified summary | Deterministic JSONL answer output |
+
+Detailed semantics are documented in [`docs/cli.md`](docs/cli.md).
+
+### 7.1 End-to-end generator
 
 `generate` accepts the versioned `ecm-tqag.normalized-document.v2` JSON contract
 (`schemas/normalized-document.schema.json`). A document contains typed nodes,
@@ -50,41 +197,7 @@ where applicable. The included inputs are small synthetic examples. The
 implementation deliberately supports only the documented normalized contract
 and a bounded RGB PNG decoder; it is not a PDF, OCR, or general image system.
 
-## Layout
-
-```text
-src/ecm_tqag/       installable library and CLI
-fixtures/            synthetic, rights-cleared T/TL/TLV packages
-schemas/             JSON Schema for public condition packages
-tests/               unit and integration tests
-configs/              example offline experiment configuration
-docs/                neutral usage and data notes
-run-output/           synthetic offline execution summary
-```
-
-## Package contract
-
-Every fixture declares `schema`, `item_id`, `condition`, and evidence metadata. TLV packages embed a tiny synthetic PNG and must include matching byte length, dimensions, and SHA-256. Public packages may not contain host paths, credentials, or hidden reference answers. Validation is deterministic and produces a canonical receipt hash. The `run` command defaults only when explicitly configured for offline mode; OpenAI-compatible mode requires an endpoint, model, and the name of an environment variable containing a credential. Outputs are atomically replaced and `verify-run` checks their canonical receipt and every answer contract. With `--config`, it recomputes the config hash (including `api_key_env`, never its secret), package hashes, and condition membership. Use `--packages DIR` to override the config package directory. `validate` scans nested JSON files recursively and ignores symlinks.
-
-## Reproduction and scope
-
-The end-to-end example starts from a normalized-document JSON file and produces new TQA records. For each specified motif, the generator computes an answer from the documented text/layout or pixel evidence, formulates a question, creates matched `text_only`, `text_layout`, and `full_pixels` packages, and writes a manifest containing package hashes and replayable provenance. `validate-generated` recomputes the source digest, validates the package triplet, and replays the recorded computation.
-
-The included documents are small synthetic examples. They demonstrate the construction interface and output format, not benchmark performance or semantic accuracy. The implementation supports the documented normalized-document contract and a bounded RGB/RGBA PNG decoder; it is not a general PDF, OCR, or image-understanding system. The optional answering-model commands operate on packages and may require a configured endpoint and credential; their responses are not expected to be identical across providers or model versions.
-
-For the basic construction path:
-
-```bash
-ecm-tqag generate fixtures/documents/layout.json run-output/generated-layout --replace
-ecm-tqag validate-generated run-output/generated-layout --source fixtures/documents/layout.json
-
-ecm-tqag generate fixtures/documents/pixel.json run-output/generated-pixel --replace
-ecm-tqag validate-generated run-output/generated-pixel --source fixtures/documents/pixel.json
-```
-
-The generated directories contain `manifest.json`, one TQA record per motif, and three condition-specific package files per record. A successful validation prints `status: PASS` and the number of generated items. The older package-level commands (`validate`, `run`, `verify-run`, and `export-dataset`) remain available for evaluating preconstructed packages.
-
-## Conference contract diagnostic
+### 7.2 Conference contract diagnostic
 
 The repository includes a deterministic, structural-only diagnostic for checking the
 conference-evaluation contract on the two synthetic normalized documents:
@@ -142,27 +255,40 @@ independent human behavior, or annotation truth. SHA-256 values are consistency
 checksums, not signatures. Consequently this report is not evidence of answer
 correctness, modality necessity, baseline superiority, or generalization.
 
-## License
+## 8. Repository layout
 
-Code and documentation are licensed under Apache-2.0; see [LICENSE](LICENSE). See [RIGHTS_AND_LIMITATIONS.md](RIGHTS_AND_LIMITATIONS.md) for data boundaries.
-
-## Citation
-
-See [CITATION.cff](CITATION.cff).
-
-## Development
-
-```bash
-uv sync --extra test
-uv run pytest
-uv build --wheel
-uv run --isolated --no-project --with dist/ecm_tqag-1.5.0-py3-none-any.whl ecm-tqag validate fixtures/packages
-uv run --isolated --no-project --with dist/ecm_tqag-1.5.0-py3-none-any.whl ecm-tqag run configs/offline-example.json
-uv run --isolated --no-project --with dist/ecm_tqag-1.5.0-py3-none-any.whl ecm-tqag verify-run run-output/summary.json --config configs/offline-example.json
+```text
+src/ecm_tqag/                Installable library and CLI
+schemas/                     JSON Schemas for packages, items, receipts, and runs
+fixtures/packages/           Synthetic T/TL/TLV evidence packages
+fixtures/constructed-items/  Synthetic traceable constructed item
+configs/                     Offline config and non-routable remote template
+tests/                       Unit and integration tests
+docs/                        CLI, fixture, and reproducibility documentation
+tools/                       Deterministic release-boundary audit
+artifacts/stage_a_model_evaluation/
+                             De-identified Stage A ratings and reproducible model-family agreement summary
+artifacts/stage_b_model_evaluation/
+                             De-identified Stage B trace ratings and reproducible agreement summary
 ```
 
-The repository contains the implementation, schemas, and synthetic examples. Running the offline configuration generates `run-output/summary.json`; this summary records execution on the included fixtures and is not a benchmark result or a source-derived dataset.
+### Stage A and Stage B model-based evaluation artifacts
 
-## Security
+The public artifacts at [`artifacts/stage_a_model_evaluation/`](artifacts/stage_a_model_evaluation/) and [`artifacts/stage_b_model_evaluation/`](artifacts/stage_b_model_evaluation/) contain de-identified protocol fields from independent GPT- and Claude-family ratings. Both model families completed 24/24 locally schema-validated Stage A ratings and 8/8 Stage B trace ratings. The included scripts deterministically regenerate the descriptive agreement summaries:
 
-Please do not add credentials, private package names, absolute local paths, or source-derived media to public fixtures. Report security issues privately to the repository maintainers.
+```bash
+python3 artifacts/stage_a_model_evaluation/reproduce_stage_a.py
+python3 artifacts/stage_b_model_evaluation/reproduce_stage_b.py
+```
+
+These are model-based protocol checks, not human/expert ratings, semantic validation, or factual/legal accuracy. Evidence text, trace text, source images, free-text notes, raw provider envelopes, credentials, and restricted materials are excluded.
+
+## 9. Reproducibility and data boundary
+
+The public release contains source code, schemas, documentation, and synthetic fixtures. It does not redistribute textbook PDFs, source-derived chunks, source images, historical model outputs, private experiment records, credentials, or deployment-specific endpoints. Users are responsible for obtaining permission before adding external material and for keeping restricted inputs and outputs outside public repositories.
+
+The software checks structure and provenance completeness. Independent human or domain review is required for semantic/legal correctness, answer quality, educational usefulness, and visual-grounding claims.
+
+## Citation and license
+
+Use the repository metadata in [`CITATION.cff`](CITATION.cff) when citing this software. Code and documentation are released under the [Apache-2.0 License](LICENSE).

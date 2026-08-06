@@ -1,0 +1,75 @@
+{
+  "evaluation_kind": "model_based_blinded_rating",
+  "human_or_expert_evaluation": false,
+  "interpretation": "Descriptive agreement between model-based evaluators; not human reliability, expert adjudication, semantic validity, or factual/legal accuracy.",
+  "item_count": 8,
+  "metrics": {
+    "answer_support": {
+      "claude_distribution": {
+        "1": 1,
+        "2": 7
+      },
+      "exact_agreement_count": 7,
+      "exact_agreement_rate": 0.875,
+      "gpt_distribution": {
+        "0": 1,
+        "1": 1,
+        "2": 6
+      },
+      "item_count": 8,
+      "within_one_count": 7,
+      "within_one_rate": 0.875
+    },
+    "source_fidelity": {
+      "claude_distribution": {
+        "0": 1,
+        "1": 3,
+        "2": 4
+      },
+      "exact_agreement_count": 4,
+      "exact_agreement_rate": 0.5,
+      "gpt_distribution": {
+        "0": 1,
+        "1": 1,
+        "2": 6
+      },
+      "item_count": 8,
+      "within_one_count": 8,
+      "within_one_rate": 1.0
+    },
+    "trace_completeness": {
+      "claude_distribution": {
+        "1": 1,
+        "2": 7
+      },
+      "exact_agreement_count": 7,
+      "exact_agreement_rate": 0.875,
+      "gpt_distribution": {
+        "0": 1,
+        "1": 1,
+        "2": 6
+      },
+      "item_count": 8,
+      "within_one_count": 7,
+      "within_one_rate": 0.875
+    },
+    "unscorable": {
+      "claude_distribution": {
+        "false": 8
+      },
+      "exact_agreement_count": 8,
+      "exact_agreement_rate": 1.0,
+      "gpt_distribution": {
+        "false": 8
+      },
+      "item_count": 8
+    }
+  },
+  "model_families": [
+    "gpt",
+    "claude"
+  ],
+  "packet_sha256": "4e63ad2beae0f90c0df683260e70208f8573d149fc3f20bcfb8ee2df3646602f",
+  "schema": "ecm-tqag.stage-b-model-evaluation-summary.v1",
+  "status": "COMPLETE"
+}

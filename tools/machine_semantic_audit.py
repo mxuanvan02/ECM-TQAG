@@ -9,6 +9,8 @@ from pathlib import Path
 
 TEXT_SUFFIXES={".md",".tex",".py",".json",".toml",".yml",".yaml",".cff",".txt"}
 MEDIA_SUFFIXES={".jpg",".jpeg",".png",".tif",".tiff",".pdf"}
+REMOTE_TEMPLATE_ENDPOINT="https://api.example.invalid/v1/chat/completions"
+REMOTE_TEMPLATE_MODEL="MODEL_NAME_PLACEHOLDER"
 FORBIDDEN={
  "revoked_artifact": re.compile(r"ECM_TQAG_EVIDENCE_EXAMPLES_20260728",re.I),
  "forbidden_aag_counts": re.compile(r"\b(?:5741|2371)\b"),
@@ -38,6 +40,17 @@ def audit(repo:Path, manuscript:Path|None)->dict:
     text=p.read_text("utf-8",errors="replace")
     for name,rx in FORBIDDEN.items():
      if rx.search(text): findings.append({"rule":name,"file":rel})
+ for p in sorted((repo / "configs").glob("*.json")):
+  try:
+   cfg=json.loads(p.read_text("utf-8"))
+  except json.JSONDecodeError:
+   findings.append({"rule":"invalid_public_config_json","file":p.relative_to(repo).as_posix()}); continue
+  if cfg.get("mode") == "openai-compatible":
+   rel=p.relative_to(repo).as_posix()
+   if cfg.get("endpoint") != REMOTE_TEMPLATE_ENDPOINT:
+    findings.append({"rule":"public_remote_endpoint","file":rel})
+   if cfg.get("model") != REMOTE_TEMPLATE_MODEL:
+    findings.append({"rule":"public_remote_model","file":rel})
  if manuscript:
   text=manuscript.read_text("utf-8")
   checked.append(str(manuscript))
