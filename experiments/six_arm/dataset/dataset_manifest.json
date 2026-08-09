@@ -1,0 +1,870 @@
+{
+  "schema": "ecm-tqag.multimodal-inputs.v4-work24",
+  "created_utc": "2026-08-09T00:00:00Z",
+  "purpose": "Rights-cleared synthetic contract fixture; not the empirical study corpus.",
+  "source_pool": {
+    "rights": "synthetic generated fixture",
+    "total_chunks": 16,
+    "multimodal_chunks": 16
+  },
+  "conditions": [
+    "T",
+    "TL_struct",
+    "TLV"
+  ],
+  "chunk_count": 16,
+  "document_count": 8,
+  "image_count": 18,
+  "package_count": 48,
+  "split_policy": "synthetic_test_only",
+  "packages": [
+    {
+      "item_id": "synthetic_chunk_01",
+      "chunk_id": "synthetic_chunk_01",
+      "doc_id": "synthetic_document_01",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 1. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_01",
+      "chunk_id": "synthetic_chunk_01",
+      "doc_id": "synthetic_document_01",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 1. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 1",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_01",
+      "chunk_id": "synthetic_chunk_01",
+      "doc_id": "synthetic_document_01",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 1. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 1",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_01.png",
+            "bytes": 27817,
+            "sha256": "d5240eb58f1719db3bed22ad3bdb9d28fd805a91e0829a3b6bb110fb088a355f",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_02",
+      "chunk_id": "synthetic_chunk_02",
+      "doc_id": "synthetic_document_01",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 2. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_02",
+      "chunk_id": "synthetic_chunk_02",
+      "doc_id": "synthetic_document_01",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 2. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 2",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_02",
+      "chunk_id": "synthetic_chunk_02",
+      "doc_id": "synthetic_document_01",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 2. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 2",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_02.png",
+            "bytes": 27817,
+            "sha256": "57828e30d01e3ec56783505ef91c314ff54ee05e381818b4122d90b0a315f0cc",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_03",
+      "chunk_id": "synthetic_chunk_03",
+      "doc_id": "synthetic_document_02",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 3. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_03",
+      "chunk_id": "synthetic_chunk_03",
+      "doc_id": "synthetic_document_02",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 3. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 3",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_03",
+      "chunk_id": "synthetic_chunk_03",
+      "doc_id": "synthetic_document_02",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 3. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 3",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_03.png",
+            "bytes": 27817,
+            "sha256": "dacb5d1bbe5fcb7bc91aa70260203eb3ef3b128cc9e4fa0fad9744acb60cbbf7",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_04",
+      "chunk_id": "synthetic_chunk_04",
+      "doc_id": "synthetic_document_02",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 4. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_04",
+      "chunk_id": "synthetic_chunk_04",
+      "doc_id": "synthetic_document_02",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 4. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 4",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_04",
+      "chunk_id": "synthetic_chunk_04",
+      "doc_id": "synthetic_document_02",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 4. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 4",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_04.png",
+            "bytes": 27817,
+            "sha256": "1b6eda3acabadbe5da23820b58dcaa21f8a85cfea6cfe57336034cd5d0ada159",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_05",
+      "chunk_id": "synthetic_chunk_05",
+      "doc_id": "synthetic_document_03",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 5. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_05",
+      "chunk_id": "synthetic_chunk_05",
+      "doc_id": "synthetic_document_03",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 5. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 5",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_05",
+      "chunk_id": "synthetic_chunk_05",
+      "doc_id": "synthetic_document_03",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 5. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 5",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_05.png",
+            "bytes": 27817,
+            "sha256": "adfe141030cfdcca0174250475450cb4ba3e9eb30c0044456f5eaf04afd1df90",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_06",
+      "chunk_id": "synthetic_chunk_06",
+      "doc_id": "synthetic_document_03",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 6. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_06",
+      "chunk_id": "synthetic_chunk_06",
+      "doc_id": "synthetic_document_03",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 6. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 6",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_06",
+      "chunk_id": "synthetic_chunk_06",
+      "doc_id": "synthetic_document_03",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 6. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 6",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_06.png",
+            "bytes": 27817,
+            "sha256": "ee850efe18d883a96c91f7648f4004d841b5c52d1b9519bb71034450f124f211",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_07",
+      "chunk_id": "synthetic_chunk_07",
+      "doc_id": "synthetic_document_04",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 7. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_07",
+      "chunk_id": "synthetic_chunk_07",
+      "doc_id": "synthetic_document_04",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 7. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 7",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_07",
+      "chunk_id": "synthetic_chunk_07",
+      "doc_id": "synthetic_document_04",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 7. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 7",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_07.png",
+            "bytes": 27817,
+            "sha256": "1be5463d21b64cb248712235b010d213aa22d0c6be2f3a9d15856551f2dd9280",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_08",
+      "chunk_id": "synthetic_chunk_08",
+      "doc_id": "synthetic_document_04",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 8. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_08",
+      "chunk_id": "synthetic_chunk_08",
+      "doc_id": "synthetic_document_04",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 8. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 8",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_08",
+      "chunk_id": "synthetic_chunk_08",
+      "doc_id": "synthetic_document_04",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 8. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 8",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_08.png",
+            "bytes": 27817,
+            "sha256": "af2fd23092de60e66622b284799b3d0976f1f196b5f2dfc75488cbb4ca188682",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_09",
+      "chunk_id": "synthetic_chunk_09",
+      "doc_id": "synthetic_document_05",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 9. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_09",
+      "chunk_id": "synthetic_chunk_09",
+      "doc_id": "synthetic_document_05",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 9. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 9",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_09",
+      "chunk_id": "synthetic_chunk_09",
+      "doc_id": "synthetic_document_05",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 9. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 9",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_09.png",
+            "bytes": 27817,
+            "sha256": "7c9dbf60abd458b2f14ca2a896f44b5373a3af2f68da29264a05598478cf0f14",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_10",
+      "chunk_id": "synthetic_chunk_10",
+      "doc_id": "synthetic_document_05",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 10. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_10",
+      "chunk_id": "synthetic_chunk_10",
+      "doc_id": "synthetic_document_05",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 10. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 10",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_10",
+      "chunk_id": "synthetic_chunk_10",
+      "doc_id": "synthetic_document_05",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 10. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 10",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_10.png",
+            "bytes": 27817,
+            "sha256": "651001307f625df7137a24e1e3e39a9cb4edc1aa61a65fb671424bb05bb47c50",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_11",
+      "chunk_id": "synthetic_chunk_11",
+      "doc_id": "synthetic_document_06",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 11. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_11",
+      "chunk_id": "synthetic_chunk_11",
+      "doc_id": "synthetic_document_06",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 11. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 11",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_11",
+      "chunk_id": "synthetic_chunk_11",
+      "doc_id": "synthetic_document_06",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 11. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 11",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_11.png",
+            "bytes": 27817,
+            "sha256": "2280a0a7cc0cb8a12aed9a6ee7f892cd50f412aca1e5388e428ff33e39353e4d",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_12",
+      "chunk_id": "synthetic_chunk_12",
+      "doc_id": "synthetic_document_06",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 12. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_12",
+      "chunk_id": "synthetic_chunk_12",
+      "doc_id": "synthetic_document_06",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 12. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 12",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_12",
+      "chunk_id": "synthetic_chunk_12",
+      "doc_id": "synthetic_document_06",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 12. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 12",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_12.png",
+            "bytes": 27817,
+            "sha256": "8e2f9bd2ab931ddceecfa349638019b20fc4dea96cc64bda2540ad4ef3bf0a95",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_13",
+      "chunk_id": "synthetic_chunk_13",
+      "doc_id": "synthetic_document_07",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 13. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_13",
+      "chunk_id": "synthetic_chunk_13",
+      "doc_id": "synthetic_document_07",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 13. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 13",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_13",
+      "chunk_id": "synthetic_chunk_13",
+      "doc_id": "synthetic_document_07",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 13. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 13",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_13.png",
+            "bytes": 27817,
+            "sha256": "22a2f116c70dfe6bc8533942f65ebd1e9369f8f3a445a39d8a44236e6bbc4ec2",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_14",
+      "chunk_id": "synthetic_chunk_14",
+      "doc_id": "synthetic_document_07",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 14. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_14",
+      "chunk_id": "synthetic_chunk_14",
+      "doc_id": "synthetic_document_07",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 14. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 14",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_14",
+      "chunk_id": "synthetic_chunk_14",
+      "doc_id": "synthetic_document_07",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 14. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 14",
+          "header_level": 2,
+          "declared_image_order": [
+            1
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_14.png",
+            "bytes": 27817,
+            "sha256": "72054903e3b8b773600b73246c248c8176a9c869e9b2deea2fe1cbcc58b4c3fc",
+            "declared_order": 1
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_15",
+      "chunk_id": "synthetic_chunk_15",
+      "doc_id": "synthetic_document_08",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 15. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_15",
+      "chunk_id": "synthetic_chunk_15",
+      "doc_id": "synthetic_document_08",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 15. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 15",
+          "header_level": 2,
+          "declared_image_order": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_15",
+      "chunk_id": "synthetic_chunk_15",
+      "doc_id": "synthetic_document_08",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 15. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 15",
+          "header_level": 2,
+          "declared_image_order": [
+            1,
+            2
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_15.png",
+            "bytes": 27817,
+            "sha256": "d65737f07589509c3ba32035decb2a67d213097e49efb561dd9174e92188de28",
+            "declared_order": 1
+          },
+          {
+            "path": "dataset/images/synthetic_diagram_16.png",
+            "bytes": 27817,
+            "sha256": "042f30df27e1b05035ffec1c891a3ae4bd22c43622be4325f64777b20c740603",
+            "declared_order": 2
+          }
+        ]
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_16",
+      "chunk_id": "synthetic_chunk_16",
+      "doc_id": "synthetic_document_08",
+      "split": "test",
+      "condition": "T",
+      "evidence": {
+        "text": "Synthetic evidence chunk 16. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook."
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_16",
+      "chunk_id": "synthetic_chunk_16",
+      "doc_id": "synthetic_document_08",
+      "split": "test",
+      "condition": "TL_struct",
+      "evidence": {
+        "text": "Synthetic evidence chunk 16. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 16",
+          "header_level": 2,
+          "declared_image_order": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "item_id": "synthetic_chunk_16",
+      "chunk_id": "synthetic_chunk_16",
+      "doc_id": "synthetic_document_08",
+      "split": "test",
+      "condition": "TLV",
+      "evidence": {
+        "text": "Synthetic evidence chunk 16. A reviewed intake record moves from an intake node to an approval node and then to an archive node. This fictional text exists only to test the ECM-TQAG data contract and is not copied from a textbook.",
+        "document_structure": {
+          "section_title": "Synthetic section 16",
+          "header_level": 2,
+          "declared_image_order": [
+            1,
+            2
+          ]
+        },
+        "images": [
+          {
+            "path": "dataset/images/synthetic_diagram_17.png",
+            "bytes": 27817,
+            "sha256": "d0d9fc43bca29f7593475a108c63b499a21c5881d924b32cdb36d6732778f452",
+            "declared_order": 1
+          },
+          {
+            "path": "dataset/images/synthetic_diagram_18.png",
+            "bytes": 27817,
+            "sha256": "02161bf5977f8c5f6f095435746bec982e666f8c6ac88e2542f61f30a1777d18",
+            "declared_order": 2
+          }
+        ]
+      }
+    }
+  ]
+}
