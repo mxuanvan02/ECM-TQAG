@@ -1,0 +1,44 @@
+{
+ "evidence": {
+  "cap_overrun_calls": 8,
+  "declared_census_call_cap": 144,
+  "discordant_duplicate_pairs": 4,
+  "distinct_task_ids": 84,
+  "duplicate_pairs_identical_idempotency_key": 68,
+  "duplicate_pairs_identical_payload_sha256": 68,
+  "duplicated_task_ids": 68,
+  "known_reported_cost_usd": 0.031373121,
+  "ledger_started": 152,
+  "ledger_terminal": 152,
+  "max_concurrent_open_calls": 2,
+  "retained_record_attribution": {
+   "failed_record_unattributable": 23,
+   "first_attempt": 12,
+   "second_attempt": 33
+  },
+  "usd_hard_cap": 10.0
+ },
+ "ledger_self_block": "RunLedger now refuses to resume this ledger (BLOCKED_RESUME:terminal_after_success), which is the correct fail-closed behaviour and independently prevents reuse of this run directory.",
+ "not_done": [
+  "No record was edited, deleted, or re-labeled.",
+  "No retry, repair, or replacement call was issued.",
+  "No ROUND2_REPORT.json was produced from contaminated records."
+ ],
+ "offline_reconstruction_generation_gate_per_arm_of16": {
+  "direct": 5,
+  "ecm_full": 9,
+  "structured_no_contract": 4
+ },
+ "offline_reconstruction_note": "A prespecified, outcome-independent first-attempt-per-task re-validation of the generation gate is recorded as a descriptive diagnostic only. It is NOT a study result: the hard-validity endpoint requires judge calls that were never made for 60 cells.",
+ "root_cause": "run_round2_census.py --phase census was executed concurrently by two processes. The task-record guard is a non-atomic `if path.exists()` test followed by a later write, and RunLedger's cap/idempotency checks are guarded only by a threading.Lock (per-process), not an inter-process lock. Both processes therefore reserved and issued the same frozen attempts.",
+ "run": "round2_exploratory_census_20260815T020000Z",
+ "schema": "ecm-tqag.round2.contamination-seal.v1",
+ "scope": "round-2 exploratory census ONLY (phase: census). Round-1 records, the v3.9 canonical freeze, and the manuscript are untouched and unaffected.",
+ "status": "VOID_CONTAMINATED",
+ "ts_utc": "2026-08-14T19:52:00Z",
+ "why_void": [
+  "Retained per-task outcomes are not a deterministic function of retained evidence: 4 duplicate pairs disagree on the gate outcome, so which record survived depends on process scheduling.",
+  "The frozen census call cap of 144 was exceeded (152 attempts), breaking the run's own accounting contract.",
+  "Judge attempts were conditioned on race-determined generation records, so judge coverage (60 NOT_ATTEMPTED) is itself selection-contaminated and cannot be repaired offline."
+ ]
+}

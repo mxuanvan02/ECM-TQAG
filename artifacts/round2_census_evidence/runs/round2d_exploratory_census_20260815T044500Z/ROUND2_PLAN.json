@@ -1,0 +1,7 @@
+{
+ "frame": "A_same_16_chunks",
+ "generation_tasks": 48,
+ "judge_tasks": 96,
+ "plan_sha256": "40c10acd54b41d4341bf97ced5d66ef1f8c8e0aeab0ccb9b3b142726e7ffd3e1",
+ "schema": "ecm-tqag.round2d.census-plan.v1"
+}

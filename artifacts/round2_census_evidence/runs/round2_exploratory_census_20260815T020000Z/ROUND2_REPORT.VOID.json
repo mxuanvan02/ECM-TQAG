@@ -1,0 +1,42 @@
+{
+ "file": "ROUND2_REPORT.json",
+ "quantities_that_are_arbitrary_draws": {
+  "generation_pass_per_arm": {
+   "direct": [
+    5,
+    5
+   ],
+   "ecm_full": [
+    8,
+    9
+   ],
+   "structured_no_contract": [
+    4,
+    5
+   ]
+  },
+  "hard_valid_per_arm": {
+   "direct": [
+    0,
+    0
+   ],
+   "ecm_full": [
+    0,
+    1
+   ],
+   "structured_no_contract": [
+    0,
+    0
+   ]
+  }
+ },
+ "reason": "Aggregated from concurrency-contaminated task records; see CONTAMINATION_SEAL_V2.json.",
+ "schema": "ecm-tqag.round2.void-notice.v1",
+ "seal": {
+  "file": "CONTAMINATION_SEAL_V2.json",
+  "sha256": "04ff429d3dd9907ce3ba8a0acaca151d707c91fe0f6bb6944e9feef5804eca18"
+ },
+ "sha256": "1e82d18318c968325eabba64866eaf65c0585bc63a92ff40c16a71fc5e8ca136",
+ "status": "VOID_DO_NOT_CITE",
+ "ts_utc": "2026-08-14T19:56:00Z"
+}

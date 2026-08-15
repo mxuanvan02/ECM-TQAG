@@ -1,0 +1,18 @@
+{
+ "cases": [
+  "qwen_generation_round2",
+  "claude-opus-5_judge_probe",
+  "gpt-5_6-sol_judge_probe"
+ ],
+ "judge_probe": "real_judge_request_over_qualification_chunk",
+ "judges": [
+  "claude-opus-5",
+  "gpt-5.6-sol"
+ ],
+ "plan_sha256": "40c10acd54b41d4341bf97ced5d66ef1f8c8e0aeab0ccb9b3b142726e7ffd3e1",
+ "schema": "ecm-tqag.round2d.qualification-plan.v1",
+ "superseded_judges": [
+  "claude-sonnet-5",
+  "gpt-5.6-terra"
+ ]
+}
