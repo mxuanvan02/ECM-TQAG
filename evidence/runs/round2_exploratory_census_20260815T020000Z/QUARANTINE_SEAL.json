@@ -1,0 +1,37 @@
+{
+ "detected_utc": "2026-08-14T19:56:00Z",
+ "disposition": "Retained byte-for-byte for audit. Not used for any manuscript number. Round-1 published evidence is untouched.",
+ "facts": {
+  "call_started": 152,
+  "call_terminal": 152,
+  "calls_overlap_in_time": true,
+  "distinct_task_ids": 84,
+  "duplicate_pairs_byte_identical": 0,
+  "duplicate_pairs_with_distinct_response_sha256": 68,
+  "generation_tasks_whose_duplicate_calls_disagreed": 2,
+  "judge_tasks_whose_duplicate_calls_disagreed": 2,
+  "known_reported_cost_usd": 0.031373121,
+  "start_gap_seconds_max": 3.414,
+  "start_gap_seconds_median": 0.641,
+  "start_gap_seconds_min": 0.001,
+  "tasks_with_one_paid_call": 16,
+  "tasks_with_two_paid_calls": 68
+ },
+ "observed_before_quarantine": "Aggregate round-2 counts were computed and inspected before the defect was found; the re-execution is therefore declared as a second exploratory attempt, not a fresh confirmatory run.",
+ "reason": "concurrency_defect_two_writers_duplicate_paid_calls",
+ "root_cause": "RunLedger idempotency/terminal_after_success guard is per-process in-memory; two concurrent census processes shared one ledger file and neither observed the other's CALL_STARTED.",
+ "round1_unaffected": {
+  "call_started": 76,
+  "call_terminal": 75,
+  "distinct_task_ids": 75,
+  "duplicated": 0
+ },
+ "run": "round2_exploratory_census_20260815T020000Z",
+ "schema": "ecm-tqag.round2.quarantine-seal.v1",
+ "verdict": "QUARANTINED_NOT_EVIDENCE",
+ "why_invalid": [
+  "Protocol requires retry=0, no replacement: 68 tasks received a second paid attempt.",
+  "Recorded task outcome is whichever concurrent writer won the race, not a single prescribed attempt.",
+  "Double sampling inflates apparent pass rate; 4 tasks demonstrably disagreed between their two calls."
+ ]
+}

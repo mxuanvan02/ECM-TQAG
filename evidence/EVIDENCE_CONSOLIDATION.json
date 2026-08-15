@@ -1,0 +1,152 @@
+{
+ "schema": "ecm-tqag.round2.evidence-consolidation.v1",
+ "generated_utc": "2026-08-14T21:30:00Z",
+ "primary_evidence_run": "successor_full_census_20260814T213500Z",
+ "reported_replication_run": "round2e_exploratory_census_20260815T051500Z",
+ "rounds": [
+  {
+   "round": "1 (primary, published)",
+   "run": "successor_full_census_20260814T213500Z",
+   "status": "VALID_EVIDENCE",
+   "judges": [
+    "claude-sonnet-5",
+    "gpt-5.6-terra"
+   ],
+   "gate_pass": {
+    "ecm_full": 6,
+    "direct": 5,
+    "structured_no_contract": 3
+   },
+   "hard_valid": {
+    "direct": 1,
+    "ecm_full": 0,
+    "structured_no_contract": 0
+   },
+   "known_cost_usd": 0.018548556,
+   "note": "audited end-to-end; all manuscript primary numbers reproduce from this run"
+  },
+  {
+   "round": "2 (quarantined)",
+   "run": "round2_exploratory_census_20260815T020000Z",
+   "status": "QUARANTINED_NOT_EVIDENCE",
+   "judges": [
+    "claude-sonnet-5",
+    "gpt-5.6-terra"
+   ],
+   "gate_pass": null,
+   "hard_valid": null,
+   "known_cost_usd": 0.031373121,
+   "note": "two concurrent writers -> 152 paid calls for 84 tasks; 68 tasks double-called, 4 with disagreeing outcomes; violates zero-retry. Root cause: ledger dedup is in-process only. Fixed by flock run lock + O_EXCL per-task claim."
+  },
+  {
+   "round": "2b (judge stage voided)",
+   "run": "round2b_exploratory_census_20260815T030000Z",
+   "status": "GENERATION_VALID_ENDPOINT_VOID",
+   "judges": [
+    "claude-sonnet-5",
+    "gpt-5.6-terra"
+   ],
+   "gate_pass": {
+    "ecm_full": 8,
+    "direct": 5,
+    "structured_no_contract": 5
+   },
+   "hard_valid": null,
+   "known_cost_usd": 0.018222503,
+   "note": "clean ledger (84/84, zero dup). Judge route HTTP 503 on 17/18 calls (provider outage, zero cost); only 1/18 candidates got both judges, so the endpoint was not measurable. Not a method result."
+  },
+  {
+   "round": "2c (replication, substituted judges)",
+   "run": "round2c_exploratory_census_20260815T041500Z",
+   "status": "VALID_EVIDENCE",
+   "judges": [
+    "claude-opus-5",
+    "gpt-5.6-sol"
+   ],
+   "gate_pass": {
+    "direct": 5,
+    "ecm_full": 7,
+    "structured_no_contract": 6
+   },
+   "hard_valid": {
+    "direct": 0,
+    "ecm_full": 0,
+    "structured_no_contract": 0
+   },
+   "known_cost_usd": 0.018436353,
+   "note": "clean ledger, 36/36 judge calls HTTP 200. Superseded as the reported replication by round 2e, which additionally repairs defect D3."
+  },
+  {
+   "round": "2d (invalidated)",
+   "run": "round2d_exploratory_census_20260815T044500Z",
+   "status": "INVALID_FOR_ARM_COMPARISON",
+   "judges": [
+    "claude-opus-5",
+    "gpt-5.6-sol"
+   ],
+   "gate_pass": {
+    "ecm_full": 15,
+    "direct": 5,
+    "structured_no_contract": 6
+   },
+   "hard_valid": {
+    "ecm_full": 0,
+    "direct": 1,
+    "structured_no_contract": 0
+   },
+   "known_cost_usd": 0.020902661,
+   "note": "clean ledger, but a ~1000-char clarification appended identically to all arms induced arm-dependent decoder degeneration (whitespace run then EOS): 7/16 direct, 4/16 structured, 0/16 ECM. The 15-vs-5-vs-6 contrast measures the prompt edit, not the intervention. Sealed VALIDITY_SEAL.json."
+  },
+  {
+   "round": "2e (reported replication)",
+   "run": "round2e_exploratory_census_20260815T051500Z",
+   "status": "VALID_EVIDENCE",
+   "judges": [
+    "claude-opus-5",
+    "gpt-5.6-sol"
+   ],
+   "gate_pass": {
+    "direct": 7,
+    "ecm_full": 12,
+    "structured_no_contract": 10
+   },
+   "hard_valid": {
+    "direct": 0,
+    "ecm_full": 1,
+    "structured_no_contract": 1
+   },
+   "known_cost_usd": 0.01932255,
+   "note": "clean ledger (106/106, zero dup/orphan/retry), 58/58 judge calls HTTP 200. Pre-declared validity check PASSED: 0/16 degenerate responses in every arm. This is the replication reported in the manuscript."
+  }
+ ],
+ "defects": [
+  {
+   "id": "D1",
+   "kind": "our specification",
+   "desc": "verbatim gate rejected NFC/whitespace variants and in-order elisions",
+   "fix": "normalize before substring test; elision tolerance reported separately",
+   "effect": "3 of 32 round-1 failures were artefacts; 17/18 round-2 passes were still exact_verbatim, so the relaxation contributed little"
+  },
+  {
+   "id": "D2",
+   "kind": "corpus",
+   "desc": "frame selected image-BEARING chunks, not image-NECESSARY ones; source text usually self-sufficient",
+   "fix": "not fixable by prompt; needs a new frame",
+   "effect": "binding constraint on the endpoint in every round (round 2e: 43 of 58 judge records scored visual_necessity=1)"
+  },
+  {
+   "id": "D3",
+   "kind": "our specification",
+   "desc": "correct_option documented nowhere as 0-based; 0..3 range and answer==options[co] live only in the validator block",
+   "fix": "state the convention in the prompt; gate left UNCHANGED",
+   "effect": "14 of 24 round-2c MCQ attempts used 1-based indices; repairing the statement raised admission in every arm and shrank the ECM margin from 6-vs-3 to 12-vs-10"
+  }
+ ],
+ "total_known_cost_usd": 0.126805744,
+ "unchanged_throughout": [
+  "deterministic gate G (schema exactness, verbatim substring, image-hash census membership, MCQ answer==options[correct_option] byte-exact)",
+  "derived endpoint V (both judges valid, no critical provenance violation, min(evidence, visual necessity, answerability) >= 3)",
+  "judge prompt, seven-field schema, 1-5 scale, arm-blind candidate coding",
+  "ITT denominator 16 per arm; zero retry, fallback, replacement; no response repair"
+ ]
+}

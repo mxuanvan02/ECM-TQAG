@@ -1,0 +1,222 @@
+{
+ "cost_accounting": {
+  "census_known_reported_cost_usd": 0.126805744,
+  "note": "Judge calls routed through the local proxy report no cost; these are retained as unknown and never imputed as zero.",
+  "qualification_known_reported_cost_usd": 0.00232999,
+  "total_known_reported_cost_usd": 0.129135734,
+  "unknown_cost_calls": 278
+ },
+ "created_utc": "2026-08-14T21:30:00Z",
+ "defects_found_in_our_own_instrument": {
+  "D1": "over-strict verbatim gate (Unicode/whitespace variants, in-order elision) - repaired in prompt-independent validator",
+  "D2": "corpus is text-sufficient; images largely redundant, capping visual_necessity - NOT repairable by prompt; Frame B infeasible in this sandbox (only the 16 census chunks are materialised)",
+  "D3": "correct_option indexing convention stated nowhere in the frozen prompt contract while the verifier required 0-based - repaired by prompt statement only, gate unchanged",
+  "D4 (process)": "census harness had no cross-process mutual exclusion, permitting duplicate paid calls"
+ },
+ "gate_never_relaxed": true,
+ "manuscript_numbers_source": {
+  "main_result": "round 1",
+  "robustness_subsection": "round 2e"
+ },
+ "primary_evidence_run": "successor_full_census_20260814T213500Z",
+ "purpose": "Single consolidated record of every paid round executed in this session, its validity status, and why. Rounds marked other than VALID_EVIDENCE must not be cited as results.",
+ "reported_replication_run": "round2e_exploratory_census_20260815T051500Z",
+ "rounds": [
+  {
+   "gate_pass_per_arm": {
+    "direct": 5,
+    "ecm_full": 6,
+    "structured_no_contract": 3
+   },
+   "hard_valid_per_arm": {
+    "direct": 1,
+    "ecm_full": 0,
+    "structured_no_contract": 0
+   },
+   "instrument": "frozen round-1 contract",
+   "judges": [
+    "claude-sonnet-5",
+    "gpt-5.6-terra"
+   ],
+   "ledger": {
+    "call_started": 76,
+    "call_terminal": 75,
+    "distinct_tasks": 75,
+    "duplicate_paid_calls": 0,
+    "known_reported_cost_usd": 0.018548556,
+    "unknown_cost_calls": 28
+   },
+   "notes": "Independently re-audited this session: all 15 judge means, 32/1/1 failure taxonomy, cost and qualification reproduce exactly from sealed records.",
+   "role": "primary evidence reported as the main result in the manuscript",
+   "round": "1",
+   "run": "successor_full_census_20260814T213500Z",
+   "status": "VALID_EVIDENCE"
+  },
+  {
+   "defect": "Two concurrent census processes issued 2 paid calls for each of 68 tasks (same idempotency key, overlapping CALL_STARTED). The transport de-duplicates in-process only, so neither writer saw the other. Recorded outcome for those tasks was a last-writer-wins race; 2 generation and 2 judge tasks had duplicate calls that DISAGREED.",
+   "ledger": {
+    "call_started": 152,
+    "call_terminal": 152,
+    "distinct_tasks": 84,
+    "duplicate_paid_calls": 68,
+    "known_reported_cost_usd": 0.031373121,
+    "unknown_cost_calls": 68
+   },
+   "remediation": "flock+O_EXCL run lock and O_EXCL per-task claim added; verified a second writer fails closed.",
+   "role": "must not be used for any claim",
+   "round": "2",
+   "run": "round2_exploratory_census_20260815T020000Z",
+   "seals": [
+    "QUARANTINE_SEAL.json",
+    "CONTAMINATION_SEAL.json",
+    "CONTAMINATION_SEAL_V2.json"
+   ],
+   "status": "QUARANTINED_NOT_EVIDENCE"
+  },
+  {
+   "defect": "Provider outage: claude-sonnet-5 returned HTTP 503 'No available accounts' on 17 of 18 judge calls (zero cost, zero retry), so only 1 of 18 candidates received both judges.",
+   "gate_pass_per_arm": {
+    "direct": 5,
+    "ecm_full": 8,
+    "structured_no_contract": 5
+   },
+   "hard_valid_per_arm": null,
+   "judges": [
+    "claude-sonnet-5",
+    "gpt-5.6-terra"
+   ],
+   "ledger": {
+    "call_started": 84,
+    "call_terminal": 84,
+    "distinct_tasks": 84,
+    "duplicate_paid_calls": 0,
+    "known_reported_cost_usd": 0.018222503,
+    "unknown_cost_calls": 36
+   },
+   "role": "generation stage informative; hard-valid endpoint NOT measured",
+   "round": "2b",
+   "run": "round2b_exploratory_census_20260815T030000Z",
+   "seals": [
+    "ENDPOINT_VALIDITY_SEAL.json"
+   ],
+   "status": "GENERATION_VALID_ENDPOINT_VOID"
+  },
+  {
+   "gate_pass_per_arm": {
+    "direct": 5,
+    "ecm_full": 7,
+    "structured_no_contract": 6
+   },
+   "hard_valid_per_arm": {
+    "direct": 0,
+    "ecm_full": 0,
+    "structured_no_contract": 0
+   },
+   "instrument": "D1 repaired contract (normalisation + in-order elision), gate otherwise unchanged",
+   "judges": [
+    "claude-opus-5",
+    "gpt-5.6-sol"
+   ],
+   "ledger": {
+    "call_started": 84,
+    "call_terminal": 84,
+    "distinct_tasks": 84,
+    "duplicate_paid_calls": 0,
+    "known_reported_cost_usd": 0.018436353,
+    "unknown_cost_calls": 36
+   },
+   "notes": "Re-derivation of its 24 MCQ attempts discovered defect D3: 14 used 1-based correct_option against a 0-based verifier; the convention is stated nowhere in the frozen prompt contract.",
+   "role": "internal replication under substituted judges; superseded as the reported replication by 2e",
+   "round": "2c",
+   "run": "round2c_exploratory_census_20260815T041500Z",
+   "status": "VALID_EVIDENCE"
+  },
+  {
+   "defect": "The D3 fix was mis-designed: a ~1000-char clarification appended identically to all three arms induced arm-dependent decoder degeneration (valid JSON prefix, hundreds of whitespace chars, EOS without closing brace) in 7/16 direct and 4/16 structured but 0/16 ECM, inflating the ECM margin to 15-vs-5-vs-6.",
+   "gate_pass_per_arm": {
+    "direct": 5,
+    "ecm_full": 15,
+    "structured_no_contract": 6
+   },
+   "hard_valid_per_arm": {
+    "direct": 1,
+    "ecm_full": 0,
+    "structured_no_contract": 0
+   },
+   "judges": [
+    "claude-opus-5",
+    "gpt-5.6-sol"
+   ],
+   "ledger": {
+    "call_started": 100,
+    "call_terminal": 100,
+    "distinct_tasks": 100,
+    "duplicate_paid_calls": 0,
+    "known_reported_cost_usd": 0.020902661,
+    "unknown_cost_calls": 52
+   },
+   "notes": "Sensitivity: closing the 11 degenerate responses with '}}' recovers them syntactically but all still FAIL the unchanged gate, so the arm gap was not produced by the pathology alone.",
+   "role": "must not be used for any arm contrast",
+   "round": "2d",
+   "run": "round2d_exploratory_census_20260815T044500Z",
+   "seals": [
+    "VALIDITY_SEAL.json"
+   ],
+   "status": "INVALID_FOR_ARM_COMPARISON"
+  },
+  {
+   "gate_pass_per_arm": {
+    "direct": 7,
+    "ecm_full": 12,
+    "structured_no_contract": 10
+   },
+   "hard_valid_per_arm": {
+    "direct": 0,
+    "ecm_full": 1,
+    "structured_no_contract": 1
+   },
+   "instrument": "D1 repaired contract + minimal arm-neutral D3 statement (~180 chars); deterministic gate UNCHANGED",
+   "judge_means_by_arm": {
+    "direct": {
+     "answerability": 3.929,
+     "evidence_correctness": 4.429,
+     "pedagogical_value": 2.571,
+     "vietnamese_language": 4.786,
+     "visual_necessity": 1.214
+    },
+    "ecm_full": {
+     "answerability": 4.417,
+     "evidence_correctness": 4.125,
+     "pedagogical_value": 2.958,
+     "vietnamese_language": 4.708,
+     "visual_necessity": 2.0
+    },
+    "structured_no_contract": {
+     "answerability": 4.25,
+     "evidence_correctness": 4.15,
+     "pedagogical_value": 2.65,
+     "vietnamese_language": 4.6,
+     "visual_necessity": 1.5
+    }
+   },
+   "judges": [
+    "claude-opus-5",
+    "gpt-5.6-sol"
+   ],
+   "ledger": {
+    "call_started": 106,
+    "call_terminal": 106,
+    "distinct_tasks": 106,
+    "duplicate_paid_calls": 0,
+    "known_reported_cost_usd": 0.01932255,
+    "unknown_cost_calls": 58
+   },
+   "prospective_validity_check": "PASS - 0/16 whitespace-degenerate responses in every arm (vs 7/16 and 4/16 in 2d); declared in ROUND2E_ADDENDUM.md before execution",
+   "role": "replication reported in the manuscript (Instrument robustness)",
+   "round": "2e",
+   "run": "round2e_exploratory_census_20260815T051500Z",
+   "status": "VALID_EVIDENCE"
+  }
+ ],
+ "schema": "ecm-tqag.round-ledger.v1"
+}

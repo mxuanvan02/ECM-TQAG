@@ -1,0 +1,52 @@
+{
+  "distinct_tasks": 84,
+  "tasks_with_duplicate_paid_calls": 68,
+  "total_paid_calls": 152,
+  "generation_duplicate_concordance": {
+    "agree:FAIL": 19,
+    "agree:PASS": 15,
+    "DISAGREE:FAIL/PASS": 1,
+    "DISAGREE:PASS/FAIL": 1
+  },
+  "judge_duplicate_concordance": {
+    "agree:PASS": 30,
+    "DISAGREE:PASS/undecodable": 2
+  },
+  "recorded_vs_calls": {
+    "generation:concordant_recorded_TERMINAL_FAILURE": 19,
+    "generation:concordant_recorded_COMPLETE": 15,
+    "generation:discordant_calls_recorded_COMPLETE": 1,
+    "generation:discordant_calls_recorded_TERMINAL_FAILURE": 1,
+    "judging:concordant_recorded_COMPLETE": 29,
+    "judging:discordant_calls_recorded_TERMINAL_FAILURE": 2,
+    "judging:concordant_recorded_TERMINAL_FAILURE": 1
+  },
+  "discordant_generation_tasks": [
+    {
+      "task_id": "generation::r2::24. LUAT TO TUNG DAN SU VN_chunk_4::ecm_full",
+      "call_outcomes": [
+        [
+          "FAIL",
+          "QUOTE_NON_VERBATIM"
+        ],
+        [
+          "PASS",
+          "normalized_verbatim"
+        ]
+      ]
+    },
+    {
+      "task_id": "generation::r2::40. TAM LY HOC TU PHAP_chunk_74::structured_no_contract",
+      "call_outcomes": [
+        [
+          "PASS",
+          "exact_verbatim"
+        ],
+        [
+          "FAIL",
+          "QUOTE_NON_VERBATIM"
+        ]
+      ]
+    }
+  ]
+}

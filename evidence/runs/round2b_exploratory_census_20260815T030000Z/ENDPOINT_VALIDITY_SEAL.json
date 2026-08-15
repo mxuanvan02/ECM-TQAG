@@ -1,0 +1,63 @@
+{
+ "cost": {
+  "failed_503_calls_billed": 0,
+  "known_reported_usd": 0.018222503,
+  "unknown_cost_calls": 36
+ },
+ "generation_stage": {
+  "attempts": 48,
+  "complete": 18,
+  "pass_per_arm": {
+   "direct": 5,
+   "ecm_full": 8,
+   "structured_no_contract": 5
+  },
+  "quote_classes_on_pass": {
+   "exact_verbatim": 18
+  },
+  "round1_pass_per_arm": {
+   "direct": 5,
+   "ecm_full": 6,
+   "structured_no_contract": 3
+  },
+  "route": "openrouter qwen/qwen3-vl-8b-instruct",
+  "status": "VALID",
+  "terminal_failure": 30
+ },
+ "judge_stage": {
+  "candidates_with_both_judges": 1,
+  "candidates_with_one_judge": 17,
+  "claude_sonnet_5": {
+   "OK": 1,
+   "http_503": 17,
+   "provider_message": "No available accounts / token quota exhausted (upstream)"
+  },
+  "gpt_5_6_terra": {
+   "OK": 18
+  },
+  "status": "VOID_PROVIDER_OUTAGE"
+ },
+ "ledger_integrity": {
+  "distinct_task_ids": 84,
+  "duplicate_task_ids": 0,
+  "orphans": 0,
+  "paid_calls": 84,
+  "retry_count_max": 0,
+  "verdict": "CLEAN_single_writer_run_lock_plus_task_claims_enforced"
+ },
+ "next_step_requires": "judge route availability, then a fresh judge-only phase under a new authorization; generation records stay frozen",
+ "no_retry_performed": true,
+ "primary_endpoint": {
+  "hard_valid_per_arm_recorded": {
+   "direct": 0,
+   "ecm_full": 0,
+   "structured_no_contract": 0
+  },
+  "interpretation": "NOT_MEASURED",
+  "reason": "17 of 18 candidates never received a second judge because the Claude route returned HTTP 503 for reasons external to the method. Reporting 0/16 as an ITT method outcome would attribute a provider outage to the intervention.",
+  "usable_as_evidence": false
+ },
+ "run": "round2b_exploratory_census_20260815T030000Z",
+ "schema": "ecm-tqag.round2b.endpoint-validity-seal.v1",
+ "sealed_utc": "2026-08-14T20:08:15Z"
+}

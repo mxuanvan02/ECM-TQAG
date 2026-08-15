@@ -1,0 +1,97 @@
+{
+ "eye_verified_shortlist": {
+  "by_label": {
+   "flowchart_quy_trinh": 3,
+   "so_do_khac": 10,
+   "so_do_to_chuc_cay": 5
+  },
+  "diagram_pages": 18,
+  "with_arrows": 15
+ },
+ "full_book_census": {
+  "books": {
+   "17,18. LUAT HIEN PHAP VIET NAM": {
+    "ci95": [
+     0.0003579689515744111,
+     0.010630522004936405
+    ],
+    "diagram_pages": 2,
+    "labels": {
+     "bang_bieu": 4,
+     "so_do_to_chuc_cay": 2,
+     "van_ban_thuan": 671
+    },
+    "pages_classified": 677,
+    "rate": 0.0029542097488921715
+   },
+   "21. LUAT HANH CHINH VIET NAM": {
+    "ci95": [
+     0.0,
+     0.007918652208497278
+    ],
+    "diagram_pages": 0,
+    "labels": {
+     "van_ban_thuan": 464
+    },
+    "pages_classified": 464,
+    "rate": 0.0
+   },
+   "22. LUAT TO TUNG HANH CHINH VIET NAM": {
+    "ci95": [
+     5.6135470873846794e-05,
+     0.012291543848125369
+    ],
+    "diagram_pages": 1,
+    "labels": {
+     "so_do_khac": 1,
+     "van_ban_thuan": 450
+    },
+    "pages_classified": 451,
+    "rate": 0.0022172949002217295
+   },
+   "28. LUAT TO TUNG HINH SU VIET NAM": {
+    "ci95": [
+     4.4030001058510325e-05,
+     0.009651381901424875
+    ],
+    "diagram_pages": 1,
+    "labels": {
+     "so_do_khac": 1,
+     "van_ban_thuan": 574
+    },
+    "pages_classified": 575,
+    "rate": 0.0017391304347826088
+   }
+  },
+  "ci95": [
+   0.0005031592424768878,
+   0.004719357350589663
+  ],
+  "parse_err_unresolved": 0,
+  "rate": 0.0018458698661744347,
+  "total_diagram_pages": 4,
+  "total_pages_classified": 2167
+ },
+ "interval": "Clopper-Pearson exact, beta inversion, cross-checked vs project impl at n=16 (max abs diff 4.2e-16)",
+ "method": "per-page VLM label; diagram = {so_do_khac, so_do_to_chuc_cay, flowchart_quy_trinh}",
+ "prefilter_candidate_screening": {
+  "candidate_pages": 437,
+  "ci95": [
+   0.048704858507320856,
+   0.0991823168362104
+  ],
+  "diagram_pages": 31,
+  "labels": {
+   "anh_khac": 1,
+   "bang_bieu": 33,
+   "bieu_mau": 47,
+   "flowchart_quy_trinh": 8,
+   "so_do_khac": 16,
+   "so_do_to_chuc_cay": 7,
+   "van_ban_thuan": 325
+  },
+  "precision": 0.07093821510297482
+ },
+ "schema": "ecm-tqag.corpus-prevalence.v1",
+ "source": "TQA_Pipeline VLM page classification (independent prior audit)"
+}

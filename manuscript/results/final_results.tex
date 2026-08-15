@@ -1,0 +1,122 @@
+\section{Results}
+
+All 48 generation attempts of the $16\times 3$ frame were executed, and
+the 14 candidates admitted by the gate $G$ were referred to both judges,
+giving 28 judging attempts of which 27 returned a schema-valid record; the
+remaining attempt was a terminal failure and is retained as such.
+
+\subsection{Gate admission}
+Table~\ref{tab:gen_rates} reports per-arm admission under
+\eqref{eq:gate}. The ECM contract admitted the most candidates and the
+structured no-contract prompt the fewest.
+
+\begin{table}[!t]
+\caption{Gate admission per arm, 16 chunks each.}
+\label{tab:gen_rates}
+\centering
+\begin{tabular}{lcc}
+\toprule
+Arm & Admitted & Rate \\
+\midrule
+ECM full & 6/16 & 0.375 \\
+Direct & 5/16 & 0.313 \\
+Structured no-contract & 3/16 & 0.188 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Primary endpoint}
+Under the derived endpoint \eqref{eq:endpoint}, a single candidate across
+all arms was valid, in the direct arm on a short-answer chunk whose
+source text was self-contained. Table~\ref{tab:hard_valid} gives the
+intention-to-test yields with Clopper--Pearson intervals.
+
+\begin{table}[!t]
+\caption{Intention-to-test valid yield per arm, $n=16$.}
+\label{tab:hard_valid}
+\centering
+\begin{tabular}{lccc}
+\toprule
+Arm & Valid & Rate & 95\% CP CI \\
+\midrule
+ECM full & 0/16 & 0.000 & [0.000, 0.206] \\
+Direct & 1/16 & 0.063 & [0.002, 0.302] \\
+Structured no-contract & 0/16 & 0.000 & [0.000, 0.206] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Confirmatory contrasts}
+Neither exact McNemar contrast rejected its null under Holm control
+(Table~\ref{tab:mcnemar}). The one discordant pair favoured the direct
+arm; the ECM versus structured contrast had no discordant pair, so
+$p=1.000$ by definition.
+
+\begin{table}[!t]
+\caption{Exact McNemar contrasts, Holm-adjusted at $\alpha=0.05$.}
+\label{tab:mcnemar}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Contrast & Discordant & $p$ & Holm & Reject \\
+\midrule
+ECM vs.\ Direct & 1 & 1.000 & 0.025 & No \\
+ECM vs.\ Structured & 0 & 1.000 & 0.050 & No \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Failure structure}
+Of the 34 terminal generation failures, 32 violated the output contract,
+1 returned unparseable content, and 1 returned no response. The dominant
+violation was a quotation drawn from text visible in the page image but
+absent from $T_c$, which fails $q\sqsubseteq T_c$; the second most
+frequent was a multiple-choice answer reported as an option letter
+rather than the option text required by $\mu$.
+
+\subsection{Judged vectors}
+Table~\ref{tab:judge_scores} reports mean judged scores over admitted
+candidates. These are conditional on admission and exploratory.
+
+\begin{table}[!t]
+\caption{Mean judged scores by arm, admitted candidates only.}
+\label{tab:judge_scores}
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+Dimension & ECM & Direct & Struct. \\
+\midrule
+Evidence correctness & 4.18 & 3.80 & 4.33 \\
+Visual necessity & 2.45 & 1.80 & 2.67 \\
+Answerability & 4.64 & 4.80 & 4.67 \\
+Pedagogical value & 3.09 & 3.20 & 3.33 \\
+Vietnamese language & 4.73 & 4.50 & 4.83 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Evidence correctness, answerability, and language quality were high in
+every arm, whereas visual necessity was low throughout, with arm means
+between 1.80 and 2.67. Judges flagged a critical provenance violation in
+two records.
+
+\subsection{Instrument robustness}
+\label{sec:robustness}
+A prospective second round re-executed the same frame after two changes
+made for measurement validity, neither of which alters $G$ or $V$: the
+judge families were substituted, because a provider outage had voided an
+intervening judging stage, and the prompt was corrected to state the
+option-indexing convention that the frozen contract left unspecified.
+Re-deriving the retained responses showed that 14 of 24 multiple-choice
+attempts had used one-based indices against a verifier requiring
+zero-based ones, so part of the round-one failure mass was an artefact of
+our specification rather than a generator limit.
+
+Under the corrected specification, admission rose in every arm, to 12/16
+(ECM), 7/16 (direct), and 10/16 (structured no-contract), and the ECM
+margin over the structured prompt narrowed from 6-vs-3 to 12-vs-10. The
+endpoint stayed low at 1/16, 0/16, and 1/16 respectively, with one and
+two discordant pairs and $p=1.000$ for both contrasts. Over 58 judged
+assessments, visual necessity remained the binding constraint, with arm
+means of 2.00, 1.21, and 1.50 and no critical provenance violation.

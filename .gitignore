@@ -1,0 +1,27 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+
+# LaTeX build artefacts
+*.aux
+*.bbl.bak
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+_build/
+
+# Never publish: credentials, raw provider responses, copyrighted source material
+.env
+.env.*
+*.key
+*credential*
+**/state/
+**/responses/
+**/CALL_LEDGER.jsonl
+**/dataset_manifest.json
+**/images/
+*.jpeg
+*.jpg
