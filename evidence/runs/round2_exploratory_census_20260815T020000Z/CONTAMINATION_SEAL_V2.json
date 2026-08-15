@@ -1,1 +1,201 @@
-{"correction_to_v1":"Seal v1 asserted 'No ROUND2_REPORT.json was produced from contaminated records.' That statement was FALSE. ROUND2_REPORT.json was written at 2026-08-15T02:49 local by round2/aggregate_round2.py (offline aggregation; no provider call, no credential read, no task-record mutation) BEFORE seal v1 was written at 02:53. The report exists and carries no contamination annotation of its own.","counterfactual_bound":{"attribution_combinations_enumerated":16,"discordant_generation_tasks":["generation::r2::24. LUAT TO TUNG DAN SU VN_chunk_4::ecm_full","generation::r2::40. TAM LY HOC TU PHAP_chunk_74::structured_no_contract"],"discordant_judge_tasks":["judge::r2::34.LUAT THUONG MAI QUOC TE_chunk_131::direct::claude-sonnet-5","judge::r2::4. LICH SU NNUOC & PLUAT VIET NAM_chunk_14::ecm_full::claude-sonnet-5"],"duplicated_tasks":68,"generation_pass_per_arm_range_of16":{"direct":[5,5],"ecm_full":[8,9],"structured_no_contract":[4,5]},"hard_valid_per_arm_range_of16":{"direct":[0,0],"ecm_full":[0,1],"structured_no_contract":[0,0]},"interpretation":"Every quantity in ROUND2_REPORT.json that depends on a duplicated task is an arbitrary selection from the ranges above. In at least one attribution the counterfactual is not even computable offline, because judge calls were never issued for a cell whose generation attempt passed but lost the write race. The endpoint therefore cannot be repaired from retained evidence.","read_only":true,"reported_in_ROUND2_REPORT":{"generation_pass_per_arm":{"direct":5,"ecm_full":9,"structured_no_contract":4},"hard_valid_per_arm":{"direct":0,"ecm_full":1,"structured_no_contract":0}},"run":"round2_exploratory_census_20260815T020000Z","schema":"ecm-tqag.round2.counterfactual-bound.v1","unobservable_cells_range":[0,1]},"evidence":{"all_http_200":true,"all_retry_count_zero":true,"cap_overrun_calls":8,"declared_census_cap":144,"discordant_pair_count":4,"discordant_pairs":[{"attempts":[{"detail":"normalized_verbatim","outcome":"PASS","response_sha256":"4bc59dc195cfa68f1a9f39d51eeb86b8b6c406da4a78297d2a8b994c89ef7df6"},{"detail":"BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM","outcome":"FAIL","response_sha256":"31e77ac3b485561d877da82837d7a492166327be1c7db3acb152e379c3d3da23"}],"phase":"generation","task_id":"generation::r2::24. LUAT TO TUNG DAN SU VN_chunk_4::ecm_full"},{"attempts":[{"detail":"BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM","outcome":"FAIL","response_sha256":"7f1f75de7c1fb43da98841fc27aeb8163716e20b2f1161acb87703483febf4a7"},{"detail":"exact_verbatim","outcome":"PASS","response_sha256":"1cf6b7ef488ea7a58817858430418a09f91bec7e7defee78fa91441c0ade5c75"}],"phase":"generation","task_id":"generation::r2::40. TAM LY HOC TU PHAP_chunk_74::structured_no_contract"},{"attempts":[{"detail":null,"outcome":"PASS","response_sha256":"59b52a1f8a4d0aa5182174f1eae17de599ad42053b7c5e72e6be1c4d50c97d84"},{"detail":null,"outcome":"UNDECODABLE","response_sha256":"fae57249a6ba28870baf468c08cca4b32f779338c102da547e4053632f66f4fa"}],"phase":"judging","task_id":"judge::r2::34.LUAT THUONG MAI QUOC TE_chunk_131::direct::claude-sonnet-5"},{"attempts":[{"detail":null,"outcome":"PASS","response_sha256":"d1e6b4afd71bc95800f50c2907cf471611ae2636239d8298e1ee227c39f32f12"},{"detail":null,"outcome":"UNDECODABLE","response_sha256":"a5732990b3ed26d68d0417f9dbc3ba7d21ee38868c8942d5e91defe37955ce0b"}],"phase":"judging","task_id":"judge::r2::4. LICH SU NNUOC & PLUAT VIET NAM_chunk_14::ecm_full::claude-sonnet-5"}],"distinct_task_ids":84,"duplicate_pair_gate_outcomes":{"FAIL|FAIL":19,"FAIL|PASS":1,"PASS|FAIL":1,"PASS|PASS":45,"PASS|UNDECODABLE":2},"duplicate_pairs_share_identical_idempotency_key":68,"duplicate_pairs_share_identical_payload_sha256":68,"duplicate_second_attempt_cost_usd":0.012922208,"duplicated_task_ids":68,"known_reported_cost_usd":0.031373121,"ledger_records":{"started":152,"terminal":152},"max_concurrent_open_calls":2,"read_only":true,"retained_record_attribution":{"failed_record_unattributable":23,"first_attempt":12,"second_attempt":33},"run":"round2_exploratory_census_20260815T020000Z","schema":"ecm-tqag.round2.concurrency-audit.v1","terminals_by_phase":{"generation":84,"judging":68},"unknown_cost_call_count":68,"usd_hard_cap":10.0,"verdict":"CONTAMINATED: retained per-task outcomes are not a deterministic function of the retained evidence for duplicated tasks; concurrent processes raced on the task-record write guard and the frozen call cap was exceeded."},"ledger_self_block":"RunLedger refuses to resume this ledger (BLOCKED_RESUME:terminal_after_success), which independently prevents reuse of this run directory.","not_done":["No task record, ledger line, or response sidecar was edited or deleted.","No retry, repair, or replacement provider call was issued.","ROUND2_REPORT.json was left byte-identical; it is voided by this seal and by a sibling ROUND2_REPORT.VOID.json notice, not by mutation."],"required_next_step":"Any round-2 measurement must start a NEW run directory under a NEW plan hash, after the runner is fixed with (a) an inter-process exclusive lock (e.g. O_EXCL lockfile or flock) over the whole census phase, and (b) atomic O_EXCL task-record creation as the attempt reservation, so a task record cannot be written twice. This requires fresh owner authorization; it is NOT authorized by the 2026-08-15 authorization already consumed.","root_cause":"run_round2_census.py --phase census was executed concurrently by two processes. The task-record guard is a non-atomic `if path.exists()` test followed by a later write, and RunLedger's cap/idempotency checks are guarded only by threading.Lock (per-process), not an inter-process lock. Both processes reserved and issued the same frozen attempts.","run":"round2_exploratory_census_20260815T020000Z","schema":"ecm-tqag.round2.contamination-seal.v2","scope":"round-2 exploratory census ONLY (phase: census). Round-1 records, the v3.9 canonical freeze, and the manuscript are untouched and unaffected.","status":"VOID_CONTAMINATED","supersedes":{"file":"CONTAMINATION_SEAL.json","sha256":"ccbe99471801653e17f7566e4e365e645ac9667a8cd25013e0bf100a7974126c"},"ts_utc":"2026-08-14T19:56:00Z","voided_artifact":{"file":"ROUND2_REPORT.json","left_byte_identical":true,"producer":"round2/aggregate_round2.py","producer_sha256":"5f9bb254397d291bf6ba43ead19c6a884fa37caae9e36f56b03d418bd754ca85","sha256":"1e82d18318c968325eabba64866eaf65c0585bc63a92ff40c16a71fc5e8ca136","status":"VOID_DO_NOT_CITE"},"why_void":["Retained per-task outcomes are not a deterministic function of retained evidence: 4 duplicate pairs disagree on gate outcome, so which record survived depends on process scheduling.","The frozen census call cap of 144 was exceeded (152 attempts), breaking the run's own accounting contract.","Judge attempts were conditioned on race-determined generation records, so judge coverage (60 NOT_ATTEMPTED) is selection-contaminated and cannot be repaired offline.","Under enumeration of all 16 attribution combinations, ecm_full generation pass is 8-9/16 and ecm_full hard-valid is 0-1/16; ROUND2_REPORT.json reports a single arbitrary draw (9/16, 1/16) from those ranges.","At least one attribution is not computable offline at all: a cell whose generation attempt passed but lost the write race never received judge calls."]}
+{
+ "correction_to_v1": "Seal v1 asserted 'No ROUND2_REPORT.json was produced from contaminated records.' That statement was FALSE. ROUND2_REPORT.json was written at 2026-08-15T02:49 local by round2/aggregate_round2.py (offline aggregation; no provider call, no credential read, no task-record mutation) BEFORE seal v1 was written at 02:53. The report exists and carries no contamination annotation of its own.",
+ "counterfactual_bound": {
+  "attribution_combinations_enumerated": 16,
+  "discordant_generation_tasks": [
+   "CHUNK-D2BD9F7971::ecm_full",
+   "CHUNK-993674C5DB::structured_no_contract"
+  ],
+  "discordant_judge_tasks": [
+   "CHUNK-A497569BDA::direct::claude-sonnet-5",
+   "CHUNK-22FEF6E9ED::ecm_full::claude-sonnet-5"
+  ],
+  "duplicated_tasks": 68,
+  "generation_pass_per_arm_range_of16": {
+   "direct": [
+    5,
+    5
+   ],
+   "ecm_full": [
+    8,
+    9
+   ],
+   "structured_no_contract": [
+    4,
+    5
+   ]
+  },
+  "hard_valid_per_arm_range_of16": {
+   "direct": [
+    0,
+    0
+   ],
+   "ecm_full": [
+    0,
+    1
+   ],
+   "structured_no_contract": [
+    0,
+    0
+   ]
+  },
+  "interpretation": "Every quantity in ROUND2_REPORT.json that depends on a duplicated task is an arbitrary selection from the ranges above. In at least one attribution the counterfactual is not even computable offline, because judge calls were never issued for a cell whose generation attempt passed but lost the write race. The endpoint therefore cannot be repaired from retained evidence.",
+  "read_only": true,
+  "reported_in_ROUND2_REPORT": {
+   "generation_pass_per_arm": {
+    "direct": 5,
+    "ecm_full": 9,
+    "structured_no_contract": 4
+   },
+   "hard_valid_per_arm": {
+    "direct": 0,
+    "ecm_full": 1,
+    "structured_no_contract": 0
+   }
+  },
+  "run": "round2_exploratory_census_20260815T020000Z",
+  "schema": "ecm-tqag.round2.counterfactual-bound.v1",
+  "unobservable_cells_range": [
+   0,
+   1
+  ]
+ },
+ "evidence": {
+  "all_http_200": true,
+  "all_retry_count_zero": true,
+  "cap_overrun_calls": 8,
+  "declared_census_cap": 144,
+  "discordant_pair_count": 4,
+  "discordant_pairs": [
+   {
+    "attempts": [
+     {
+      "detail": "normalized_verbatim",
+      "outcome": "PASS",
+      "response_sha256": "4bc59dc195cfa68f1a9f39d51eeb86b8b6c406da4a78297d2a8b994c89ef7df6"
+     },
+     {
+      "detail": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM",
+      "outcome": "FAIL",
+      "response_sha256": "31e77ac3b485561d877da82837d7a492166327be1c7db3acb152e379c3d3da23"
+     }
+    ],
+    "phase": "generation",
+    "task_id": "CHUNK-D2BD9F7971::ecm_full"
+   },
+   {
+    "attempts": [
+     {
+      "detail": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM",
+      "outcome": "FAIL",
+      "response_sha256": "7f1f75de7c1fb43da98841fc27aeb8163716e20b2f1161acb87703483febf4a7"
+     },
+     {
+      "detail": "exact_verbatim",
+      "outcome": "PASS",
+      "response_sha256": "1cf6b7ef488ea7a58817858430418a09f91bec7e7defee78fa91441c0ade5c75"
+     }
+    ],
+    "phase": "generation",
+    "task_id": "CHUNK-993674C5DB::structured_no_contract"
+   },
+   {
+    "attempts": [
+     {
+      "detail": null,
+      "outcome": "PASS",
+      "response_sha256": "59b52a1f8a4d0aa5182174f1eae17de599ad42053b7c5e72e6be1c4d50c97d84"
+     },
+     {
+      "detail": null,
+      "outcome": "UNDECODABLE",
+      "response_sha256": "fae57249a6ba28870baf468c08cca4b32f779338c102da547e4053632f66f4fa"
+     }
+    ],
+    "phase": "judging",
+    "task_id": "CHUNK-A497569BDA::direct::claude-sonnet-5"
+   },
+   {
+    "attempts": [
+     {
+      "detail": null,
+      "outcome": "PASS",
+      "response_sha256": "d1e6b4afd71bc95800f50c2907cf471611ae2636239d8298e1ee227c39f32f12"
+     },
+     {
+      "detail": null,
+      "outcome": "UNDECODABLE",
+      "response_sha256": "a5732990b3ed26d68d0417f9dbc3ba7d21ee38868c8942d5e91defe37955ce0b"
+     }
+    ],
+    "phase": "judging",
+    "task_id": "CHUNK-22FEF6E9ED::ecm_full::claude-sonnet-5"
+   }
+  ],
+  "distinct_task_ids": 84,
+  "duplicate_pair_gate_outcomes": {
+   "FAIL|FAIL": 19,
+   "FAIL|PASS": 1,
+   "PASS|FAIL": 1,
+   "PASS|PASS": 45,
+   "PASS|UNDECODABLE": 2
+  },
+  "duplicate_pairs_share_identical_idempotency_key": 68,
+  "duplicate_pairs_share_identical_payload_sha256": 68,
+  "duplicate_second_attempt_cost_usd": 0.012922208,
+  "duplicated_task_ids": 68,
+  "known_reported_cost_usd": 0.031373121,
+  "ledger_records": {
+   "started": 152,
+   "terminal": 152
+  },
+  "max_concurrent_open_calls": 2,
+  "read_only": true,
+  "retained_record_attribution": {
+   "failed_record_unattributable": 23,
+   "first_attempt": 12,
+   "second_attempt": 33
+  },
+  "run": "round2_exploratory_census_20260815T020000Z",
+  "schema": "ecm-tqag.round2.concurrency-audit.v1",
+  "terminals_by_phase": {
+   "generation": 84,
+   "judging": 68
+  },
+  "unknown_cost_call_count": 68,
+  "usd_hard_cap": 10.0,
+  "verdict": "CONTAMINATED: retained per-task outcomes are not a deterministic function of the retained evidence for duplicated tasks; concurrent processes raced on the task-record write guard and the frozen call cap was exceeded."
+ },
+ "ledger_self_block": "RunLedger refuses to resume this ledger (BLOCKED_RESUME:terminal_after_success), which independently prevents reuse of this run directory.",
+ "not_done": [
+  "No task record, ledger line, or response sidecar was edited or deleted.",
+  "No retry, repair, or replacement provider call was issued.",
+  "ROUND2_REPORT.json was left byte-identical; it is voided by this seal and by a sibling ROUND2_REPORT.VOID.json notice, not by mutation."
+ ],
+ "required_next_step": "Any round-2 measurement must start a NEW run directory under a NEW plan hash, after the runner is fixed with (a) an inter-process exclusive lock (e.g. O_EXCL lockfile or flock) over the whole census phase, and (b) atomic O_EXCL task-record creation as the attempt reservation, so a task record cannot be written twice. This requires fresh owner authorization; it is NOT authorized by the 2026-08-15 authorization already consumed.",
+ "root_cause": "run_round2_census.py --phase census was executed concurrently by two processes. The task-record guard is a non-atomic `if path.exists()` test followed by a later write, and RunLedger's cap/idempotency checks are guarded only by threading.Lock (per-process), not an inter-process lock. Both processes reserved and issued the same frozen attempts.",
+ "run": "round2_exploratory_census_20260815T020000Z",
+ "schema": "ecm-tqag.round2.contamination-seal.v2",
+ "scope": "round-2 exploratory census ONLY (phase: census). Round-1 records, the v3.9 canonical freeze, and the manuscript are untouched and unaffected.",
+ "status": "VOID_CONTAMINATED",
+ "supersedes": {
+  "file": "CONTAMINATION_SEAL.json",
+  "sha256": "ccbe99471801653e17f7566e4e365e645ac9667a8cd25013e0bf100a7974126c"
+ },
+ "ts_utc": "2026-08-14T19:56:00Z",
+ "voided_artifact": {
+  "file": "ROUND2_REPORT.json",
+  "left_byte_identical": true,
+  "producer": "round2/aggregate_round2.py",
+  "producer_sha256": "5f9bb254397d291bf6ba43ead19c6a884fa37caae9e36f56b03d418bd754ca85",
+  "sha256": "1e82d18318c968325eabba64866eaf65c0585bc63a92ff40c16a71fc5e8ca136",
+  "status": "VOID_DO_NOT_CITE"
+ },
+ "why_void": [
+  "Retained per-task outcomes are not a deterministic function of retained evidence: 4 duplicate pairs disagree on gate outcome, so which record survived depends on process scheduling.",
+  "The frozen census call cap of 144 was exceeded (152 attempts), breaking the run's own accounting contract.",
+  "Judge attempts were conditioned on race-determined generation records, so judge coverage (60 NOT_ATTEMPTED) is selection-contaminated and cannot be repaired offline.",
+  "Under enumeration of all 16 attribution combinations, ecm_full generation pass is 8-9/16 and ecm_full hard-valid is 0-1/16; ROUND2_REPORT.json reports a single arbitrary draw (9/16, 1/16) from those ranges.",
+  "At least one attribution is not computable offline at all: a cell whose generation attempt passed but lost the write race never received judge calls."
+ ]
+}

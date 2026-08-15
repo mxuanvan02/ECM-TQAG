@@ -1,1 +1,7 @@
-{"frame":"A_same_16_chunks","generation_tasks":48,"judge_tasks":96,"plan_sha256":"db21bb668c56cfe5a41b49f5b13da500a175f8a9a6efb80fdcddad818de9b236","schema":"ecm-tqag.round2e.census-plan.v1"}
+{
+ "frame": "A_same_16_chunks",
+ "generation_tasks": 48,
+ "judge_tasks": 96,
+ "plan_sha256": "db21bb668c56cfe5a41b49f5b13da500a175f8a9a6efb80fdcddad818de9b236",
+ "schema": "ecm-tqag.round2e.census-plan.v1"
+}

@@ -1,1 +1,148 @@
-{"contrasts":{"ecm_full_vs_direct":{"discordant":0,"discordant_left_only":0,"discordant_right_only":0,"holm":{"holm_threshold":0.025,"rank":1,"reject":false},"min_unidirectional_discordance_required":6,"p_two_sided_exact":1.0,"test":"mcnemar_exact_two_sided"},"ecm_full_vs_structured_no_contract":{"discordant":0,"discordant_left_only":0,"discordant_right_only":0,"holm":{"holm_threshold":0.05,"rank":2,"reject":false},"min_unidirectional_discordance_required":6,"p_two_sided_exact":1.0,"test":"mcnemar_exact_two_sided"}},"critical_provenance_violations":0,"denominator_per_arm":16,"frame":"A_same_16_chunks","generation_failure_reasons":{"BLOCKED_V310:R2:GENERATION":15,"BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM":15},"generation_pass_per_arm":{"direct":5,"ecm_full":7,"structured_no_contract":6},"hard_valid_blockers":{"answerability_below_3":2,"evidence_correctness_below_3":3,"visual_necessity_below_3":16},"hard_valid_ci_per_arm":{"direct":{"alpha":0.05,"conf_level":0.95,"interval":[0.0,0.20590721420782243],"lower":0.0,"method":"clopper_pearson_exact","n":16,"point":0.0,"successes":0,"upper":0.20590721420782243},"ecm_full":{"alpha":0.05,"conf_level":0.95,"interval":[0.0,0.20590721420782243],"lower":0.0,"method":"clopper_pearson_exact","n":16,"point":0.0,"successes":0,"upper":0.20590721420782243},"structured_no_contract":{"alpha":0.05,"conf_level":0.95,"interval":[0.0,0.20590721420782243],"lower":0.0,"method":"clopper_pearson_exact","n":16,"point":0.0,"successes":0,"upper":0.20590721420782243}},"hard_valid_per_arm":{"direct":0,"ecm_full":0,"structured_no_contract":0},"judge_means_by_arm":{"direct":{"answerability":3.9,"evidence_correctness":3.7,"pedagogical_value":2.9,"vietnamese_language":4.6,"visual_necessity":2.4},"ecm_full":{"answerability":4.5,"evidence_correctness":4.071,"pedagogical_value":2.857,"vietnamese_language":4.571,"visual_necessity":1.571},"structured_no_contract":{"answerability":4.75,"evidence_correctness":4.75,"pedagogical_value":2.583,"vietnamese_language":4.5,"visual_necessity":1.667}},"judge_models":["claude-opus-5","gpt-5.6-sol"],"judge_records_complete":36,"judge_records_per_arm":{"direct":10,"ecm_full":14,"structured_no_contract":12},"known_reported_cost_usd":0.018436353,"mode":"exploratory_round2c_repaired_contract_substituted_judges","quote_classes_on_pass":{"elided_verbatim":1,"exact_verbatim":17},"run":"round2c_exploratory_census_20260815T041500Z","schema":"ecm-tqag.round2c.census-report.v1","status_counts":{"generation":{"COMPLETE":18,"TERMINAL_FAILURE":30},"judge":{"COMPLETE":36,"NOT_ATTEMPTED":60}},"unknown_cost_call_count":36}
+{
+ "contrasts": {
+  "ecm_full_vs_direct": {
+   "discordant": 0,
+   "discordant_left_only": 0,
+   "discordant_right_only": 0,
+   "holm": {
+    "holm_threshold": 0.025,
+    "rank": 1,
+    "reject": false
+   },
+   "min_unidirectional_discordance_required": 6,
+   "p_two_sided_exact": 1.0,
+   "test": "mcnemar_exact_two_sided"
+  },
+  "ecm_full_vs_structured_no_contract": {
+   "discordant": 0,
+   "discordant_left_only": 0,
+   "discordant_right_only": 0,
+   "holm": {
+    "holm_threshold": 0.05,
+    "rank": 2,
+    "reject": false
+   },
+   "min_unidirectional_discordance_required": 6,
+   "p_two_sided_exact": 1.0,
+   "test": "mcnemar_exact_two_sided"
+  }
+ },
+ "critical_provenance_violations": 0,
+ "denominator_per_arm": 16,
+ "frame": "A_same_16_chunks",
+ "generation_failure_reasons": {
+  "BLOCKED_V310:R2:GENERATION": 15,
+  "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM": 15
+ },
+ "generation_pass_per_arm": {
+  "direct": 5,
+  "ecm_full": 7,
+  "structured_no_contract": 6
+ },
+ "hard_valid_blockers": {
+  "answerability_below_3": 2,
+  "evidence_correctness_below_3": 3,
+  "visual_necessity_below_3": 16
+ },
+ "hard_valid_ci_per_arm": {
+  "direct": {
+   "alpha": 0.05,
+   "conf_level": 0.95,
+   "interval": [
+    0.0,
+    0.20590721420782243
+   ],
+   "lower": 0.0,
+   "method": "clopper_pearson_exact",
+   "n": 16,
+   "point": 0.0,
+   "successes": 0,
+   "upper": 0.20590721420782243
+  },
+  "ecm_full": {
+   "alpha": 0.05,
+   "conf_level": 0.95,
+   "interval": [
+    0.0,
+    0.20590721420782243
+   ],
+   "lower": 0.0,
+   "method": "clopper_pearson_exact",
+   "n": 16,
+   "point": 0.0,
+   "successes": 0,
+   "upper": 0.20590721420782243
+  },
+  "structured_no_contract": {
+   "alpha": 0.05,
+   "conf_level": 0.95,
+   "interval": [
+    0.0,
+    0.20590721420782243
+   ],
+   "lower": 0.0,
+   "method": "clopper_pearson_exact",
+   "n": 16,
+   "point": 0.0,
+   "successes": 0,
+   "upper": 0.20590721420782243
+  }
+ },
+ "hard_valid_per_arm": {
+  "direct": 0,
+  "ecm_full": 0,
+  "structured_no_contract": 0
+ },
+ "judge_means_by_arm": {
+  "direct": {
+   "answerability": 3.9,
+   "evidence_correctness": 3.7,
+   "pedagogical_value": 2.9,
+   "vietnamese_language": 4.6,
+   "visual_necessity": 2.4
+  },
+  "ecm_full": {
+   "answerability": 4.5,
+   "evidence_correctness": 4.071,
+   "pedagogical_value": 2.857,
+   "vietnamese_language": 4.571,
+   "visual_necessity": 1.571
+  },
+  "structured_no_contract": {
+   "answerability": 4.75,
+   "evidence_correctness": 4.75,
+   "pedagogical_value": 2.583,
+   "vietnamese_language": 4.5,
+   "visual_necessity": 1.667
+  }
+ },
+ "judge_models": [
+  "claude-opus-5",
+  "gpt-5.6-sol"
+ ],
+ "judge_records_complete": 36,
+ "judge_records_per_arm": {
+  "direct": 10,
+  "ecm_full": 14,
+  "structured_no_contract": 12
+ },
+ "known_reported_cost_usd": 0.018436353,
+ "mode": "exploratory_round2c_repaired_contract_substituted_judges",
+ "quote_classes_on_pass": {
+  "elided_verbatim": 1,
+  "exact_verbatim": 17
+ },
+ "run": "round2c_exploratory_census_20260815T041500Z",
+ "schema": "ecm-tqag.round2c.census-report.v1",
+ "status_counts": {
+  "generation": {
+   "COMPLETE": 18,
+   "TERMINAL_FAILURE": 30
+  },
+  "judge": {
+   "COMPLETE": 36,
+   "NOT_ATTEMPTED": 60
+  }
+ },
+ "unknown_cost_call_count": 36
+}

@@ -1,1 +1,9 @@
-{"cases":["qwen_generation_round2","claude_judge_probe","terra_judge_probe"],"plan_sha256":"4cb866a45ae754b9e27394d9e5bb62d1fa28586a44118541c35ed6161899f269","schema":"ecm-tqag.round2.qualification-plan.v1"}
+{
+ "cases": [
+  "qwen_generation_round2",
+  "claude_judge_probe",
+  "terra_judge_probe"
+ ],
+ "plan_sha256": "4cb866a45ae754b9e27394d9e5bb62d1fa28586a44118541c35ed6161899f269",
+ "schema": "ecm-tqag.round2.qualification-plan.v1"
+}

@@ -1,1 +1,164 @@
-{"contrasts":{"ecm_full_vs_direct":{"alpha":0.05,"direct_rate":{"alpha":0.05,"conf_level":0.95,"interval":[0.001581111722765538,0.30232073843453167],"lower":0.001581111722765538,"method":"clopper_pearson_exact","n":16,"point":0.0625,"successes":1,"upper":0.30232073843453167},"direct_successes":1,"discordance_target_met":false,"discordant":1,"ecm_full_rate":{"alpha":0.05,"conf_level":0.95,"interval":[0.0,0.20590721420782243],"lower":0.0,"method":"clopper_pearson_exact","n":16,"point":0.0,"successes":0,"upper":0.20590721420782243},"ecm_full_successes":0,"endpoint":"gate_valid_yield_per_chunk","equivalence_claimed":false,"holm":{"holm_threshold":0.025,"rank":1,"raw_p":1.0,"reject":false},"left_only":0,"min_unidirectional_discordance_required":6,"n":16,"n_pairs":16,"no_discordance":false,"p_two_sided_exact":1.0,"pair_ids":["47. LY LUAN DINH TOI DANH_chunk_40","34.LUAT THUONG MAI QUOC TE_chunk_131","47. LY LUAN DINH TOI DANH_chunk_50","30. LUAT NGAN HANG VIET NAM_chunk_75","24. LUAT TO TUNG DAN SU VN_chunk_232","47. LY LUAN DINH TOI DANH_chunk_9","4. LICH SU NNUOC & PLUAT VIET NAM_chunk_35","17,18. LUAT HIEN PHAP VIET NAM_chunk_79","46. TOI PHAM HOC_chunk_48","40. TAM LY HOC TU PHAP_chunk_74","24. LUAT TO TUNG DAN SU VN_chunk_4","40. TAM LY HOC TU PHAP_chunk_33","24. LUAT TO TUNG DAN SU VN_chunk_230","4. LICH SU NNUOC & PLUAT VIET NAM_chunk_14","4. LICH SU NNUOC & PLUAT VIET NAM_chunk_66","19.LUAT HIEN PHAP NUOC NGOAI_chunk_44"],"right_only":1,"significant":false,"table":{"both":0,"direct_only":1,"ecm_full_only":0,"neither":15},"test":"mcnemar_exact_two_sided","unit":"chunk","verdict":"inconclusive"},"ecm_full_vs_structured_no_contract":{"alpha":0.05,"discordance_target_met":false,"discordant":0,"ecm_full_rate":{"alpha":0.05,"conf_level":0.95,"interval":[0.0,0.20590721420782243],"lower":0.0,"method":"clopper_pearson_exact","n":16,"point":0.0,"successes":0,"upper":0.20590721420782243},"ecm_full_successes":0,"endpoint":"gate_valid_yield_per_chunk","equivalence_claimed":false,"holm":{"holm_threshold":0.05,"rank":2,"raw_p":1.0,"reject":false},"left_only":0,"min_unidirectional_discordance_required":6,"n":16,"n_pairs":16,"no_discordance":true,"p_two_sided_exact":1.0,"pair_ids":["47. LY LUAN DINH TOI DANH_chunk_40","34.LUAT THUONG MAI QUOC TE_chunk_131","47. LY LUAN DINH TOI DANH_chunk_50","30. LUAT NGAN HANG VIET NAM_chunk_75","24. LUAT TO TUNG DAN SU VN_chunk_232","47. LY LUAN DINH TOI DANH_chunk_9","4. LICH SU NNUOC & PLUAT VIET NAM_chunk_35","17,18. LUAT HIEN PHAP VIET NAM_chunk_79","46. TOI PHAM HOC_chunk_48","40. TAM LY HOC TU PHAP_chunk_74","24. LUAT TO TUNG DAN SU VN_chunk_4","40. TAM LY HOC TU PHAP_chunk_33","24. LUAT TO TUNG DAN SU VN_chunk_230","4. LICH SU NNUOC & PLUAT VIET NAM_chunk_14","4. LICH SU NNUOC & PLUAT VIET NAM_chunk_66","19.LUAT HIEN PHAP NUOC NGOAI_chunk_44"],"right_only":0,"significant":false,"structured_no_contract_rate":{"alpha":0.05,"conf_level":0.95,"interval":[0.0,0.20590721420782243],"lower":0.0,"method":"clopper_pearson_exact","n":16,"point":0.0,"successes":0,"upper":0.20590721420782243},"structured_no_contract_successes":0,"table":{"both":0,"ecm_full_only":0,"neither":16,"structured_no_contract_only":0},"test":"mcnemar_exact_two_sided","unit":"chunk","verdict":"inconclusive"}},"denominator_per_arm":16,"endpoint":"complete_pipeline_hard_valid_yield_ITT","multiplicity":"Holm_two_primary_alpha_0.05","schema":"ecm-tqag.official.primary-analysis.v1"}
+{
+ "contrasts": {
+  "ecm_full_vs_direct": {
+   "alpha": 0.05,
+   "direct_rate": {
+    "alpha": 0.05,
+    "conf_level": 0.95,
+    "interval": [
+     0.001581111722765538,
+     0.30232073843453167
+    ],
+    "lower": 0.001581111722765538,
+    "method": "clopper_pearson_exact",
+    "n": 16,
+    "point": 0.0625,
+    "successes": 1,
+    "upper": 0.30232073843453167
+   },
+   "direct_successes": 1,
+   "discordance_target_met": false,
+   "discordant": 1,
+   "ecm_full_rate": {
+    "alpha": 0.05,
+    "conf_level": 0.95,
+    "interval": [
+     0.0,
+     0.20590721420782243
+    ],
+    "lower": 0.0,
+    "method": "clopper_pearson_exact",
+    "n": 16,
+    "point": 0.0,
+    "successes": 0,
+    "upper": 0.20590721420782243
+   },
+   "ecm_full_successes": 0,
+   "endpoint": "gate_valid_yield_per_chunk",
+   "equivalence_claimed": false,
+   "holm": {
+    "holm_threshold": 0.025,
+    "rank": 1,
+    "raw_p": 1.0,
+    "reject": false
+   },
+   "left_only": 0,
+   "min_unidirectional_discordance_required": 6,
+   "n": 16,
+   "n_pairs": 16,
+   "no_discordance": false,
+   "p_two_sided_exact": 1.0,
+   "pair_ids": [
+    "CHUNK-6A758A9EA4",
+    "CHUNK-614ADA05EE",
+    "CHUNK-161116CC20",
+    "CHUNK-9582BC669F",
+    "CHUNK-03F2875268",
+    "CHUNK-CC5C549AB2",
+    "CHUNK-C4D6C3F95C",
+    "CHUNK-AA50300450",
+    "CHUNK-4107B47E9D",
+    "CHUNK-439BEC4AE6",
+    "CHUNK-6EA886F073",
+    "CHUNK-03461C2066",
+    "CHUNK-CD8897C548",
+    "CHUNK-C2ECF24774",
+    "CHUNK-DA46E861E9",
+    "CHUNK-732B5834E3"
+   ],
+   "right_only": 1,
+   "significant": false,
+   "table": {
+    "both": 0,
+    "direct_only": 1,
+    "ecm_full_only": 0,
+    "neither": 15
+   },
+   "test": "mcnemar_exact_two_sided",
+   "unit": "chunk",
+   "verdict": "inconclusive"
+  },
+  "ecm_full_vs_structured_no_contract": {
+   "alpha": 0.05,
+   "discordance_target_met": false,
+   "discordant": 0,
+   "ecm_full_rate": {
+    "alpha": 0.05,
+    "conf_level": 0.95,
+    "interval": [
+     0.0,
+     0.20590721420782243
+    ],
+    "lower": 0.0,
+    "method": "clopper_pearson_exact",
+    "n": 16,
+    "point": 0.0,
+    "successes": 0,
+    "upper": 0.20590721420782243
+   },
+   "ecm_full_successes": 0,
+   "endpoint": "gate_valid_yield_per_chunk",
+   "equivalence_claimed": false,
+   "holm": {
+    "holm_threshold": 0.05,
+    "rank": 2,
+    "raw_p": 1.0,
+    "reject": false
+   },
+   "left_only": 0,
+   "min_unidirectional_discordance_required": 6,
+   "n": 16,
+   "n_pairs": 16,
+   "no_discordance": true,
+   "p_two_sided_exact": 1.0,
+   "pair_ids": [
+    "CHUNK-6A758A9EA4",
+    "CHUNK-614ADA05EE",
+    "CHUNK-161116CC20",
+    "CHUNK-9582BC669F",
+    "CHUNK-03F2875268",
+    "CHUNK-CC5C549AB2",
+    "CHUNK-C4D6C3F95C",
+    "CHUNK-AA50300450",
+    "CHUNK-4107B47E9D",
+    "CHUNK-439BEC4AE6",
+    "CHUNK-6EA886F073",
+    "CHUNK-03461C2066",
+    "CHUNK-CD8897C548",
+    "CHUNK-C2ECF24774",
+    "CHUNK-DA46E861E9",
+    "CHUNK-732B5834E3"
+   ],
+   "right_only": 0,
+   "significant": false,
+   "structured_no_contract_rate": {
+    "alpha": 0.05,
+    "conf_level": 0.95,
+    "interval": [
+     0.0,
+     0.20590721420782243
+    ],
+    "lower": 0.0,
+    "method": "clopper_pearson_exact",
+    "n": 16,
+    "point": 0.0,
+    "successes": 0,
+    "upper": 0.20590721420782243
+   },
+   "structured_no_contract_successes": 0,
+   "table": {
+    "both": 0,
+    "ecm_full_only": 0,
+    "neither": 16,
+    "structured_no_contract_only": 0
+   },
+   "test": "mcnemar_exact_two_sided",
+   "unit": "chunk",
+   "verdict": "inconclusive"
+  }
+ },
+ "denominator_per_arm": 16,
+ "endpoint": "complete_pipeline_hard_valid_yield_ITT",
+ "multiplicity": "Holm_two_primary_alpha_0.05",
+ "schema": "ecm-tqag.official.primary-analysis.v1"
+}
