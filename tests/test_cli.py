@@ -1,7 +1,11 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from ecm_tqag.cli import main
+
+REAL_INVENTORY = Path(__file__).parents[2] / "conference_eval/inventory_v1.json"
 
 
 def test_validate_cli(capsys):
@@ -37,8 +41,12 @@ def test_contract_eval_and_verify_cli(tmp_path, capsys):
     assert replayed["status"] == "PASS_REPLAY_VERIFIED"
 
 
+@pytest.mark.skipif(
+    not REAL_INVENTORY.is_file(),
+    reason="conference_eval/inventory_v1.json is a restricted Gate-1 inventory kept outside this public repository (see README section 9); this check runs only where that private input is present",
+)
 def test_real_inventory_cli(capsys):
-    inventory = Path(__file__).parents[2] / "conference_eval/inventory_v1.json"
+    inventory = REAL_INVENTORY
     assert main(["validate-real-inventory", str(inventory)]) == 2
     result = json.loads(capsys.readouterr().out)
     assert result["status"] == "BLOCKED"

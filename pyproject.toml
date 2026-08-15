@@ -25,3 +25,6 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+# Import the src-layout package without requiring an editable install,
+# so `pytest` works on a fresh clone (pytest >= 7).
+pythonpath = ["src"]

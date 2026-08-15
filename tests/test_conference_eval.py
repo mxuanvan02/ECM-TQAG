@@ -130,8 +130,15 @@ def test_verifier_rejects_invalid_resealed_report(tmp_path):
         raise AssertionError("invalid resealed report was accepted")
 
 
+REAL_INVENTORY = ROOT.parent / "conference_eval/inventory_v1.json"
+
+
+@pytest.mark.skipif(
+    not REAL_INVENTORY.is_file(),
+    reason="conference_eval/inventory_v1.json is a restricted Gate-1 inventory kept outside this public repository (see README section 9); this check runs only where that private input is present",
+)
 def test_real_data_inventory_is_fail_closed():
-    inventory = ROOT.parent / "conference_eval/inventory_v1.json"
+    inventory = REAL_INVENTORY
     result = validate_real_data_inventory(inventory)
 
     assert result["status"] == "BLOCKED"
