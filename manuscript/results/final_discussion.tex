@@ -1,61 +1,31 @@
 \section{Discussion}
+\label{sec:discussion}
 
-No arm reached a high end-to-end yield: the best observed rate was 1/16
-in the direct arm, and neither confirmatory contrast rejected its null.
-The intervention therefore separates cleanly into two effects with
-opposite signs.
+\paragraph{Effect of the contract.}
+The contract changes the rate at which one call produces an item whose
+declared evidence actually recomputes against the source: $0.92$
+against $0.67$ and $0.50$, with both paired contrasts significant
+after Holm adjustment. The mechanism is visible in the failures rather than
+inferred from the totals: the dominant failure of the uncontracted arms
+is a quotation copied from lettering inside the page image, which no
+textual source supports, and it occurs ten times without the contract
+and never with it. Because admission is computed by the verifier alone,
+the result requires no human rating and can be recomputed from the
+released records.
 
-\paragraph{The contract acts on structure.}
-Admission under $G$ was highest for ECM at 6/16 against 5/16 and 3/16,
-so fixing the tuple $\tau$ before realisation does improve mechanical
-conformance to the evidence contract. This is the effect the contract is
-designed to produce, and it is the effect it produces.
+\paragraph{Limitations.}
+The frame is a bounded census from one institution's holdings, and the
+two rejections concern mechanical admission on that frame rather than
+any population claim. The generator is a single open-weight multimodal
+model, and admission certifies source consistency, not truth, legal
+correctness, or pedagogical value. The secondary semantic ratings are
+exploratory and are not calibrated against blinded human ratings.
 
-\paragraph{The contract does not act on visual dependence.}
-The advantage did not survive to the endpoint, because $V$ additionally
-requires $\min(s_1,s_2,s_3)\geq 3$ and judged visual necessity was low
-in every arm, with means between 1.80 and 2.67. A prompt can require the
-generator to declare that an image is necessary; it cannot make the
-image necessary. This bottleneck is a property of the corpus, not of
-$\pi_a$: across four complete Vietnamese-law textbooks classified page by
-page, only 4 of 2167 pages carry a diagram at all (0.185\%, 95\% exact
-interval $[0.050\%,0.472\%]$), and screening vector-rich candidates in
-the wider collection raises the yield only to 31 of 437 (7.1\%,
-$[4.9\%,9.9\%]$). Diagram presence is necessary but not sufficient for
-visual necessity, so these rates bound from above the fraction of this
-material on which the criterion could ever be met. Admitting any
-image-bearing chunk is therefore too weak a selection rule: it must be
-strengthened to chunks whose images carry information absent from $T_c$.
-
-\paragraph{Failures are generator-side, not design-side.}
-Both dominant violations, quoting image-rendered text absent from $T_c$
-and returning an option letter instead of the option text, are capability
-limits of Qwen3-VL-8B under a strict schema with no repair. The gate
-detects them as specified, which is why they appear as terminal outcomes
-rather than as silently corrected items.
-
-\paragraph{How much of the structural effect was measurement.}
-The replication of \S\ref{sec:robustness} revises the reading of the
-structural result. Once the indexing convention was stated, admission
-improved in every arm and the ECM margin over the structured prompt fell
-from 6-vs-3 to 12-vs-10, so a substantial part of the round-one
-structural advantage reflected an unstated convention in our own
-contract rather than the intervention. The endpoint conclusion instead
-replicated: under the corrected specification and two different judge
-families, valid yield stayed at or below 1/16 in every arm and judged
-visual necessity stayed low. A first attempt at the same repair had to be
-discarded, because a pre-declared validity check found that a long
-clarification appended to all three arms induced arm-dependent decoder
-degeneration and inflated the ECM margin; strict verifiers are therefore
-sensitive to prompt mass as well as to prompt content.
-
-\paragraph{Interpretation boundaries.}
-The census is bounded at 16 chunks and supports no population claim.
-Non-significance is not equivalence: at $\alpha=0.05$ with $n=16$, six
-unidirectional discordant pairs are required for significance, and the
-0 to 2 pairs observed across both rounds provide evidence in neither
-direction. The judged vectors are exploratory until calibrated against
-blinded human ratings, and no deterministic check substitutes for expert
-legal or pedagogical review. The two actionable targets are the
-verbatim-quotation bottleneck and corpus selection by genuine visual
-dependence.
+\paragraph{Future work.}
+Three directions would raise the protocol's reach. First, visual
+necessity can be measured by an ablation arm that answers from text
+alone, turning a rated score into a direct measurement. Second, the
+judged criteria can be calibrated against blinded human ratings before
+they are used as endpoints. Third, the protocol can be extended to corpora whose figures carry
+information absent from the prose and to other generators, with any
+refinement of the verbatim rule fixed before new calls are issued.

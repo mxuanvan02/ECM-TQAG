@@ -1,19 +1,19 @@
-# ECM–TQAG ICTC 2026 — submission package
+# ECM–TQAG — submission package
 
-Four-page IEEE conference manuscript presenting ECM–TQAG as a method:
-an evidence contract on one multimodal generation call, made checkable by
-a deterministic verifier, and measured by a paired three-arm census.
+IEEE conference manuscript presenting ECM–TQAG: a protocol for generating
+evidence-grounded multimodal question–answer items from scanned documents,
+together with the paired three-arm experiment that measures it.
 
 ## Contents
 
 - `main.tex` — abstract, introduction and related work, method, experimental
-  setup, conclusion, data availability and limitations
-- `results/final_results.tex` — gate admission, primary endpoint,
-  confirmatory contrasts, failure structure, judged vectors, instrument
-  robustness (second-round replication)
-- `results/final_discussion.tex` — discussion
-- `figure_ecm_tqag_method.pdf` / `.py` — Fig. 1, the method composition
-  (conditioning bundle, arm prompt, contracted call, gate, blind dual
+  setup, conclusion, data availability
+- `results/final_results.tex` — census outcomes, mechanical admission,
+  failure structure
+- `results/final_discussion.tex` — discussion and limitations
+- `figure_ecm_tqag_method.pdf` / `.py` — Fig. 1, the data pipeline and
+  architecture in one icon-style schematic (scanned corpus, OCR, figure
+  crops, bundle, arm prompt, contracted call, gate, admission, blind
   judging), plus its generator script
 - `references.bib`, `IEEEtran.cls`, `IEEEtran.bst` — bibliography and template
 
@@ -23,55 +23,51 @@ a deterministic verifier, and measured by a paired three-arm census.
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-Produces a 4-page US-letter PDF, no overfull or underfull warnings.
+A clean rebuild reports no undefined citations or references and no overfull or
+underfull boxes.
 
 ## Contribution
 
-The contribution is the ECM–TQAG method: evidence support and visual
-dependence are stated as a contract on the generation call, and that
-contract is made verifiable by recomputing the declared evidence tuple
-against the per-chunk source bundle. The method is specified together with
-the derived intention-to-test endpoint it is measured by, so a paired
-contrast that varies only the prompt attributes any endpoint difference to
-the contract alone.
+The contribution is the ECM–TQAG protocol: evidence support and visual
+dependence are stated as a contract on the generation call, and that contract
+is made verifiable by recomputing the declared evidence tuple against the
+per-chunk source bundle. The protocol is specified together with the endpoints
+it is measured by, so a paired contrast that varies only the prompt attributes
+any endpoint difference to the contract alone.
 
-The bounded census finds that the contract improves gate admission
-(6/16 vs. 5/16 and 3/16) while end-to-end valid yield stays at 0–1/16 for
-every arm, with the visual necessity of the source images as the binding
-constraint. No superiority, equivalence, or population-generalisation
-claim is made.
+Two endpoints are reported, and they answer different questions.
 
-A prospective second round re-executed the same frame after two
-measurement-validity corrections that leave the gate and the endpoint
-unchanged: substituted judge families, and a prompt statement of the
-option-indexing convention the frozen contract had left unspecified.
-Admission rose in every arm (12/16, 7/16, 10/16) and the ECM margin over
-the structured prompt narrowed from 6-vs-3 to 12-vs-10, so part of the
-first-round structural advantage was an artefact of our own
-specification. The endpoint conclusion replicated: valid yield stayed at
-or below 1/16 in every arm and judged visual necessity stayed low.
+Mechanical admission is decided by the verifier alone, with no rater in the
+loop. The contract raises it from 0.67 and 0.50 to 0.92, and both paired
+contrasts are rejected under Holm control at family α = 0.05. The mechanism is
+visible in the failures: the dominant failure without the contract is a
+quotation copied from lettering rendered inside the page image, which no
+recognised text supports. It occurs ten times without the contract and never
+with it.
+
+The derived endpoint, which additionally requires two blind judges to score
+evidence correctness, visual necessity and answerability at 3 or above, does not
+separate the arms. Judged visual necessity is low in every arm, and in this
+material figures largely restate adjacent prose rather than carry information
+absent from it. A contract on the generation call cannot create a dependence the
+source pages do not contain. This is reported as a result, not as a shortfall.
+
+The judged criteria are secondary and exploratory: inter-rater agreement is
+modest and they are not calibrated against blinded human ratings.
 
 ## Manuscript content scope
 
-The manuscript reports scientific content only: task and motivation,
-method, analysis frame and endpoints, observed results with denominators
-and uncertainty, failure structure, and interpretation boundaries.
+The manuscript reports scientific content only: task and motivation, protocol,
+analysis frame and endpoints, observed results with denominators and
+uncertainty, failure structure, and interpretation boundaries.
 
-Internal execution and process material is excluded from the manuscript and
-kept in the private execution records: provider cost accounting,
-authorisation chains, provider-qualification reporting, retry and
-interruption bookkeeping, internal infrastructure and routing, and internal
-run identifiers. Excluding this material changes no reported scientific
-value.
+Internal execution material is excluded from the manuscript and kept in the
+private execution records: cost accounting, authorisation chains, provider
+routing and identifiers, and retry or interruption bookkeeping. Excluding this
+material changes no reported scientific value.
 
 ## Evidence boundary
 
-All reported numbers derive from the executed 16-chunk censuses.
-Copyrighted page images, credentials, and raw provider responses are not
-distributed.
-
-Two execution attempts are excluded from the manuscript and sealed as
-non-evidence in the private records: one whose transport ledger showed
-duplicate paid calls for the same tasks, and one whose reported arm
-contrast was invalidated by a pre-declared validity check. Neither
-contributes any reported value.
+All reported numbers derive from the executed census over the 24-chunk frame.
+Source material is held by the University of Law, Hue University; page images,
+credentials, and raw provider responses are not distributed.

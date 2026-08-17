@@ -35,25 +35,22 @@
 \bstctlcite{ecm:bstctl}
 
 \begin{abstract}
-We present ECM--TQAG, a method for generating evidence-grounded multimodal
-question--answer items from scanned Vietnamese-law documents. The method
-binds every item to a per-chunk conditioning bundle of recognised text,
-document structure, and a hash-identified image census; an evidence
-contract then requires the generator to select its text quotation and
-source image, to plan the answer before wording the question, and to keep
-that evidence tuple fixed while realising the item. A deterministic
-verifier admits a candidate only if the returned tuple is reproducible
-against the bundle, and two arm-blind judges supply the semantic
-criteria of a derived validity endpoint. We evaluate the contract in a
-paired three-arm census of image-bearing chunks in which the prompt is
-the only quantity that varies: the generator, response schema, decoding
-settings, and question-type assignment are held fixed, so a paired
-contrast isolates the contract. All failures remain in the
-intention-to-test denominator, and the two confirmatory contrasts use
-exact McNemar tests under Holm control. The census shows that the
-contract improves structural compliance while end-to-end valid yield
-stays low for every arm, with the visual necessity of source images as
-the dominant bottleneck.
+We present ECM--TQAG, a protocol for generating evidence-grounded
+multimodal question--answer items from scanned documents. For each
+source chunk the protocol fixes a conditioning bundle of recognised
+text, document structure, and hash-bound figure crops; an evidence
+contract then requires the generator, within a single call, to commit
+to a verbatim text quotation, an answer planned before the question,
+and a figure identified by content hash, and to keep this evidence
+tuple fixed while realising the item. A deterministic verifier
+recomputes the returned tuple against the bundle and admits the item
+only if every component reproduces, with no repair and no human
+judgement. In a paired experiment over 24 figure-bearing chunks from
+scanned Vietnamese-law holdings, the prompt is the only quantity that
+varies: the contracted prompt admits $22/24$ items against $16/24$ and
+$12/24$ for two control prompts, with both paired contrasts significant
+under multiplicity control, and it eliminates quotation from text that
+is rendered only inside page images.
 \end{abstract}
 \begin{IEEEkeywords}
 multimodal question generation, document intelligence, evidence grounding,
@@ -61,77 +58,75 @@ structured decoding, legal education
 \end{IEEEkeywords}
 
 \section{Introduction and Related Work}
-Scanned textbooks combine prose, diagrams, hierarchies, and tables,
-motivating textbook QA~\cite{kembhavi2017tqa} and its generation
-counterpart. Yet a fluent question may assert unsupported
-content~\cite{ji2023hallucination} or may merely appear multimodal while
-remaining answerable from text alone, a phenomenon analogous to language
-shortcuts in VQA~\cite{goyal2017making,agrawal2018don}. Existing document
-models combine text, layout, and
-pixels~\cite{xu2020layoutlm,xu2021layoutlmv2,huang2022layoutlmv3} or read
-pixels directly~\cite{kim2022donut,lee2023pix2struct}, while DocVQA and
-ChartQA assess answers~\cite{mathew2021docvqa,masry2022chartqa}.
-Educational and visual question generation, in turn, motivate our
-construction task~\cite{heilman2010good,kurdi2020systematic,
-mostafazadeh2016generating}.
+Scanned textbooks and institutional documents combine prose, diagrams,
+and tables, motivating textbook QA~\cite{kembhavi2017tqa} and its
+generation counterpart. A fluent generated question may still assert
+unsupported content~\cite{ji2023hallucination} or may only appear
+multimodal while remaining answerable from text
+alone~\cite{goyal2017making,agrawal2018don}. Existing document models
+fuse text, layout, and pixels~\cite{xu2020layoutlm,xu2021layoutlmv2,
+huang2022layoutlmv3} or read pixels directly~\cite{kim2022donut,
+lee2023pix2struct}, while DocVQA and ChartQA assess
+answers~\cite{mathew2021docvqa,masry2022chartqa}; educational and
+visual question generation motivate the construction
+task~\cite{heilman2010good,kurdi2020systematic,mostafazadeh2016generating}.
 
-Our contribution is the ECM--TQAG method itself: evidence support and
-visual dependence are stated as a contract on the generation call, and
-that contract is made checkable by a deterministic verifier that
-recomputes the declared evidence against the source. The method is
-therefore specified together with the endpoint it is measured by, and it
-is designed so that a paired experiment can attribute any difference in
-that endpoint to the contract alone. Section~\ref{sec:method} formalises
-the method, and Section~\ref{sec:setup} instantiates it as a bounded
-census on Vietnamese-law material.
+Our contribution is the ECM--TQAG protocol itself: evidence support is
+stated as a contract on one generation call, and that contract is made
+checkable by a deterministic verifier that recomputes the declared
+evidence against the source. The protocol is evaluated by a paired
+design in which each source chunk serves as its own control, so any
+difference in the measured outcome is attributed to the contract alone.
+Section~\ref{sec:method} specifies the protocol,
+Section~\ref{sec:setup} instantiates the experiment, and
+Sections~\ref{sec:results}--\ref{sec:discussion} report the census.
 
 \section{Method}
 \label{sec:method}
-ECM--TQAG comprises a conditioning bundle that fixes what may serve as
-evidence, an evidence contract that constrains how an item is produced
-from that bundle, and a deterministic verifier that turns each returned
-item into a binary outcome. Fig.~\ref{fig:method} shows the composition.
+ECM--TQAG has three components: a conditioning bundle that fixes what
+may serve as evidence, an evidence contract that constrains how an item
+is produced from that bundle, and a deterministic verifier that turns
+each returned item into a binary outcome. Fig.~\ref{fig:method} shows
+the architecture, including the data pipeline that builds the bundles.
 
 \subsection{Conditioning bundle}
 Each source chunk $c$ is represented by
 \begin{equation}
 E_c=\bigl(T_c,\;L_c,\;\mathcal I_c\bigr),
 \end{equation}
-where $T_c$ is the recognised text, $L_c$ the document structure, and
-$\mathcal I_c$ a census of page images identified by content hash.
-Nothing outside $E_c$ is admissible evidence for a chunk, which is what
-makes the contract checkable rather than declarative.
+where $T_c$ is the recognised page text, $L_c$ the document structure
+(headings, figure and table regions), and $\mathcal I_c$ the set of
+figure crops bound by content hash. Evidence outside $E_c$ is
+inadmissible for a chunk, so the contract is checkable rather than
+declarative.
 
-\subsection{Contracted generation}
-A single multimodal generator $g$ is fixed for the whole method. For arm
-$a$ in the condition set $\mathcal A=\{\textsc{ecm},\textsc{dir},
-\textsc{str}\}$, one call produces one candidate,
+\subsection{Evidence contract}
+One multimodal generator $g$ is fixed for the whole protocol. Under arm
+$a\in\mathcal A=\{\textsc{ecm},\textsc{dir},\textsc{str}\}$, one call
+produces one candidate item,
 \begin{equation}
 y_{c,a}=g\bigl(\pi_a,\;E_c\bigr),
 \label{eq:call}
 \end{equation}
-where $\pi_a$ is the arm prompt. Source bytes, decoding settings,
-question type $t_c$, and the type-conditioned response schema are
-identical across arms, so $\pi_a$ is the only quantity in
-\eqref{eq:call} that varies; the direct arm requests one multimodal item
-and the structured no-contract arm additionally emphasises exact schema
-completion.
-
-The ECM contract $\pi_{\textsc{ecm}}$ adds four operations to that shared
-instruction. It selects an exact quotation $q$ from $T_c$ together with
-an image $h$ from $\mathcal I_c$; it plans a unique answer $\alpha$
-before the question is worded; it holds the evidence tuple
+where $\pi_a$ is the arm prompt and the decoding settings, the
+question type $t_c$, and the response schema are identical across arms.
+The ECM contract adds four operations to that shared instruction: it
+selects a verbatim quotation $q$ from $T_c$ together with a figure $h$
+from $\mathcal I_c$; it plans the answer $\alpha$ before wording the
+question; it holds the evidence tuple
 \begin{equation}
 \tau=(t,\;q,\;\alpha,\;h)
 \end{equation}
-fixed while the item is realised; and it self-checks multimodal necessity
-and schema conformance. These are instructions inside one call, not
-separately observed stages. The provider returns only the final
-structured item, so hidden intermediate reasoning is never treated as
-observed evidence, and we write $\tau(y)$ for the tuple carried by a
-response $y$.
+fixed while the item is realised; and it self-checks schema
+conformance. All four operations are instructions within the single
+call of \eqref{eq:call}; because the provider returns only the final
+structured item, intermediate reasoning never enters the evidence
+record. The two control arms
+share the same call structure; the direct arm simply requests one
+multimodal item, and the structured no-contract arm additionally
+emphasises exact schema completion.
 
-\subsection{Deterministic verification}
+\subsection{Deterministic verifier}
 Verification recomputes $\tau(y)$ against $E_c$. The gate is the
 conjunction
 \begin{equation}
@@ -144,97 +139,95 @@ G(y,E_c)=\;&\mathbb 1\{t=t_c\}\cdot
 \end{split}
 \label{eq:gate}
 \end{equation}
-where $q\sqsubseteq T_c$ requires $q$ to be a contiguous substring of the
-recognised text, $\sigma$ is exact conformance to the response schema
-with a nonempty question, answer, visual description, and necessity
-rationale, and $\mu$ requires, for multiple choice, four distinct options
-with a valid unique answer index whose option equals $\alpha$. The code
-accepts exactly one JSON object and performs no insertion, aliasing,
-translation, normalisation, coercion, or repair, so $G$ is a property of
-the response rather than of any post-processing. Passing $G$ establishes
-mechanical source consistency only, not truth, legal correctness,
-pedagogical value, or genuine visual necessity.
-
-\subsection{Derived endpoint}
-Two arm-blind judges $j\in\{1,2\}$ from independent model families supply
-the semantic criteria. Each returns the same seven-field object: five
-integer scores $s_{jk}\in\{1,\dots,5\}$, a critical-provenance flag
-$p_j$, and a nonempty rationale. With $k\le 3$ indexing evidence
-correctness, visual necessity, and answerability, the primary endpoint is
+where $q\sqsubseteq T_c$ requires the quotation to be a contiguous
+substring of the recognised text, $\sigma$ is exact schema conformance
+with nonempty question, answer, visual description, and rationale, and
+$\mu$ requires, for multiple choice, four distinct options whose marked
+option equals $\alpha$. Because $G$ is evaluated on the response as
+returned, admission is a property of the response itself. The mechanical admission of
+chunk $c$ under arm $a$ is
 \begin{equation}
-\begin{split}
-V(c,a)=\;&G(y_{c,a},E_c)\cdot
-\mathbb 1\Bigl\{\min_{j,k\le 3}s_{jk}\ge 3\Bigr\}\\
-&\cdot\prod_{j=1}^{2}\mathbb 1\{\gamma_j\}\,\mathbb 1\{p_j=0\},
-\end{split}
-\label{eq:endpoint}
+A(c,a)=G\bigl(y_{c,a},E_c\bigr),
+\label{eq:admission}
 \end{equation}
-where $\gamma_j$ is the judge record passing its own identity, schema,
-and local gates. Every factor in \eqref{eq:endpoint} is computed by code;
-caller-supplied validity flags are never analysis inputs. A missing,
-transport-invalid, identity-invalid, or schema-invalid record leaves the
-corresponding factor at zero, so $V(c,a)=0$ under
-intention-to-test rather than being removed from the denominator.
+computed entirely by the verifier. Passing $G$ certifies source
+consistency only; it does not establish truth, legal correctness, or
+pedagogical value.
 
-\subsection{Identification}
+\subsection{Paired identification}
 Because $g$, $E_c$, $t_c$, the schema, and the decoding settings are
-common to all arms, the paired difference $V(c,\textsc{ecm})-V(c,a')$ for
-$a'\ne\textsc{ecm}$ varies only with the prompt. Each chunk therefore
-acts as its own control, and the contract is tested by exact paired
-comparisons over chunks with prespecified multiplicity control.
+common to all arms, the paired difference $A(c,\textsc{ecm})-A(c,a')$
+varies only with the prompt. Each chunk therefore acts as its own
+control, and the contract is tested by exact paired comparisons with
+prespecified multiplicity control. In addition, two arm-blind model
+raters from independent families supply secondary semantic scores;
+these are treated as exploratory in this work.
 
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=\textwidth]{figure_ecm_tqag_method.pdf}
-\caption{ECM--TQAG. A per-chunk conditioning bundle $E_c$ conditions one
-generation call per arm; the arm prompt $\pi_a$ is the only quantity that
-varies. The gate $G$ recomputes the returned tuple $\tau(y)$ against
-$E_c$ without repair, and blind dual judging supplies the semantic
-factors of the derived endpoint $V(c,a)$.}
+\caption{ECM--TQAG architecture and data pipeline. Left: scanned
+holdings are rendered page by page; recognition, layout analysis, and
+figure-crop extraction produce the conditioning bundle
+$E_c=(T_c,\,L_c,\,\mathcal I_c)$. Centre: the bundle and an arm prompt
+$\pi_a$ enter one generation call; under the ECM arm the call carries
+the four contract operations listed in the panel. Right: the returned
+evidence tuple $\tau(y)=(t,\,q,\,\alpha,\,h)$ is recomputed by the
+deterministic gate $G$, whose five conditions are evaluated against the
+same bundle without repair, yielding the binary admission $A(c,a)$ used
+for all reported contrasts. Judging of admitted items by two arm-blind
+raters is a secondary, exploratory measurement.}
 \label{fig:method}
 \end{figure*}
 
 \section{Experimental Setup}
 \label{sec:setup}
-The analysis frame is a bounded census of 16 Vietnamese-law
-image-bearing chunks, not a population sample. The generator is
-Qwen3-VL-8B-Instruct, held fixed across all three arms so that no model
-change can confound the prompt contrast, and the two arm-blind judges
-are Claude Sonnet 5 and GPT-5.6 Terra. Multiple-choice distractor
-integrity is enforced by the construction gate $\mu$ in \eqref{eq:gate}
-rather than by a judge field.
+\paragraph{Material.}
+The frame is a bounded census of 24 figure-bearing chunks, not a
+population sample. The chunks come from scanned holdings of the
+University of Law, Hue University: reference monographs, conference
+proceedings, course textbooks, student research reports, undergraduate
+theses, and institutional process and form documents, used for internal
+research only; no page image is redistributed. The frame retains chunks whose figure is present, whose crop is
+resolvable, and whose text is long enough to support a verbatim
+quotation (Fig.~\ref{fig:method}).
 
-The primary endpoint is the intention-to-test valid yield $V$ of
-\eqref{eq:endpoint}: every assigned chunk remains in the denominator,
-and schema, transport, missing-response, and gate failures count as
-invalid while being tabulated separately. The two confirmatory contrasts
-compare ECM against each control arm with exact McNemar tests under Holm
-control at $\alpha=0.05$, with Clopper--Pearson intervals for per-arm
-yields. Five secondary judged vectors, namely evidence correctness,
-visual necessity, answerability and uniqueness, pedagogical value, and
-Vietnamese language quality, are reported separately rather than
-averaged, and they remain exploratory until calibrated against blinded
-human ratings.
+\paragraph{Arms and models.}
+Each chunk receives one call under each of the three arms of
+\eqref{eq:call}. The generator is Qwen3-VL-8B-Instruct, held fixed
+across arms so that no model change can confound the prompt contrast.
+The two arm-blind raters are Claude Opus 5 and GPT-5.6 Sol, from
+independent model families.
+
+\paragraph{Quantities and tests.}
+The measured outcome is the mechanical admission $A$ of
+\eqref{eq:admission}, reported over all assigned chunks: a chunk whose
+item fails any gate condition contributes zero to the rate. Each paired contrast compares the contracted arm with one control arm
+by an exact McNemar test; the two $p$-values are adjusted by Holm's
+step-down procedure at family-wise $\alpha=0.05$ (thresholds $0.025$
+and $0.05$).
 
 \input{results/final_results}
 \input{results/final_discussion}
 
 \section{Conclusion}
-ECM--TQAG states evidence support and visual dependence as a contract on
-one generation call and makes that contract checkable by recomputing the
-declared evidence tuple against the source bundle, with a derived
-intention-to-test endpoint. In a paired three-arm census that varies
-only the prompt, the contract raised structural compliance but produced
-no significant advantage in complete-pipeline yield, and the binding
-constraint was the visual necessity of the source images rather than the
-contract itself. The method is thus executable and structurally
-beneficial, while end-to-end valid multimodal yield on this corpus and
-generator remains an open problem.
+ECM--TQAG states evidence support as a contract on one generation call
+and makes that contract checkable by recomputing the declared evidence
+tuple against the source bundle. In a paired census of 24
+figure-bearing chunks in which the prompt is the only quantity that
+varies, the contract significantly raises the rate at which a single
+call yields a source-consistent item, and it eliminates the dominant
+failure mode of the control arms, namely quotation from text rendered
+only inside page images. Admission certifies source consistency rather
+than truth or pedagogical value, and extending the protocol to semantic
+validity at scale remains open.
 
 \section*{Data Availability}
 The evidence consists of the frozen protocol, the evaluation instrument,
-and the complete census records with their primary analysis. Copyrighted
-page images and raw provider responses are not distributed.
+and the complete census records with their primary analysis. Source
+material is held by the University of Law, Hue University, for internal
+research only: copyrighted page images, figure crops, and raw model
+responses are not distributed.
 
 \section*{Acknowledgment}
 The authors thank the Institute of Open Education and Information

@@ -1,0 +1,87 @@
+{
+ "attribution": {
+  "instrument_case_sensitivity": {
+   "action_taken": "NONE. The gate was NOT modified. Round 1-4 records stand as run.",
+   "by_arm": {
+    "direct": 1,
+    "ecm_full": 1,
+    "structured_no_contract": 2
+   },
+   "counterfactual_if_case_folded": {
+    "direct": "16->17",
+    "ecm_full": "22->23",
+    "structured_no_contract": "12->14",
+    "total": "50->54"
+   },
+   "definition": "Quote IS present in T_c; the sole difference is the capitalisation of the first letter (model capitalised a mid-sentence quote). Frozen classify_quote applies NFC + whitespace collapsing but NOT case folding.",
+   "examples": [
+    "CHUNK-DE8ADDD205 'N' vs 'n'",
+    "CHUNK-5B24FE6E35 'N' vs 'n' (all three arms)"
+   ],
+   "interpretation": "FALSE REJECTS. Content is correct and verbatim; rejection turns on one uppercase letter. This is an instrument defect, not a generator failure.",
+   "n": 4,
+   "share_of_18": 0.22
+  },
+  "model_image_quoting": {
+   "by_arm": {
+    "direct": 4,
+    "ecm_full": 0,
+    "structured_no_contract": 6
+   },
+   "definition": "Quote absent from T_c and from +/-2 neighbouring pages, but PRESENT in OCR of the figure crop. The model quoted text rendered inside the image.",
+   "interpretation": "This is the capability failure the manuscript already reports. The ECM contract eliminated it entirely (0 of 10).",
+   "n": 10,
+   "share_of_18": 0.56
+  },
+  "unresolved": {
+   "by_arm": {
+    "direct": 2,
+    "ecm_full": 1,
+    "structured_no_contract": 1
+   },
+   "caveat": "Probably also image-quoting: two are syllogism conclusion lines and one is a diagram label ([diagram label redacted]), which tesseract failed to read off the diagram. NOT counted as confirmed image-quoting because the OCR evidence is absent.",
+   "definition": "Quote absent from text layer and not recovered by crop OCR (overlap 0.0-0.17).",
+   "n": 4
+  }
+ },
+ "bottom_line": [
+  "The null is NOT caused by a dataset scoping bug and NOT by a broken model vision.",
+  "56% of quote violations are the model quoting image-rendered text - the failure ECM is designed to prevent, and ECM prevented all of them.",
+  "22% are FALSE REJECTS from a case-sensitive gate: an instrument defect that penalises every arm and understates admission by 4 items.",
+  "The endpoint stays near-constant because of the corpus: figures restate prose. That is a frame property, not a prompt or model property."
+ ],
+ "boundaries": "No frozen code, gate, dataset, or prior-round record was modified. No paid call was made by this audit; it reads sealed sidecars only.",
+ "created_utc": "2026-08-16T12:45:00Z",
+ "dataset_verdict": {
+  "T_c_excludes_image_text": "BY DESIGN and correct: pdftotext -layout returns the text layer only. This is what makes the gate q subset-of T_c meaningful.",
+  "T_c_scoping_defect": "NOT FOUND. 0 of 18 failed quotes appear on neighbouring pages, so the single-page T_c window is not the cause.",
+  "real_dataset_limitation": "Figures restate prose. 24 of 50 admitted items have an answer >=20 chars verbatim in T_c; 37 of 50 judge records score necessity below 3. This is the corpus property that keeps the endpoint near-constant.",
+  "rule4_defect_already_fixed": "2 chunks with T_c of 1 and 4 chars were excluded before execution (frozen rule 4)."
+ },
+ "method": [
+  "All 22 terminal generation failures recovered from sealed transport sidecars.",
+  "Each failed text_evidence_quote re-classified with the FROZEN validator (round2_validation.classify_quote) against the gate's own source_text.",
+  "Decisive split 1: search quote in target page AND +/-2 neighbouring pages of the source PDF text layer (pdftotext -layout) -> tests T_c scoping.",
+  "Decisive split 2: OCR the figure crops (tesseract -l vie) and test whether the quote is present in image-rendered text -> tests image-quoting.",
+  "Split 3: case-insensitive re-match to isolate gate strictness from content error."
+ ],
+ "model_verdict": {
+  "contract_compliance": "This is the real weakness: unprompted, the model quotes what it sees in the image. 10 of 18 violations.",
+  "normalized_verbatim_dominance": "42 of 50 admitted quotes needed NFC/whitespace normalisation; only 8 matched byte-exact. Consistent with a scanned Vietnamese corpus, accepted by design under the D1 repair.",
+  "vision_capability": "INTACT. Verified items read pie charts and fishbone diagrams correctly, including answers absent from T_c (e.g. CHUNK-8D8C55049A [source fragment redacted])."
+ },
+ "prompt_verdict": {
+  "arm_neutrality": "All prompt repairs (D1 validator, D3 option-indexing clarification) were applied identically to all three arms, so no prompt change could have favoured ECM.",
+  "observed_prompt_effect": "The ECM contract text is the only arm-specific difference and it removed image-quoting entirely (0 of 10 vs direct 4, structured 6)."
+ },
+ "question": "Is the round-4 null attributable to dataset, prompt, or model?",
+ "schema": "ecm-tqag.round4.failure-attribution-audit.v1",
+ "totals": {
+  "complete": 50,
+  "generation_attempts": 72,
+  "json_object": 2,
+  "other_schema": 2,
+  "quote_non_verbatim": 18,
+  "terminal_failures": 22
+ }
+}

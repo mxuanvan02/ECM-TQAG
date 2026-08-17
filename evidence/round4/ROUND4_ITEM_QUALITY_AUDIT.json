@@ -1,0 +1,43 @@
+{
+ "bearing_on_endpoint": "The judges' low visual_necessity scores are consistent with the item text on direct reading, so the round-4 null is not evidence of judge miscalibration; it reflects item construction plus corpus redundancy.",
+ "by_arm": {
+  "direct": {
+   "cites_figure": 7,
+   "concedes": 0,
+   "n": 16,
+   "text_directed": 5
+  },
+  "ecm_full": {
+   "cites_figure": 15,
+   "concedes": 8,
+   "n": 22,
+   "text_directed": 9
+  },
+  "structured_no_contract": {
+   "cites_figure": 8,
+   "concedes": 0,
+   "n": 12,
+   "text_directed": 3
+  }
+ },
+ "created_utc": "2026-08-16T12:12:35.672914+00:00",
+ "finding": "About a third of gate-passing items ask about the TEXT ('theo văn bản') inside a frame selected for image-necessity. The ECM contract constrains the declared evidence tuple but does not constrain question CONTENT toward visual dependence, so text-directed items pass the gate in every arm including ecm_full.",
+ "items": null,
+ "measures": {
+  "answer_long_verbatim_in_Tc": 24,
+  "cites_figure": 30,
+  "neither_figure_nor_text_cue": 7,
+  "rationale_concedes_text_has_fact": 8,
+  "text_directed": 17
+ },
+ "n_items": 50,
+ "schema": "ecm-tqag.round4.item-quality-audit.v1",
+ "status": "ASSISTANT_READING_NOT_THE_PREREGISTERED_HUMAN_REVIEW",
+ "superseded_metric": {
+  "earlier_claim": "70% of answers appear verbatim in T_c",
+  "replacement": "answer_long_verbatim_in_Tc requires >=20 chars",
+  "why_wrong": "bare substring test; e.g. a short answer matched incidentally inside a longer institution name, which is not the survey result the question asks about"
+ },
+ "what_this_is": "Single-rater, non-blinded, post-hoc reading of the 50 gate-passing round-4 items by the assistant. It is NOT the pre-registered human semantic review and carries no confirmatory weight.",
+ "items_redaction_note": "Per-item records (50 items; per-arm counts {'ecm_full': 22, 'structured_no_contract': 12, 'direct': 16}) are withheld from the public release: they are raw generated responses over copyrighted source material (manuscript Data Availability). Aggregate fields below are complete."
+}
