@@ -132,6 +132,11 @@ def test_verifier_rejects_invalid_resealed_report(tmp_path):
 
 def test_real_data_inventory_is_fail_closed():
     inventory = ROOT.parent / "conference_eval/inventory_v1.json"
+    if not inventory.is_file():
+        pytest.skip(
+            "requires the private rights inventory at "
+            f"{inventory} (not distributed with this repository)"
+        )
     result = validate_real_data_inventory(inventory)
 
     assert result["status"] == "BLOCKED"

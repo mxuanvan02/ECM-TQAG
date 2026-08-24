@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from ecm_tqag.cli import main
 
 
@@ -39,6 +41,11 @@ def test_contract_eval_and_verify_cli(tmp_path, capsys):
 
 def test_real_inventory_cli(capsys):
     inventory = Path(__file__).parents[2] / "conference_eval/inventory_v1.json"
+    if not inventory.is_file():
+        pytest.skip(
+            "requires the private rights inventory at "
+            f"{inventory} (not distributed with this repository)"
+        )
     assert main(["validate-real-inventory", str(inventory)]) == 2
     result = json.loads(capsys.readouterr().out)
     assert result["status"] == "BLOCKED"
