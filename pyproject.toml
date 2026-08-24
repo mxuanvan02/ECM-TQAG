@@ -25,3 +25,7 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+# The distribution uses a src/ layout. Without this, a bare `pytest` run from the
+# repository root cannot import `ecm_tqag` unless the package is installed first,
+# which made every test module fail at collection time.
+pythonpath = ["src"]
