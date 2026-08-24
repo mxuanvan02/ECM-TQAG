@@ -1,0 +1,23 @@
+{
+ "call_cap": 300,
+ "granted_by": "project owner (chat)",
+ "granted_utc": "2026-08-24T11:30:25.758075+00:00",
+ "owner_statement_verbatim": "triển khai chạy toàn bộ nhé, bất kể chi phí",
+ "prompt_revision": {
+  "arm": "gate_disclosed",
+  "probe": "runs/gate_prompt_probe_20260824T113000Z (6 calls, non-citable): 5/6 admitted, 1 empty answer",
+  "reason": "first prompt framed the task as satisfying the checker, producing empty question/answer fields",
+  "revisions": 1,
+  "stopping_rule": "prompt fixed once for the contentless defect; NOT tuned against admission counts"
+ },
+ "round": "census_4arm_framec",
+ "schema": "ecm-tqag.round4.owner-authorization.v1",
+ "scope": "Four-arm Frame-C census: qualification (3 calls) + census (288 calls: 24 chunks x 4 arms x [1 generation + 2 judges]). Generator via OpenRouter, judges via OmniProxy, per owner instruction. No other round or frame authorized.",
+ "supersedes": {
+  "reason": "gate_disclosed prompt induced schema-conformant contentless output",
+  "run": "census_4arm_framec_20260824T110000Z",
+  "spend_usd": 0.015572,
+  "status": "VOID"
+ },
+ "usd_hard_cap": 25.0
+}

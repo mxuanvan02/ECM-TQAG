@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "direct",
+ "branch": "text_image",
+ "item_id": "framec::R15_P1_03::p0231::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0007457,
+ "returned": {
+  "answer": "Chính con người là nguyên nhân gây ra thảm họa môi trường đáng báo động hiện nay."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::R15_P1_03::p0231::direct"
+}

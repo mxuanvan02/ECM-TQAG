@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "direct",
+ "branch": "text_only",
+ "item_id": "framec::R12_P1_03::p0395::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0002207,
+ "returned": {
+  "answer": "Cán bộ phân tích sử dụng hồ sơ rủi ro, các thông tin khác và các hoạt động kiểm soát để lựa chọn các phương tiện, hành khách và hàng hóa rủi ro cao nhất để kiểm tra."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::R12_P1_03::p0395::direct"
+}

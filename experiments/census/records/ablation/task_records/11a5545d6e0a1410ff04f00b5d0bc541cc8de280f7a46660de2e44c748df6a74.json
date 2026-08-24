@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "direct",
+ "branch": "text_only",
+ "item_id": "framec::P4_001::p0273::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 5.1207e-05,
+ "returned": {
+  "answer": "Từ truyền thông hoặc các cuộc tranh luận xã hội"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::P4_001::p0273::direct"
+}

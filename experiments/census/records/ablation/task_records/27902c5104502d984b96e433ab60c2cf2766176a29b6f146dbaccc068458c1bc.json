@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "structured_no_contract",
+ "branch": "text_only",
+ "item_id": "framec::P3_003::p0027::structured_no_contract",
+ "question_type": "multiple_choice",
+ "reported_cost_usd": 4.3849e-05,
+ "returned": {
+  "option_index": 3
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::P3_003::p0027::structured_no_contract"
+}

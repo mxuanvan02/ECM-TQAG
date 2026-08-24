@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "gate_disclosed",
+ "branch": "text_image",
+ "item_id": "framec::P1_008::p0042::gate_disclosed",
+ "question_type": "short_answer",
+ "reported_cost_usd": 8.1458e-05,
+ "returned": {
+  "answer": "3 phần: cơ sở ban hành, nội dung chính và hiệu lực pháp lý"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_image::framec::P1_008::p0042::gate_disclosed"
+}

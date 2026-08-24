@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "structured_no_contract",
+ "branch": "text_only",
+ "item_id": "framec::P4_001::p0274::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0001858,
+ "returned": {
+  "answer": "Vấn đề \"quyền được chết\" còn nhiều tranh cãi, và chính những tranh cãi này là lý do khiến quyền này chưa thể được công nhận tại Việt Nam."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P4_001::p0274::structured_no_contract"
+}

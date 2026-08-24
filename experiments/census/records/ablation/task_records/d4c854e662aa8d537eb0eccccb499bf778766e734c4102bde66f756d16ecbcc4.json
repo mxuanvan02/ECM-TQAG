@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "ecm_full",
+ "branch": "text_image",
+ "item_id": "framec::P4_001::p0272::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.000147381,
+ "returned": {
+  "answer": "Đại học"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_image::framec::P4_001::p0272::ecm_full"
+}

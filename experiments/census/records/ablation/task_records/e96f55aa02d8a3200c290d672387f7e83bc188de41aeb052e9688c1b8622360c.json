@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "gate_disclosed",
+ "branch": "text_only",
+ "item_id": "framec::P3_003::p0027::gate_disclosed",
+ "question_type": "multiple_choice",
+ "reported_cost_usd": 0.0001383,
+ "returned": {
+  "option_index": 2
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P3_003::p0027::gate_disclosed"
+}

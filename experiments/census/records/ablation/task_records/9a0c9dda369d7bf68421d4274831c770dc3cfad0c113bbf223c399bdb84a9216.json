@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "direct",
+ "branch": "text_only",
+ "item_id": "framec::P1_008::p0042::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 8.9e-05,
+ "returned": {
+  "answer": "nội dung chính"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P1_008::p0042::direct"
+}

@@ -1,0 +1,13 @@
+{
+ "assistant_note": "Admitted items in the new 4-arm census: 68. Measured generator cost in that census was ~USD 0.00034/call. Gemini 2.5 Flash is priced higher per token but the payloads are identical, so the projected total is still well under a dollar. If the USD cap would bind, remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending.",
+ "call_cap": 276,
+ "granted_by": "project owner (chat)",
+ "granted_utc": "2026-08-24T12:32:54.874647+00:00",
+ "owner_statement_verbatim": "ok em làm đi nhé, bất kể chi phí",
+ "preregistration": "ABLATION_PREREGISTRATION.md",
+ "preregistration_sha256": "da0d52818feb53c00c95e5e7994afae1bd0157d4efc7dd365986243d416d32cc",
+ "round": "ablation_2answerer",
+ "schema": "ecm-tqag.ablation.owner-authorization.v1",
+ "scope": "Text-only vs text+image ablation over the 68 admitted items of census_4arm_framec_20260824T120000Z, answered independently by TWO answerer families: qwen/qwen3-vl-8b-instruct (the generator, retained for comparability with the earlier single-answerer ablation) and google/gemini-2.5-flash (independent). 68 items x 2 branches x 2 answerers = 272 calls. Neither judge family (claude-opus-5, gpt-5.6-sol) is used as an answerer, because that would make the measured and rated necessity endpoints share a model. Zero retry, no fallback.",
+ "usd_hard_cap": 25.0
+}

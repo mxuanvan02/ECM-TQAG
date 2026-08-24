@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "ecm_full",
+ "branch": "text_image",
+ "item_id": "framec::P4_001::p0275::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0004902,
+ "returned": {
+  "answer": "Theo kết quả khảo sát trong hình 8, điều kiện được cộng đồng cho là quan trọng nhất để công nhận quyền được chết ngoài các điều kiện về độ tuổi, sự tự nguyện, năng lực hành vi dân sự và quốc tịch là \"Mắc bệnh nan y khó chữa, không có cơ hội phục hồi\" với 62,3%."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::P4_001::p0275::ecm_full"
+}

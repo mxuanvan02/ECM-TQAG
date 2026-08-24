@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "gate_disclosed",
+ "branch": "text_image",
+ "item_id": "framec::P3_002::p0014::gate_disclosed",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0006945,
+ "returned": {
+  "answer": "Hoạt động rà soát để hoàn thiện các biểu mẫu phục vụ công tác khảo thí của Trường chưa được thực hiện thường xuyên và chưa có tính tổng thể."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::P3_002::p0014::gate_disclosed"
+}

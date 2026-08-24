@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "gate_disclosed",
+ "branch": "text_image",
+ "item_id": "framec::R15_P1_03::p0058::gate_disclosed",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0002969,
+ "returned": {
+  "answer": "Hình 2.2. Sơ đồ biểu diễn suy luận quy nạp."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::R15_P1_03::p0058::gate_disclosed"
+}

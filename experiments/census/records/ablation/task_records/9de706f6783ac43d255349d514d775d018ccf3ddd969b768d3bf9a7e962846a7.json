@@ -1,0 +1,10 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "ecm_full",
+ "branch": "text_only",
+ "item_id": "framec::P3_003::p0029::ecm_full",
+ "question_type": "multiple_choice",
+ "reason": "UNDECODABLE",
+ "status": "TERMINAL_FAILURE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P3_003::p0029::ecm_full"
+}

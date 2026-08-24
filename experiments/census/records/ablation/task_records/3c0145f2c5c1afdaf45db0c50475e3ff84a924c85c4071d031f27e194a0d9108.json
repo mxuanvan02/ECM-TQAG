@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "structured_no_contract",
+ "branch": "text_image",
+ "item_id": "framec::P4_001::p0274::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.000212771,
+ "returned": {
+  "answer": "Điều kiện kinh tế - xã hội của Việt Nam"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_image::framec::P4_001::p0274::structured_no_contract"
+}

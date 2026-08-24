@@ -1,0 +1,294 @@
+{
+ "schema": "ecm-tqag.official.prompt-schema-contract.v1",
+ "status": "OFFICIAL_PROSPECTIVE",
+ "generator_model": "qwen/qwen3-vl-8b-instruct",
+ "shared_request": {
+  "temperature": 0,
+  "max_tokens": 1024,
+  "input_order": [
+   "source_text",
+   "document_structure",
+   "frozen_question_type",
+   "image_parts"
+  ],
+  "response_format": "type_conditioned_json_schema",
+  "no_output_repair": true,
+  "no_normalization": true
+ },
+ "generator_prompts": {
+  "ecm_full": {
+   "system": "Bạn tạo đúng một mục TQA đa phương thức bằng tiếng Việt từ duy nhất gói nguồn được cung cấp. Thực hiện nội bộ, không xuất chuỗi suy luận, theo bốn bước bắt buộc. (1) COMPILE CONTRACT: chọn một trích dẫn văn bản nguyên văn, một nhận định quan sát được trong ảnh và đúng SHA-256 ảnh; không dùng tri thức ngoài gói nguồn. (2) ANSWER-FIRST PLAN: xác định trước một đáp án duy nhất được hai kênh văn bản và ảnh cùng hỗ trợ, rồi mới soạn câu hỏi sao cho thiếu một trong hai kênh sẽ không đủ căn cứ trả lời. Với multiple_choice, tạo đúng bốn lựa chọn khác nhau, chỉ một lựa chọn đúng; các nhiễu phải hợp lý nhưng không được nguồn hỗ trợ. (3) SEAL: cố định loại câu hỏi, đáp án, trích dẫn và SHA-256 ảnh trước khi hiện thực hóa câu hỏi; không thay bằng chứng để hợp thức hóa câu hỏi sau đó. (4) SELF-GATE: kiểm tra trích dẫn là chuỗi con nguyên văn, hash thuộc danh sách hợp lệ, câu hỏi thực sự cần ảnh, đáp án duy nhất, và object khớp chính xác JSON schema. Chỉ trả một JSON object; không thêm giải thích ngoài JSON.",
+   "user_template": "VĂN BẢN NGUỒN:\n{source_text}\n\nCẤU TRÚC TÀI LIỆU:\n{document_structure_json}\n\nLOẠI CÂU HỎI ĐÃ ẤN ĐỊNH: {question_type}\n\nSHA-256 ẢNH HỢP LỆ: {image_hashes_json}\n\nHãy compile hợp đồng bằng chứng, lập đáp án trước, niêm phong tuple (question_type, answer, text_evidence_quote, image_sha256), tự kiểm qua các cổng nguồn gốc–tính cần thiết của ảnh–tính duy nhất của đáp án–schema, rồi chỉ xuất object cuối. Trường text_evidence_quote phải là chuỗi con nguyên văn của VĂN BẢN NGUỒN; visual_evidence.image_sha256 phải thuộc danh sách hợp lệ; necessity_rationale phải giải thích cụ thể vì sao riêng văn bản không đủ trả lời."
+  },
+  "direct": {
+   "system": "Tạo đúng một câu hỏi và đáp án TQA đa phương thức bằng tiếng Việt từ văn bản và ảnh được cung cấp. Tuân thủ đúng loại câu hỏi đã ấn định và JSON schema được áp dụng. Chỉ trả một JSON object, không thêm văn bản ngoài JSON.",
+   "user_template": "VĂN BẢN NGUỒN:\n{source_text}\n\nCẤU TRÚC TÀI LIỆU:\n{document_structure_json}\n\nLOẠI CÂU HỎI ĐÃ ẤN ĐỊNH: {question_type}\n\nSHA-256 ẢNH HỢP LỆ: {image_hashes_json}\n\nTạo đúng một câu hỏi và đáp án từ gói nguồn."
+  },
+  "structured_no_contract": {
+   "system": "Tạo đúng một câu hỏi và đáp án TQA đa phương thức bằng tiếng Việt. Tuân thủ loại câu hỏi đã ấn định và điền đầy đủ, chính xác các trường của JSON schema được áp dụng. Không thêm trường, không bỏ trường và chỉ trả một JSON object.",
+   "user_template": "VĂN BẢN NGUỒN:\n{source_text}\n\nCẤU TRÚC TÀI LIỆU:\n{document_structure_json}\n\nLOẠI CÂU HỎI ĐÃ ẤN ĐỊNH: {question_type}\n\nSHA-256 ẢNH HỢP LỆ: {image_hashes_json}\n\nĐiền object theo JSON schema từ gói nguồn."
+  },
+  "gate_disclosed": {
+   "system": "Bạn tạo đúng một mục TQA đa phương thức bằng tiếng Việt từ duy nhất gói nguồn được cung cấp; không dùng tri thức ngoài gói nguồn. Mục phải có nội dung thực chất: câu hỏi hoàn chỉnh, đáp án thật, mô tả đúng ảnh, lý giải rõ vì sao cần ảnh; không để trống trường nào và không trả về khung rỗng. Mục sẽ được một bộ kiểm tự động đối chiếu lại với gói nguồn theo năm tiêu chí, công bố tại đây để bạn biết trước: (1) question_type đúng loại đã ấn định; (2) text_evidence_quote là chuỗi con nguyên văn của VĂN BẢN NGUỒN, nên chữ chỉ có trong ảnh là không hợp lệ; (3) visual_evidence.image_sha256 thuộc danh sách hợp lệ; (4) đúng một JSON object khớp chính xác schema, đủ trường và mọi trường văn bản đều có nội dung; (5) với multiple_choice có đúng bốn lựa chọn khác nhau, correct_option là số nguyên trong 0..3 đếm từ 0, answer chép nguyên văn options[correct_option]. Bộ kiểm không sửa, không chuẩn hoá, không bù trường thiếu. Cách tiến hành là tuỳ bạn: không có trình tự bắt buộc, không bắt buộc chọn bằng chứng trước hay soạn câu hỏi trước. Chỉ trả một JSON object, không thêm văn bản ngoài JSON.",
+   "user_template": "VĂN BẢN NGUỒN:\n{source_text}\n\nCẤU TRÚC TÀI LIỆU:\n{document_structure_json}\n\nLOẠI CÂU HỎI ĐÃ ẤN ĐỊNH: {question_type}\n\nSHA-256 ẢNH HỢP LỆ: {image_hashes_json}\n\nHãy tạo đúng một mục TQA có nội dung thực chất từ gói nguồn, rồi tự đối chiếu với năm tiêu chí trước khi trả về. Mọi trường văn bản phải có nội dung: question, answer, text_evidence_quote, visual_evidence.description, visual_evidence.necessity_rationale. text_evidence_quote phải là chuỗi con nguyên văn của VĂN BẢN NGUỒN. Trình tự tiến hành là tuỳ bạn."
+  }
+ },
+ "schemas": {
+  "generation_short_answer": {
+   "type": "json_schema",
+   "json_schema": {
+    "name": "ecm_tqag_v310_generation_short_answer",
+    "strict": true,
+    "schema": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "question",
+      "answer",
+      "question_type",
+      "text_evidence_quote",
+      "visual_evidence"
+     ],
+     "properties": {
+      "question": {
+       "type": "string"
+      },
+      "answer": {
+       "type": "string"
+      },
+      "question_type": {
+       "type": "string",
+       "enum": [
+        "short_answer"
+       ]
+      },
+      "text_evidence_quote": {
+       "type": "string"
+      },
+      "visual_evidence": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "image_sha256",
+        "description",
+        "necessity_rationale"
+       ],
+       "properties": {
+        "image_sha256": {
+         "type": "string"
+        },
+        "description": {
+         "type": "string"
+        },
+        "necessity_rationale": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "generation_multiple_choice": {
+   "type": "json_schema",
+   "json_schema": {
+    "name": "ecm_tqag_v310_generation_multiple_choice",
+    "strict": true,
+    "schema": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "question",
+      "answer",
+      "question_type",
+      "options",
+      "correct_option",
+      "text_evidence_quote",
+      "visual_evidence"
+     ],
+     "properties": {
+      "question": {
+       "type": "string"
+      },
+      "answer": {
+       "type": "string"
+      },
+      "question_type": {
+       "type": "string",
+       "enum": [
+        "multiple_choice"
+       ]
+      },
+      "options": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "correct_option": {
+       "type": "integer"
+      },
+      "text_evidence_quote": {
+       "type": "string"
+      },
+      "visual_evidence": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "image_sha256",
+        "description",
+        "necessity_rationale"
+       ],
+       "properties": {
+        "image_sha256": {
+         "type": "string"
+        },
+        "description": {
+         "type": "string"
+        },
+        "necessity_rationale": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "judge_short_answer": {
+   "type": "json_schema",
+   "json_schema": {
+    "name": "ecm_tqag_official_judge",
+    "strict": true,
+    "schema": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "evidence_correctness",
+      "visual_necessity",
+      "answerability",
+      "pedagogical_value",
+      "vietnamese_language",
+      "critical_provenance_violation",
+      "rationale"
+     ],
+     "properties": {
+      "evidence_correctness": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "visual_necessity": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "answerability": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "pedagogical_value": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "vietnamese_language": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "critical_provenance_violation": {
+       "type": "boolean"
+      },
+      "rationale": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "judge_multiple_choice": {
+   "type": "json_schema",
+   "json_schema": {
+    "name": "ecm_tqag_official_judge",
+    "strict": true,
+    "schema": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "evidence_correctness",
+      "visual_necessity",
+      "answerability",
+      "pedagogical_value",
+      "vietnamese_language",
+      "critical_provenance_violation",
+      "rationale"
+     ],
+     "properties": {
+      "evidence_correctness": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "visual_necessity": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "answerability": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "pedagogical_value": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "vietnamese_language": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "critical_provenance_violation": {
+       "type": "boolean"
+      },
+      "rationale": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  }
+ },
+ "local_validation": {
+  "exact_top_level_keys": true,
+  "exact_nested_visual_keys": true,
+  "question_and_answer_nonempty": true,
+  "question_type_must_equal_frozen_task_type": true,
+  "text_evidence_quote_nonempty_exact_source_substring": true,
+  "image_sha256_must_match_supplied_image": true,
+  "visual_description_and_necessity_nonempty": true,
+  "multiple_choice_exact_option_count": 4,
+  "multiple_choice_options_distinct_nonempty": true,
+  "correct_option_integer_range": [
+   0,
+   3
+  ],
+  "multiple_choice_answer_must_exactly_equal_selected_option": true,
+  "judge_score_integer_range": [
+   1,
+   5
+  ],
+  "judge_rationale_nonempty": true,
+  "decode_exactly_one_json_object": true,
+  "repair": false,
+  "coercion": false,
+  "missing_key_insertion": false
+ },
+ "judge_prompt": {
+  "system": "Bạn là giám khảo độc lập, mù nhãn phương pháp. Chỉ dùng nguồn và ứng viên được cung cấp. Trả đúng bảy trường theo schema. Chấm evidence_correctness, visual_necessity, answerability, pedagogical_value và vietnamese_language bằng số nguyên 1--5 (1=kém, 3=đạt tối thiểu, 5=xuất sắc). Đặt critical_provenance_violation=true khi bằng chứng nguồn gốc sai. Rationale phải ngắn gọn và có căn cứ. Không thêm, đổi tên, dịch, suy diễn hoặc sửa trường; chỉ trả một JSON object.",
+  "user_template": "MÃ ỨNG VIÊN: {candidate_code}\n\nVĂN BẢN NGUỒN:\n{source_text}\n\nLOẠI CÂU HỎI: {question_type}\n\nSHA-256 ẢNH HỢP LỆ: {image_hashes_json}\n\nỨNG VIÊN:\n{candidate_json}\n\nĐánh giá theo đúng schema bảy trường và thang 1--5."
+ }
+}

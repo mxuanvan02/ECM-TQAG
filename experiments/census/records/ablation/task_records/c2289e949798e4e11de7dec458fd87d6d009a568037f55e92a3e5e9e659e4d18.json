@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "structured_no_contract",
+ "branch": "text_only",
+ "item_id": "framec::R15_P1_03::p0237::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 5.8877e-05,
+ "returned": {
+  "answer": "Cách biểu diễn suy luận, lập luận dưới dạng sơ đồ cấu trúc"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::R15_P1_03::p0237::structured_no_contract"
+}

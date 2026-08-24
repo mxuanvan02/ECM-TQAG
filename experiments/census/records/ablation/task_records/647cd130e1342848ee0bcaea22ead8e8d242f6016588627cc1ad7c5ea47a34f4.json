@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "structured_no_contract",
+ "branch": "text_only",
+ "item_id": "framec::R15_P1_03::p0059::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 3.4281e-05,
+ "returned": {
+  "answer": "Kết luận được rút ra từ các tiền đề, không từ quan sát cụ thể."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::R15_P1_03::p0059::structured_no_contract"
+}

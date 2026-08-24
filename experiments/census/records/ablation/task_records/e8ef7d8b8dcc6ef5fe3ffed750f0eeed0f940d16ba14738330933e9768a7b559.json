@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "structured_no_contract",
+ "branch": "text_image",
+ "item_id": "framec::P2_006::p0093::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0002925,
+ "returned": {
+  "answer": "Không có biểu đồ nào trong số các biểu đồ được cung cấp hiển thị tỷ lệ sinh viên biết về mức hưởng khi tham gia BHYT."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::P2_006::p0093::structured_no_contract"
+}

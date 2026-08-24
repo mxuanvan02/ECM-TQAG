@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "structured_no_contract",
+ "branch": "text_only",
+ "item_id": "framec::P2_006::p0060::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0002665,
+ "returned": {
+  "answer": "Theo văn bản nguồn, thực tế tại một số trường ĐH, CĐ trên địa bàn tỉnh Thừa Thiên Huế, SV khi tham gia BHYT có quyền \"lựa chọn cơ sở KCB ban đầu\" nhưng lại bị nhà trường đứng ra chọn thay."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P2_006::p0060::structured_no_contract"
+}

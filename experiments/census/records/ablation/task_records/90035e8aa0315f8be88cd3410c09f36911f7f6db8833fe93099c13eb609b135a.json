@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "ecm_full",
+ "branch": "text_image",
+ "item_id": "framec::P2_006::p0060::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.000138151,
+ "returned": {
+  "answer": "quyền lựa chọn cơ sở KCB ban đầu"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_image::framec::P2_006::p0060::ecm_full"
+}

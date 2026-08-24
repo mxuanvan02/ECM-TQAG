@@ -1,0 +1,1370 @@
+{
+ "assignments": {
+  "framec::P1_006::p0074": "short_answer",
+  "framec::P1_008::p0042": "short_answer",
+  "framec::P2_006::p0060": "short_answer",
+  "framec::P2_006::p0093": "short_answer",
+  "framec::P2_007::p0062": "short_answer",
+  "framec::P2_007::p0063": "short_answer",
+  "framec::P2_007::p0068": "short_answer",
+  "framec::P3_002::p0014": "short_answer",
+  "framec::P3_002::p0015": "short_answer",
+  "framec::P3_003::p0025": "multiple_choice",
+  "framec::P3_003::p0027": "multiple_choice",
+  "framec::P3_003::p0029": "multiple_choice",
+  "framec::P4_001::p0272": "short_answer",
+  "framec::P4_001::p0273": "short_answer",
+  "framec::P4_001::p0274": "short_answer",
+  "framec::P4_001::p0275": "short_answer",
+  "framec::R12_P1_03::p0380": "multiple_choice",
+  "framec::R12_P1_03::p0395": "short_answer",
+  "framec::R15_P1_03::p0058": "short_answer",
+  "framec::R15_P1_03::p0059": "short_answer",
+  "framec::R15_P1_03::p0231": "short_answer",
+  "framec::R15_P1_03::p0237": "short_answer",
+  "framec::R15_P1_03::p0306": "multiple_choice",
+  "framec::R15_P1_03::p0311": "multiple_choice"
+ },
+ "build_audit": [
+  {
+   "chunk_id": "framec::P1_006::p0074",
+   "context_text_nonspace_chars": 2425,
+   "crop_min_dimension_px": 842,
+   "crops": 1,
+   "document_class": "giao_trinh",
+   "figure_cues": {
+    "diagram": 1
+   },
+   "page": 74,
+   "question_type": "short_answer",
+   "question_type_reason": "single_relation_diagram_cue",
+   "target_text_nonspace_chars": 238
+  },
+  {
+   "chunk_id": "framec::P1_008::p0042",
+   "context_text_nonspace_chars": 2618,
+   "crop_min_dimension_px": 602,
+   "crops": 1,
+   "document_class": "tai_lieu_hoc_tap",
+   "figure_cues": {},
+   "page": 42,
+   "question_type": "short_answer",
+   "question_type_reason": "no_procedure_or_multi_element_cue",
+   "target_text_nonspace_chars": 209
+  },
+  {
+   "chunk_id": "framec::P1_008::p0052",
+   "context_text_nonspace_chars": 2212,
+   "crop_min_dimension_px": 622,
+   "crops": 2,
+   "document_class": "tai_lieu_hoc_tap",
+   "figure_cues": {},
+   "page": 52,
+   "question_type": "short_answer",
+   "question_type_reason": "no_procedure_or_multi_element_cue",
+   "target_text_nonspace_chars": 2
+  },
+  {
+   "chunk_id": "framec::P2_006::p0060",
+   "context_text_nonspace_chars": 3334,
+   "crop_min_dimension_px": 600,
+   "crops": 2,
+   "document_class": "bao_cao_nckh",
+   "figure_cues": {
+    "chart": 1
+   },
+   "page": 60,
+   "question_type": "short_answer",
+   "question_type_reason": "single_chart_relation",
+   "target_text_nonspace_chars": 618
+  },
+  {
+   "chunk_id": "framec::P2_006::p0093",
+   "context_text_nonspace_chars": 401,
+   "crop_min_dimension_px": 203,
+   "crops": 2,
+   "document_class": "bao_cao_nckh",
+   "figure_cues": {
+    "chart": 1
+   },
+   "page": 93,
+   "question_type": "short_answer",
+   "question_type_reason": "single_chart_relation",
+   "target_text_nonspace_chars": 130
+  },
+  {
+   "chunk_id": "framec::P2_006::p0094",
+   "context_text_nonspace_chars": 130,
+   "crop_min_dimension_px": 210,
+   "crops": 1,
+   "document_class": "bao_cao_nckh",
+   "figure_cues": {},
+   "page": 94,
+   "question_type": "short_answer",
+   "question_type_reason": "no_procedure_or_multi_element_cue",
+   "target_text_nonspace_chars": 0
+  },
+  {
+   "chunk_id": "framec::P2_007::p0062",
+   "context_text_nonspace_chars": 2788,
+   "crop_min_dimension_px": 359,
+   "crops": 1,
+   "document_class": "khoa_luan_luan_van",
+   "figure_cues": {
+    "chart": 1
+   },
+   "page": 62,
+   "question_type": "short_answer",
+   "question_type_reason": "single_chart_relation",
+   "target_text_nonspace_chars": 803
+  },
+  {
+   "chunk_id": "framec::P2_007::p0063",
+   "context_text_nonspace_chars": 2536,
+   "crop_min_dimension_px": 416,
+   "crops": 1,
+   "document_class": "khoa_luan_luan_van",
+   "figure_cues": {
+    "chart": 2
+   },
+   "page": 63,
+   "question_type": "short_answer",
+   "question_type_reason": "single_chart_relation",
+   "target_text_nonspace_chars": 814
+  },
+  {
+   "chunk_id": "framec::P2_007::p0068",
+   "context_text_nonspace_chars": 4144,
+   "crop_min_dimension_px": 505,
+   "crops": 1,
+   "document_class": "khoa_luan_luan_van",
+   "figure_cues": {
+    "chart": 2
+   },
+   "page": 68,
+   "question_type": "short_answer",
+   "question_type_reason": "single_chart_relation",
+   "target_text_nonspace_chars": 937
+  },
+  {
+   "chunk_id": "framec::P3_002::p0014",
+   "context_text_nonspace_chars": 1275,
+   "crop_min_dimension_px": 928,
+   "crops": 1,
+   "document_class": "de_tai_quy_trinh_bieu_mau",
+   "figure_cues": {
+    "form": 1
+   },
+   "page": 14,
+   "question_type": "short_answer",
+   "question_type_reason": "form_layout_no_procedure_cue",
+   "target_text_nonspace_chars": 191
+  },
+  {
+   "chunk_id": "framec::P3_002::p0015",
+   "context_text_nonspace_chars": 1600,
+   "crop_min_dimension_px": 574,
+   "crops": 1,
+   "document_class": "de_tai_quy_trinh_bieu_mau",
+   "figure_cues": {
+    "form": 13
+   },
+   "page": 15,
+   "question_type": "short_answer",
+   "question_type_reason": "form_layout_no_procedure_cue",
+   "target_text_nonspace_chars": 751
+  },
+  {
+   "chunk_id": "framec::P3_003::p0025",
+   "context_text_nonspace_chars": 1939,
+   "crop_min_dimension_px": 612,
+   "crops": 2,
+   "document_class": "de_tai_quy_trinh_bieu_mau",
+   "figure_cues": {
+    "diagram": 1,
+    "procedure": 3
+   },
+   "page": 25,
+   "question_type": "multiple_choice",
+   "question_type_reason": "multi_step_procedure_cue",
+   "target_text_nonspace_chars": 383
+  },
+  {
+   "chunk_id": "framec::P3_003::p0027",
+   "context_text_nonspace_chars": 2307,
+   "crop_min_dimension_px": 610,
+   "crops": 2,
+   "document_class": "de_tai_quy_trinh_bieu_mau",
+   "figure_cues": {
+    "diagram": 1,
+    "procedure": 3
+   },
+   "page": 27,
+   "question_type": "multiple_choice",
+   "question_type_reason": "multi_step_procedure_cue",
+   "target_text_nonspace_chars": 452
+  },
+  {
+   "chunk_id": "framec::P3_003::p0029",
+   "context_text_nonspace_chars": 2117,
+   "crop_min_dimension_px": 233,
+   "crops": 2,
+   "document_class": "de_tai_quy_trinh_bieu_mau",
+   "figure_cues": {
+    "diagram": 2,
+    "form": 1,
+    "procedure": 1
+   },
+   "page": 29,
+   "question_type": "multiple_choice",
+   "question_type_reason": "multi_step_procedure_cue",
+   "target_text_nonspace_chars": 835
+  },
+  {
+   "chunk_id": "framec::P4_001::p0272",
+   "context_text_nonspace_chars": 4414,
+   "crop_min_dimension_px": 489,
+   "crops": 1,
+   "document_class": "ky_yeu_hoi_thao",
+   "figure_cues": {},
+   "page": 272,
+   "question_type": "short_answer",
+   "question_type_reason": "no_procedure_or_multi_element_cue",
+   "target_text_nonspace_chars": 1593
+  },
+  {
+   "chunk_id": "framec::P4_001::p0273",
+   "context_text_nonspace_chars": 2572,
+   "crop_min_dimension_px": 477,
+   "crops": 3,
+   "document_class": "ky_yeu_hoi_thao",
+   "figure_cues": {},
+   "page": 273,
+   "question_type": "short_answer",
+   "question_type_reason": "no_procedure_or_multi_element_cue",
+   "target_text_nonspace_chars": 642
+  },
+  {
+   "chunk_id": "framec::P4_001::p0274",
+   "context_text_nonspace_chars": 1896,
+   "crop_min_dimension_px": 453,
+   "crops": 3,
+   "document_class": "ky_yeu_hoi_thao",
+   "figure_cues": {},
+   "page": 274,
+   "question_type": "short_answer",
+   "question_type_reason": "no_procedure_or_multi_element_cue",
+   "target_text_nonspace_chars": 337
+  },
+  {
+   "chunk_id": "framec::P4_001::p0275",
+   "context_text_nonspace_chars": 3425,
+   "crop_min_dimension_px": 534,
+   "crops": 2,
+   "document_class": "ky_yeu_hoi_thao",
+   "figure_cues": {},
+   "page": 275,
+   "question_type": "short_answer",
+   "question_type_reason": "no_procedure_or_multi_element_cue",
+   "target_text_nonspace_chars": 917
+  },
+  {
+   "chunk_id": "framec::R12_P1_03::p0380",
+   "context_text_nonspace_chars": 2179,
+   "crop_min_dimension_px": 476,
+   "crops": 1,
+   "document_class": "giao_trinh",
+   "figure_cues": {
+    "diagram": 1,
+    "procedure": 2
+   },
+   "page": 380,
+   "question_type": "multiple_choice",
+   "question_type_reason": "multi_step_procedure_cue",
+   "target_text_nonspace_chars": 495
+  },
+  {
+   "chunk_id": "framec::R12_P1_03::p0395",
+   "context_text_nonspace_chars": 2109,
+   "crop_min_dimension_px": 453,
+   "crops": 2,
+   "document_class": "giao_trinh",
+   "figure_cues": {
+    "diagram": 1
+   },
+   "page": 395,
+   "question_type": "short_answer",
+   "question_type_reason": "single_relation_diagram_cue",
+   "target_text_nonspace_chars": 497
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0058",
+   "context_text_nonspace_chars": 1496,
+   "crop_min_dimension_px": 226,
+   "crops": 2,
+   "document_class": "sach_chuyen_khao_tham_khao",
+   "figure_cues": {
+    "diagram": 2
+   },
+   "page": 58,
+   "question_type": "short_answer",
+   "question_type_reason": "single_relation_diagram_cue",
+   "target_text_nonspace_chars": 462
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0059",
+   "context_text_nonspace_chars": 1605,
+   "crop_min_dimension_px": 373,
+   "crops": 2,
+   "document_class": "sach_chuyen_khao_tham_khao",
+   "figure_cues": {
+    "diagram": 1
+   },
+   "page": 59,
+   "question_type": "short_answer",
+   "question_type_reason": "single_relation_diagram_cue",
+   "target_text_nonspace_chars": 163
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0231",
+   "context_text_nonspace_chars": 3461,
+   "crop_min_dimension_px": 481,
+   "crops": 1,
+   "document_class": "sach_chuyen_khao_tham_khao",
+   "figure_cues": {
+    "diagram": 2
+   },
+   "page": 231,
+   "question_type": "short_answer",
+   "question_type_reason": "single_relation_diagram_cue",
+   "target_text_nonspace_chars": 909
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0237",
+   "context_text_nonspace_chars": 3044,
+   "crop_min_dimension_px": 716,
+   "crops": 1,
+   "document_class": "sach_chuyen_khao_tham_khao",
+   "figure_cues": {
+    "diagram": 1
+   },
+   "page": 237,
+   "question_type": "short_answer",
+   "question_type_reason": "single_relation_diagram_cue",
+   "target_text_nonspace_chars": 691
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0306",
+   "context_text_nonspace_chars": 2506,
+   "crop_min_dimension_px": 531,
+   "crops": 1,
+   "document_class": "sach_chuyen_khao_tham_khao",
+   "figure_cues": {
+    "fishbone": 2,
+    "hierarchy": 1
+   },
+   "page": 306,
+   "question_type": "multiple_choice",
+   "question_type_reason": "multi_element_fishbone_cue",
+   "target_text_nonspace_chars": 814
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0311",
+   "context_text_nonspace_chars": 2147,
+   "crop_min_dimension_px": 603,
+   "crops": 1,
+   "document_class": "sach_chuyen_khao_tham_khao",
+   "figure_cues": {
+    "fishbone": 2
+   },
+   "page": 311,
+   "question_type": "multiple_choice",
+   "question_type_reason": "multi_element_fishbone_cue",
+   "target_text_nonspace_chars": 725
+  }
+ ],
+ "chunk_count": 24,
+ "corpus_declaration": {
+  "deviation_from_round1": "The round-1 official frame was drawn from 9 Vietnamese law textbooks; this frame is a different document mix. Declared as a deviation, not absorbed silently.",
+  "must_not_say": "Vietnamese law textbooks (giao trinh) - only 3 of 26 chunks are giao trinh.",
+  "must_say": "scanned Vietnamese legal documents from the University of Law, Hue University (HUL): monographs, conference proceedings, textbooks, student research reports, undergraduate theses, institutional process/form studies and case-based course materials"
+ },
+ "created_utc": "2026-08-16T08:05:56.456027+00:00",
+ "crop_floor_px": 203,
+ "determination_record": "ROUND4_FRAME_DETERMINATION_v3_20260816T080249Z.json",
+ "determination_sha256": "dc52d653c0b2cda2f9b865e619dbd2dad57402fa7b1c0707a4ad9b8f84390d6a",
+ "dropped_at_build_time": [],
+ "frame": "C_hul_legal_documents",
+ "packages": [
+  {
+   "chunk_id": "framec::P1_006::p0074",
+   "condition": "TLV",
+   "doc_id": "P1_006",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      73,
+      74,
+      75
+     ],
+     "document_type": "giao_trinh",
+     "figure_cues": {
+      "diagram": 1
+     },
+     "page": 74,
+     "source_id": "P1_006",
+     "title": "Giáo trình xây dựng văn bản pháp luật"
+    },
+    "images": [
+     {
+      "bytes": 49518,
+      "declared_order": 1,
+      "height": 889,
+      "path": "dataset_framec/images/P1_006_p0074_figure_crop_1.png",
+      "sha256": "2d82ce4273739d887f41da227bd7145aecd581afa7674c56c656c338596a3ad6",
+      "width": 842
+     }
+    ],
+    "text": "  SƠ ĐỒ BỐ TRÍ CÁC THÀNH PHẦN THỂ THỨC\nVĂN BẢN\n  (Trên một trang giấy khổ A4: 210 mm x 297 mm)\n\n\n\n\n   Ghi chú:\nÔ số        : Thành phần thể thức văn bản\n1           : Quốc hiệu và Tiêu ngữ\n2           : Tên cơ quan, tổ chức ban hành văn bản\n3           : Số, ký hiệu của văn bản\n4           : Địa danh và ngày, tháng, năm ban hành văn bản\n5           : Tên văn bản\n6           : Nội dung văn bản\n\n74\n\f"
+   },
+   "item_id": "framec::P1_006::p0074",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P1_008::p0042",
+   "condition": "TLV",
+   "doc_id": "P1_008",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      41,
+      42,
+      43
+     ],
+     "document_type": "tai_lieu_hoc_tap",
+     "figure_cues": {},
+     "page": 42,
+     "source_id": "P1_008",
+     "title": "Tài liệu học tập hướng dẫn giải quyết tình huống xây dựng văn bản pháp luật, văn bản hành chính"
+    },
+    "images": [
+     {
+      "bytes": 50486,
+      "declared_order": 1,
+      "height": 662,
+      "path": "dataset_framec/images/P1_008_p0042_figure_crop_1.png",
+      "sha256": "dffc7d93190cffd7799829ecbfc432b99ec0111094c9cbe7441bf729fe2b1c34",
+      "width": 602
+     }
+    ],
+    "text": "     VÍ DỤ TÌNH HUỐNG\n      Xây dựng nghị định quy định về tuyển dụng, sử dụng, quản\nlý công chức\n\n\n\n\n2.1.2.3. Cách thức soạn thảo nghị định\n      Tương tự các văn bản quy phạm pháp luật khác, nội dung của\nnghị định bao gồm ba phần: cơ sở ban hành, nội dung chính và hiệu\nlực pháp lý.\n                               42\n\f"
+   },
+   "item_id": "framec::P1_008::p0042",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P2_006::p0060",
+   "condition": "TLV",
+   "doc_id": "P2_006",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      59,
+      60,
+      61
+     ],
+     "document_type": "bao_cao_nckh",
+     "figure_cues": {
+      "chart": 1
+     },
+     "page": 60,
+     "source_id": "P2_006",
+     "title": "Pháp luật về bảo hiểm y tế sinh viên, qua thực tiễn áp dụng tại tỉnh Thừa Thiên Huế"
+    },
+    "images": [
+     {
+      "bytes": 7180,
+      "declared_order": 1,
+      "height": 600,
+      "path": "dataset_framec/images/P2_006_p0060_figure_crop_1.png",
+      "sha256": "0074c47320f5ef47b2d917c1379f4cfcd4af7cfaaebd2baeb5f118943d5eed11",
+      "width": 600
+     },
+     {
+      "bytes": 14224,
+      "declared_order": 2,
+      "height": 600,
+      "path": "dataset_framec/images/P2_006_p0060_figure_crop_2.png",
+      "sha256": "daef05e34a9c6259a85f4d09d70eca34c0dfe773e28642e22c25c5281046ce5a",
+      "width": 600
+     }
+    ],
+    "text": "  Biểu đồ 2.1. Biểu thị tỷ lệ SV tham gia BHYT tại một số trường trên địa bàn\n                               tỉnh Thừa Thiên Huế\n     Với tỷ lệ SV tham gia BHYT SV như hiện nay cho thấy các cơ quan ban ngành,\nnhà trường thực sự chưa hoàn thành nhiệm vụ và SV cũng chưa làm tròn trách nhiệm\ncủa bản thân đối với xã hội (vì SV là đối tượng bắt buộc của BHYT).\n      Thứ năm, về cơ sở KCB khi tham gia BHYT SV.\n      Theo Luật Khám bệnh, chữa bệnh thì SV khi tham gia vào BHYT SV thì có\nquyền lựa chọn cơ sở khám, chữa bệnh ban đầu.\n      Tuy nhiên, thực tế tại một số trường ĐH, CĐ trên địa bàn tỉnh Thừa Thiên Huế\nthì khi tham gia nhập học, SV bắt buộc phải đóng khoản tiền BHYT mà không được\nthực hiện quyền của mình, đó chính là quyền “lựa chọn cơ sở KCB ban đầu”. Thay\nvào đó, nhà trường sẽ đứng ra chọn một cơ sở KCB thay cho SV. Điều này là một hạn\n\n\n\n                                         50\n\f"
+   },
+   "item_id": "framec::P2_006::p0060",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P2_006::p0093",
+   "condition": "TLV",
+   "doc_id": "P2_006",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      92,
+      93,
+      94
+     ],
+     "document_type": "bao_cao_nckh",
+     "figure_cues": {
+      "chart": 1
+     },
+     "page": 93,
+     "source_id": "P2_006",
+     "title": "Pháp luật về bảo hiểm y tế sinh viên, qua thực tiễn áp dụng tại tỉnh Thừa Thiên Huế"
+    },
+    "images": [
+     {
+      "bytes": 11368,
+      "declared_order": 1,
+      "height": 203,
+      "path": "dataset_framec/images/P2_006_p0093_figure_crop_1.png",
+      "sha256": "333d66230393240f26dce04315f2da0d685773b591f869b22b7147239f12177a",
+      "width": 544
+     },
+     {
+      "bytes": 12064,
+      "declared_order": 2,
+      "height": 203,
+      "path": "dataset_framec/images/P2_006_p0093_figure_crop_2.png",
+      "sha256": "46d85d418e04f38ac8f374df653a7f6a907e6ed54f0a6195cd6fef223165371e",
+      "width": 557
+     }
+    ],
+    "text": "c. Mức độ hiểu biết về mức hưởng khi tham gia BHYT SV\n\n\n\n\nd. Mức độ hiểu biết về chế tài xử lý vi phạm\n\n\n\n\n3. Biểu đồ về tỷ lệ SV được tham gia lựa chọn cơ sở khám chữa bệnh ban đầu\n\f"
+   },
+   "item_id": "framec::P2_006::p0093",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P2_007::p0062",
+   "condition": "TLV",
+   "doc_id": "P2_007",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      61,
+      62,
+      63
+     ],
+     "document_type": "khoa_luan_luan_van",
+     "figure_cues": {
+      "chart": 1
+     },
+     "page": 62,
+     "source_id": "P2_007",
+     "title": "Pháp luật về giải quyết tranh chấp trong hợp đồng mua bán hàng hóa bằng trọng tài"
+    },
+    "images": [
+     {
+      "bytes": 99763,
+      "declared_order": 1,
+      "height": 359,
+      "path": "dataset_framec/images/P2_007_p0062_figure_crop_1.png",
+      "sha256": "2b419f8aad384740d7e906babb6bdc8b631a321a70bdd12e7a1f289262b55466",
+      "width": 748
+     }
+    ],
+    "text": "     Nguồn: Trung tâm trọng tài quốc tế Việt Nam VIAC, thống kê tình hình\ngiải quyết tranh chấp tại VIAC giai đoạn 1993-2019\n     Nhận xét: Tuy chưa xác nhận được tổng số vụ án tranh chấp tại từng\ntrung tâm trọng tài cụ thể, tuy nhiên, thông qua biểu đồ số vụ án tranh chấp tại\ntrung tâm trọng tài quốc tế Việt Nam VIAC giai đoạn 1993-2019 chúng ta có\nthể thấy được số vụ án tranh chấp được đưa ra giải quyết tại trung tâm trọng\ntài này ngày càng tăng lên rõ rệt, từ chỗ giải quyết từ 8-9 vụ tranh chấp một\nnăm trong năm 1993, thì đến năm 2010 số vụ án tranh chấp được giải quyết\ntăng lên khoảng 70 vụ một năm. Và đến năm 2019, tổng số vụ án tranh chấp\nđược giải quyết trong thời điểm này lên đến con số khoảng 275 vụ. Đây là\nmột sự tăng lên khá rõ rệt, số lượng vụ án tranh chấp được giải quyết tại trung\ntâm trọng tài tăng lên là một một dấu hiệu tích cực cho thấy rằng vai trò và vị\ntrí của các trung tâm trọng tài đang ngày càng tạo được sự lòng tin đối với các\ndoanh nhiệp hay các tổ chức cá nhân khác trong xã hội, và nó như là một\n\n\n\n                                      58\n\f"
+   },
+   "item_id": "framec::P2_007::p0062",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P2_007::p0063",
+   "condition": "TLV",
+   "doc_id": "P2_007",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      62,
+      63,
+      64
+     ],
+     "document_type": "khoa_luan_luan_van",
+     "figure_cues": {
+      "chart": 2
+     },
+     "page": 63,
+     "source_id": "P2_007",
+     "title": "Pháp luật về giải quyết tranh chấp trong hợp đồng mua bán hàng hóa bằng trọng tài"
+    },
+    "images": [
+     {
+      "bytes": 90187,
+      "declared_order": 1,
+      "height": 416,
+      "path": "dataset_framec/images/P2_007_p0063_figure_crop_1.png",
+      "sha256": "dc8f960455bfc03f853150566cce15b8d505be8854b8676de1d0c6a074589d68",
+      "width": 696
+     }
+    ],
+    "text": "phương pháp giải quyết tranh chấp chiếm vị trí khá cao so với phương thức\ngiải quyết tranh chấp tại tòa án.\n     Ngoài ra, cùng với sự phát triển của nền kinh tế trong nước cũng như nền\nkinh tế thế giới, các loại hình tranh chấp tại các trung tâm trọng tài thương\nmại Việt Nam ngày càng có sự phong phú và đa dạng hơn. Nếu như trước\nđây, loại hình tranh chấp được các bên đưa ra giải quyết tại các trung tâm\ntrọng tài chủ yếu là các quan hệ tranh chấp về ngân hàng, đầu tư, gia công thì\nhiện nay các loại hình tranh chấp được giải quyết ngày càng phong phú hơn\nnhư tranh chấp về hợp đồng mua bán hàng hóa, logistics, bảo hiểm xây dựng\nvà dịch vụ, hay là tranh chấp giữa các thành viên công ty, tranh chấp về tài\nchính, năng lượng và phân phối. Sự đa dạng về các loại hình tranh chấp này\nđược thể hiện rõ nét thông qua biểu đồ như sau:\n    Biểu đồ 2.2: Loại hình tranh chấp tại trung tâm trọng tài quốc tế\n                                Việt Nam VIAC\n\n\n\n\n     Nguồn: Trung tâm trọng tài quốc tế Việt Nam VIAC, thống kê tình hình\ngiải quyết tranh chấp tại VIAC giai đoạn 1993-2019\n\n\n\n                                     59\n\f"
+   },
+   "item_id": "framec::P2_007::p0063",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P2_007::p0068",
+   "condition": "TLV",
+   "doc_id": "P2_007",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      67,
+      68,
+      69
+     ],
+     "document_type": "khoa_luan_luan_van",
+     "figure_cues": {
+      "chart": 2
+     },
+     "page": 68,
+     "source_id": "P2_007",
+     "title": "Pháp luật về giải quyết tranh chấp trong hợp đồng mua bán hàng hóa bằng trọng tài"
+    },
+    "images": [
+     {
+      "bytes": 278714,
+      "declared_order": 1,
+      "height": 505,
+      "path": "dataset_framec/images/P2_007_p0068_figure_crop_1.png",
+      "sha256": "5d048d4a98ba5d578f0be21370f4e272fcb43886d4cbd6cda0a75792037fbcd9",
+      "width": 739
+     }
+    ],
+    "text": "     Nguồn:https://www.vietnamplus.vn/40-doanh-nghiep-fdi-chon-giai-\nquyet-tranh-chap-qua-trong-tai/502125.vnp\n     Nhận xét: Nhìn vào biểu đồ, chúng ta có thể thấy, nếu như các doanh\nnghiệp không sử dụng tòa án làm phương thức giải quyết tranh chấp tỷ lệ các\ndoanh nghiệp lựa chọn trọng tài chiếm tỷ lệ 40%. Ngoài ra, lĩnh vực tranh\nchấp của các doanh nghiệp thường tập trung chủ yếu vào quan hệ tranh chấp\nhợp đồng mua bán hàng hóa, lĩnh vực này chiếm khoảng 32%. Như vậy, nhìn\nvào biểu đồ, chúng ta có thể thấy, các doanh nghiệp FDI ngày càng có niềm\ntin và lựa chọn trọng tài làm hình thức giải quyết tranh chấp chủ yếu.\n     2.1.2.2. Vướng mắc từ thực tiễn giải quyết tranh chấp hợp đồng mua bán\nhàng hóa bằng trọng tài\n     Thứ nhất, bên cạnh những thành tựu, kết quả mà các trung tâm trọng tài\nthương mại đã đạt được thì vẫn còn tồn tại những thiếu sót, chưa đáp ứng\nđược nhu cầu, tình hình phát triển của đất nước trong xu thế hội nhập. So với\nphương thức giải quyết tranh chấp tại tòa án thì tỷ lệ được các bên lựa chọn\nđể giải quyết tranh chấp tại Tòa án vẫn chiếm con số cao hơn so với việc giải\nquyết tại các trung tâm trọng tài. Theo thống kê đã nhận được, số vụ tranh\n\n\n                                      64\n\f"
+   },
+   "item_id": "framec::P2_007::p0068",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P3_002::p0014",
+   "condition": "TLV",
+   "doc_id": "P3_002",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      13,
+      14,
+      15
+     ],
+     "document_type": "de_tai_quy_trinh_bieu_mau",
+     "figure_cues": {
+      "form": 1
+     },
+     "page": 14,
+     "source_id": "P3_002",
+     "title": "Hoàn thiện hệ thống biểu mẫu phục vụ hoạt động khảo thí của Trường Đại học Luật, Đại học Huế"
+    },
+    "images": [
+     {
+      "bytes": 391836,
+      "declared_order": 1,
+      "height": 1767,
+      "path": "dataset_framec/images/P3_002_p0014_figure_crop_1.png",
+      "sha256": "f1f2b4fab9c86a9109e200a58015963b65686829aff1f707f69285a095d9851d",
+      "width": 928
+     }
+    ],
+    "text": "                                      9\n\n\n\n\n    1.2.2. Hạn chế\n    Thứ nhất, hoạt động ra soát để hoàn thiện các biểu mẫu phục vụ công tác\nkhảo thí của Trường chưa được thực hiện thường xuyên cũng như chưa có tính\ntổng thế. Hằng nằm, qua thực tiễn hoạt động của công tác khảo thí, Phòng Khảo\n\f"
+   },
+   "item_id": "framec::P3_002::p0014",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P3_002::p0015",
+   "condition": "TLV",
+   "doc_id": "P3_002",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      14,
+      15,
+      16
+     ],
+     "document_type": "de_tai_quy_trinh_bieu_mau",
+     "figure_cues": {
+      "form": 13
+     },
+     "page": 15,
+     "source_id": "P3_002",
+     "title": "Hoàn thiện hệ thống biểu mẫu phục vụ hoạt động khảo thí của Trường Đại học Luật, Đại học Huế"
+    },
+    "images": [
+     {
+      "bytes": 214631,
+      "declared_order": 1,
+      "height": 1094,
+      "path": "dataset_framec/images/P3_002_p0015_figure_crop_1.png",
+      "sha256": "487744a4b370ee517a607109d7cb4494c622916e0a27c34be0fcefa26fa6c262",
+      "width": 574
+     }
+    ],
+    "text": "                                       10\n\n\nthí và Bảo đảm chất lượng giáo dục đã tự chủ động thực hiện việc ra soát và cải\ntiến chứ chưa thực hiện trên cơ sở kế hoạch chung và có sự tham gia của các bên\nliên quan.\n     Thứ hai, qua thực tiễn thực hiện công tác khảo thí thì một số nghiệp vụ\nchưa có biểu mẫu để thực hiện, như: biểu mẫu Ngân hàng đề thi hoàn thiện; biểu\nmẫu Giám sát in sao đề thi sử dụng cho kỳ thi; biểu mẫu Điều hành thi; biểu\nmẫu Chỉ đạo thi; biểu mẫu Tổng hợp kỳ thi …vv.\n     Thứ ba, một số biểu mẫu đã có nhưng trong quá trình thực hiện thì chưa\nphù hợp, như: biểu mẫu Biên bản chấm thi; biểu mẫu Biên bản thống nhất đáp\nán; biểu mẫu Phúc khảo bài thi;… vv.\n     Thứ tư, trên hệ thống website của Trường việc đưa các biểu mẫu lên hệ\nthống còn thiếu và sắp xếp chưa được khoa học.\n\n\n\n\n     Thứ năm, qua thực tiễn quan sát thì một số sinh viên và viên chức, người\nlao động của Trường chưa tiếp nhận được thông tin về địa chỉ cũng như mục\nđích của các biểu mẫu. Nên giá trị sử dụng của các biểu mẫu còn hạn chế.\n\f"
+   },
+   "item_id": "framec::P3_002::p0015",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P3_003::p0025",
+   "condition": "TLV",
+   "doc_id": "P3_003",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      24,
+      25,
+      26
+     ],
+     "document_type": "de_tai_quy_trinh_bieu_mau",
+     "figure_cues": {
+      "diagram": 1,
+      "procedure": 3
+     },
+     "page": 25,
+     "source_id": "P3_003",
+     "title": "Xây dựng quy trình kế toán tiền mặt và hệ thống các biểu mẫu áp dụng tại Trường Đại học Luật, Đại học Huế"
+    },
+    "images": [
+     {
+      "bytes": 27940,
+      "declared_order": 1,
+      "height": 612,
+      "path": "dataset_framec/images/P3_003_p0025_figure_crop_1.png",
+      "sha256": "d9cc51c53b85cda70176372f7a1f6a171ff6ecd563618ed520c8e99ec28e9848",
+      "width": 804
+     },
+     {
+      "bytes": 1275,
+      "declared_order": 2,
+      "height": 612,
+      "path": "dataset_framec/images/P3_003_p0025_figure_crop_2.png",
+      "sha256": "dbd3173265ef97adcf96092d9b3f594e49cc6dd96749ce6fbbd774b2e10396ea",
+      "width": 804
+     }
+    ],
+    "text": "                  Sơ đồ 2.1: Quy trình kế toán thu tiền mặt\n    Trình tự thực hiện:\n    Bước 1. Nhận và xử lý chứng từ (1 – 2 ngày)\n    - Người nộp tiền lập Giấy nộp tiền tại Phòng Kế hoạch – Tài chính (KHTC).\nKế toán thanh toán lập Phiếu thu kèm các chứng từ khác (nếu có) trình kế\ntoán trưởng.\n    - Nếu chứng từ chưa hợp lệ hoặc chưa đầy đủ thì yêu cầu bổ sung hoặc\ncó thể từ chối phê duyệt. Nếu bộ chứng từ đã đầy đủ, hợp lệ, kế toán trưởng\nkiểm duyệt và trình Hiệu trưởng phê duyệt.\n    Bước 2. Luân chuyển chứng từ (1 ngày)\n\n\n\n\n                                     17\n\f"
+   },
+   "item_id": "framec::P3_003::p0025",
+   "question_type": "multiple_choice",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P3_003::p0027",
+   "condition": "TLV",
+   "doc_id": "P3_003",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      26,
+      27,
+      28
+     ],
+     "document_type": "de_tai_quy_trinh_bieu_mau",
+     "figure_cues": {
+      "diagram": 1,
+      "procedure": 3
+     },
+     "page": 27,
+     "source_id": "P3_003",
+     "title": "Xây dựng quy trình kế toán tiền mặt và hệ thống các biểu mẫu áp dụng tại Trường Đại học Luật, Đại học Huế"
+    },
+    "images": [
+     {
+      "bytes": 27901,
+      "declared_order": 1,
+      "height": 610,
+      "path": "dataset_framec/images/P3_003_p0027_figure_crop_1.png",
+      "sha256": "8473a06fee42fb12e0f77cc39210a2251941dbe041394237c75bfa775e9334ef",
+      "width": 801
+     },
+     {
+      "bytes": 1270,
+      "declared_order": 2,
+      "height": 610,
+      "path": "dataset_framec/images/P3_003_p0027_figure_crop_2.png",
+      "sha256": "e7837f4ff25f7984cd83cee454ff62cef833ac32c6c580b940b0bab1725ca477",
+      "width": 801
+     }
+    ],
+    "text": "                   Sơ đồ 2.2: Quy trình kế toán chi tiền mặt\n     Trình tự thực hiện:\n     Bước 1: Nhận và kiểm soát chứng từ (1 đến 2 ngày)\n     - Người thanh toán nộp chứng từ thanh toán tại Phòng KHTC. Kế toán\nkiểm soát chứng từ, chấp nhận hoặc trả lại (1 ngày).\n     - Kế toán trình chứng từ cho Kế toán trưởng, Kế toán trưởng xem xét,\nchấp nhận hoặc trả lại (1 ngày)\n     Nếu chứng từ chưa hợp lệ hoặc chưa đầy đủ, phải trả lại, kế toán sẽ\nthông báo cụ thể để người thanh toán bổ sung hoặc chỉnh sửa, hoàn chỉnh.\n     Bước 2: Trình Hiệu trưởng (1 ngày)\n     - Kế toán thanh toán trình chứng từ cho Hiệu trưởng ký duyệt chi.\n\n                                      19\n\f"
+   },
+   "item_id": "framec::P3_003::p0027",
+   "question_type": "multiple_choice",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P3_003::p0029",
+   "condition": "TLV",
+   "doc_id": "P3_003",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      28,
+      29,
+      30
+     ],
+     "document_type": "de_tai_quy_trinh_bieu_mau",
+     "figure_cues": {
+      "diagram": 2,
+      "form": 1,
+      "procedure": 1
+     },
+     "page": 29,
+     "source_id": "P3_003",
+     "title": "Xây dựng quy trình kế toán tiền mặt và hệ thống các biểu mẫu áp dụng tại Trường Đại học Luật, Đại học Huế"
+    },
+    "images": [
+     {
+      "bytes": 15802,
+      "declared_order": 1,
+      "height": 233,
+      "path": "dataset_framec/images/P3_003_p0029_figure_crop_1.png",
+      "sha256": "93ffc04c83cda2beabf174f579282e6c20ea211fa0434324288c5b585492e048",
+      "width": 729
+     },
+     {
+      "bytes": 534,
+      "declared_order": 2,
+      "height": 233,
+      "path": "dataset_framec/images/P3_003_p0029_figure_crop_2.png",
+      "sha256": "9f3234d1f5a7c693314cbc801bf6cd28046815eddc5331ceb0cfedd4a6a19183",
+      "width": 729
+     }
+    ],
+    "text": "     Sơ đồ 2.3: Sơ đồ quy trình luân chuyển chứng từ thanh toán chuyển khoản\n     Ghi chú:\n     (1) Kế toán nhận chứng từ cá nhân, đơn vị.\n     (2) Kế toán kiểm tra hồ sơ, tính hợp pháp, hợp lệ của chứng từ (01-02\nngày tùy theo loại chứng từ, hồ sơ), trả lại hoặc chấp nhận, lập séc ( Giấy rút\nDTNS, UNC, Lệnh chi...) trình Kế toán trưởng ký.\n     (3) Kế toán trưởng kiểm duyệt hồ sơ, dự toán được phê duyệt, tính hợp\npháp, hợp lý của chứng từ (01 ngày), trả lại hoặc chấp nhận, ký đề nghị chuẩn\nchi, chuyển trình ký Chủ tài khoản.\n     (4) Chủ tài khoản ký duyệt chuẩn chi (01-02 ngày tùy theo loại chứng từ,\nhồ sơ) hoặc chuyển trả bộ chứng từ lại cho kế toán nếu chưa phù hợp hoặc có\nsai sót.\n     (5) Kế toán chuyển bộ chứng từ trình Kho bạc, Ngân hàng để thanh toán\ncho cá nhân, đơn vị thụ hưởng.\n     (6) Kho bạc, Nhân hàng kiểm soát chấp nhận thực hiện nghiệp vụ thanh\ntoán chuyển khoản cho cá nhân, đơn vị thụ hưởng (02 ngày) hoặc trả lại cho\nkế toán nếu hồ sơ chưa đầy đủ hoặc không hợp lệ, hợp pháp.\n     Biểu mẫu đính kèm:\n     - Giấy rút dự toán ngân sách (Mẫu C2-02/NS); uỷ nhiệm chi (Mẫu C4-\n02/KB)\n                                       21\n\f"
+   },
+   "item_id": "framec::P3_003::p0029",
+   "question_type": "multiple_choice",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P4_001::p0272",
+   "condition": "TLV",
+   "doc_id": "P4_001",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      271,
+      272,
+      273
+     ],
+     "document_type": "ky_yeu_hoi_thao",
+     "figure_cues": {},
+     "page": 272,
+     "source_id": "P4_001",
+     "title": "Kỷ yếu hội thảo khoa học “Phương pháp luận, phương pháp nghiên cứu khoa học”"
+    },
+    "images": [
+     {
+      "bytes": 50831,
+      "declared_order": 1,
+      "height": 489,
+      "path": "dataset_framec/images/P4_001_p0272_figure_crop_1.png",
+      "sha256": "ca92bfafa748a70693821915fae7d33ce4d26cd9be2d3e8cfec80e21010af7c0",
+      "width": 1015
+     }
+    ],
+    "text": "                          KỶ YẾU HỘI THẢO KHOA HỌC\n          - “Phương pháp luận, phương pháp nghiên cứu Luật học” -\n\n\n        Có thể thấy rằng, phương pháp luật học so sánh có ý nghĩa quan trọng\ntrong quá trình nghiên cứu khoa học đối với lĩnh vực pháp lý. Trong bối cảnh hội\nnhập, các yếu tố kinh tế, văn hóa, xã hội có sự giao thoa giữa các nước thì các\nyếu tố pháp luật cũng không ngoại lệ. Do đó, trong quá trình xây dựng, ban hành\nvà hoàn thiện pháp luật, nhà làm luật bên cạnh nhìn nhận và đánh giá bối cảnh,\nđiều kiện của Việt Nam để xây dựng, ban hành luật thì việc xem xét và học hỏi\npháp luật nước ngoài là điều tất yếu. Vì vậy, hoạt động xây dựng luật, phát triển\nluật, sửa đổi, bổ sung luật nói chung và công tác nghiên cứu khoa học pháp lý nói\nriêng luôn cần có sự hiện diện của phương pháp luật học so sánh.\n        Thứ ba, phương pháp điều tra, khảo sát xã hội học.\n        Đây cũng là một phương pháp được sử dụng rộng rãi trong tất cả các lĩnh\nvực có liên quan đến hoạt động nghiên cứu khoa học xã hội, trong đó có lĩnh vực\nluật học.\n        Dưới đây là một số câu hỏi được rút ra từ việc khảo sát để thực hiện đề tài\nnghiên cứu khoa học sinh viên Trường Đại học Luật TP.HCM năm học 2019 -\n2020. Tên đề tài: “Quyền được chết theo pháp luật một số quốc gia trên thế giới\nvà kinh nghiệm tham khảo cho Việt Nam” của nhóm sinh viên là Nguyễn Phạm\nThanh Hoa và Nguyễn Thị Quỳnh Diệp dưới sự hướng dẫn của ThS. Trương Thị\nMinh Thùy. Kết quả này được thực hiện bởi 212 người tham gia khảo sát với 26\ncâu hỏi, trong đó có 05 câu hỏi liên quan đến thông tin cá nhân của người tham\ngia khảo sát; 02 câu hỏi để đánh giá sự tiếp cận của người tham gia khảo sát đối\nvới vấn đề đang khảo sát; 19 câu hỏi còn lại liên quan đến nội dung của đề tài.\nCó thể thấy rằng, phương pháp điều tra, khảo sát xã hội học sẽ giúp cho công\ntrình nghiên cứu trở nên tin cậy và sát với quan điểm, ý kiến của người dân đối\nvới một vấn đề pháp lý khi nó phát sinh trong thực tiễn. Điều này ảnh hưởng rất\nlớn đến hiệu quả thực thi pháp luật trên thực tế khi pháp luật được xây dựng và\nhoàn thiện.\n\n\n\n\n                         Hình 1. Kết quả khảo sát câu 5\n\n                                                                               271\n\f"
+   },
+   "item_id": "framec::P4_001::p0272",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P4_001::p0273",
+   "condition": "TLV",
+   "doc_id": "P4_001",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      272,
+      273,
+      274
+     ],
+     "document_type": "ky_yeu_hoi_thao",
+     "figure_cues": {},
+     "page": 273,
+     "source_id": "P4_001",
+     "title": "Kỷ yếu hội thảo khoa học “Phương pháp luận, phương pháp nghiên cứu khoa học”"
+    },
+    "images": [
+     {
+      "bytes": 57681,
+      "declared_order": 1,
+      "height": 508,
+      "path": "dataset_framec/images/P4_001_p0273_figure_crop_1.png",
+      "sha256": "718d9694c77973ca8b16ed74c281a0b95720acc367892d3caafb62df207621bc",
+      "width": 1017
+     },
+     {
+      "bytes": 26660,
+      "declared_order": 2,
+      "height": 477,
+      "path": "dataset_framec/images/P4_001_p0273_figure_crop_2.png",
+      "sha256": "24827369c7b0d39046dc845ebcc74a169e04c8f3c01d32e9c54239ad1568285a",
+      "width": 972
+     },
+     {
+      "bytes": 43456,
+      "declared_order": 3,
+      "height": 484,
+      "path": "dataset_framec/images/P4_001_p0273_figure_crop_3.png",
+      "sha256": "93a09b9c9c2efc061e3cbd909408e8f884be23e8525954e3b72d4c7b30451ec8",
+      "width": 1005
+     }
+    ],
+    "text": "                          KỶ YẾU HỘI THẢO KHOA HỌC\n          - “Phương pháp luận, phương pháp nghiên cứu Luật học” -\n\n\n       Câu hỏi về trình độ/Chuyên môn của người khảo sát ảnh hưởng trực tiếp\nđến cách hiểu và nhận thức một vấn đề pháp lý trong thực tế, đặc biệt là những\nvấn đề pháp lý mới chưa có sự thống nhất, còn gây nhiều tranh cãi. So sánh giữa\nngười trong ngành luật và người ngoài ngành thì đánh giá về tính cấp thiết của\nviệc công nhận quyền được chết là khác nhau.\n\n\n\n\n                         Hình 2. Kết quả khảo sát câu 7\n       Câu hỏi này được đưa vào danh sách khảo sát nhằm xác định được vấn đề\npháp lý đang nghiên cứu có tính phổ biến và nhận được nhiều sự quan tâm hay\nkhông. Vì để thừa nhận một quyền thì quyền này phải được người dân tiếp cận và\nbiết đến, từ đó mới có cơ sở để xây dựng và ban hành luật điều chỉnh.\n\n\n\n\n                       Hình 3. Kết quả khảo sát câu 8\n\n\n\n\n                       Hình 4. Kết quả khảo sát câu 9\n\n272\n\f"
+   },
+   "item_id": "framec::P4_001::p0273",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P4_001::p0274",
+   "condition": "TLV",
+   "doc_id": "P4_001",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      273,
+      274,
+      275
+     ],
+     "document_type": "ky_yeu_hoi_thao",
+     "figure_cues": {},
+     "page": 274,
+     "source_id": "P4_001",
+     "title": "Kỷ yếu hội thảo khoa học “Phương pháp luận, phương pháp nghiên cứu khoa học”"
+    },
+    "images": [
+     {
+      "bytes": 68867,
+      "declared_order": 1,
+      "height": 453,
+      "path": "dataset_framec/images/P4_001_p0274_figure_crop_1.png",
+      "sha256": "a4e5ade7fb534c76e900d64ed88333369775d43bd52265209c17b02e5b0df085",
+      "width": 914
+     },
+     {
+      "bytes": 59143,
+      "declared_order": 2,
+      "height": 495,
+      "path": "dataset_framec/images/P4_001_p0274_figure_crop_2.png",
+      "sha256": "de39eeac44ed9bbbae8c1f8f98e5c8c6b1899f0ae0b97db61362fe64aaf186ea",
+      "width": 957
+     },
+     {
+      "bytes": 70520,
+      "declared_order": 3,
+      "height": 579,
+      "path": "dataset_framec/images/P4_001_p0274_figure_crop_3.png",
+      "sha256": "045bd6868915900d8a560e9e18d55f430fa13054bf7658d5e9382a1f58b8f04f",
+      "width": 1099
+     }
+    ],
+    "text": "                          KỶ YẾU HỘI THẢO KHOA HỌC\n          - “Phương pháp luận, phương pháp nghiên cứu Luật học” -\n\n\n\n\n                       Hình 5. Kết quả khảo sát câu 12\n      Câu hỏi này được đưa ra để xác định được tỷ lệ của việc ủng hộ/phản đối\nmột vấn đề pháp lý cụ thể, từ đó thấy rằng, vấn đề này đang còn nhiều tranh cãi\nvà chính những tranh cãi này sẽ là lý do khiến cho quyền được chết chưa thể\nđược công nhận tại Việt Nam.\n\n\n\n\n                       Hình 6. Kết quả khảo sát câu 15\n\n\n\n\n                       Hình 7. Kết quả khảo sát câu 17\n\n                                                                           273\n\f"
+   },
+   "item_id": "framec::P4_001::p0274",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::P4_001::p0275",
+   "condition": "TLV",
+   "doc_id": "P4_001",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      274,
+      275,
+      276
+     ],
+     "document_type": "ky_yeu_hoi_thao",
+     "figure_cues": {},
+     "page": 275,
+     "source_id": "P4_001",
+     "title": "Kỷ yếu hội thảo khoa học “Phương pháp luận, phương pháp nghiên cứu khoa học”"
+    },
+    "images": [
+     {
+      "bytes": 91679,
+      "declared_order": 1,
+      "height": 591,
+      "path": "dataset_framec/images/P4_001_p0275_figure_crop_1.png",
+      "sha256": "26f0d7bea25a178b3c2be0da032cdec859e1cd946a9caf375d32624035868955",
+      "width": 1119
+     },
+     {
+      "bytes": 28258,
+      "declared_order": 2,
+      "height": 534,
+      "path": "dataset_framec/images/P4_001_p0275_figure_crop_2.png",
+      "sha256": "feb263d4f24b7224b18c996ac77b5e248aaef3bda272d1d8f1711d37016980c4",
+      "width": 1039
+     }
+    ],
+    "text": "                          KỶ YẾU HỘI THẢO KHOA HỌC\n          - “Phương pháp luận, phương pháp nghiên cứu Luật học” -\n\n\n\n\n                       Hình 8. Kết quả khảo sát câu 21\n\n\n\n\n                         Hình 9. Kết quả khảo sát câu 23\n        Vì định hướng nghiên cứu của đề tài xoay quanh việc cần thiết công nhận\nquyền được chết tại Việt Nam nên các câu hỏi tiếp theo sau này sẽ tập trung làm\nrõ lý do tại sao công nhận quyền được chết, khi công nhận quyền này thì pháp\nluật cần quy định những nội dung nào cũng như trách nhiệm của các bên liên\nquan. Những câu trả lời của câu hỏi này giúp cho nhóm nghiên cứu đánh giá\nđược những khía cạnh của quyền được chết đang được cộng đồng quan tâm và\nchú ý ở mức độ nào với những mong muốn gì. Từ đó, nhóm nghiên cứu mới có\nnhững nhận định cũng như đề xuất hướng giải quyết phù hợp cho vấn đề đang\nnghiên cứu.\n       3. Một số giải pháp nâng cao hiệu quả áp dụng các phương pháp\nnghiên cứu khoa học pháp lý trong lĩnh vực luật học\n       Như đã đề cập, hiện nay, có nhiều phương pháp được áp dụng trong hoạt\nđộng nghiên cứu khoa học pháp lý. Tuy nhiên, trong phạm vi bài viết này, nhóm\ntác giả tập trung phân tích và dẫn chứng 03 phương pháp được sử dụng phổ biến,\nđó là phương pháp phân tích và tổng hợp; phương pháp luật học so sánh và\n\n274\n\f"
+   },
+   "item_id": "framec::P4_001::p0275",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::R12_P1_03::p0380",
+   "condition": "TLV",
+   "doc_id": "R12_P1_03",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      379,
+      380,
+      381
+     ],
+     "document_type": "giao_trinh",
+     "figure_cues": {
+      "diagram": 1,
+      "procedure": 2
+     },
+     "page": 380,
+     "source_id": "R12_P1_03",
+     "title": "Giáo trình hải quan cơ bản"
+    },
+    "images": [
+     {
+      "bytes": 29587,
+      "declared_order": 1,
+      "height": 523,
+      "path": "dataset_framec/images/R12_P1_03_p0380_figure_crop_1.png",
+      "sha256": "b7d500b101c9cfa548e2808c8df5bbcee24560964b33fe980b9a562f664f5fc6",
+      "width": 476
+     }
+    ],
+    "text": "             Sơ đồ. Quy trình phân tích đánh giá rủi ro\n\n\n      7.4.5. Quản lý hồ sơ rủi ro\n      Hồ sơ rủi ro là một hoạt động nghiệp vụ trong công tác\nđánh giá rủi ro. Đánh giá rủi ro là một quy trình tổng thể từ việc\nxác định rủi ro, phân tích rủi ro, đánh giá mức độ rủi ro và xác\nđịnh ưu tiên xử lý rủi ro. Hồ sơ rủi ro là một trong những bước\nquan trọng nhất trong chu trình kiến thức tổng thể và là kết quả\ncủa bước đánh giá rủi ro. Trên cơ sở hồ sơ rủi ro, cơ quan hải\nquan có thể thống nhất các việc áp dụng quản lý rủi ro thông qua\ndanh mục rủi ro, tạo ra bản đồ rủi ro, tạo ra cơ sở cho việc kiểm\nsoát đối tượng rủi ro, phát huy được kiến thức, kinh nghiệm của\n\n380\n\f"
+   },
+   "item_id": "framec::R12_P1_03::p0380",
+   "question_type": "multiple_choice",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::R12_P1_03::p0395",
+   "condition": "TLV",
+   "doc_id": "R12_P1_03",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      394,
+      395,
+      396
+     ],
+     "document_type": "giao_trinh",
+     "figure_cues": {
+      "diagram": 1
+     },
+     "page": 395,
+     "source_id": "R12_P1_03",
+     "title": "Giáo trình hải quan cơ bản"
+    },
+    "images": [
+     {
+      "bytes": 15814,
+      "declared_order": 1,
+      "height": 453,
+      "path": "dataset_framec/images/R12_P1_03_p0395_figure_crop_1.png",
+      "sha256": "dbf5cef4acd613f1a2503ad050ff3f4e005d82341b95043c6373b6b186b72f1d",
+      "width": 626
+     },
+     {
+      "bytes": 2840,
+      "declared_order": 2,
+      "height": 453,
+      "path": "dataset_framec/images/R12_P1_03_p0395_figure_crop_2.png",
+      "sha256": "3d8b363612c6d38af3f226fb75ffe852591a6cc98e156601387152f2601e628b",
+      "width": 626
+     }
+    ],
+    "text": "     + Tiếp nhận phản hồi;\n     + Điều chỉnh hồ sơ dựa trên các kết quả và tiếp tục\nnghiên cứu.\n     7.5.4. Xác định trọng điểm, lựa chọn\n      Cán bộ phân tích sẽ sử dụng hồ sơ rủi ro, các thông tin khác\nvà các hoạt động kiểm soát để lựa chọn các phương tiện, hành\nkhách và hàng hóa rủi ro cao nhất để kiểm tra. Có thể thực hiện\nthủ công hoặc sử dụng hệ thống điện tử. Ưu điểm khi sử dụng kỹ\nthuật này là: tránh việc thực hiện theo trực giác ngẫu nhiên khi\ntiến hành kiểm tra hải quan. Cho phép tự động hóa cao (xử lý\nnhanh một lượng thông tin khổng lồ, cách tiếp cận đa tầng, tích\nlũy thông tin, các tầng lựa chọn).\n\n\n\n\n            Sơ đồ. Xác định trọng điểm/ lựa chọn\n\n\n\n                                                              395\n\f"
+   },
+   "item_id": "framec::R12_P1_03::p0395",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0058",
+   "condition": "TLV",
+   "doc_id": "R15_P1_03",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      57,
+      58,
+      59
+     ],
+     "document_type": "sach_chuyen_khao_tham_khao",
+     "figure_cues": {
+      "diagram": 2
+     },
+     "page": 58,
+     "source_id": "R15_P1_03",
+     "title": "Kỹ năng tư duy phản biện trong lĩnh vực pháp luật : Sách chuyên khảo"
+    },
+    "images": [
+     {
+      "bytes": 151009,
+      "declared_order": 1,
+      "height": 577,
+      "path": "dataset_framec/images/R15_P1_03_p0058_figure_crop_1.png",
+      "sha256": "de9f686420f0d73a302a6dde4b96a50a3c8de8396fa921e8c6ac8a33ab2561ed",
+      "width": 853
+     },
+     {
+      "bytes": 16209,
+      "declared_order": 2,
+      "height": 226,
+      "path": "dataset_framec/images/R15_P1_03_p0058_figure_crop_2.png",
+      "sha256": "3df4eb18c6268f8e556e183346b6a0b1befacbfc802520ad583f907923949a12",
+      "width": 714
+     }
+    ],
+    "text": "     Ví dụ.\n\n\n\n\n    Suy luận quy nạp thường được sử dụng để chứng minh quan\nhệ nhân - quả và có thể được biểu diễn bằng sơ đồ sau:\n\n\n\n\n              Hình 2.2. Sơ đồ biểu diễn suy luận quy nạp.\n\n\n     Để nhận thức và cải tạo thế giới hiện thực, con người không\nchỉ cần đến hình thức suy luận quy nạp mà còn cần đến cả suy\nluận diễn dịch. Hai hình thức suy luận này không đối lập hay loại\ntrừ nhau mà chúng có liên hệ chặt chẽ với nhau trong quá trình\nnhận thức.\n     Dễ dàng nhận thấy suy luận dễn dịch và suy luận quy nạp là\nhai hình thức suy luận có điểm xuất phát và kết thúc trái ngược\nnhau. Để hiểu rõ hơn điều này này, ta xét 2 ví dụ.\n\n58\n\f"
+   },
+   "item_id": "framec::R15_P1_03::p0058",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0059",
+   "condition": "TLV",
+   "doc_id": "R15_P1_03",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      58,
+      59,
+      60
+     ],
+     "document_type": "sach_chuyen_khao_tham_khao",
+     "figure_cues": {
+      "diagram": 1
+     },
+     "page": 59,
+     "source_id": "R15_P1_03",
+     "title": "Kỹ năng tư duy phản biện trong lĩnh vực pháp luật : Sách chuyên khảo"
+    },
+    "images": [
+     {
+      "bytes": 40464,
+      "declared_order": 1,
+      "height": 373,
+      "path": "dataset_framec/images/R15_P1_03_p0059_figure_crop_1.png",
+      "sha256": "b21f0cafa256f5c36c578109bbfcf4ba7a96ef773d0225e38953c76f4b037caf",
+      "width": 750
+     },
+     {
+      "bytes": 142773,
+      "declared_order": 2,
+      "height": 519,
+      "path": "dataset_framec/images/R15_P1_03_p0059_figure_crop_2.png",
+      "sha256": "d11224bfbd1a7792892ce26f9dabf61f1906c6743a992a22c6af901d0bfacab1",
+      "width": 798
+     }
+    ],
+    "text": " Trước hết là suy luận diễn dịch trong ví dụ đã nêu trên:\n\n\n\n\nCó thể diễn tả sự “vận động” của suy luận diễn dịch bằng sơ đồ:\n\n\n\n\nHình 2.3. Mô tả các bộ phận hình thành suy luận diễn dịch.\n\n Ví dụ. Xét suy luận quy nạp:\n\n\n\n\n                                                                  59\n\f"
+   },
+   "item_id": "framec::R15_P1_03::p0059",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0231",
+   "condition": "TLV",
+   "doc_id": "R15_P1_03",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      230,
+      231,
+      232
+     ],
+     "document_type": "sach_chuyen_khao_tham_khao",
+     "figure_cues": {
+      "diagram": 2
+     },
+     "page": 231,
+     "source_id": "R15_P1_03",
+     "title": "Kỹ năng tư duy phản biện trong lĩnh vực pháp luật : Sách chuyên khảo"
+    },
+    "images": [
+     {
+      "bytes": 119717,
+      "declared_order": 1,
+      "height": 481,
+      "path": "dataset_framec/images/R15_P1_03_p0231_figure_crop_1.png",
+      "sha256": "c0734ecff48d9e001c902a1aafd8221c5a46a4e860f7b98104e45884ad8c1db3",
+      "width": 802
+     }
+    ],
+    "text": "     - Tương tự, LC2: “Phá rừng gây xói mòn đất và hủy diệt\nnăng lực phòng hộ, hậu quả không thể tránh khỏi là lũ lụt\ntriền miên” cũng là một suy luận với TK2 là: “hậu quả không\nthể tránh khỏi là lũ lụt triền miên” với tiền đề hỗ trợ: “Phá\nrừng gây xói mòn đất và hủy diệt năng lực phòng hộ”.\n    Việc phân tích như vậy cho thấy kết luận cuối cùng (kết\nluận chính) của lập luận có thể được rút ra một cách ngắn gọn\ntừ các tiểu kết luận: “Sử dụng năng lượng hóa thạch sẽ dẫn\nđến hiện tượng băng tan và nước biển dâng, đồng thời hậu\nquả không thể tránh khỏi là lũ lụt triền miên. Rõ ràng, chính\ncon người là nguyên nhân gây ra thảm họa môi trường đáng\nbáo động hiện nay”.\n    Có thể biểu diễn sơ đồ cấu trúc lập luận này bằng sơ đồ:\n\n\n\n\n    Ví dụ 2. “Đã đến lúc pháp luật Việt Nam cần thừa nhận hôn\nnhân đồng tính. Ai cũng biết giới tính của mỗi người là do bẩm\nsinh, không ai có quyền lựa chọn. Hơn nữa tình yêu không phân\nbiệt giới tính. Bởi vậy, dù thuộc giới tính nào thì họ cũng không có\nlỗi và hôn nhân cần được xem là quyền chính đáng của mỗi người.\nNếu pháp luật không thừa nhận, người đồng tính sẽ phải tìm bình\nphong bằng cách lập gia đình với người khác giới. Lập gia đình\n\n                                                                231\n\f"
+   },
+   "item_id": "framec::R15_P1_03::p0231",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0237",
+   "condition": "TLV",
+   "doc_id": "R15_P1_03",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      236,
+      237,
+      238
+     ],
+     "document_type": "sach_chuyen_khao_tham_khao",
+     "figure_cues": {
+      "diagram": 1
+     },
+     "page": 237,
+     "source_id": "R15_P1_03",
+     "title": "Kỹ năng tư duy phản biện trong lĩnh vực pháp luật : Sách chuyên khảo"
+    },
+    "images": [
+     {
+      "bytes": 157890,
+      "declared_order": 1,
+      "height": 716,
+      "path": "dataset_framec/images/R15_P1_03_p0237_figure_crop_1.png",
+      "sha256": "00b643a82e46a0dfbf81491715dc58a4b7630cfae84dde336efb6acfb42b67bb",
+      "width": 818
+     }
+    ],
+    "text": "     Từ những nội dung đã nghiên cứu có thể thấy cách biểu\ndiễn suy luận, lập luận dưới dạng sơ đồ cấu trúc là phương\npháp trực quan để hình ảnh hóa một suy luận, lập luận. Hình\nảnh đó cho phép phân biệt rành mạch mối tương quan tầng bậc\n(trên dưới, trong ngoài) giữa các thành phần, từ đó cho phép\nhiểu sâu sắc, rõ ràng hơn vai trò, mối quan hệ logic giữa các\nthành phần hình thành nên một suy luận, lập luận và vì vậy\nđây cũng là cách hiệu quả để tiến hành phân tích, mổ xẻ nhằm\nđánh giá chất lượng của một suy luận, lập luận.\n     4.2. ĐÁNH GIÁ CHẤT LƯỢNG SUY LUẬN, LẬP\nLUẬN DỰA TRÊN CẤU TRÚC, CÁCH TỔ CHỨC SUY\nLUẬN, LẬP LUẬN\n     Khi đối tượng tư duy được diễn đạt dưới hình thức một\nlập luận, yêu cầu của hoạt động tư duy với mục đích phản biện\nđối tượng đòi hỏi phải có sự đánh giá minh xác, đầy đủ chất\nlượng của lập luận đó về độ vững chắc, rõ ràng và xác tín về\ncả hình thức lẫn nội dung.\n\n                                                         237\n\f"
+   },
+   "item_id": "framec::R15_P1_03::p0237",
+   "question_type": "short_answer",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0306",
+   "condition": "TLV",
+   "doc_id": "R15_P1_03",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      305,
+      306,
+      307
+     ],
+     "document_type": "sach_chuyen_khao_tham_khao",
+     "figure_cues": {
+      "fishbone": 2,
+      "hierarchy": 1
+     },
+     "page": 306,
+     "source_id": "R15_P1_03",
+     "title": "Kỹ năng tư duy phản biện trong lĩnh vực pháp luật : Sách chuyên khảo"
+    },
+    "images": [
+     {
+      "bytes": 59697,
+      "declared_order": 1,
+      "height": 531,
+      "path": "dataset_framec/images/R15_P1_03_p0306_figure_crop_1.png",
+      "sha256": "33ec796ffc7c8bf2281e3b012041f424ae282824d163311eeff661f3946e5f77",
+      "width": 851
+     }
+    ],
+    "text": "              Hình 5.3. Giản đồ xương cá cho VĐ\n              “Nguyên nhân bạo lực học đường”.\n    Đối với mỗi VĐ được xem xét giải quyết, sau khi sử dụng\nphương pháp giản đồ xương cá để xác định nguyên nhân theo\nchiều rộng, thông qua cách đánh giá sơ bộ ta có thể xác định\nđược những nguyên nhân có ảnh hưởng, tác động mạnh nhất\ngây ra VĐ. Tiếp theo, xuất phát từ các nguyên nhân có ảnh\nhưởng, tác động mạnh nhất này để tiến hành xác định nguyên\nnhân gốc rễ (nguyên nhân sâu xa) bằng cách sử dụng phương\npháp câu hỏi 5Whys.\n    Đối với VĐ lớn và phức tạp, thông thường không dễ để\nnhận rõ nguyên nhân. Vì vậy, cần phải tiếp cận từ nhiều nguồn\nthông tin chính thống để làm rõ các các tiểu tiết cấu thành nên\nnó. Khi đó, việc xác định nguyên nhân của VĐ thường khởi\nđầu bằng cách chia nhỏ cấu trúc VĐ thông qua việc sử dụng\ncây vấn đề (Issue Tree). Đây là phương pháp GQVĐ theo mô\nhình của McKinsey (công ty tư vấn chiến lược số một thế giới)\nvà được diễn tả dưới khái niệm MECE (Mutually Exclusive,\nCollectively Exhaustive - Loại trừ lẫn nhau, Thấu đáo mọi khía\n\n306\n\f"
+   },
+   "item_id": "framec::R15_P1_03::p0306",
+   "question_type": "multiple_choice",
+   "split": "test"
+  },
+  {
+   "chunk_id": "framec::R15_P1_03::p0311",
+   "condition": "TLV",
+   "doc_id": "R15_P1_03",
+   "evidence": {
+    "document_structure": {
+     "context_pages": [
+      310,
+      311,
+      312
+     ],
+     "document_type": "sach_chuyen_khao_tham_khao",
+     "figure_cues": {
+      "fishbone": 2
+     },
+     "page": 311,
+     "source_id": "R15_P1_03",
+     "title": "Kỹ năng tư duy phản biện trong lĩnh vực pháp luật : Sách chuyên khảo"
+    },
+    "images": [
+     {
+      "bytes": 112082,
+      "declared_order": 1,
+      "height": 603,
+      "path": "dataset_framec/images/R15_P1_03_p0311_figure_crop_1.png",
+      "sha256": "af6a63225853f876ffa699f670044b6dc7a44afde2e26c7cfa6bab85714b822b",
+      "width": 852
+     }
+    ],
+    "text": "                Hình 5.5. Giản đồ xương cá cho VĐ\n              “Giải pháp giảm tai nạn giao thông”.\n    Bên cạnh phương pháp giản đồ xương cá, có thể sử dụng\nphương pháp “Công não” để đề xuất các giải pháp GQVĐ. Tuy\nnhiên như đã nói, trong lĩnh vực pháp luật, các VĐ cần giải\nquyết luôn đòi hỏi những điều kiện nghiêm ngặt, chặt chẽ và\nluôn bị ràng buộc nhiều bởi các yếu tố pháp lý, do vậy phương\npháp “Công não” (vốn giúp ích cho sự khơi thông, gợi mở những\ný tưởng thoáng đạt, vượt khỏi những quy tắc truyền thống)\nthường ít tỏ ra hiệu quả.\n    Từ các giải pháp cụ thể (theo chiều rộng) nêu trên, việc lựa\nchọn giải pháp để RQĐ thực thi được tiến hành bằng cách tính\nđiểm (theo trọng số) cho từng giải pháp dựa vào 3 tiêu chí:\n     + Tính HIỆU LỰC (Validity): Là khả năng “chữa trị” được\nVĐ, nghĩa là loại bỏ được VĐ (vĩnh viễn hoặc trong một khoảng\nthời gian chấp nhận được).\n     + Tính HIỆU QUẢ (Effectiveness): Giúp GQVĐ mà không\nlàm phát sinh VĐ mới.\n\n                                                            311\n\f"
+   },
+   "item_id": "framec::R15_P1_03::p0311",
+   "question_type": "multiple_choice",
+   "split": "test"
+  }
+ ],
+ "question_type_rule": "ROUND3_FRAMEB_ADDENDUM.md rule 5, applied mechanically from deterministic layout cues before execution",
+ "rule4_applied": {
+  "dropped": [
+   {
+    "chunk_id": "framec::P1_008::p0052",
+    "enum_items": 0,
+    "prose_chars": 2,
+    "reason": "rule4_insufficient_text_for_verbatim_quote"
+   },
+   {
+    "chunk_id": "framec::P2_006::p0094",
+    "enum_items": 0,
+    "prose_chars": 0,
+    "reason": "rule4_insufficient_text_for_verbatim_quote"
+   }
+  ],
+  "frozen_source_sha256": "73658f47d35171d285aa5b724f9e6b47c463789a8d01acff22ae1ebbddc8407a",
+  "kept": 24,
+  "measure": "prose_chars = len(_FIG_RE.sub('', page_text).strip()) — the FROZEN measure copied from round2/build_frameb.py lines 136-145, not a re-derived variant",
+  "rule": "ROUND3_FRAMEB_ADDENDUM.md rule 4 (text-sufficiency exclusion)",
+  "thresholds": "EXCLUDE if (enum_items>=3 and prose_chars<400) or prose_chars<120",
+  "why": "The frame-C builder carried forward rules 3 and 5 but omitted rule 4, leaving two chunks whose T_c held 0 and 2 prose chars. Gate G requires q ⊑ T_c, so an empty T_c makes the gate unsatisfiable for every arm — a dataset defect that would read as a measured result."
+ },
+ "schema": "ecm-tqag.multimodal-inputs.v4-work24",
+ "source": "HUL Liberty OPAC acquisition rounds 1-15 (frameC_acquisition)",
+ "supersedes": {
+  "chunk_count": 26,
+  "path": "dataset_framec/dataset_manifest.json",
+  "sha256": "7e57b82e321d8b15edb876e8dda47052178b7aacc49f6baa1c272506e4d7afee"
+ }
+}

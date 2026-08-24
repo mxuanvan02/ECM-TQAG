@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "direct",
+ "branch": "text_only",
+ "item_id": "framec::R15_P1_03::p0231::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 6.5793e-05,
+ "returned": {
+  "answer": "Đã đến lúc pháp luật Việt Nam cần thừa nhận hôn nhân đồng tính."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::R15_P1_03::p0231::direct"
+}

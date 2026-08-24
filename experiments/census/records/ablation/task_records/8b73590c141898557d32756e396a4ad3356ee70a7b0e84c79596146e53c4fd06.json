@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "structured_no_contract",
+ "branch": "text_only",
+ "item_id": "framec::P2_007::p0062::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 6.6287e-05,
+ "returned": {
+  "answer": "Số lượng vụ án tranh chấp được giải quyết tại trung tâm trọng tài tăng lên rõ rệt"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::P2_007::p0062::structured_no_contract"
+}

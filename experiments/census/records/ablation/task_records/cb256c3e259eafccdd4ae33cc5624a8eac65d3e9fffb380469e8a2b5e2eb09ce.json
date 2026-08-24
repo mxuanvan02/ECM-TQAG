@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "ecm_full",
+ "branch": "text_only",
+ "item_id": "framec::P3_003::p0025::ecm_full",
+ "question_type": "multiple_choice",
+ "reported_cost_usd": 0.0001413,
+ "returned": {
+  "option_index": 2
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P3_003::p0025::ecm_full"
+}

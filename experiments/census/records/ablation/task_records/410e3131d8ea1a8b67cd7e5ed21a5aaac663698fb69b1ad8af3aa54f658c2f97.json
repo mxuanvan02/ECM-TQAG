@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "gate_disclosed",
+ "branch": "text_image",
+ "item_id": "framec::P2_007::p0062::gate_disclosed",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0007018,
+ "returned": {
+  "answer": "Khoảng 70 vụ."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::P2_007::p0062::gate_disclosed"
+}

@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "structured_no_contract",
+ "branch": "text_only",
+ "item_id": "framec::P2_007::p0063::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 6.9966e-05,
+ "returned": {
+  "answer": "Không có thông tin cụ thể về loại hình tranh chấp chiếm tỷ lệ cao nhất trong biểu đồ 2.2 do tài liệu không cung cấp chi tiết biểu đồ."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::P2_007::p0063::structured_no_contract"
+}
