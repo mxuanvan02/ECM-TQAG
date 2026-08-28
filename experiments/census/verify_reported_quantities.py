@@ -244,6 +244,41 @@ def admitted_items(tasks: list[dict]) -> dict[str, dict]:
     return gold
 
 
+# ------------------------------------------------------------------ cue scan
+
+FIGURE_CUES = ("hình", "sơ đồ", "biểu đồ")
+VERBATIM_MIN_CHARS = 20
+
+
+def load_target_text() -> dict[str, str]:
+    """T_c per chunk, read from the published frame manifest."""
+    root = RECORDS / "frame"
+    files = sorted(root.glob("dataset_manifest*.json"))
+    if not files:
+        sys.exit("missing frame manifest under %s" % root)
+    manifest = json.loads(files[-1].read_text(encoding="utf-8"))
+    out: dict[str, str] = {}
+    for pkg in manifest.get("packages", []):
+        text = (pkg.get("evidence") or {}).get("text")
+        if isinstance(text, str):
+            out[pkg["chunk_id"]] = text
+    return out
+
+
+def cites_figure(question: str, cues=FIGURE_CUES) -> bool:
+    """Does the question name the figure in words? Mechanical cue test."""
+    q = _norm_fold(question)
+    return any(c in q for c in cues)
+
+
+def long_verbatim(answer: str, target_text: str) -> bool:
+    """Does the answer repeat >=20 characters of T_c verbatim under N?"""
+    a = _norm_fold(answer)
+    if len(a) < VERBATIM_MIN_CHARS:
+        return False
+    return a in _norm_fold(target_text)
+
+
 # --------------------------------------------------------------------------- report
 
 
@@ -404,10 +439,17 @@ def main() -> int:
         necessity_flags[answerer] = nec
         b_only = sum(nec.values())
         d_only = sum(1 for b in items.values() if b["text_image"] == 0 and b["text_only"] == 1)
+        # Answered in NEITHER branch: not the same as n - text_image, which also
+        # counts the items answered only with the figure withheld.
+        neither_branch = sum(
+            1 for b in items.values() if b["text_image"] == 0 and b["text_only"] == 0
+        )
         p = exact_mcnemar(b_only, d_only)
         lo, hi = clopper_pearson(b_only, len(items))
         print("  %-30s n=%d  R_txt=%d  R_+img=%d  Gamma+1=%d  p=%.4f  rate=%.2f [%.2f, %.2f]"
               % (answerer, len(items), txt, img, b_only, p, b_only / len(items), lo, hi))
+        print("    answered in neither branch: %d  (n - text_image = %d)"
+              % (neither_branch, len(items) - img))
         mcq = {i: b for i, b in items.items() if meta[i]["question_type"] == "multiple_choice"}
         print("    multiple choice: n=%d  text-only correct %d"
               % (len(mcq), sum(b["text_only"] for b in mcq.values())))
@@ -418,6 +460,7 @@ def main() -> int:
             check("qwen necessary", b_only, 16)
             check("qwen p", round(p, 4), 0.0013)
             check("qwen mcq text-only", sum(b["text_only"] for b in mcq.values()), 18)
+            check("qwen neither branch", neither_branch, 19)
         if answerer.startswith("google"):
             check("gemini n", len(items), 67)
             check("gemini text-only", txt, 31)
@@ -463,6 +506,47 @@ def main() -> int:
               % (both, neither, rated_only, measured_only, raw, k))
         check("measured-vs-rated kappa", round(k, 2), 0.42)
         check("measured-vs-rated raw", round(raw, 2), 0.78)
+
+    # ------------------------------------------------------- mechanical cue scan
+    # A mechanical scan, NOT a human review: it labels a question as citing the
+    # figure when it names one in words, and an answer as verbatim when >=20
+    # characters of it reappear in T_c under N.  Reported descriptively.
+    target_text = load_target_text()
+    gold = admitted_items(census)
+    cue_arm = {a: {"n": 0, "fig": 0, "vb": 0} for a in ARMS}
+    cue_missing_tc: list[str] = []
+    for key, obj in sorted(gold.items()):
+        parts = key.split("::")
+        chunk, arm = "::".join(parts[:3]), parts[3]
+        if arm not in cue_arm:
+            continue
+        cue_arm[arm]["n"] += 1
+        if cites_figure(obj.get("question", "")):
+            cue_arm[arm]["fig"] += 1
+        tc = target_text.get(chunk)
+        if tc is None:
+            cue_missing_tc.append(chunk)
+            continue
+        if long_verbatim(str(obj.get("answer", "")), tc):
+            cue_arm[arm]["vb"] += 1
+    fig_total = sum(d["fig"] for d in cue_arm.values())
+    vb_total = sum(d["vb"] for d in cue_arm.values())
+    print("\nMECHANICAL CUE SCAN over the admitted items (descriptive, not a human review)")
+    for arm in ARMS:
+        d = cue_arm[arm]
+        print("  %-6s n=%2d  cites figure=%2d  answer repeats >=%d chars of T_c=%2d"
+              % (ARM_LABEL[arm], d["n"], d["fig"], VERBATIM_MIN_CHARS, d["vb"]))
+    print("  cues=%s  totals: cites figure=%d  verbatim=%d"
+          % ("/".join(FIGURE_CUES), fig_total, vb_total))
+    if cue_missing_tc:
+        print("  !! chunks with no T_c in the frame manifest: %s" % sorted(set(cue_missing_tc)))
+    check("cue scan cites figure total", fig_total, 39)
+    check("cue scan verbatim total", vb_total, 33)
+    check("cue scan ECM cites figure", cue_arm["ecm_full"]["fig"], 15)
+    check("cue scan GATE cites figure", cue_arm["gate_disclosed"]["fig"], 11)
+    check("cue scan DIR cites figure", cue_arm["direct"]["fig"], 7)
+    check("cue scan STR cites figure", cue_arm["structured_no_contract"]["fig"], 6)
+    check("cue scan chunks with T_c", len(cue_missing_tc), 0)
 
     # ---------------------------------------------------------------- verdict
     print("\n" + "=" * 72)

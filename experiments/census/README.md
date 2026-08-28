@@ -26,7 +26,19 @@ summary file:
 - quadratic weighted kappa, exact agreement and within-one agreement per criterion
 - the text-only ablation for both answerers, including the pre-registered
   grading rule applied to each response
+- the count of admitted items answered correctly in neither branch, printed
+  next to `n - text_image` because the two are easily confused and differ
 - agreement between the two answerers, and measured against rated necessity
+- the mechanical cue scan over the admitted items: how many questions name the
+  figure in words, and how many answers repeat at least 20 characters of `T_c`
+  verbatim, per arm and in total
+
+The cue scan is a mechanical string test, not a human review, and the paper
+reports it as such. Its rules are the two constants at the top of the cue-scan
+section of the script: the cue set `hình / sơ đồ / biểu đồ` and the 20-character
+floor, both applied under the same normalisation `N` as the quotation gate. It
+reads `T_c` from the published frame manifest, so a reviewer can change either
+rule and see the counts move.
 
 The failure taxonomy is read from `FAILURE_ATTRIBUTION.json` because tracing a
 quotation to its source channel needs the page images, which are not

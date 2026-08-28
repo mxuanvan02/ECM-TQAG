@@ -7,7 +7,7 @@
   "frame_manifest_sha256": "14325616771840623d2dbb8267fea0721255f29178400b1c94732e4b3559d648",
   "ablation_preregistration_sha256": "da0d52818feb53c00c95e5e7994afae1bd0157d4efc7dd365986243d416d32cc",
   "naming_note": "Published filenames carry no version token. A file whose bytes match a private working file is marked identical; a file changed to carry the fourth (gate-disclosed) arm is marked derived, with the line-set similarity to its nearest private ancestor and that ancestor's basename. Private absolute paths are not published.",
-  "verification": "python3 verify_reported_quantities.py --check recomputes every quantity the paper reports from records/ alone and asserts it against the published value. The plan_sha256 above is reproducible from code/ecm_tqag/gate.py and code/ecm_tqag/prompt_amendment.py, which binds the released instrument to the executed run.",
+  "verification": "python3 verify_reported_quantities.py --check recomputes every quantity the paper reports from records/ alone and asserts it against the published value. The plan_sha256 above is reproducible from code/ecm_tqag/gate.py and code/ecm_tqag/prompt_amendment.py, which binds the released instrument to the executed run. The harness also recomputes the items answered in neither ablation branch and the mechanical cue scan over the admitted items, both of which were previously reported without a check; see CORRECTIONS.md.",
   "excluded_from_release": [
     "scanned page images and figure crops (copyright: University of Law, Hue University)",
     "raw provider response payloads (state/responses)",
@@ -16,7 +16,7 @@
   "counts": {
     "code_files": 28,
     "record_files": 574,
-    "doc_files": 2,
+    "doc_files": 3,
     "code_identical": 7,
     "code_derived": 11,
     "code_rewritten": 1,
@@ -24,14 +24,19 @@
   },
   "docs": [
     {
+      "path": "CORRECTIONS.md",
+      "sha256": "1f3b02b6597e65110b21000cf68afe55bce860d5aabde91d872b7ee56520ed9a",
+      "bytes": 3036
+    },
+    {
       "path": "README.md",
-      "sha256": "360f1470bafe728d602d3ab626437e74f682d738ce92b421607ba0e347a174de",
-      "bytes": 4440
+      "sha256": "23d8f82c818d56a9851eb2217367774110914297aa59aa258b765cbb09679fc3",
+      "bytes": 5216
     },
     {
       "path": "verify_reported_quantities.py",
-      "sha256": "3ae06f225aaa247b06d66601012b14754173660a676599bd770fb90cfa29ca6e",
-      "bytes": 20003
+      "sha256": "2a36003c799731f0981d3a3c11fabcf22e95addd3e6ae41787bf18414cedaedc",
+      "bytes": 23750
     }
   ],
   "code": [
@@ -3133,5 +3138,9 @@
       "bytes": 12305
     }
   ],
-  "hash_note": "sha256 values are over the published bytes. origin_sha256 is the sha256 of the private working file named in private_ancestor; for entries marked identical the two are equal, which is what makes that claim checkable by anyone holding the private tree. Private files themselves are not published."
+  "hash_note": "sha256 values are over the published bytes. origin_sha256 is the sha256 of the private working file named in private_ancestor; for entries marked identical the two are equal, which is what makes that claim checkable by anyone holding the private tree. Private files themselves are not published.",
+  "corrections": {
+    "record": "CORRECTIONS.md",
+    "note": "Three quantities reported in the manuscript were corrected after the records were sealed: items answered in neither ablation branch (21 -> 19), the descriptive cue scan over admitted items (44/25 -> 39/33, per-arm 17/12/7/8 -> 15/11/7/6), and the Conclusion wording on the image-quoting endpoint (occurred -> was confirmed, with the unresolved attempt stated). No record was altered; each correction is a reading error in the manuscript and is now covered by a named check in verify_reported_quantities.py."
+  }
 }
