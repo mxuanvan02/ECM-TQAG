@@ -1,8 +1,13 @@
-# ECM–TQAG — submission package
+# ECM–TQAG — three-arm ICTC 2026 manuscript (superseded, not submitted)
 
 IEEE conference manuscript presenting ECM–TQAG: a protocol for generating
 evidence-grounded multimodal question–answer items from scanned documents,
 together with the paired three-arm experiment that measures it.
+
+This manuscript was not submitted. It was superseded by a four-arm census
+released on branch `experiments/census-4arm`, which is the submitted version
+(ACIIDS 2027). See `../ERRATA.md` for a mislabelled failure class in the text
+below and for what this release can and cannot recompute.
 
 ## Contents
 

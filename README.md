@@ -1,7 +1,15 @@
 # ECM–TQAG
 
 Evidence-Contracted Multimodal Generation of Textbook Question–Answer Items
-from Scanned Documents (ICTC 2026 submission package).
+from Scanned Documents.
+
+> **Superseded, and not submitted.** This tree holds the three-arm ICTC 2026
+> manuscript and its public evidence. It was not submitted; the work was carried
+> forward into a four-arm census on branch
+> [`experiments/census-4arm`](../../tree/experiments/census-4arm), which is the
+> version submitted (to ACIIDS 2027) and the one that ships a recomputation
+> harness. See [`ERRATA.md`](ERRATA.md) for a mislabelled failure class in this
+> manuscript and for what this release can and cannot recompute.
 
 ECM–TQAG states evidence support as a *contract* on a single multimodal
 generation call and makes that contract checkable by a deterministic verifier
