@@ -59,3 +59,35 @@ attempt counted as confirmed image quoting, the arm would read 1 of 24.
 The wording is now "no quotation ... was confirmed", with the unresolved attempt
 stated in the same sentence. The taxonomy counts are unchanged and remain
 checkable: `image-quoting ECM` and `unresolved total`.
+
+## 4. Frame extensibility: superseded discovery pass replaced by the screened one
+
+The Limitations paragraph attributed the frame's shortfall to the acquisition
+pass and supported that with "a narrow re-scan returned 56 further candidate
+sources, 23 in the textbook class the sweep excluded, unscreened and of unknown
+yield".
+
+Both halves were stale. The 56-record pass read only the first page of the
+catalogue's pager and was superseded by a paginated pass that enumerated the
+same query to its end and returned **319** records. And the candidates are no
+longer unscreened: eight of those sources were staged and screened over 3902
+pages, keeping **32** candidate pages under the frame's own text-sufficiency
+rule, of which **10** bear raster figures. None has been crop-extracted, so
+none is yet a frame chunk.
+
+The manuscript now reports 319, the eight screened sources, 32 candidate pages,
+and the 10 raster-bearing ones, and states that none is crop-resolved.
+
+Not covered by a check: the discovery and screening records are acquisition
+artefacts and are not part of `records/`, which holds the executed census. They
+are not redistributed, because they carry catalogue identifiers and staged
+copyrighted PDFs. The numbers above are recomputable from those artefacts by the
+owner and are stated here so the claim can be challenged.
+
+## 5. Poppler version removed from the setup description
+
+The setup section named the extractor as "`pdftotext -layout`, Poppler 25.12.0".
+The tool is correct and is recorded in the run, but the version is not: no
+record captures which Poppler built `T_c` in August, and 25.12.0 is simply what
+the machine that drafted the sentence reports today. The version is now omitted
+rather than asserted. Nothing else in the paper depends on it.

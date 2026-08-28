@@ -25,8 +25,8 @@
   "docs": [
     {
       "path": "CORRECTIONS.md",
-      "sha256": "1f3b02b6597e65110b21000cf68afe55bce860d5aabde91d872b7ee56520ed9a",
-      "bytes": 3036
+      "sha256": "11faa186585d0afb27db1c68755eb0ff126f237837c79d163b02a6da96dd0a39",
+      "bytes": 4812
     },
     {
       "path": "README.md",
@@ -3141,6 +3141,6 @@
   "hash_note": "sha256 values are over the published bytes. origin_sha256 is the sha256 of the private working file named in private_ancestor; for entries marked identical the two are equal, which is what makes that claim checkable by anyone holding the private tree. Private files themselves are not published.",
   "corrections": {
     "record": "CORRECTIONS.md",
-    "note": "Three quantities reported in the manuscript were corrected after the records were sealed: items answered in neither ablation branch (21 -> 19), the descriptive cue scan over admitted items (44/25 -> 39/33, per-arm 17/12/7/8 -> 15/11/7/6), and the Conclusion wording on the image-quoting endpoint (occurred -> was confirmed, with the unresolved attempt stated). No record was altered; each correction is a reading error in the manuscript and is now covered by a named check in verify_reported_quantities.py."
+    "note": "Five items reported in the manuscript were corrected after the records were sealed: items answered in neither ablation branch (21 -> 19); the descriptive cue scan over admitted items (44/25 -> 39/33, per-arm 17/12/7/8 -> 15/11/7/6); the Conclusion wording on the image-quoting endpoint (occurred -> was confirmed, with the unresolved attempt stated); the frame-extensibility claim, where a superseded first-page discovery pass (56 records, unscreened) was replaced by the paginated pass (319 records) and the screening that followed it (8 sources, 3902 pages, 32 candidate pages, 10 raster-bearing, none crop-resolved); and the Poppler version in the setup description, removed because no record captures it. No record was altered. Corrections 1-3 are covered by named checks in verify_reported_quantities.py; corrections 4-5 concern acquisition artefacts and the build environment, which are outside records/ and are therefore documented rather than checked."
   }
 }
