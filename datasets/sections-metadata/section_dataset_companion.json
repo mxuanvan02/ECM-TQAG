@@ -1,0 +1,4028 @@
+{
+ "schema": "ecm-tqag.section-dataset-public-companion.v1",
+ "created_utc": "2026-08-29T19:23:14Z",
+ "what_this_is": "Metadata-only companion to the section-level ECM input dataset. It carries chunk identity, provenance hashes, gate decisions, region geometry and counts, and deliberately carries no section prose, no recognised figure word, and no image bytes.",
+ "why_content_is_withheld": "The source PDFs, their text layer and the figure crops are copyright of the University of Law, Hue University and are held on an internal-research basis, not a redistribution basis. Publishing them would also contradict RIGHTS_AND_LIMITATIONS.md, which states this repository contains no source-derived document images or restricted datasets.",
+ "how_to_rebuild_the_full_dataset": [
+  "obtain the 26 textbooks from the University of Law, Hue University catalogue (shelf 'Kệ C2-C8 (Giáo trình)'); each is identified here by sha256, so a rebuild is verifiable byte-for-byte",
+  "run corpus/build_multimodal_dataset.py to screen figure-bearing pages",
+  "run corpus/scripts/build_section_dataset.py for section granularity",
+  "run corpus/reconcile_rights_sections.py for the rights ledger",
+  "run corpus/scripts/augment_figure_text.py for the figure-text channel",
+  "run corpus/scripts/build_ecm_input_dataset.py for the ECM input",
+  "the image sha256 values recorded here then reproduce exactly"
+ ],
+ "scope": "law textbooks (giáo trình luật) held by the HUL catalogue",
+ "text_source": {
+  "primary": "PDF text layer, layout-preserving, never overwritten",
+  "why_not_rebuilt_from_ocr": "All 26 sources are born-digital (Adobe InDesign / Acrobat / Word producers) and 86% of figure-bearing pages carry a real text layer. Measured on 24 sampled pages, tesseract vie+eng reaches median CER 1.89% against that layer, so rebuilding from OCR would replace the typesetter's own output with a lossy copy. Measurement: corpus/reports/OCR_FIDELITY_PROBE.json",
+  "ocr_role": "figure regions only, as a separate channel; see corpus/reports/FIGURE_TEXT_AUGMENTATION.json"
+ },
+ "figure_text_contract": {
+  "quotable_as_prose": false,
+  "why": "At the chosen confidence gate roughly one word in ten is still an OCR slip on graphical strokes. The verbatim-quote gate must read evidence.text only, as the sealed frame does.",
+  "gate_calibration": "corpus/reports/FIGURE_OCR_CONFIDENCE_CALIBRATION.json"
+ },
+ "authorisation": {
+  "paid_run_authorised": false,
+  "why": "Frame D is not pre-registered. ROUND4_NECESSITY_ADDENDUM.md §4 fixes n before the first call and forbids frame extension after results were seen; the vector reading of rule 3 additionally needs its own determination record written before any call.",
+  "floor": 40,
+  "target": 46
+ },
+ "private_manifest": {
+  "path": "experiment/dataset_sections/dataset_manifest.json",
+  "sha256": "ce4584cec037aa4922e368b8300482506a85b7bd7058d146f0c7b00b8e86930d",
+  "published": false
+ },
+ "provenance_reports": {
+  "ocr_fidelity": {
+   "path": "corpus/reports/OCR_FIDELITY_PROBE.json",
+   "sha256": "7022686d0fde86ab72f074d8f54a367a215b9c0487cc2c4cf701fb0958100b68"
+  },
+  "figure_ocr_calibration": {
+   "path": "corpus/reports/FIGURE_OCR_CONFIDENCE_CALIBRATION.json",
+   "sha256": "76c3e394be682a52bd0c3cf1413a442c35f0a6df94501099b3a009487418b8ce"
+  },
+  "figure_text_augmentation": {
+   "path": "corpus/reports/FIGURE_TEXT_AUGMENTATION.json",
+   "sha256": "51891bbfe7c81e2177c9108db534cccee812c0606a6bed70aa75984be6fae77e"
+  },
+  "region_ocr_surplus": {
+   "path": "corpus/reports/REGION_OCR_SURPLUS_PROBE.json",
+   "sha256": "1547d4d0f04061fedd06edda00dcbc879e25c4e824d4dfdad66dfdac09fcfaff"
+  },
+  "rights_ledger": {
+   "path": "corpus/reports/SECTION_DATASET_RIGHTS_RECONCILIATION.json",
+   "sha256": "ac342cc6bf6f46abb8855b869e3b9509afc79af0e22a6488c80366986af6e150"
+  },
+  "frame_determination": {
+   "path": "corpus/reports/SECTION_FRAME_DETERMINATION.json",
+   "sha256": "e8c4e707cd6d65bde90d051735cccfbff4225a696562f34867a9071112a2557f"
+  },
+  "scope_decision": {
+   "path": "corpus/reports/DATASET_SCOPE_LAW_TEXTBOOKS.json",
+   "sha256": "2b2eff04821ad945580a2254c2863215c4e38adf6cf3841fd04f0de92bf7d7d8"
+  },
+  "shelf_discovery": {
+   "path": "corpus/reports/round19_shelf_discovery_20260829T183005Z.json",
+   "sha256": "47329ad58d440ad128143f4d5d8cf29fa9f622ce62d009d7f5a6310e13f795ac"
+  }
+ },
+ "documents": [
+  {
+   "doc_id": "T01_giao_trinh_luat_dan_su_viet_nam_phan_2",
+   "source_sha256": "d6cd9941547b3d61a18416278e9fa66c3bc9cc4958ba654c4c3fe8507ee96957",
+   "pages": 750,
+   "sections_detected": 321,
+   "units_built": 0,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T02_giao_trinh_luat_hinh_su_phan_cac_toi_pham_2023",
+   "source_sha256": "90cc51e8268455f09ebb9126ba681eb2c82e5e98bdd8c7fe90d4a6872220c632",
+   "pages": 666,
+   "sections_detected": 769,
+   "units_built": 0,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T03_giao_trinh_luat_thuong_mai_phan_1",
+   "source_sha256": "1db5dba0c52ff6f8828faf34a7c846b9d65c822655dcf0023becfd51771defc3",
+   "pages": 558,
+   "sections_detected": 231,
+   "units_built": 0,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T04_r12_p1_04",
+   "source_sha256": "38f4f5ef69863f43f56691e0fd5d2117a840306f6661c42014f8394d08d80bb6",
+   "pages": 552,
+   "sections_detected": 371,
+   "units_built": 0,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T05_giao_trinh_luat_thuong_mai_phan_2",
+   "source_sha256": "17dd8b318e6b85d2e7376d65be9b5fc8c92bc96599e8366c7b5e5e2d8e435d2d",
+   "pages": 522,
+   "sections_detected": 166,
+   "units_built": 0,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T06_giao_trinh_phap_luat_an_sinh_xa_hoi_2024",
+   "source_sha256": "b8608967aa29f569c640c40181f4f966f35a324e09d98f2cb0b355026c2d6d80",
+   "pages": 516,
+   "sections_detected": 105,
+   "units_built": 2,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+   "source_sha256": "bb1a55ad307fc73d87ad731dac1ca5d0436274056b2f4ff44f64fd3813d51e9c",
+   "pages": 488,
+   "sections_detected": 116,
+   "units_built": 7,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T08_giao_trinh_luat_hon_nhan_va_gia_dinh_viet_nam",
+   "source_sha256": "fffb024f279c6c8e13945347d8c18bc7bd314b35fe5a25cce3061fb38a1cc025",
+   "pages": 464,
+   "sections_detected": 124,
+   "units_built": 5,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T09_giao_trinh_luat_quoc_te_1",
+   "source_sha256": "3ee76111040c9a86bc2dade744ee7dede973062d3c7ee635d8e91dab62b205b4",
+   "pages": 448,
+   "sections_detected": 211,
+   "units_built": 3,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+   "source_sha256": "38036d1a7731a4c1fe4ee1bfda45415ea267719b39e4a742569366d08c05da60",
+   "pages": 432,
+   "sections_detected": 317,
+   "units_built": 9,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T11_r12_p1_03",
+   "source_sha256": "f837410dd79cbb516293a1a683e94ccf07a987b0343bf9d7f3ac9b7fedc75dbe",
+   "pages": 399,
+   "sections_detected": 132,
+   "units_built": 0,
+   "in_scope": false
+  },
+  {
+   "doc_id": "T12_giao_trinh_ly_luan_nha_nuoc_va_phap_luat",
+   "source_sha256": "aace308c0db96a841b58b93f0bbdf19a44578712d656299bfa392b80b5438255",
+   "pages": 376,
+   "sections_detected": 183,
+   "units_built": 0,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T13_r13_p1_04",
+   "source_sha256": "516c38ff5ad7eae7d2d561b979831f6c87386bd8473b694026248795597ea66c",
+   "pages": 360,
+   "sections_detected": 185,
+   "units_built": 10,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n",
+   "source_sha256": "bed83ce3bb64f05de8a7692e64f4dd4d3a25ae6000827ebf1469f26d17df6380",
+   "pages": 352,
+   "sections_detected": 116,
+   "units_built": 3,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T15_r13_p1_03",
+   "source_sha256": "e46b81abf38cc5c071fe4d839ead963d824181d29aa633e19df87b30e47f2172",
+   "pages": 350,
+   "sections_detected": 115,
+   "units_built": 1,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T16_r13_p1_05",
+   "source_sha256": "e42bdcc8020a687ad313143b0d244c9c56064e0fab1d2525c74a553dc4280bbc",
+   "pages": 336,
+   "sections_detected": 156,
+   "units_built": 7,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T17_giao_trinh_xay_dung_van_ban_phap_luat_2025",
+   "source_sha256": "9d9566236a4f2a5e354075883dcb6c2c6af23d7baafad276842e5c1bc2717197",
+   "pages": 304,
+   "sections_detected": 220,
+   "units_built": 4,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T18_giao_trinh_luat_canh_tranh_2010",
+   "source_sha256": "50bfde10a3fa2d86da8e92f94fd98844fce487f49fd2b0922d9b53bae59668a4",
+   "pages": 232,
+   "sections_detected": 122,
+   "units_built": 1,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+   "source_sha256": "6f5d483ccabe59c11af40f3403178c11f22137c3bab07089201f0a0afaefc00d",
+   "pages": 208,
+   "sections_detected": 132,
+   "units_built": 4,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T20_r13_p1_01",
+   "source_sha256": "13635edebbee19b80474964250110d0f8c137136fbb005c431173ee0bbb2f809",
+   "pages": 45,
+   "sections_detected": 0,
+   "units_built": 0,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+   "source_sha256": "25c47723430376d70be9377e53bc5bd2b89852da57fef8b2b7ea4c406b14343a",
+   "pages": 368,
+   "sections_detected": 208,
+   "units_built": 6,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T22_giao_trinh_luat_to_tung_hanh_chinh_viet_nam",
+   "source_sha256": "bcb36ec4c528e0624872b0e9c3fa9c742532651d5c74fdf7f9459df0f663e49a",
+   "pages": 384,
+   "sections_detected": 321,
+   "units_built": 0,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T23_giao_trinh_luat_hinh_su_quoc_te",
+   "source_sha256": "795a640b0a536f27e83150bb339ff5202eef18912bf1c7940268ad390cf7f1fb",
+   "pages": 391,
+   "sections_detected": 92,
+   "units_built": 3,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "source_sha256": "5deee6c35117fe7bbf14aed55ba5d012f6e874ecbe0a4378066d3827a500bac8",
+   "pages": 440,
+   "sections_detected": 182,
+   "units_built": 26,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s",
+   "source_sha256": "b122344d262aabdf7aa2fc5f24717d2e28a614abb75273002e2c7c67d4a70857",
+   "pages": 208,
+   "sections_detected": 65,
+   "units_built": 6,
+   "in_scope": true
+  },
+  {
+   "doc_id": "T26_giao_trinh_tu_phap_quoc_te",
+   "source_sha256": "8bc3996fb2fec57e7513cb4201d82a128f2b00ea976384642bab4c6691d32644",
+   "pages": 504,
+   "sections_detected": 251,
+   "units_built": 0,
+   "in_scope": true
+  }
+ ],
+ "frames": {
+  "frame_d_strict": {
+   "rule3_reading": "embedded rasters only, min-dim >= 203 px (the frozen operationalisation)",
+   "chunk_count": 28,
+   "reaches_floor": false,
+   "documents": 8,
+   "question_types": {
+    "short_answer": 24,
+    "multiple_choice": 4
+   },
+   "dropped_count": 64,
+   "chunks": [
+    {
+     "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+     "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      324
+     ],
+     "section_pages": [
+      312,
+      326
+     ],
+     "text_chars": 22403,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 739,
+       "height": 451,
+       "bytes": 183086,
+       "sha256": "148de0e8ddc247166c4324f353a9ec18e6089bc835f4f43988f7737871c896dc",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 77,
+      "surplus_count": 5
+     }
+    },
+    {
+     "chunk_id": "frameD::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+     "doc_id": "T09_giao_trinh_luat_quoc_te_1",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:6.2.3.3",
+     "ancestor_depth": 3,
+     "pages": [
+      330
+     ],
+     "section_pages": [
+      329,
+      331
+     ],
+     "text_chars": 1219,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 1925,
+       "height": 785,
+       "bytes": 328427,
+       "sha256": "489c5e59e18d634bc404c83c82776708032e8cc3fd8becda6cfcc340a801f51b",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 16,
+      "surplus_count": 15
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.2.2",
+     "ancestor_depth": 3,
+     "pages": [
+      158,
+      159
+     ],
+     "section_pages": [
+      157,
+      159
+     ],
+     "text_chars": 2051,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 854,
+       "height": 392,
+       "bytes": 7341,
+       "sha256": "9da03ec85e8327f8aa230c81ed26bf2a504a1e29e1f2f00e714ab83b04197c26",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 852,
+       "height": 348,
+       "bytes": 10073,
+       "sha256": "ac29f8e959a32168fdd478bbdedbdb08c0d15c137fae3ff30d249d0f108c959a",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 36,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.2.4",
+     "ancestor_depth": 3,
+     "pages": [
+      169
+     ],
+     "section_pages": [
+      167,
+      169
+     ],
+     "text_chars": 3533,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 852,
+       "height": 460,
+       "bytes": 51735,
+       "sha256": "6c2add388f20efec444efd380d05b0af4ee64127d5bdb5e9e3dcc2891bd5a338",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 66,
+      "surplus_count": 21
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.1.2",
+     "ancestor_depth": 3,
+     "pages": [
+      359
+     ],
+     "section_pages": [
+      358,
+      359
+     ],
+     "text_chars": 1758,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 757,
+       "height": 350,
+       "bytes": 13403,
+       "sha256": "b3d4e9bf9e120d3c043c1d85f8274f5aa8eb61c6d5ab4d81cb10c2de2b7cc4f7",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 40,
+      "surplus_count": 19
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.1.3",
+     "ancestor_depth": 3,
+     "pages": [
+      361
+     ],
+     "section_pages": [
+      359,
+      364
+     ],
+     "text_chars": 5683,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 853,
+       "height": 416,
+       "bytes": 141258,
+       "sha256": "22372e9e96ef73301324fe833e028c6b82b7102195a0e322de0f9eb391ee0513",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 852,
+       "height": 404,
+       "bytes": 102291,
+       "sha256": "cb30cdd86f92cead612e6ce327796c4b1fd81e4d4d84ac95513ecd1dae17d6ed",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 46,
+      "surplus_count": 12
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.2.3.1",
+     "ancestor_depth": 4,
+     "pages": [
+      367
+     ],
+     "section_pages": [
+      366,
+      371
+     ],
+     "text_chars": 8103,
+     "figure_cues": {
+      "procedure": 4,
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 852,
+       "height": 371,
+       "bytes": 24472,
+       "sha256": "fdc2cd363f7ed08bcdc232aa5219c919486cad013eaaf7cad7f61cab4eab941d",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 8,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.2.4.3",
+     "ancestor_depth": 4,
+     "pages": [
+      374
+     ],
+     "section_pages": [
+      374,
+      375
+     ],
+     "text_chars": 2315,
+     "figure_cues": {
+      "procedure": 3,
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 821,
+       "height": 404,
+       "bytes": 24766,
+       "sha256": "67105aa165967f46eb1f68485410a14d89a2aa741db39016f3a94cee60b19dd3",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 12,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0004_alpha_a",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:a",
+     "ancestor_depth": 4,
+     "pages": [
+      26,
+      30
+     ],
+     "section_pages": [
+      20,
+      33
+     ],
+     "text_chars": 20279,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 293,
+       "bytes": 19685,
+       "sha256": "783f169c6673bd288bf9262fd804bbb7ece60775464e8d3f879dc25862d0b78f",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 804,
+       "height": 478,
+       "bytes": 47592,
+       "sha256": "9073f5fa2b38ce6980fdf08d138d54e61841c6b07f612910c6f461255fb818c9",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 24,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0023_dec_3",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:3",
+     "ancestor_depth": 3,
+     "pages": [
+      55
+     ],
+     "section_pages": [
+      55,
+      57
+     ],
+     "text_chars": 2129,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 778,
+       "height": 564,
+       "bytes": 42363,
+       "sha256": "c7036755e0ea0a543bb8f621305fb68ab3714c5988df182f511e1b614b3d2f45",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 19,
+      "surplus_count": 4
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0121_alpha_b",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:b",
+     "ancestor_depth": 4,
+     "pages": [
+      239
+     ],
+     "section_pages": [
+      234,
+      241
+     ],
+     "text_chars": 12865,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 299,
+       "bytes": 16408,
+       "sha256": "6af3f5dbf8a2af771f54de741593ec6a381a9f95e537134b34b96926b49b76ec",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 26,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0130_alpha_c",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:c",
+     "ancestor_depth": 4,
+     "pages": [
+      265
+     ],
+     "section_pages": [
+      253,
+      267
+     ],
+     "text_chars": 21594,
+     "figure_cues": {
+      "procedure": 3,
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 410,
+       "bytes": 59374,
+       "sha256": "74e888539ba0e06c84d32283080d03ad68ec976b3e68d9d1f02fc1c6fbd6d5d7",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 22,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0135_alpha_a",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:a",
+     "ancestor_depth": 4,
+     "pages": [
+      275
+     ],
+     "section_pages": [
+      271,
+      275
+     ],
+     "text_chars": 6463,
+     "figure_cues": {
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 567,
+       "bytes": 35686,
+       "sha256": "0a780f6e18037b5f79b04421f7477772ad6d298ec91e58340517173133960dd7",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 24,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+     "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      43
+     ],
+     "section_pages": [
+      42,
+      47
+     ],
+     "text_chars": 7710,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 569,
+       "bytes": 113853,
+       "sha256": "feddb9ef82016bc4a063a5e413db01a127c04169e303dd7f90415c8ec80fdb9c",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 50,
+      "surplus_count": 15
+     }
+    },
+    {
+     "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+     "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:5.2",
+     "ancestor_depth": 3,
+     "pages": [
+      199
+     ],
+     "section_pages": [
+      197,
+      201
+     ],
+     "text_chars": 4294,
+     "figure_cues": {
+      "procedure": 1,
+      "diagram": 1,
+      "table": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 816,
+       "height": 1088,
+       "bytes": 109026,
+       "sha256": "6203e0a2f20dd6659e076d4b51f3d49b2e5a2d156bcf1683079eb4757020d7d0",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 81,
+      "surplus_count": 66
+     }
+    },
+    {
+     "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0154_dec_6_2",
+     "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:6.2",
+     "ancestor_depth": 3,
+     "pages": [
+      289
+     ],
+     "section_pages": [
+      286,
+      291
+     ],
+     "text_chars": 4753,
+     "figure_cues": {
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 852,
+       "height": 1091,
+       "bytes": 57125,
+       "sha256": "e16a3e08ec4410896487b4b00fc57bc3ed00954d8f977a5fb61977201a642016",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 16,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+     "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:5.3",
+     "ancestor_depth": 3,
+     "pages": [
+      341
+     ],
+     "section_pages": [
+      340,
+      345
+     ],
+     "text_chars": 6209,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 852,
+       "height": 1001,
+       "bytes": 58639,
+       "sha256": "a0d85a499b3ece29ef0a8876bd41e5bbd878f6c147715a806e781a3f7cbe241f",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 19,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:1.3",
+     "ancestor_depth": 1,
+     "pages": [
+      25
+     ],
+     "section_pages": [
+      24,
+      26
+     ],
+     "text_chars": 2509,
+     "figure_cues": {
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 780,
+       "height": 451,
+       "bytes": 63443,
+       "sha256": "26b77f78bf19eae8fb0065a3d00ef06a94f3748843ec433c356df37de1055136",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 25,
+      "surplus_count": 3
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.1.1.1",
+     "ancestor_depth": 3,
+     "pages": [
+      33,
+      35,
+      36
+     ],
+     "section_pages": [
+      32,
+      36
+     ],
+     "text_chars": 6161,
+     "figure_cues": {
+      "diagram": 1,
+      "figure_ref": 3
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 759,
+       "height": 516,
+       "bytes": 218558,
+       "sha256": "64f709c3a6d9b0288f2a2f97d99c36d3517009d5cb7f98a6e7313eddf2149f39",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 694,
+       "height": 491,
+       "bytes": 19738,
+       "sha256": "0aa179e93bc1b3f3ff6afc1245cfee4200cd9e4cc8160e7a732574acc0d16041",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 3,
+       "width": 698,
+       "height": 400,
+       "bytes": 39673,
+       "sha256": "e481fb9c51aa3284359c7bdb88de8f63bba26d63236cb02e1b13f86eecb371fd",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 24,
+      "surplus_count": 8
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.1.1.2",
+     "ancestor_depth": 3,
+     "pages": [
+      38,
+      41,
+      43,
+      44,
+      47,
+      48
+     ],
+     "section_pages": [
+      36,
+      50
+     ],
+     "text_chars": 22210,
+     "figure_cues": {
+      "figure_ref": 6
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 425,
+       "bytes": 190046,
+       "sha256": "37b2f377edc67d0e1dc631a85b3b56888ba1db4a82335b3ad1bdc8e4da9c9166",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 781,
+       "height": 407,
+       "bytes": 151391,
+       "sha256": "140ba7a545477560e7b0d6d34213b49f8d9e32980560681b07fd6c6fe46a5879",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 3,
+       "width": 812,
+       "height": 469,
+       "bytes": 49327,
+       "sha256": "56227578e0c02514b34da14d586eb4ecefb7963d88f3f8b29443f0495b93832c",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 4,
+       "width": 781,
+       "height": 422,
+       "bytes": 84592,
+       "sha256": "a33d7fed89b438632c968d7cacddcbacff20e58fee38baf8f7eea88e0dd80245",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 5,
+       "width": 852,
+       "height": 443,
+       "bytes": 29443,
+       "sha256": "a96a45f0e9acf8b6b9054c4a775efe02760ad1948e25df184c92aa91af26e078",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 6,
+       "width": 720,
+       "height": 344,
+       "bytes": 83872,
+       "sha256": "e45b7f928d6cc324cf25138ee58f519ba1a045fe287017efd662e36e83102151",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 72,
+      "surplus_count": 22
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0016_dec_2_2_1_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.2.1.1",
+     "ancestor_depth": 3,
+     "pages": [
+      61
+     ],
+     "section_pages": [
+      60,
+      61
+     ],
+     "text_chars": 1527,
+     "figure_cues": {
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 416,
+       "bytes": 200688,
+       "sha256": "4777e26745621b9d642e18ef9c5b7c8355159691d63b4392a150bdafd3d081f9",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 11,
+      "surplus_count": 3
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.2.1.2",
+     "ancestor_depth": 3,
+     "pages": [
+      64,
+      70
+     ],
+     "section_pages": [
+      61,
+      79
+     ],
+     "text_chars": 32169,
+     "figure_cues": {
+      "table": 1,
+      "figure_ref": 2
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 802,
+       "height": 451,
+       "bytes": 165830,
+       "sha256": "2a70de8e1861aef4ace9ba151c7b34d1ff482ecf04a9c686caca52b8307f576d",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 823,
+       "height": 464,
+       "bytes": 171352,
+       "sha256": "a2e37bd36fa50d0e35ad7106bbe254be5444912f0395fa7b1f6fe2a200c59009",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 16,
+      "surplus_count": 8
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.2.2.2",
+     "ancestor_depth": 3,
+     "pages": [
+      84
+     ],
+     "section_pages": [
+      83,
+      92
+     ],
+     "text_chars": 13165,
+     "figure_cues": {
+      "table": 13,
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 440,
+       "bytes": 256836,
+       "sha256": "92ec71d082f8df02f0655e29a2533b8256b5e98fc95633086a7808ab5f2c7227",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 133,
+      "surplus_count": 42
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0031_dec_3_2_1_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:3.2.1.1",
+     "ancestor_depth": 3,
+     "pages": [
+      105
+     ],
+     "section_pages": [
+      103,
+      105
+     ],
+     "text_chars": 2135,
+     "figure_cues": {
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 481,
+       "bytes": 92811,
+       "sha256": "7a421dcf3103aec10f2acacd1d3f3e2933c382f0c124aa5bc5fabdc2925d13a9",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 1,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.2.3.1",
+     "ancestor_depth": 4,
+     "pages": [
+      147
+     ],
+     "section_pages": [
+      144,
+      147
+     ],
+     "text_chars": 4495,
+     "figure_cues": {
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 674,
+       "height": 704,
+       "bytes": 292998,
+       "sha256": "2b9d8366c200b33638a713e2f9d05027717bfe7857ceaa34ac3112b8ac827c2a",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 4,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:9.2.3",
+     "ancestor_depth": 3,
+     "pages": [
+      387
+     ],
+     "section_pages": [
+      386,
+      393
+     ],
+     "text_chars": 8588,
+     "figure_cues": {
+      "diagram": 1,
+      "figure_ref": 4
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 620,
+       "height": 514,
+       "bytes": 168461,
+       "sha256": "87391ae2877208493c310712ef65a5b6f6c78a3b8da5e66a10fa986fef59185c",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 3,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:9.2.3.4",
+     "ancestor_depth": 4,
+     "pages": [
+      388,
+      390
+     ],
+     "section_pages": [
+      388,
+      393
+     ],
+     "text_chars": 6199,
+     "figure_cues": {
+      "diagram": 1,
+      "figure_ref": 2
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 807,
+       "height": 479,
+       "bytes": 259421,
+       "sha256": "df3e55b7503464b69a7ebfc82753f55bea3789ace0e624da69982ae9c1f8bdaf",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 781,
+       "height": 525,
+       "bytes": 228024,
+       "sha256": "524e9d8396c352948ebb1394ec6cf08dedd19ef134ab8d9d4d72dabe2848dc59",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 106,
+      "surplus_count": 27
+     }
+    },
+    {
+     "chunk_id": "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+     "doc_id": "T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.2",
+     "ancestor_depth": 2,
+     "pages": [
+      38,
+      39
+     ],
+     "section_pages": [
+      36,
+      40
+     ],
+     "text_chars": 4795,
+     "figure_cues": {
+      "diagram": 1,
+      "figure_ref": 3
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 904,
+       "height": 592,
+       "bytes": 40480,
+       "sha256": "e5fa073c45ac774a82802fe0e7bb1cbad7d8a1919bc9a2ae1e7e70a1c6aa6167",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 575,
+       "height": 536,
+       "bytes": 28238,
+       "sha256": "bf7fba2bb8354795d7bf7eee5ca8cfcb5cdd5990c40c18eb4e63e0f953511d89",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 3,
+       "width": 752,
+       "height": 550,
+       "bytes": 38373,
+       "sha256": "9d9f57c3945570d320cb91ff88b7e812134208cb7b244521f3e79d69085184a9",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 59,
+      "surplus_count": 1
+     }
+    }
+   ]
+  },
+  "frame_d_vector": {
+   "rule3_reading": "any crop on disk, min-dim >= 203 px (the literal text of rule 3)",
+   "chunk_count": 67,
+   "reaches_floor": true,
+   "documents": 13,
+   "question_types": {
+    "multiple_choice": 11,
+    "short_answer": 56
+   },
+   "dropped_count": 25,
+   "chunks": [
+    {
+     "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+     "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      55,
+      57,
+      58,
+      59
+     ],
+     "section_pages": [
+      55,
+      61
+     ],
+     "text_chars": 10056,
+     "figure_cues": {
+      "procedure": 9
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 1239,
+       "bytes": 251495,
+       "sha256": "76cf82d0a078dfefbb704d734712f8414c93fb0005fc1a64321c5d65142a9770",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 1089,
+       "bytes": 216434,
+       "sha256": "9b896b557c223e6a3d81e2fdbdae075967b191e166160d01662ba80b6289c785",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 3,
+       "width": 982,
+       "height": 289,
+       "bytes": 44398,
+       "sha256": "459eccd8feb527865ef44dd967198bb58cab51ab949cc303d729b056fce84dbd",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 4,
+       "width": 982,
+       "height": 1517,
+       "bytes": 277341,
+       "sha256": "85e910fc483bf4666c39e5ae69efc890fcec113aa8ebc39a4b89bdf58673d1b9",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 305,
+      "surplus_count": 4
+     }
+    },
+    {
+     "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+     "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      145,
+      146,
+      149,
+      150
+     ],
+     "section_pages": [
+      145,
+      159
+     ],
+     "text_chars": 22448,
+     "figure_cues": {
+      "procedure": 8
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 789,
+       "bytes": 156807,
+       "sha256": "0da728a0f20914b3a49464c3d781913e151c8682e2e9fe2580c8cca2263a9070",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 539,
+       "bytes": 98165,
+       "sha256": "d097e5600fbb8694795bff1ed8e758aca69fe8f27c764d75bc02c9483753e94e",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 3,
+       "width": 982,
+       "height": 616,
+       "bytes": 123304,
+       "sha256": "19eb35e9df2102dbc0aab4c1aa1770fa73753e30eec47a099dd6a6ac50278c18",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 4,
+       "width": 982,
+       "height": 1299,
+       "bytes": 250568,
+       "sha256": "276496a0286cbe44d00234a77e6126500640fd13537818cada25a196ba6ea3e2",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 320,
+      "surplus_count": 3
+     }
+    },
+    {
+     "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+     "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      177,
+      178
+     ],
+     "section_pages": [
+      166,
+      178
+     ],
+     "text_chars": 21778,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 955,
+       "bytes": 186452,
+       "sha256": "621024f34c85cb6884481faac304dd1c4ea4c5899cbfe8e9499fa589cf12604c",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 891,
+       "bytes": 153388,
+       "sha256": "fa31359fec51a6d59d1575eaf025281f0f99a155ff5d964082ba3093aec78322",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 149,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+     "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      199,
+      200
+     ],
+     "section_pages": [
+      186,
+      200
+     ],
+     "text_chars": 23448,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 1463,
+       "bytes": 256671,
+       "sha256": "8795cae81313c7c5212f2973176f3bde40bb41bdb6414174457132e32ccbe41e",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 489,
+       "bytes": 89885,
+       "sha256": "2747d1ac67874d12090e672df3b5d1b4fcfa0ec3a689b44eda45b1d0d7dd3d06",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 146,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+     "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      230,
+      231,
+      232,
+      233
+     ],
+     "section_pages": [
+      209,
+      233
+     ],
+     "text_chars": 40820,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 1139,
+       "bytes": 222143,
+       "sha256": "567ab11226be0849f65b4cb1c0a894631588e3ecb74a8334d5a65ca40b69ca6b",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 1589,
+       "bytes": 288284,
+       "sha256": "e0d011344e4d82d54bd2435a1190f5fd3f026547289b181ed55db12874651165",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 3,
+       "width": 982,
+       "height": 1580,
+       "bytes": 305171,
+       "sha256": "da8a7624f403dead1fd771fac9411c29742b26c3d6d25da17786ecfd4bc07c6b",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 4,
+       "width": 982,
+       "height": 558,
+       "bytes": 105017,
+       "sha256": "15ba8a779707dbca09e0780be33d309f84f97320db01364de22160b27dc13c7c",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 337,
+      "surplus_count": 3
+     }
+    },
+    {
+     "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+     "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      274,
+      275,
+      276
+     ],
+     "section_pages": [
+      251,
+      278
+     ],
+     "text_chars": 44218,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 1174,
+       "bytes": 220632,
+       "sha256": "068da742ee9b6b9ea52e30d6b0c069adeb7df4ff8fe6b3d66dae5da5ee2a493c",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 1557,
+       "bytes": 275650,
+       "sha256": "c1d9a59cd807713be080cd6998857089b60f311cfd9db60f12940a3405518110",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 3,
+       "width": 982,
+       "height": 389,
+       "bytes": 58188,
+       "sha256": "ef74810335b3ba81f8ce75ba82c1a6ff5516b54d1bfe364670082c0fc5a34cb1",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 208,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+     "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      324
+     ],
+     "section_pages": [
+      312,
+      326
+     ],
+     "text_chars": 22403,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 739,
+       "height": 451,
+       "bytes": 183086,
+       "sha256": "148de0e8ddc247166c4324f353a9ec18e6089bc835f4f43988f7737871c896dc",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 77,
+      "surplus_count": 5
+     }
+    },
+    {
+     "chunk_id": "frameD::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+     "doc_id": "T09_giao_trinh_luat_quoc_te_1",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:6.2.3.3",
+     "ancestor_depth": 3,
+     "pages": [
+      330
+     ],
+     "section_pages": [
+      329,
+      331
+     ],
+     "text_chars": 1219,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 1925,
+       "height": 785,
+       "bytes": 328427,
+       "sha256": "489c5e59e18d634bc404c83c82776708032e8cc3fd8becda6cfcc340a801f51b",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 16,
+      "surplus_count": 15
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.2.2",
+     "ancestor_depth": 3,
+     "pages": [
+      158,
+      159
+     ],
+     "section_pages": [
+      157,
+      159
+     ],
+     "text_chars": 2051,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 854,
+       "height": 392,
+       "bytes": 7341,
+       "sha256": "9da03ec85e8327f8aa230c81ed26bf2a504a1e29e1f2f00e714ab83b04197c26",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 852,
+       "height": 348,
+       "bytes": 10073,
+       "sha256": "ac29f8e959a32168fdd478bbdedbdb08c0d15c137fae3ff30d249d0f108c959a",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 3,
+       "width": 405,
+       "height": 232,
+       "bytes": 12593,
+       "sha256": "b594c38e8caf40be70551b2d25ded90b3f48914950d527fabed8bbbdc11ce860",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 36,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.2.4",
+     "ancestor_depth": 3,
+     "pages": [
+      169
+     ],
+     "section_pages": [
+      167,
+      169
+     ],
+     "text_chars": 3533,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 852,
+       "height": 460,
+       "bytes": 51735,
+       "sha256": "6c2add388f20efec444efd380d05b0af4ee64127d5bdb5e9e3dcc2891bd5a338",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 66,
+      "surplus_count": 21
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:7.3.3.1",
+     "ancestor_depth": 4,
+     "pages": [
+      255,
+      256
+     ],
+     "section_pages": [
+      253,
+      257
+     ],
+     "text_chars": 5851,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 766,
+       "bytes": 78521,
+       "sha256": "bc6fb87633259e4f11982b2127d1c16e62b1c8cea70ff867f79f3d621c7a5b8a",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 1590,
+       "bytes": 208649,
+       "sha256": "fbddd84b96f0e516f15a3a9e37b08afde2d28d8529cdf4ccacf51bdbfa61e37a",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 114,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.1.1.3",
+     "ancestor_depth": 4,
+     "pages": [
+      355
+     ],
+     "section_pages": [
+      355,
+      356
+     ],
+     "text_chars": 2534,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 980,
+       "height": 429,
+       "bytes": 62648,
+       "sha256": "5bfee697ccc6f01dbc8a65ec73f74258659c6ccf0875c3546f53ccde6d035d17",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 980,
+       "height": 497,
+       "bytes": 81259,
+       "sha256": "4949c53e64d71d77ed70735fadb618f87aee4d3c40c5676bf18fcf86a200e37d",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 98,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.1.2",
+     "ancestor_depth": 3,
+     "pages": [
+      359
+     ],
+     "section_pages": [
+      358,
+      359
+     ],
+     "text_chars": 1758,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 757,
+       "height": 350,
+       "bytes": 13403,
+       "sha256": "b3d4e9bf9e120d3c043c1d85f8274f5aa8eb61c6d5ab4d81cb10c2de2b7cc4f7",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 40,
+      "surplus_count": 19
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.1.3",
+     "ancestor_depth": 3,
+     "pages": [
+      361
+     ],
+     "section_pages": [
+      359,
+      364
+     ],
+     "text_chars": 5683,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 853,
+       "height": 416,
+       "bytes": 141258,
+       "sha256": "22372e9e96ef73301324fe833e028c6b82b7102195a0e322de0f9eb391ee0513",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 852,
+       "height": 404,
+       "bytes": 102291,
+       "sha256": "cb30cdd86f92cead612e6ce327796c4b1fd81e4d4d84ac95513ecd1dae17d6ed",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 46,
+      "surplus_count": 12
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.2.3.1",
+     "ancestor_depth": 4,
+     "pages": [
+      367
+     ],
+     "section_pages": [
+      366,
+      371
+     ],
+     "text_chars": 8103,
+     "figure_cues": {
+      "procedure": 4,
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 852,
+       "height": 371,
+       "bytes": 24472,
+       "sha256": "fdc2cd363f7ed08bcdc232aa5219c919486cad013eaaf7cad7f61cab4eab941d",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 8,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+     "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.2.4.3",
+     "ancestor_depth": 4,
+     "pages": [
+      374
+     ],
+     "section_pages": [
+      374,
+      375
+     ],
+     "text_chars": 2315,
+     "figure_cues": {
+      "procedure": 3,
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 821,
+       "height": 404,
+       "bytes": 24766,
+       "sha256": "67105aa165967f46eb1f68485410a14d89a2aa741db39016f3a94cee60b19dd3",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 12,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0004_alpha_a",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:a",
+     "ancestor_depth": 4,
+     "pages": [
+      26,
+      30
+     ],
+     "section_pages": [
+      20,
+      33
+     ],
+     "text_chars": 20279,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 293,
+       "bytes": 19685,
+       "sha256": "783f169c6673bd288bf9262fd804bbb7ece60775464e8d3f879dc25862d0b78f",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 804,
+       "height": 478,
+       "bytes": 47592,
+       "sha256": "9073f5fa2b38ce6980fdf08d138d54e61841c6b07f612910c6f461255fb818c9",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 24,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0023_dec_3",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:3",
+     "ancestor_depth": 3,
+     "pages": [
+      55
+     ],
+     "section_pages": [
+      55,
+      57
+     ],
+     "text_chars": 2129,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 778,
+       "height": 564,
+       "bytes": 42363,
+       "sha256": "c7036755e0ea0a543bb8f621305fb68ab3714c5988df182f511e1b614b3d2f45",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 19,
+      "surplus_count": 4
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0106_alpha_b",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:b",
+     "ancestor_depth": 4,
+     "pages": [
+      211
+     ],
+     "section_pages": [
+      191,
+      212
+     ],
+     "text_chars": 36570,
+     "figure_cues": {
+      "procedure": 3
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1550,
+       "bytes": 279020,
+       "sha256": "ff2e8ab0d2ecb9d87ac9fe4e5422e72a611daff610e4d274f60cbf82854b9311",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 98,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0121_alpha_b",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:b",
+     "ancestor_depth": 4,
+     "pages": [
+      239
+     ],
+     "section_pages": [
+      234,
+      241
+     ],
+     "text_chars": 12865,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 299,
+       "bytes": 16408,
+       "sha256": "6af3f5dbf8a2af771f54de741593ec6a381a9f95e537134b34b96926b49b76ec",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 26,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0130_alpha_c",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:c",
+     "ancestor_depth": 4,
+     "pages": [
+      265
+     ],
+     "section_pages": [
+      253,
+      267
+     ],
+     "text_chars": 21594,
+     "figure_cues": {
+      "procedure": 3,
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 410,
+       "bytes": 59374,
+       "sha256": "74e888539ba0e06c84d32283080d03ad68ec976b3e68d9d1f02fc1c6fbd6d5d7",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 22,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T13_r13_p1_04::s0135_alpha_a",
+     "doc_id": "T13_r13_p1_04",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:a",
+     "ancestor_depth": 4,
+     "pages": [
+      275
+     ],
+     "section_pages": [
+      271,
+      275
+     ],
+     "text_chars": 6463,
+     "figure_cues": {
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 567,
+       "bytes": 35686,
+       "sha256": "0a780f6e18037b5f79b04421f7477772ad6d298ec91e58340517173133960dd7",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 24,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+     "doc_id": "T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.1",
+     "ancestor_depth": 1,
+     "pages": [
+      71
+     ],
+     "section_pages": [
+      67,
+      74
+     ],
+     "text_chars": 11806,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 990,
+       "height": 1209,
+       "bytes": 175756,
+       "sha256": "e5065cab0d6397738439e684ee3a228ea1178676da06d13cbbbd7dfa4d2f57f3",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 50,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T15_r13_p1_03::s0057_dec_1_2",
+     "doc_id": "T15_r13_p1_03",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:1.2",
+     "ancestor_depth": 2,
+     "pages": [
+      198
+     ],
+     "section_pages": [
+      197,
+      205
+     ],
+     "text_chars": 11620,
+     "figure_cues": {
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 941,
+       "height": 1061,
+       "bytes": 178762,
+       "sha256": "019d2f132afb9fa7cb53578fb646c69e9f41e251c0e54aa8d7ee93c7cb203ce8",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 52,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T16_r13_p1_05::s0064_dec_2_3",
+     "doc_id": "T16_r13_p1_05",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.3",
+     "ancestor_depth": 3,
+     "pages": [
+      161,
+      162
+     ],
+     "section_pages": [
+      159,
+      165
+     ],
+     "text_chars": 7530,
+     "figure_cues": {
+      "figure_ref": 2
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 1553,
+       "bytes": 169821,
+       "sha256": "4bfb5975f31990bb09958ab00fa43413de298ca2ef1a663d191415607bb77557",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 1552,
+       "bytes": 187137,
+       "sha256": "6cef20fde0df61440bb1c1c6febd6fd18216f33be3c079c251af271116b742bf",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 128,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T16_r13_p1_05::s0067_roman_ii",
+     "doc_id": "T16_r13_p1_05",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "roman:II",
+     "ancestor_depth": 2,
+     "pages": [
+      170
+     ],
+     "section_pages": [
+      169,
+      174
+     ],
+     "text_chars": 4979,
+     "figure_cues": {
+      "procedure": 1,
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 729,
+       "bytes": 85732,
+       "sha256": "6f6b213fae68fd8d9a60ad51f40e210d1fe6239753f72062bb5c70f2ce2ee380",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 16,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+     "doc_id": "T18_giao_trinh_luat_canh_tranh_2010",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.2",
+     "ancestor_depth": 2,
+     "pages": [
+      39
+     ],
+     "section_pages": [
+      38,
+      43
+     ],
+     "text_chars": 16584,
+     "figure_cues": {
+      "chart": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 869,
+       "height": 595,
+       "bytes": 26796,
+       "sha256": "973e3329d9dd5ea821bd74d201e0ca38e884db122b930e0281ad61acf440c0d3",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 4,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+     "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      43
+     ],
+     "section_pages": [
+      42,
+      47
+     ],
+     "text_chars": 7710,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 569,
+       "bytes": 113853,
+       "sha256": "feddb9ef82016bc4a063a5e413db01a127c04169e303dd7f90415c8ec80fdb9c",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 50,
+      "surplus_count": 15
+     }
+    },
+    {
+     "chunk_id": "frameD::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+     "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 3,
+     "pages": [
+      62
+     ],
+     "section_pages": [
+      61,
+      63
+     ],
+     "text_chars": 2891,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 406,
+       "bytes": 41028,
+       "sha256": "cd6312f7210438633fd3902f6c144cb2d6dc80109c75d7c5867b1e6fe57bcc7a",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 21,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c",
+     "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "alpha:c",
+     "ancestor_depth": 4,
+     "pages": [
+      145,
+      146
+     ],
+     "section_pages": [
+      137,
+      148
+     ],
+     "text_chars": 16794,
+     "figure_cues": {
+      "procedure": 3
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 783,
+       "bytes": 93473,
+       "sha256": "90c9a3737d8439dc79840a29d05af262b2eb0eb56b149b0ee4f03c479b108a8e",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 575,
+       "bytes": 68119,
+       "sha256": "173adc4f1993f65630a28782da79270359047c8bac150a819cb7df910da5d69c",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 85,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+     "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4",
+     "ancestor_depth": 3,
+     "pages": [
+      186,
+      187,
+      188
+     ],
+     "section_pages": [
+      183,
+      188
+     ],
+     "text_chars": 8220,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 775,
+       "bytes": 81173,
+       "sha256": "d9a305fe188bce9447b248cb24133012b6463c4a92051658310a4919ee3852a6",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 1583,
+       "bytes": 173669,
+       "sha256": "d88a0087c5f3f32653f4264dd4ac7a6fcbffa1a0ef2701cf988c5079a4c2d5a7",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 3,
+       "width": 982,
+       "height": 217,
+       "bytes": 21301,
+       "sha256": "dc5ad3eb5acba088d5fa9344fc4da2e8018f6c3c13a58c55298e9741c7c7ccc8",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 188,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+     "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 2,
+     "pages": [
+      52,
+      53
+     ],
+     "section_pages": [
+      51,
+      56
+     ],
+     "text_chars": 9906,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 982,
+       "height": 311,
+       "bytes": 41080,
+       "sha256": "a29ce21ddf1a290c39221ba93300acdf68e2e53b2cad67eaf16b37d589a18511",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 982,
+       "height": 1373,
+       "bytes": 261931,
+       "sha256": "2d60dbf81a46905f83dabefe7a995476fe87eec4905dcd340393aa9a97a7ad91",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 117,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+     "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:3",
+     "ancestor_depth": 2,
+     "pages": [
+      91,
+      92,
+      93,
+      94
+     ],
+     "section_pages": [
+      90,
+      95
+     ],
+     "text_chars": 5224,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 983,
+       "height": 1051,
+       "bytes": 152954,
+       "sha256": "46dd3270029457c6dc8e541f5a9f27b3ac1c50ae4995a052d7221550fabc8915",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 983,
+       "height": 1555,
+       "bytes": 222490,
+       "sha256": "d5592bbb56205105cdebaa334316085499095b89b7eea68a85c958444d1d936d",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 3,
+       "width": 983,
+       "height": 1555,
+       "bytes": 239813,
+       "sha256": "2ed5f9109ac6916d226e17638dbe46ca58afb989f8a4b6c85997e7b93cf3e46b",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 4,
+       "width": 983,
+       "height": 359,
+       "bytes": 44504,
+       "sha256": "f9d0944ba97457e5f1d9fecf132903fc7da295af9a6fedc85e2d5382c6b55a7a",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 261,
+      "surplus_count": 3
+     }
+    },
+    {
+     "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+     "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:5.2",
+     "ancestor_depth": 3,
+     "pages": [
+      199
+     ],
+     "section_pages": [
+      197,
+      201
+     ],
+     "text_chars": 4294,
+     "figure_cues": {
+      "procedure": 1,
+      "diagram": 1,
+      "table": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 816,
+       "height": 1088,
+       "bytes": 109026,
+       "sha256": "6203e0a2f20dd6659e076d4b51f3d49b2e5a2d156bcf1683079eb4757020d7d0",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 81,
+      "surplus_count": 66
+     }
+    },
+    {
+     "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0154_dec_6_2",
+     "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:6.2",
+     "ancestor_depth": 3,
+     "pages": [
+      289
+     ],
+     "section_pages": [
+      286,
+      291
+     ],
+     "text_chars": 4753,
+     "figure_cues": {
+      "diagram": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 852,
+       "height": 1091,
+       "bytes": 57125,
+       "sha256": "e16a3e08ec4410896487b4b00fc57bc3ed00954d8f977a5fb61977201a642016",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 16,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+     "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:5.3",
+     "ancestor_depth": 3,
+     "pages": [
+      341
+     ],
+     "section_pages": [
+      340,
+      345
+     ],
+     "text_chars": 6209,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 852,
+       "height": 1001,
+       "bytes": 58639,
+       "sha256": "a0d85a499b3ece29ef0a8876bd41e5bbd878f6c147715a806e781a3f7cbe241f",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 19,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0006_dec_1_3",
+     "doc_id": "T23_giao_trinh_luat_hinh_su_quoc_te",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:1.3",
+     "ancestor_depth": 1,
+     "pages": [
+      44
+     ],
+     "section_pages": [
+      37,
+      70
+     ],
+     "text_chars": 47305,
+     "figure_cues": {
+      "diagram": 3
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 838,
+       "height": 1228,
+       "bytes": 133578,
+       "sha256": "67240b60dbdf0e550f641a0de1f9ad08f2e5e8a60b725dfd116263c7ed2ffe4f",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 0,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+     "doc_id": "T23_giao_trinh_luat_hinh_su_quoc_te",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.2.4",
+     "ancestor_depth": 2,
+     "pages": [
+      314,
+      315,
+      316
+     ],
+     "section_pages": [
+      314,
+      316
+     ],
+     "text_chars": 3060,
+     "figure_cues": {
+      "procedure": 3
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 939,
+       "height": 579,
+       "bytes": 93367,
+       "sha256": "62a7275c2c4c378d1c14ba6fb2a4e7b342be67696f26268ef6b89a68553d13aa",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 940,
+       "height": 1273,
+       "bytes": 211936,
+       "sha256": "b1e2e45b758a7cbd7fa60fa4178bcb8683821682633cc8f10e1e52cdef6023d4",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 3,
+       "width": 939,
+       "height": 621,
+       "bytes": 90544,
+       "sha256": "fa10cf73bfe9ee61f8c175c7885e75fa8567a9aacc617b3b185246ffba506553",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 191,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0068_dec_4_3_2",
+     "doc_id": "T23_giao_trinh_luat_hinh_su_quoc_te",
+     "question_type": "multiple_choice",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.3.2",
+     "ancestor_depth": 2,
+     "pages": [
+      329
+     ],
+     "section_pages": [
+      320,
+      330
+     ],
+     "text_chars": 10979,
+     "figure_cues": {
+      "procedure": 3,
+      "diagram": 4
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 889,
+       "height": 1252,
+       "bytes": 185062,
+       "sha256": "3173f5d9490d9dae27e17a01c8e41ac5b5589d8a386709767f58c539d03c4281",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 0,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:1.3",
+     "ancestor_depth": 1,
+     "pages": [
+      25
+     ],
+     "section_pages": [
+      24,
+      26
+     ],
+     "text_chars": 2509,
+     "figure_cues": {
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 780,
+       "height": 451,
+       "bytes": 63443,
+       "sha256": "26b77f78bf19eae8fb0065a3d00ef06a94f3748843ec433c356df37de1055136",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 25,
+      "surplus_count": 3
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:1.4",
+     "ancestor_depth": 1,
+     "pages": [
+      28
+     ],
+     "section_pages": [
+      26,
+      32
+     ],
+     "text_chars": 6096,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1472,
+       "bytes": 269139,
+       "sha256": "fd92fb697d0ab2d60d06a4d06cef1a8b546ce5db22dadf7d58cdb5355073e392",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 117,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.1.1.1",
+     "ancestor_depth": 3,
+     "pages": [
+      33,
+      35,
+      36
+     ],
+     "section_pages": [
+      32,
+      36
+     ],
+     "text_chars": 6161,
+     "figure_cues": {
+      "diagram": 1,
+      "figure_ref": 3
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 759,
+       "height": 516,
+       "bytes": 218558,
+       "sha256": "64f709c3a6d9b0288f2a2f97d99c36d3517009d5cb7f98a6e7313eddf2149f39",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 694,
+       "height": 491,
+       "bytes": 19738,
+       "sha256": "0aa179e93bc1b3f3ff6afc1245cfee4200cd9e4cc8160e7a732574acc0d16041",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 3,
+       "width": 698,
+       "height": 400,
+       "bytes": 39673,
+       "sha256": "e481fb9c51aa3284359c7bdb88de8f63bba26d63236cb02e1b13f86eecb371fd",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 24,
+      "surplus_count": 8
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.1.1.2",
+     "ancestor_depth": 3,
+     "pages": [
+      38,
+      41,
+      43,
+      44,
+      47,
+      48
+     ],
+     "section_pages": [
+      36,
+      50
+     ],
+     "text_chars": 22210,
+     "figure_cues": {
+      "figure_ref": 6
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 425,
+       "bytes": 190046,
+       "sha256": "37b2f377edc67d0e1dc631a85b3b56888ba1db4a82335b3ad1bdc8e4da9c9166",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 781,
+       "height": 407,
+       "bytes": 151391,
+       "sha256": "140ba7a545477560e7b0d6d34213b49f8d9e32980560681b07fd6c6fe46a5879",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 3,
+       "width": 812,
+       "height": 469,
+       "bytes": 49327,
+       "sha256": "56227578e0c02514b34da14d586eb4ecefb7963d88f3f8b29443f0495b93832c",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 4,
+       "width": 781,
+       "height": 422,
+       "bytes": 84592,
+       "sha256": "a33d7fed89b438632c968d7cacddcbacff20e58fee38baf8f7eea88e0dd80245",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 5,
+       "width": 852,
+       "height": 443,
+       "bytes": 29443,
+       "sha256": "a96a45f0e9acf8b6b9054c4a775efe02760ad1948e25df184c92aa91af26e078",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 6,
+       "width": 720,
+       "height": 344,
+       "bytes": 83872,
+       "sha256": "e45b7f928d6cc324cf25138ee58f519ba1a045fe287017efd662e36e83102151",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 72,
+      "surplus_count": 22
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.1.2.3",
+     "ancestor_depth": 3,
+     "pages": [
+      58,
+      59
+     ],
+     "section_pages": [
+      56,
+      60
+     ],
+     "text_chars": 6302,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 561,
+       "bytes": 90463,
+       "sha256": "650d62ccaa08d899467f11fd23200742a08172f5baec8cc41f394aaf66608eef",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 903,
+       "height": 1572,
+       "bytes": 282394,
+       "sha256": "6699a9d7dc1dd98191da00727131201d9484416cc0bd74ad079ad93e7f96546f",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 192,
+      "surplus_count": 4
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0016_dec_2_2_1_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.2.1.1",
+     "ancestor_depth": 3,
+     "pages": [
+      61
+     ],
+     "section_pages": [
+      60,
+      61
+     ],
+     "text_chars": 1527,
+     "figure_cues": {
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 416,
+       "bytes": 200688,
+       "sha256": "4777e26745621b9d642e18ef9c5b7c8355159691d63b4392a150bdafd3d081f9",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 11,
+      "surplus_count": 3
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.2.1.2",
+     "ancestor_depth": 3,
+     "pages": [
+      64,
+      70
+     ],
+     "section_pages": [
+      61,
+      79
+     ],
+     "text_chars": 32169,
+     "figure_cues": {
+      "table": 1,
+      "figure_ref": 2
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 802,
+       "height": 451,
+       "bytes": 165830,
+       "sha256": "2a70de8e1861aef4ace9ba151c7b34d1ff482ecf04a9c686caca52b8307f576d",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 823,
+       "height": 464,
+       "bytes": 171352,
+       "sha256": "a2e37bd36fa50d0e35ad7106bbe254be5444912f0395fa7b1f6fe2a200c59009",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 16,
+      "surplus_count": 8
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.2.2.2",
+     "ancestor_depth": 3,
+     "pages": [
+      84,
+      87
+     ],
+     "section_pages": [
+      83,
+      92
+     ],
+     "text_chars": 13165,
+     "figure_cues": {
+      "table": 13,
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 440,
+       "bytes": 256836,
+       "sha256": "92ec71d082f8df02f0655e29a2533b8256b5e98fc95633086a7808ab5f2c7227",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 903,
+       "height": 943,
+       "bytes": 140640,
+       "sha256": "36b0a899e8fccb8cb3c117e5f110101285c5bae92f63ccca26450eeb58204efd",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 133,
+      "surplus_count": 42
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:3.1.1.1",
+     "ancestor_depth": 3,
+     "pages": [
+      94
+     ],
+     "section_pages": [
+      92,
+      94
+     ],
+     "text_chars": 2506,
+     "figure_cues": {
+      "table": 1,
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 996,
+       "bytes": 91936,
+       "sha256": "d6f194c765d269bc375b1521a29beb18d24b3f3dd8c572b24c7f428434c7449b",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 38,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0031_dec_3_2_1_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:3.2.1.1",
+     "ancestor_depth": 3,
+     "pages": [
+      105
+     ],
+     "section_pages": [
+      103,
+      105
+     ],
+     "text_chars": 2135,
+     "figure_cues": {
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 781,
+       "height": 481,
+       "bytes": 92811,
+       "sha256": "7a421dcf3103aec10f2acacd1d3f3e2933c382f0c124aa5bc5fabdc2925d13a9",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 1,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:3.2.2.2",
+     "ancestor_depth": 3,
+     "pages": [
+      121
+     ],
+     "section_pages": [
+      118,
+      121
+     ],
+     "text_chars": 6386,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 397,
+       "bytes": 50777,
+       "sha256": "b19b25b1395aa3e0547b9de14be32de0ace7f6e1dba6ad473ca91bfa267d978d",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 35,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:1",
+     "ancestor_depth": 1,
+     "pages": [
+      122
+     ],
+     "section_pages": [
+      121,
+      123
+     ],
+     "text_chars": 2574,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1576,
+       "bytes": 291977,
+       "sha256": "9ea87f74e5aafb8be493794265a08e2a77da8e99cc0e8db799f44eb5d781cf0f",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 123,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 1,
+     "pages": [
+      123,
+      124
+     ],
+     "section_pages": [
+      123,
+      276
+     ],
+     "text_chars": 265885,
+     "figure_cues": {
+      "hierarchy": 1,
+      "table": 1,
+      "figure_ref": 5
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1547,
+       "bytes": 280593,
+       "sha256": "db2830f8bf997c325d6a3f23d98605ecb63cd5d94988d9481f7012994f879e04",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 903,
+       "height": 1318,
+       "bytes": 241677,
+       "sha256": "729244938453795851d20699569a72a4750bdcd32e80756de0834a1bcf6c1afc",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 247,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.2.3.1",
+     "ancestor_depth": 4,
+     "pages": [
+      147
+     ],
+     "section_pages": [
+      144,
+      147
+     ],
+     "text_chars": 4495,
+     "figure_cues": {
+      "figure_ref": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 674,
+       "height": 704,
+       "bytes": 292998,
+       "sha256": "2b9d8366c200b33638a713e2f9d05027717bfe7857ceaa34ac3112b8ac827c2a",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 4,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.3.2.4",
+     "ancestor_depth": 4,
+     "pages": [
+      160,
+      161
+     ],
+     "section_pages": [
+      159,
+      161
+     ],
+     "text_chars": 3044,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1505,
+       "bytes": 247963,
+       "sha256": "28e8247e8c5b87cbe8c743dbc5d378937c14755d3e8c84c6384455dc56f2570b",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 903,
+       "height": 613,
+       "bytes": 101577,
+       "sha256": "5aeb501d19793b9aa697acd7961fa73ac9421721fa90f0aaea5a8554340f52f3",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 184,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:5.4.2",
+     "ancestor_depth": 3,
+     "pages": [
+      215
+     ],
+     "section_pages": [
+      209,
+      219
+     ],
+     "text_chars": 13415,
+     "figure_cues": {
+      "hierarchy": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1322,
+       "bytes": 235265,
+       "sha256": "efffbce24e863323ee908d219d58986f067a0ae0d2ff636487d5f67b78c954a8",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 113,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:6.3",
+     "ancestor_depth": 2,
+     "pages": [
+      243
+     ],
+     "section_pages": [
+      238,
+      246
+     ],
+     "text_chars": 13078,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1473,
+       "bytes": 302032,
+       "sha256": "73b4d40bd58229e2023d7cf41a86aeca2bf6a1342ca27883f619600b335abe65",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 152,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:7.2",
+     "ancestor_depth": 2,
+     "pages": [
+      273
+     ],
+     "section_pages": [
+      268,
+      276
+     ],
+     "text_chars": 13623,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 949,
+       "height": 1457,
+       "bytes": 330919,
+       "sha256": "6d93528f49d3b2d79d270ace30350878b7f00216ccc2195f465e9b34e0f5cb65",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 157,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0132_dec_8_2_3_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:8.2.3.2",
+     "ancestor_depth": 4,
+     "pages": [
+      362
+     ],
+     "section_pages": [
+      353,
+      362
+     ],
+     "text_chars": 15376,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1519,
+       "bytes": 287266,
+       "sha256": "67191c3edee2c1adb8558ee7e0fb78e395fa54682e6d25222fec688fb245daf5",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 141,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 1,
+     "pages": [
+      363
+     ],
+     "section_pages": [
+      363,
+      433
+     ],
+     "text_chars": 125157,
+     "figure_cues": {
+      "diagram": 1,
+      "figure_ref": 4
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1450,
+       "bytes": 287601,
+       "sha256": "d1bfac7895ec22983b95fca9e83e38efff53c50a3f19532038efd49d09c22b25",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 145,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:9.1.2.2",
+     "ancestor_depth": 4,
+     "pages": [
+      383
+     ],
+     "section_pages": [
+      382,
+      384
+     ],
+     "text_chars": 1951,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1055,
+       "bytes": 182324,
+       "sha256": "3198ab154297262a6b47813a120a6d3a0030b641d4dcb551516a8a2a6d0b4bad",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 97,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:9.2.3",
+     "ancestor_depth": 3,
+     "pages": [
+      387
+     ],
+     "section_pages": [
+      386,
+      393
+     ],
+     "text_chars": 8588,
+     "figure_cues": {
+      "diagram": 1,
+      "figure_ref": 4
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 620,
+       "height": 514,
+       "bytes": 168461,
+       "sha256": "87391ae2877208493c310712ef65a5b6f6c78a3b8da5e66a10fa986fef59185c",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 3,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:9.2.3.4",
+     "ancestor_depth": 4,
+     "pages": [
+      388,
+      390
+     ],
+     "section_pages": [
+      388,
+      393
+     ],
+     "text_chars": 6199,
+     "figure_cues": {
+      "diagram": 1,
+      "figure_ref": 2
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 807,
+       "height": 479,
+       "bytes": 259421,
+       "sha256": "df3e55b7503464b69a7ebfc82753f55bea3789ace0e624da69982ae9c1f8bdaf",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 781,
+       "height": 525,
+       "bytes": 228024,
+       "sha256": "524e9d8396c352948ebb1394ec6cf08dedd19ef134ab8d9d4d72dabe2848dc59",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 3,
+       "width": 903,
+       "height": 435,
+       "bytes": 66742,
+       "sha256": "396fe3e8b919cbd7e24b1b792c60f3507b5a78ee7c12d18eff4e333eb1077b5f",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 106,
+      "surplus_count": 27
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0179_dec_10_3_2_4",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:10.3.2.4",
+     "ancestor_depth": 4,
+     "pages": [
+      433
+     ],
+     "section_pages": [
+      430,
+      433
+     ],
+     "text_chars": 5359,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1568,
+       "bytes": 270992,
+       "sha256": "2f05b3f3e40e857cf670624b1a5918d71fe2f318ffe08142e7d0340daf541c1a",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 118,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2",
+     "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2",
+     "ancestor_depth": 1,
+     "pages": [
+      434
+     ],
+     "section_pages": [
+      433,
+      440
+     ],
+     "text_chars": 7679,
+     "figure_cues": {
+      "chart": 1
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 903,
+       "height": 1035,
+       "bytes": 183568,
+       "sha256": "7a8b77be06db7b4a0f26e3be38ab554efbcb93c48c6db8c9c8819e1a3efad843",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 82,
+      "surplus_count": 0
+     }
+    },
+    {
+     "chunk_id": "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+     "doc_id": "T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:2.2",
+     "ancestor_depth": 2,
+     "pages": [
+      38,
+      39
+     ],
+     "section_pages": [
+      36,
+      40
+     ],
+     "text_chars": 4795,
+     "figure_cues": {
+      "diagram": 1,
+      "figure_ref": 3
+     },
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 904,
+       "height": 592,
+       "bytes": 40480,
+       "sha256": "e5fa073c45ac774a82802fe0e7bb1cbad7d8a1919bc9a2ae1e7e70a1c6aa6167",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 2,
+       "width": 575,
+       "height": 536,
+       "bytes": 28238,
+       "sha256": "bf7fba2bb8354795d7bf7eee5ca8cfcb5cdd5990c40c18eb4e63e0f953511d89",
+       "source": "embedded_raster"
+      },
+      {
+       "declared_order": 3,
+       "width": 752,
+       "height": 550,
+       "bytes": 38373,
+       "sha256": "9d9f57c3945570d320cb91ff88b7e812134208cb7b244521f3e79d69085184a9",
+       "source": "embedded_raster"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 59,
+      "surplus_count": 1
+     }
+    },
+    {
+     "chunk_id": "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+     "doc_id": "T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:4.2",
+     "ancestor_depth": 2,
+     "pages": [
+      56,
+      57,
+      58,
+      59
+     ],
+     "section_pages": [
+      53,
+      63
+     ],
+     "text_chars": 15542,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 974,
+       "height": 1283,
+       "bytes": 257674,
+       "sha256": "bb53d9371d87b63a157ae6a19f5ab5c2f0e40fbf81529b96e70d2b4e1923271a",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 2,
+       "width": 974,
+       "height": 1601,
+       "bytes": 299381,
+       "sha256": "9efc6f0ac47213f1b529106e78ae4b56375b286e6612ed6870a00418b18b29d3",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 3,
+       "width": 974,
+       "height": 1600,
+       "bytes": 322266,
+       "sha256": "ed4c0e6dcc727aa89d2fbed283e11088721299dddd9bbe9ab412b3218d9eee22",
+       "source": "rendered_vector_region"
+      },
+      {
+       "declared_order": 4,
+       "width": 974,
+       "height": 599,
+       "bytes": 86289,
+       "sha256": "9e751dfc14a77dbf36c74b703ab09fd2b38beb3cc04df567ea1563ccfdfb62a0",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 302,
+      "surplus_count": 2
+     }
+    },
+    {
+     "chunk_id": "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13",
+     "doc_id": "T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s",
+     "question_type": "short_answer",
+     "condition": "TLV",
+     "split": "test",
+     "section_label": "dec:3.13",
+     "ancestor_depth": 2,
+     "pages": [
+      185
+     ],
+     "section_pages": [
+      182,
+      185
+     ],
+     "text_chars": 4584,
+     "figure_cues": {},
+     "images": [
+      {
+       "declared_order": 1,
+       "width": 963,
+       "height": 934,
+       "bytes": 122955,
+       "sha256": "4018a9eb2e5c4486b32284c3e35d9f013383321287b80999aa12f9344604bfdf",
+       "source": "rendered_vector_region"
+      }
+     ],
+     "figure_text_counts": {
+      "words_kept": 55,
+      "surplus_count": 1
+     }
+    }
+   ]
+  }
+ }
+}
