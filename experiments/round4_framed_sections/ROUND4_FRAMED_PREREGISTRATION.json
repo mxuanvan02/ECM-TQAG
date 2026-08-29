@@ -1,0 +1,145 @@
+{
+ "schema": "ecm-tqag.round4.framed-preregistration.v1",
+ "status": "FROZEN, prospective. No paid call is authorised by this document.",
+ "created_utc": "2026-08-29T20:03:19Z",
+ "what_this_is": "Pre-registration for a round-4 census on Frame D, a new frame drawn from the section-level law-textbook dataset. Written before any call, so that the frame, its size, and the rule reading that produced it cannot be chosen after seeing results.",
+ "parent_addendum": {
+  "path": "prospective/v3103_round2/ROUND4_NECESSITY_ADDENDUM.md",
+  "sha256": "fea9078d43ee5ac32578233805425a83f1453f6fce374c9baf77687e4e9b3dfb",
+  "what_is_inherited_unchanged": [
+   "primary endpoint M(c,a) = min_j N_j(c,a), unthresholded judged visual necessity",
+   "paired two-sided exact sign test on discordant pairs",
+   "all three pooling rules reported every time: strict (PRIMARY), lenient, itt",
+   "Holm control at family alpha 0.05 over the two contrasts",
+   "V, the round-1..3 hard-valid endpoint, still computed and reported",
+   "generator, the three arm prompts, the repaired gates, the seven-field judgement schema",
+   "zero retry, zero fallback, zero replacement; ITT accounting",
+   "the floor of 40 and the target of 46"
+  ],
+  "what_this_record_does_not_do": "It does not relax V, does not move the necessity threshold, does not modify the gate G, and does not change the floor or the target."
+ },
+ "frame": {
+  "name": "D_hul_law_textbooks_sections",
+  "manifest": "experiment/dataset_framed/dataset_manifest_framed_20260829T195643Z.json",
+  "manifest_sha256": "2aca4def1d411097ca0917e4398f3bf7ec3c03441aa97ecd71b00b48f56594a2",
+  "manifest_schema": "ecm-tqag.multimodal-inputs.v4-work24",
+  "n": 67,
+  "n_is_fixed_before_the_first_call": true,
+  "question_types": {
+   "multiple_choice": 11,
+   "short_answer": 56
+  },
+  "documents": 13,
+  "source_concentration": {
+   "top1_doc_chunks": 25,
+   "top1_doc_share": 0.373,
+   "top5_doc_share": 0.761,
+   "note": "Declared because round-4 §7 recorded top-5 concentration as a frame-quality concern. It is not a stopping rule."
+  },
+  "granularity": "one section of a textbook, not one page: the whole section text plus every figure-like region inside it"
+ },
+ "deviation_1_rule_3_reading": {
+  "what_changed": "Frame D admits a rendered vector region as a resolvable figure crop. Frames B and C counted embedded rasters only.",
+  "rule_3_frozen_text": "ROUND3_FRAMEB_ADDENDUM.md rule 3 - 'At least one extracted figure crop resolvable on disk; pages without a resolvable crop are EXCLUDED'",
+  "frameb_addendum_sha256": "2b74e998ad5d05c23686f464d552c861355c0aa0805be526a19c17b63858c18d",
+  "frame_c_operationalisation": "ROUND4_FRAME_DETERMINATION_v3: largest EMBEDDED RASTER on the page must have min-dimension >= 203 px",
+  "frame_d_operationalisation": "any crop written to disk for the unit, embedded raster or rendered vector region, must have min-dimension >= 203 px",
+  "why_the_wider_reading_is_defensible": "Law textbooks draw their tables and diagrams with strokes rather than placing scans, so the narrow reading excludes the corpus's dominant figure form. Visual adjudication of the vector regions found them to be genuine flowcharts, org charts, specimen forms and ruled tables, not artefacts.",
+  "why_this_is_still_a_deviation": "Vector renders were never in the round-1 or Frame-B evidence bundles, and SECTION_FRAME_DETERMINATION.json declined this reading precisely because it was the binding constraint. Adopting it now is a gate change and must be read as one.",
+  "counts_under_both_readings": {
+   "frozen_reading_embedded_rasters_only": 28,
+   "literal_reading_any_crop": 67,
+   "floor": 40,
+   "note": "Recorded so the choice is visible: the frozen reading is below the floor and the literal reading is above it. A reader may discount Frame D on exactly this ground."
+  },
+  "pre_registered_sensitivity_analysis": {
+   "requirement": "The 28 chunks that also pass the frozen reading are a subset of the 67. Every endpoint must ALSO be reported on that subset, every time, whatever it shows.",
+   "why": "It is the only way a reader can see whether the result depends on the widened gate. Fixed now so it cannot be dropped later.",
+   "subset_n": 28,
+   "subset_is_below_floor": true,
+   "subset_significance_claims": "suppressed, as the floor clause requires"
+  }
+ },
+ "deviation_2_new_frame_not_the_three_named_frames": {
+  "s7_frozen_text": "ROUND4_NECESSITY_ADDENDUM.md §7 - the frame must not be the round-1 16, the Frame B 15, or the repaired 16",
+  "how_freshness_was_established": "By source bytes and by passage text, not by doc_id: no Frame-D source PDF is byte-identical to any of the legacy 48 documents those frames were drawn from, and the maximum 8-word shingle containment against every chunk of those frames is 0.023.",
+  "audit": "corpus/reports/SECTION_FRAME_DETERMINATION.json, block freshness_audit_s7",
+  "sealed_frame_c_pages_excluded": "A unit whose (source_sha256, page) appears in the sealed frame-C 24 is excluded from Frame D, so Frame D does not re-test pages that have already been run."
+ },
+ "figure_text_channel": {
+  "what_it_is": "Per-unit OCR of the figure regions, carried as evidence.figure_text, with each word marked for whether it also occurs in the text layer.",
+  "measured_fact_about_the_instrument": "The sealed evidence contract publishes only text, document_structure and images to the model, so figure_text does NOT enter the prompt and does NOT change what any arm sees. Verified by rendering a generation request and searching the payload.",
+  "therefore_its_role": "A pre-registered stratifier and a diagnostic, not an input. It is the operational test of whether the image carries information the text does not, which is the premise of the visual-necessity endpoint.",
+  "gate": "tesseract vie+eng --psm 11, TSV per-word confidence >= 90, word >= 3 chars, 400 dpi, region padded 4 pt",
+  "gate_calibration": "corpus/reports/FIGURE_OCR_CONFIDENCE_CALIBRATION.json",
+  "gate_calibration_sha256": "76c3e394be682a52bd0c3cf1413a442c35f0a6df94501099b3a009487418b8ce",
+  "not_quotable_as_prose": "At confidence 90 roughly one word in ten is still an OCR slip on graphical strokes, so these words must never be treated as context text for the verbatim-quote gate. The gate reads evidence.text only."
+ },
+ "pre_registered_stratum": {
+  "definition": "image_only_content = the unit's figure regions yield at least one gate-passing word absent from both the page text layer and the section prose",
+  "counts": {
+   "image_only_content": 40,
+   "no_image_only_content": 27
+  },
+  "declared_before_execution": true,
+  "what_is_expected": "If judged visual necessity is driven by the image carrying information the text lacks, necessity should be higher in the image_only_content stratum. This is a secondary, descriptive comparison; it is not a confirmatory contrast and carries no Holm correction.",
+  "why_declared_now": "Rounds 1-3 found the corpus text-sufficient, with OCR text restating the diagram in 10 of 15 Frame-B pages. Splitting on that property after seeing results would be a post-hoc subgroup."
+ },
+ "text_source": {
+  "primary": "PDF text layer, layout-preserving, never overwritten by OCR",
+  "why_not_rebuilt_from_ocr": "All 26 sources are born-digital and 86% of figure-bearing pages carry a real text layer. Measured on 24 sampled pages, tesseract vie+eng reaches median CER 1.89% against that layer, so rebuilding from OCR would replace the typesetter's own output with a lossy copy.",
+  "measurement": "corpus/reports/OCR_FIDELITY_PROBE.json",
+  "measurement_sha256": "7022686d0fde86ab72f074d8f54a367a215b9c0487cc2c4cf701fb0958100b68"
+ },
+ "power": {
+  "n": 67,
+  "floor": 40,
+  "target": 46,
+  "reaches_floor": true,
+  "reaches_target": true,
+  "consequence": "n=67 is above the floor of 40 and above the target of 46, so the floor clause does not apply to the full frame and Holm rejection flags are NOT suppressed for it.",
+  "honest_statement_of_what_is_still_underpowered": "The addendum's own power table puts ECM-vs-structured at roughly 0.43 at n=46 and needing n~90. At n=67 that contrast remains underpowered, and a null on it is not evidence of no effect. This is declared now rather than presented afterwards as a fair test that happened to fail.",
+  "sensitivity_subset_is_below_floor": true
+ },
+ "inputs_bound_by_sha256": {
+  "eligible_units": {
+   "path": "datasets_sections/ELIGIBLE_UNITS.json",
+   "sha256": "9e55d16acd370ce2b32e6c1dcb0aa68b2c14e77a9e66231e5fe52bb13d0ec240"
+  },
+  "rights_ledger": {
+   "path": "corpus/reports/SECTION_DATASET_RIGHTS_RECONCILIATION.json",
+   "sha256": "ac342cc6bf6f46abb8855b869e3b9509afc79af0e22a6488c80366986af6e150"
+  },
+  "scope_decision": {
+   "path": "corpus/reports/DATASET_SCOPE_LAW_TEXTBOOKS.json",
+   "sha256": "2b2eff04821ad945580a2254c2863215c4e38adf6cf3841fd04f0de92bf7d7d8"
+  },
+  "determination": {
+   "path": "corpus/reports/SECTION_FRAME_DETERMINATION.json",
+   "sha256": "e8c4e707cd6d65bde90d051735cccfbff4225a696562f34867a9071112a2557f"
+  },
+  "sealed_frame_c": {
+   "path": "experiment/dataset_framec/dataset_manifest_rule4_20260816T105100Z.json",
+   "sha256": "14325616771840623d2dbb8267fea0721255f29178400b1c94732e4b3559d648"
+  }
+ },
+ "budget_and_stop_rules": {
+  "calls_if_executed": 603,
+  "generation_calls": 201,
+  "judge_calls": 402,
+  "owner_authorization_required": true,
+  "why": "ROUND4_NECESSITY_ADDENDUM.md §6 requires an explicit hard USD cap from the owner. The runner must refuse every paid call without one, and must record remaining tasks as NOT_ATTEMPTED:budget_cap rather than overspending.",
+  "stop_on_first_qualification_failure": true,
+  "retry": 0,
+  "fallback": false,
+  "replacement": false
+ },
+ "what_would_make_this_record_invalid": [
+  "changing n after the first call",
+  "changing the rule-3 reading after seeing results",
+  "reporting the strict/lenient/itt triple selectively",
+  "omitting the 28-chunk sensitivity analysis",
+  "treating figure_text words as quotable context for the gate",
+  "pooling Frame D with the sealed frame-C 24"
+ ]
+}
