@@ -1,0 +1,195 @@
+{
+ "schema": "ecm-tqag.round4.framef-ablation-preregistration.v1",
+ "status": "FROZEN, prospective. No paid call is authorised by this document; execution additionally requires an owner authorization naming an explicit USD cap.",
+ "created_utc": "2026-08-30T16:08:25Z",
+ "question_this_answers": "Frame F showed ECM-v2 raises A2 against every control. A2 is built from three gates that are PROXIES for multimodality: G6 is a structural relation between two returned fields, and G7/G8 are OCR-overlap tests with measured chance rates far above zero. This ablation asks whether the items A2 admits actually need the figure. If they do not, A2 measures prompt compliance rather than multimodality, and the Frame-F result must be restated as such.",
+ "why_this_is_not_a_second_chance_at_the_frame_f_result": "The Frame-F census is sealed and is NOT re-analysed by this record. A2 rates, the confirmatory family and its Holm flags stand as reported whatever this ablation shows. What is at stake here is the INTERPRETATION of A2, not its measured values.",
+ "grading": {
+  "primary_rule": "symmetric word-F1 over accent- and case-folded content tokens; an answer is correct iff F1(returned, gold) >= 0.70",
+  "f1_threshold": 0.7,
+  "multiple_choice": "correct iff the returned option_index equals the recorded correct_option; no string heuristic, chance level 0.25",
+  "secondary_rule_reported_beside_it": "containment in either direction, the frame-D primary, reported for comparability only and carrying no claim here",
+  "why_the_rule_changed": {
+   "defect": "containment is lenient on substrings but STRICT on insertions: one inserted function word scores an otherwise identical answer wrong",
+   "found_in": "the executed frame-D ablation",
+   "example": "a returned answer differing from the gold by the single word 'của' scored WRONG under containment and scores F1=0.909 under the symmetric rule",
+   "consequence_for_the_published_frame_d_number": "the frame-D ablation reported V*=0.4261 and exact McNemar p=0.0386 as evidence that figures were measurably necessary. Re-graded under symmetric word-F1 at eight thresholds from 0.50 to 0.90, NO threshold reproduces significance. That result is therefore a grading artefact and is corrected on the record here rather than left standing.",
+   "sensitivity_table_recomputed_on_the_sealed_frame_d_pairs": {
+    "n_pairs": 115,
+    "containment_frame_d_primary": {
+     "v_star": 0.4261,
+     "p": 0.0386
+    },
+    "f1_0.50": {
+     "v_star": 0.287,
+     "p": 0.7266
+    },
+    "f1_0.60": {
+     "v_star": 0.383,
+     "p": 0.1797
+    },
+    "f1_0.65": {
+     "v_star": 0.426,
+     "p": 0.2891
+    },
+    "f1_0.70": {
+     "v_star": 0.461,
+     "p": 1.0
+    },
+    "f1_0.75": {
+     "v_star": 0.504,
+     "p": 1.0
+    },
+    "f1_0.80": {
+     "v_star": 0.53,
+     "p": 0.6875
+    },
+    "f1_0.90": {
+     "v_star": 0.574,
+     "p": 0.125
+    }
+   },
+   "why_0.70_and_not_the_threshold_with_the_smallest_p": "0.70 is the knee where a single inserted or dropped function word no longer flips a verdict, and it is chosen for that structural reason. Choosing the threshold with the smallest p-value would be the same defect in the opposite direction; all eight thresholds are reported as a sensitivity curve whatever the primary shows."
+  }
+ },
+ "design": {
+  "branches": {
+   "TEXT": "the chunk's scoped evidence text plus the question. No image, no figure description, no declared quotation, no rationale.",
+   "TEXT_IMG": "the same text, the same question, plus the chunk's own figure crops"
+  },
+  "paired_within_item": true,
+  "why_the_control_branch_is_required": "without TEXT_IMG a wrong answer under TEXT is ambiguous between 'the item needs the figure' and 'the item is unanswerable'",
+  "answerer_model": "qwen/qwen3-vl-8b-instruct",
+  "why_the_generator_answers_its_own_items": "it is the census generator, so the measurement is on the same model whose output was gated; a different answerer would confound answerer capability with figure dependence. Same choice as the sealed frame-C and frame-D ablations, retained for comparability.",
+  "temperature": 0,
+  "retry": 0,
+  "fallback": false,
+  "identical_between_branches": "prompt text, response schema, decoding settings. Only the image content blocks differ."
+ },
+ "items": {
+  "population": "every generation that passed the v1 gate in round4_framef_census_20260830T140000Z, across all five arms",
+  "n_v1_admitted": 227,
+  "n_scored": 225,
+  "n_fixed_before_the_first_call": true,
+  "by_arm": {
+   "direct": 43,
+   "structured_no_contract": 43,
+   "ecm_full": 41,
+   "ecm_v2_disclosed": 48,
+   "ecm_v2": 50
+  },
+  "by_question_type": {
+   "multiple_choice": 30,
+   "short_answer": 195
+  },
+  "a2_split": {
+   "pass": 57,
+   "fail": 168
+  },
+  "a2_split_by_arm": {
+   "ecm_v2": {
+    "pass": 24,
+    "fail": 26
+   },
+   "ecm_v2_disclosed": {
+    "pass": 10,
+    "fail": 38
+   },
+   "ecm_full": {
+    "pass": 11,
+    "fail": 30
+   },
+   "direct": {
+    "pass": 6,
+    "fail": 37
+   },
+   "structured_no_contract": {
+    "pass": 6,
+    "fail": 37
+   }
+  },
+  "calls": 450
+ },
+ "declared_exclusion_before_execution": {
+  "rule": "a short-answer item whose gold answer folds to <= 2 characters is excluded",
+  "why": "such a gold is contained in almost any returned string, so the item auto-passes both branches under the containment rule and would enter as evidence that the figure was unnecessary. That is a generation defect read as a measurement.",
+  "n_excluded": 2,
+  "item_ids": [
+   "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::direct",
+   "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::structured_no_contract"
+  ]
+ },
+ "primary_endpoint": {
+  "name": "A2 construct validity",
+  "definition": "V*(i) = 1 - R_TEXT(i) is 1 when item i is NOT answerable from text alone. The endpoint is the difference in V* between the items A2 admitted and the items A2 rejected.",
+  "test": "Fisher exact two-sided on the 2x2 table of A2 status against V*, over all scored items pooled across arms",
+  "why_unpaired": "A2 status is a property of an item, not a condition applied to a chunk, so A2-pass and A2-fail items are different items and the comparison is unpaired. The paired quantity is reported separately as the branch contrast below.",
+  "alpha": 0.05,
+  "n_a2_pass": 57,
+  "n_a2_fail": 168,
+  "direction_not_assumed": "two-sided. A2-admitted items being LESS figure-dependent is a valid and reportable outcome, and would mean the gates select against the property they were built for.",
+  "confound_declared_now": "A2 status correlates with arm by construction: ECM-v2 supplies 24 of the 57 A2-pass items. The pooled test therefore cannot separate 'A2 selects figure-dependent items' from 'the ECM-v2 arm writes figure-dependent items'. Both readings are reported, and the WITHIN-ARM version of the same table is reported for every arm with enough items, which is the form that breaks the confound."
+ },
+ "secondary_endpoints": [
+  {
+   "name": "branch contrast within items",
+   "definition": "Gamma(i) = R_TEXT_IMG(i) - R_TEXT(i); exact two-sided McNemar on the branch-discordant items",
+   "why": "the paired form: does supplying the figure change the outcome",
+   "confirmatory": false
+  },
+  {
+   "name": "V* and Gamma per arm",
+   "why": "shows whether any effect is arm-specific",
+   "confirmatory": false
+  },
+  {
+   "name": "V* by A2 status WITHIN each arm",
+   "why": "the form that separates gate selection from arm effect; reported for every arm, with its n, however small",
+   "confirmatory": false
+  },
+  {
+   "name": "the eight-threshold F1 sensitivity curve",
+   "why": "so no reader has to trust the single frozen threshold; the frame-D failure was invisible without exactly this",
+   "confirmatory": false
+  },
+  {
+   "name": "PRIMARY_MCQ",
+   "why": "graded by option index alone, with no string heuristic",
+   "confirmatory": false
+  }
+ ],
+ "power": {
+  "n_scored": 225,
+  "n_a2_pass": 57,
+  "n_a2_fail": 168,
+  "honest_limit": "the within-arm tables are small: outside ECM-v2 no arm has more than 11 A2-pass items, so within-arm comparisons are descriptive and carry no significance claim. Only the pooled table is powered, and only the pooled table carries the confound above."
+ },
+ "pre_committed_reporting": [
+  "Reported whatever it shows.",
+  "If A2-admitted items are more figure-dependent than A2-rejected ones, A2 has construct validity as a multimodality gate and the Frame-F result reads as intended.",
+  "If they are not, A2 is reported as a compliance gate: it measures whether the generator followed the division-of-labour instruction, not whether the resulting item needs the figure. The Frame-F contrasts stand as measured and their INTERPRETATION narrows.",
+  "If the pooled table separates but the within-arm tables do not, the result is reported as confounded with arm and not as gate validity.",
+  "The frame-D ablation's published V*=0.4261 / p=0.0386 is corrected on the record as a grading artefact, whatever this ablation shows.",
+  "No outcome licenses changing the gates, the frame, the census, or regenerating items."
+ ],
+ "what_would_make_this_record_invalid": [
+  "any paid call before this file is frozen and an authorization exists",
+  "editing the grading rule, the threshold, or the item set after the first call",
+  "reporting the pooled table without the within-arm tables beside it",
+  "presenting the frame-D correction as anything other than a correction"
+ ],
+ "inputs_bound_by_sha256": {
+  "census_run": "round4_framef_census_20260830T140000Z",
+  "frame_manifest": "experiment/dataset_framef/dataset_manifest_framef_20260830T122835Z.json",
+  "frame_manifest_sha256": "5e667745e7ba5b1989bdfd7cd2ba36bb84eca420062a0f693a2cd8f9d552d943",
+  "framef_preregistration": "prospective/v3103_round2/ROUND4_FRAMEF_PREREGISTRATION.json",
+  "framef_preregistration_sha256": "20695651ad624d370a908101a1039f6baddf5723cf99f07b064f7c3ca2832635",
+  "gate_module": "experiment/round2/ecm_v2_gates.py",
+  "gate_module_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828"
+ },
+ "budget_and_stop_rules": {
+  "calls_if_executed": 450,
+  "authorization_required": "the runner requires --usd-cap and an authorization naming round round4_framef_ablation whose cap equals it",
+  "budget_cap_behaviour": "remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending"
+ }
+}

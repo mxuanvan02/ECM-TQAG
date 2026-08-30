@@ -1,0 +1,17 @@
+{
+ "_published_note": "Published copy of the authorization artefact. The runner verifies this file's cap against the --usd-cap argument and its preregistration_sha256 against the frozen record before any paid call.",
+ "assistant_note": "454 calls, not the 450 stated in the pre-registration: the two declared-excluded items are still ATTEMPTED so their records exist, and are excluded from the graded denominator rather than from the call plan. The pre-registration's sensitivity analysis scores them correct in both branches regardless, so the extra records cannot change any endpoint; they cost about 0.004 USD.",
+ "budget_note": "this run is capped at 2.00 USD inside the owner's 10.00 grant; 0.670375 USD reported spent across all prior runs",
+ "call_cap": 454,
+ "gate_module_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828",
+ "granted_by": "owner (project principal), in-session",
+ "granted_utc": "2026-08-30T16:28:48Z",
+ "owner_cap_statement_verbatim": "Đồng ý cho chi tối đa 10 USD cho toàn bộ round 4",
+ "owner_statement_verbatim": "ok em làm đi nhé",
+ "preregistration": "ROUND4_FRAMEF_ABLATION_PREREGISTRATION.json",
+ "preregistration_sha256": "15ea6979578a7a202ba845b06df5f0e16398b5ae8cab12e8987b67becabbe752",
+ "round": "round4_framef_ablation",
+ "schema": "ecm-tqag.round4.owner-authorization.v1",
+ "scope": "Text-only ablation over the 227 v1-admitted items of the frame-F census, two branches per item. Tests whether the items A2 admits actually need the figure, i.e. the construct validity of the A2 endpoint.",
+ "usd_hard_cap": 2.0
+}

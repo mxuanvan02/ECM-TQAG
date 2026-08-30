@@ -1,0 +1,679 @@
+{
+ "PRIMARY_A2_CONSTRUCT_VALIDITY": {
+  "a2_fail": {
+   "figure_attributable_G": {
+    "ci95": [
+     0.0289,
+     0.1067
+    ],
+    "count": 10,
+    "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+    "item_ids": [
+     "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2_disclosed",
+     "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2",
+     "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_full",
+     "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_v2",
+     "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::direct",
+     "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::structured_no_contract",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_v2_disclosed",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2_disclosed",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_full",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::structured_no_contract"
+    ],
+    "rate": 0.0595
+   },
+   "mcnemar_exact_two_sided_p": 0.301758,
+   "measured_visual_necessity_V_star": {
+    "ci95": [
+     0.3072,
+     0.4589
+    ],
+    "count": 64,
+    "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+    "rate": 0.381
+   },
+   "n": 168,
+   "paired_table": {
+    "concordant": 153,
+    "discordant": 15,
+    "image_helped_b": 10,
+    "image_hurt_c": 5
+   },
+   "text_image": {
+    "ci95": [
+     0.5715,
+     0.7207
+    ],
+    "correct": 109,
+    "rate": 0.6488
+   },
+   "text_only": {
+    "ci95": [
+     0.5411,
+     0.6928
+    ],
+    "correct": 104,
+    "rate": 0.619
+   }
+  },
+  "a2_pass": {
+   "figure_attributable_G": {
+    "ci95": [
+     0.0396,
+     0.2152
+    ],
+    "count": 6,
+    "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+    "item_ids": [
+     "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2",
+     "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_v2",
+     "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_v2",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2_disclosed",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_v2"
+    ],
+    "rate": 0.1053
+   },
+   "mcnemar_exact_two_sided_p": 0.507812,
+   "measured_visual_necessity_V_star": {
+    "ci95": [
+     0.4408,
+     0.7086
+    ],
+    "count": 33,
+    "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+    "rate": 0.5789
+   },
+   "n": 57,
+   "paired_table": {
+    "concordant": 48,
+    "discordant": 9,
+    "image_helped_b": 6,
+    "image_hurt_c": 3
+   },
+   "text_image": {
+    "ci95": [
+     0.3398,
+     0.6103
+    ],
+    "correct": 27,
+    "rate": 0.4737
+   },
+   "text_only": {
+    "ci95": [
+     0.2914,
+     0.5592
+    ],
+    "correct": 24,
+    "rate": 0.4211
+   }
+  },
+  "confound_declared_before_execution": "A2 status correlates with arm by construction: ECM-v2 supplies 24 of the 57 A2-pass items. The pooled test therefore cannot separate 'A2 selects figure-dependent items' from 'the ECM-v2 arm writes figure-dependent items'. Both readings are reported, and the WITHIN-ARM version of the same table is reported for every arm with enough items, which is the form that breaks the confound.",
+  "contingency_table": {
+   "a2_fail_answerable_from_text": 104,
+   "a2_fail_needs_figure": 64,
+   "a2_pass_answerable_from_text": 24,
+   "a2_pass_needs_figure": 33
+  },
+  "definition": "V*(i) = 1 - R_TEXT(i) is 1 when item i is NOT answerable from text alone. The endpoint is the difference in V* between the items A2 admitted and the items A2 rejected.",
+  "fisher_exact_two_sided_p": 0.012908,
+  "test": "fisher_exact_two_sided",
+  "v_star_a2_fail": 0.381,
+  "v_star_a2_pass": 0.5789,
+  "why_unpaired": "A2 status is a property of an item, not a condition applied to a chunk, so A2-pass and A2-fail items are different items and the comparison is unpaired. The paired quantity is reported separately as the branch contrast below."
+ },
+ "PRIMARY_ALL": {
+  "figure_attributable_G": {
+   "ci95": [
+    0.0412,
+    0.1129
+   ],
+   "count": 16,
+   "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+   "item_ids": [
+    "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2",
+    "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2_disclosed",
+    "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2",
+    "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_v2",
+    "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_v2",
+    "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_full",
+    "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_v2",
+    "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::direct",
+    "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::structured_no_contract",
+    "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2_disclosed",
+    "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_v2_disclosed",
+    "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2_disclosed",
+    "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2",
+    "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_v2",
+    "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_full",
+    "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::structured_no_contract"
+   ],
+   "rate": 0.0711
+  },
+  "mcnemar_exact_two_sided_p": 0.15159,
+  "measured_visual_necessity_V_star": {
+   "ci95": [
+    0.3655,
+    0.4986
+   ],
+   "count": 97,
+   "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+   "rate": 0.4311
+  },
+  "n": 225,
+  "paired_table": {
+   "concordant": 201,
+   "discordant": 24,
+   "image_helped_b": 16,
+   "image_hurt_c": 8
+  },
+  "text_image": {
+   "ci95": [
+    0.5373,
+    0.6688
+   ],
+   "correct": 136,
+   "rate": 0.6044
+  },
+  "text_only": {
+   "ci95": [
+    0.5014,
+    0.6345
+   ],
+   "correct": 128,
+   "rate": 0.5689
+  }
+ },
+ "PRIMARY_MCQ": {
+  "chance_level": 0.25,
+  "figure_attributable_G": {
+   "ci95": [
+    0.0008,
+    0.1722
+   ],
+   "count": 1,
+   "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+   "item_ids": [
+    "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_v2"
+   ],
+   "rate": 0.0333
+  },
+  "mcnemar_exact_two_sided_p": 1.0,
+  "measured_visual_necessity_V_star": {
+   "ci95": [
+    0.0082,
+    0.2207
+   ],
+   "count": 2,
+   "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+   "rate": 0.0667
+  },
+  "n": 30,
+  "paired_table": {
+   "concordant": 29,
+   "discordant": 1,
+   "image_helped_b": 1,
+   "image_hurt_c": 0
+  },
+  "text_image": {
+   "ci95": [
+    0.8278,
+    0.9992
+   ],
+   "correct": 29,
+   "rate": 0.9667
+  },
+  "text_only": {
+   "ci95": [
+    0.7793,
+    0.9918
+   ],
+   "correct": 28,
+   "rate": 0.9333
+  },
+  "why_reported_separately": "graded by option index alone, with no string containment heuristic"
+ },
+ "a2_validity_within_arm": {
+  "arms": {
+   "direct": {
+    "fisher_exact_two_sided_p": 1.0,
+    "n_a2_fail": 37,
+    "n_a2_pass": 6,
+    "v_star_a2_fail": 0.4595,
+    "v_star_a2_pass": 0.5
+   },
+   "ecm_full": {
+    "fisher_exact_two_sided_p": 0.074288,
+    "n_a2_fail": 30,
+    "n_a2_pass": 11,
+    "v_star_a2_fail": 0.3,
+    "v_star_a2_pass": 0.6364
+   },
+   "ecm_v2": {
+    "fisher_exact_two_sided_p": 0.412886,
+    "n_a2_fail": 26,
+    "n_a2_pass": 24,
+    "v_star_a2_fail": 0.4615,
+    "v_star_a2_pass": 0.5833
+   },
+   "ecm_v2_disclosed": {
+    "fisher_exact_two_sided_p": 0.281601,
+    "n_a2_fail": 38,
+    "n_a2_pass": 10,
+    "v_star_a2_fail": 0.3684,
+    "v_star_a2_pass": 0.6
+   },
+   "structured_no_contract": {
+    "fisher_exact_two_sided_p": 0.647356,
+    "n_a2_fail": 37,
+    "n_a2_pass": 6,
+    "v_star_a2_fail": 0.3243,
+    "v_star_a2_pass": 0.5
+   }
+  },
+  "why": "A2 status correlates with arm by construction, so the pooled table cannot separate gate selection from an arm effect. Within an arm that confound is gone. Every cell here is small and carries NO significance claim; it is reported for every arm whatever it shows."
+ },
+ "by_arm": {
+  "arms": {
+   "direct": {
+    "figure_attributable_G": {
+     "ci95": [
+      0.0006,
+      0.1229
+     ],
+     "count": 1,
+     "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+     "item_ids": [
+      "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::direct"
+     ],
+     "rate": 0.0233
+    },
+    "mcnemar_exact_two_sided_p": 0.625,
+    "measured_visual_necessity_V_star": {
+     "ci95": [
+      0.3118,
+      0.6235
+     ],
+     "count": 20,
+     "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+     "rate": 0.4651
+    },
+    "n": 43,
+    "paired_table": {
+     "concordant": 39,
+     "discordant": 4,
+     "image_helped_b": 1,
+     "image_hurt_c": 3
+    },
+    "text_image": {
+     "ci95": [
+      0.3331,
+      0.6454
+     ],
+     "correct": 21,
+     "rate": 0.4884
+    },
+    "text_only": {
+     "ci95": [
+      0.3765,
+      0.6882
+     ],
+     "correct": 23,
+     "rate": 0.5349
+    }
+   },
+   "ecm_full": {
+    "figure_attributable_G": {
+     "ci95": [
+      0.006,
+      0.1653
+     ],
+     "count": 2,
+     "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+     "item_ids": [
+      "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_full",
+      "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_full"
+     ],
+     "rate": 0.0488
+    },
+    "mcnemar_exact_two_sided_p": 1.0,
+    "measured_visual_necessity_V_star": {
+     "ci95": [
+      0.242,
+      0.555
+     ],
+     "count": 16,
+     "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+     "rate": 0.3902
+    },
+    "n": 41,
+    "paired_table": {
+     "concordant": 38,
+     "discordant": 3,
+     "image_helped_b": 2,
+     "image_hurt_c": 1
+    },
+    "text_image": {
+     "ci95": [
+      0.4694,
+      0.7788
+     ],
+     "correct": 26,
+     "rate": 0.6341
+    },
+    "text_only": {
+     "ci95": [
+      0.445,
+      0.758
+     ],
+     "correct": 25,
+     "rate": 0.6098
+    }
+   },
+   "ecm_v2": {
+    "figure_attributable_G": {
+     "ci95": [
+      0.0582,
+      0.2674
+     ],
+     "count": 7,
+     "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+     "item_ids": [
+      "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2",
+      "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2",
+      "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_v2",
+      "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_v2",
+      "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_v2",
+      "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2",
+      "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_v2"
+     ],
+     "rate": 0.14
+    },
+    "mcnemar_exact_two_sided_p": 0.179688,
+    "measured_visual_necessity_V_star": {
+     "ci95": [
+      0.3742,
+      0.6634
+     ],
+     "count": 26,
+     "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+     "rate": 0.52
+    },
+    "n": 50,
+    "paired_table": {
+     "concordant": 41,
+     "discordant": 9,
+     "image_helped_b": 7,
+     "image_hurt_c": 2
+    },
+    "text_image": {
+     "ci95": [
+      0.4321,
+      0.7181
+     ],
+     "correct": 29,
+     "rate": 0.58
+    },
+    "text_only": {
+     "ci95": [
+      0.3366,
+      0.6258
+     ],
+     "correct": 24,
+     "rate": 0.48
+    }
+   },
+   "ecm_v2_disclosed": {
+    "figure_attributable_G": {
+     "ci95": [
+      0.0232,
+      0.1998
+     ],
+     "count": 4,
+     "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+     "item_ids": [
+      "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2_disclosed",
+      "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2_disclosed",
+      "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_v2_disclosed",
+      "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2_disclosed"
+     ],
+     "rate": 0.0833
+    },
+    "mcnemar_exact_two_sided_p": 0.375,
+    "measured_visual_necessity_V_star": {
+     "ci95": [
+      0.2761,
+      0.5679
+     ],
+     "count": 20,
+     "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+     "rate": 0.4167
+    },
+    "n": 48,
+    "paired_table": {
+     "concordant": 43,
+     "discordant": 5,
+     "image_helped_b": 4,
+     "image_hurt_c": 1
+    },
+    "text_image": {
+     "ci95": [
+      0.4946,
+      0.7784
+     ],
+     "correct": 31,
+     "rate": 0.6458
+    },
+    "text_only": {
+     "ci95": [
+      0.4321,
+      0.7239
+     ],
+     "correct": 28,
+     "rate": 0.5833
+    }
+   },
+   "structured_no_contract": {
+    "figure_attributable_G": {
+     "ci95": [
+      0.0057,
+      0.1581
+     ],
+     "count": 2,
+     "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+     "item_ids": [
+      "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::structured_no_contract",
+      "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::structured_no_contract"
+     ],
+     "rate": 0.0465
+    },
+    "mcnemar_exact_two_sided_p": 1.0,
+    "measured_visual_necessity_V_star": {
+     "ci95": [
+      0.2101,
+      0.5093
+     ],
+     "count": 15,
+     "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+     "rate": 0.3488
+    },
+    "n": 43,
+    "paired_table": {
+     "concordant": 40,
+     "discordant": 3,
+     "image_helped_b": 2,
+     "image_hurt_c": 1
+    },
+    "text_image": {
+     "ci95": [
+      0.5146,
+      0.8092
+     ],
+     "correct": 29,
+     "rate": 0.6744
+    },
+    "text_only": {
+     "ci95": [
+      0.4907,
+      0.7899
+     ],
+     "correct": 28,
+     "rate": 0.6512
+    }
+   }
+  },
+  "why_confounded": "the arms admit different item sets, so each arm's rate is measured on different items; conditional on admission"
+ },
+ "census_run": "round4_framef_census_20260830T140000Z",
+ "declared_exclusion_applied": {
+  "item_ids": [
+   "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::direct",
+   "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::structured_no_contract"
+  ],
+  "n": 2,
+  "rule": "a short-answer item whose gold answer folds to <= 2 characters is excluded"
+ },
+ "grading_sensitivity_curve": {
+  "frozen_primary_threshold": 0.7,
+  "thresholds": {
+   "containment_frame_d_rule": {
+    "branch_mcnemar_p": 1e-06,
+    "fisher_exact_two_sided_p": 0.000201,
+    "n": 225,
+    "v_star_a2_fail": 0.3631,
+    "v_star_a2_pass": 0.6491,
+    "v_star_overall": 0.4356
+   },
+   "f1_0.50": {
+    "branch_mcnemar_p": 8.8e-05,
+    "fisher_exact_two_sided_p": 0.005392,
+    "n": 225,
+    "v_star_a2_fail": 0.2798,
+    "v_star_a2_pass": 0.4912,
+    "v_star_overall": 0.3333
+   },
+   "f1_0.60": {
+    "branch_mcnemar_p": 0.043285,
+    "fisher_exact_two_sided_p": 0.007635,
+    "n": 225,
+    "v_star_a2_fail": 0.3393,
+    "v_star_a2_pass": 0.5439,
+    "v_star_overall": 0.3911
+   },
+   "f1_0.65": {
+    "branch_mcnemar_p": 0.075519,
+    "fisher_exact_two_sided_p": 0.011754,
+    "n": 225,
+    "v_star_a2_fail": 0.3452,
+    "v_star_a2_pass": 0.5439,
+    "v_star_overall": 0.3956
+   },
+   "f1_0.70": {
+    "branch_mcnemar_p": 0.15159,
+    "fisher_exact_two_sided_p": 0.012908,
+    "n": 225,
+    "v_star_a2_fail": 0.381,
+    "v_star_a2_pass": 0.5789,
+    "v_star_overall": 0.4311
+   },
+   "f1_0.75": {
+    "branch_mcnemar_p": 0.03469,
+    "fisher_exact_two_sided_p": 0.030526,
+    "n": 225,
+    "v_star_a2_fail": 0.4048,
+    "v_star_a2_pass": 0.5789,
+    "v_star_overall": 0.4489
+   },
+   "f1_0.80": {
+    "branch_mcnemar_p": 0.009355,
+    "fisher_exact_two_sided_p": 0.091046,
+    "n": 225,
+    "v_star_a2_fail": 0.4405,
+    "v_star_a2_pass": 0.5789,
+    "v_star_overall": 0.4756
+   },
+   "f1_0.90": {
+    "branch_mcnemar_p": 0.000117,
+    "fisher_exact_two_sided_p": 0.030465,
+    "n": 225,
+    "v_star_a2_fail": 0.5119,
+    "v_star_a2_pass": 0.6842,
+    "v_star_overall": 0.5556
+   }
+  },
+  "why": "the frame-D ablation's significance came from a grading rule that was strict to insertions; it did not survive re-grading. This curve is reported so the same failure cannot hide here."
+ },
+ "items_with_both_branches": 227,
+ "preregistration": "ROUND4_FRAMEF_ABLATION_PREREGISTRATION.json",
+ "preregistration_sha256": "15ea6979578a7a202ba845b06df5f0e16398b5ae8cab12e8987b67becabbe752",
+ "question_this_answers": "Frame F showed ECM-v2 raises A2 against every control. A2 is built from three gates that are PROXIES for multimodality: G6 is a structural relation between two returned fields, and G7/G8 are OCR-overlap tests with measured chance rates far above zero. This ablation asks whether the items A2 admits actually need the figure. If they do not, A2 measures prompt compliance rather than multimodality, and the Frame-F result must be restated as such.",
+ "schema": "ecm-tqag.ablation.framef-a2-validity.v1",
+ "sensitivity_all_items_exclusions_scored_correct": {
+  "endpoint": {
+   "figure_attributable_G": {
+    "ci95": [
+     0.0408,
+     0.1119
+    ],
+    "count": 16,
+    "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+    "item_ids": [
+     "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2",
+     "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2_disclosed",
+     "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2",
+     "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_v2",
+     "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_v2",
+     "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_full",
+     "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_v2",
+     "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::direct",
+     "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::structured_no_contract",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2_disclosed",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_v2_disclosed",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2_disclosed",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_v2",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_full",
+     "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::structured_no_contract"
+    ],
+    "rate": 0.0705
+   },
+   "mcnemar_exact_two_sided_p": 0.15159,
+   "measured_visual_necessity_V_star": {
+    "ci95": [
+     0.3621,
+     0.4945
+    ],
+    "count": 97,
+    "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+    "rate": 0.4273
+   },
+   "n": 227,
+   "paired_table": {
+    "concordant": 203,
+    "discordant": 24,
+    "image_helped_b": 16,
+    "image_hurt_c": 8
+   },
+   "text_image": {
+    "ci95": [
+     0.5411,
+     0.6719
+    ],
+    "correct": 138,
+    "rate": 0.6079
+   },
+   "text_only": {
+    "ci95": [
+     0.5055,
+     0.6379
+    ],
+    "correct": 130,
+    "rate": 0.5727
+   }
+  },
+  "why": "the two excluded items are added back scored correct in both branches. They are concordant by construction, so they cannot move the branch McNemar test, only the raw rates."
+ },
+ "task_status_counts": {
+  "COMPLETE": 454
+ }
+}
