@@ -785,6 +785,8 @@ def census(plan_hash: str, auth: dict[str, Any]) -> int:
                 "n": len(sensitivity),
                 "endpoint": sensitivity_endpoint,
             },
+            "other_judged_vectors": _judged_vectors(judge_records),
+            "judge_record_completeness_per_arm": _judge_completeness(judge_records),
         },
         "quote_classes": _quote_classes(gen_records),
         "elapsed_sec": round(time.time() - started, 1),
@@ -806,6 +808,144 @@ def _quote_classes(gen_records: dict[str, Any]) -> dict[str, int]:
             key = "fail:" + str(rec.get("reason", ""))[:60]
         counts[key] = counts.get(key, 0) + 1
     return counts
+
+
+# The four judged vectors other than visual_necessity. Ordered as in the frozen
+# seven-field judgement schema.
+OTHER_JUDGED_VECTORS = (
+    "answerability",
+    "evidence_correctness",
+    "pedagogical_value",
+    "vietnamese_language",
+)
+
+
+def _judged_vectors(judge_records: dict[str, Any]) -> dict[str, Any]:
+    """ROUND4_NECESSITY_ADDENDUM.md section 2.1 item 4: the four remaining judged
+    vectors, per arm, UNAVERAGED.
+
+    Reported as the full 1-5 score distribution per arm and per judge, because
+    the addendum says unaveraged and a mean would hide a bimodal split or a
+    single-judge artefact. Means are included alongside for readability only,
+    and are derived from the same distributions rather than computed separately.
+
+    Derived entirely from sealed judge records. Makes no call.
+    """
+    dist: dict[str, dict[str, dict[int, int]]] = {
+        arm: {dim: {} for dim in OTHER_JUDGED_VECTORS} for arm in ARMS
+    }
+    per_judge: dict[str, dict[str, dict[str, dict[int, int]]]] = {
+        arm: {judge: {dim: {} for dim in OTHER_JUDGED_VECTORS} for judge in JUDGE_MODELS}
+        for arm in ARMS
+    }
+    provenance: dict[str, dict[str, int]] = {
+        arm: {"violations": 0, "records": 0} for arm in ARMS
+    }
+
+    for task_id, rec in judge_records.items():
+        if not rec or rec.get("status") != "COMPLETE":
+            continue
+        obj = rec.get("object")
+        if not isinstance(obj, Mapping):
+            continue
+        # judge::<mode>::<chunk...>::<arm>::<judge-model>
+        parts = str(task_id).split("::")
+        if len(parts) < 2:
+            continue
+        arm, judge = parts[-2], parts[-1]
+        if arm not in dist or judge not in per_judge[arm]:
+            continue
+        provenance[arm]["records"] += 1
+        if obj.get("critical_provenance_violation") is True:
+            provenance[arm]["violations"] += 1
+        for dim in OTHER_JUDGED_VECTORS:
+            score = obj.get(dim)
+            if isinstance(score, bool) or not isinstance(score, int):
+                continue
+            dist[arm][dim][score] = dist[arm][dim].get(score, 0) + 1
+            pj = per_judge[arm][judge][dim]
+            pj[score] = pj.get(score, 0) + 1
+
+    def summarise(counts: dict[int, int]) -> dict[str, Any]:
+        n = sum(counts.values())
+        if not n:
+            return {"n": 0, "distribution": {}, "mean": None}
+        total = sum(score * k for score, k in counts.items())
+        return {
+            "n": n,
+            "distribution": {str(s): counts[s] for s in sorted(counts)},
+            "mean": round(total / n, 3),
+        }
+
+    return {
+        "why": ("ROUND4_NECESSITY_ADDENDUM.md section 2.1 item 4: the four judged "
+                "vectors other than visual_necessity, per arm, unaveraged. These are "
+                "declared secondary and are NOT confirmatory: no Holm control is "
+                "applied to them and no significance claim is made from them."),
+        "unaveraged_note": ("distribution is the primary form; mean is derived from it "
+                            "for readability and carries no test"),
+        "per_arm": {
+            arm: {dim: summarise(dist[arm][dim]) for dim in OTHER_JUDGED_VECTORS}
+            for arm in ARMS
+        },
+        "per_arm_per_judge": {
+            arm: {
+                judge: {dim: summarise(per_judge[arm][judge][dim])
+                        for dim in OTHER_JUDGED_VECTORS}
+                for judge in JUDGE_MODELS
+            }
+            for arm in ARMS
+        },
+        "critical_provenance_violation_per_arm": provenance,
+    }
+
+
+def _judge_completeness(judge_records: dict[str, Any]) -> dict[str, Any]:
+    """ROUND4_NECESSITY_ADDENDUM.md section 2.1 item 5: judge-record completeness
+    per arm.
+
+    The addendum requires this because round 1 had an asymmetry in which arms
+    received judge records, and an asymmetry there silently biases every pooling
+    rule that needs both judges. It must be visible in the report rather than
+    absorbed into the contrast counts.
+
+    Derived entirely from sealed judge records. Makes no call.
+    """
+    per_arm: dict[str, dict[str, Any]] = {}
+    for arm in ARMS:
+        by_status: dict[str, int] = {}
+        by_judge: dict[str, dict[str, int]] = {j: {} for j in JUDGE_MODELS}
+        for task_id, rec in judge_records.items():
+            parts = str(task_id).split("::")
+            if len(parts) < 2 or parts[-2] != arm:
+                continue
+            judge = parts[-1]
+            status = (rec or {}).get("status") or "MISSING"
+            by_status[status] = by_status.get(status, 0) + 1
+            if judge in by_judge:
+                by_judge[judge][status] = by_judge[judge].get(status, 0) + 1
+        complete = by_status.get("COMPLETE", 0)
+        per_arm[arm] = {
+            "expected": len(by_status) and sum(by_status.values()) or 0,
+            "by_status": by_status,
+            "by_judge": by_judge,
+            "complete": complete,
+            "complete_share_of_expected": (
+                round(complete / sum(by_status.values()), 4) if by_status else None
+            ),
+        }
+    completes = [v["complete"] for v in per_arm.values()]
+    return {
+        "why": ("ROUND4_NECESSITY_ADDENDUM.md section 2.1 item 5: judge-record "
+                "completeness per arm must be visible, because a per-arm asymmetry "
+                "biases every pooling rule that requires both judges."),
+        "per_arm": per_arm,
+        "max_minus_min_complete": (max(completes) - min(completes)) if completes else None,
+        "how_to_read": ("NOT_ATTEMPTED means the paired generation did not pass its "
+                        "gate, so no judge call was made; that is admission attrition "
+                        "and it is arm-dependent by construction. TERMINAL_FAILURE is a "
+                        "judge-side failure and is not."),
+    }
 
 
 def preflight() -> int:

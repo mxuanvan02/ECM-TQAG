@@ -1,0 +1,24 @@
+{
+ "_published_note": "owner_statement_verbatim removed for publication; the private record retains it",
+ "call_cap": 603,
+ "granted_by": "project owner (chat)",
+ "granted_utc": "2026-08-30T03:05:21.442780+00:00",
+ "models_declared": {
+  "generator": "qwen/qwen3-vl-8b-instruct",
+  "generator_not_substituted": "The generator qwen/qwen3-vl-8b-instruct is NOT advertised by omniproxy (checked: 49 model ids, no qwen route) and is frozen by ROUND4_NECESSITY_ADDENDUM.md section 3 as a thing that does not change. Swapping it would make Frame D incomparable with rounds 1-4 on the generation stage, which is the stage the paper's main result reports. It therefore stays on openrouter.",
+  "generator_provider": "openrouter",
+  "judge_provider": "omniproxy",
+  "judge_substitution_relative_to_round_3": "none",
+  "judges": [
+   "claude-opus-5",
+   "gpt-5.6-sol"
+  ],
+  "owner_preference_applied": "The owner asked that models available on omniproxy be given priority. Both judge families named by the owner (gpt-5.6-sol, claude-opus-5) are already the frozen round-3/round-4 judges and already route through omniproxy, so the preference is satisfied by the existing frozen route table with no substitution."
+ },
+ "preregistration": "ROUND4_FRAMED_PREREGISTRATION.json",
+ "preregistration_sha256": "b487218b5e0955a74d7f5ade4d32f48f18164cf50aca0c80413b30c2c25384de",
+ "round": "round4_framed",
+ "schema": "ecm-tqag.round4.owner-authorization.v1",
+ "scope": "Round-4 Frame-D census over 67 section-granularity chunks from the 26 giao trinh luat held by the HUL catalogue. 67 chunks x 3 arms x (1 generation + 2 judges) = 603 paid calls maximum. Zero retry, no fallback, no replacement. Stop on first qualification failure.",
+ "usd_hard_cap": 10.0
+}
