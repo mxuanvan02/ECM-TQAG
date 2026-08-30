@@ -1,0 +1,106 @@
+{
+ "schema": "ecm-tqag.multimodal-dataset-quality.v1",
+ "unit_of_analysis": "one section of a law textbook (owner decision)",
+ "what_this_is": "Explicit quality criteria for the section-level multimodal corpus, each with the measurement that produced it and a threshold fixed in this record. C3 and C4 come from the executed text-only ablation, so visual need is measured rather than rated.",
+ "overall": "fail",
+ "frame": {
+  "chunks": 67,
+  "documents": 13,
+  "scored_items": 115,
+  "scored_chunks": 58
+ },
+ "measured": {
+  "visual_need_V_star": {
+   "count": 49,
+   "n": 115,
+   "rate": 0.4261
+  },
+  "figure_attributable_G": {
+   "count": 10,
+   "n": 115,
+   "rate": 0.087
+  },
+  "chunks_with_gain": 8,
+  "chunks_with_visual_need": 31,
+  "section_chars": {
+   "median": 7530,
+   "min": 1219,
+   "max": 265885,
+   "over_20k": 14
+  },
+  "region_kinds": {
+   "rendered_vector_region": 73,
+   "embedded_raster": 42
+  }
+ },
+ "checks": [
+  {
+   "name": "C1 figure presence",
+   "value": "67/67 units carry >=1 region; {'rendered_vector_region': 73, 'embedded_raster': 42}",
+   "expected": "every unit >=1 resolvable figure region",
+   "status": "pass"
+  },
+  {
+   "name": "C2 text-layer fidelity (median CER vs text layer)",
+   "value": 0.0189,
+   "expected": "<= 0.05 so the text layer, not OCR, is the reference",
+   "status": "pass"
+  },
+  {
+   "name": "C3 measured visual need (share of items unanswerable from text)",
+   "value": 0.4261,
+   "expected": ">= 0.30 for a corpus to support multimodal TQA",
+   "status": "pass"
+  },
+  {
+   "name": "C4 figure-attributable gain (share the figure made answerable)",
+   "value": 0.087,
+   "expected": ">= 0.20 desirable; 0.05-0.20 usable but thin",
+   "status": "warn"
+  },
+  {
+   "name": "C4b chunks with >=1 figure-attributable item",
+   "value": "8 of 58 scored chunks",
+   "expected": "the usable multimodal subset of the frame",
+   "status": "warn"
+  },
+  {
+   "name": "C5 evidence-span tractability (median section chars)",
+   "value": 7530,
+   "expected": "<= 3000 so a verbatim-evidence gate stays discriminative",
+   "status": "fail"
+  },
+  {
+   "name": "C5b sections over 20k chars",
+   "value": "14 of 67 (max 265885)",
+   "expected": "0; a 200k-char span makes any single quote trivially findable",
+   "status": "fail"
+  },
+  {
+   "name": "C6 source concentration (largest document share)",
+   "value": "T24_giao_trinh_lich_su_nha_n 25/67 = 0.37",
+   "expected": "<= 0.25",
+   "status": "warn"
+  },
+  {
+   "name": "C7 rights eligibility",
+   "value": "92 eligible of 60+ measured units",
+   "expected": "every frame unit clears rules 1 and 2",
+   "status": "pass"
+  },
+  {
+   "name": "C8 no reuse of sealed chunks",
+   "value": "FRESH under §7 as written: no audited unit shares source bytes or any 8-word pas",
+   "expected": "no shared source bytes and no shared passage",
+   "status": "pass"
+  }
+ ],
+ "length_measure": "Every character count in this record is raw len() on the section text exactly as the manifest carries it, because that is the string the gate searches. An NFC-normalised, whitespace-collapsed count of the same sections gives median 5925 and maximum 207673; both are correct measures of different things, and mixing them in one report was a defect in an earlier draft of this record.",
+ "the_binding_defect": "C5. The section is the right unit for teaching content but its length is uncontrolled: median 7530 characters, maximum 265885, with 14 sections over 20k. A verbatim evidence gate over a span that long is nearly free to satisfy, so the gate stops discriminating between prompts. This is a property of the DATA as presented to the method, and it is what any method adaptation has to address.",
+ "inputs": {
+  "frame_manifest": "experiment/dataset_framed/dataset_manifest_framed_20260829T195643Z.json",
+  "ablation_run": "ablation_framed_20260830T060000Z",
+  "census_run": "round4_framed_census_20260829T200000Z",
+  "ocr_probe": "corpus/reports/OCR_FIDELITY_PROBE.json"
+ }
+}

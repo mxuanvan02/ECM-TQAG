@@ -1,0 +1,177 @@
+{
+ "schema": "ecm-tqag.round4.framee-preregistration.v1",
+ "status": "FROZEN, prospective. No paid call is authorised by this document; execution additionally requires an owner authorization naming an explicit USD cap.",
+ "created_utc": "2026-08-30T09:37:29Z",
+ "script": "corpus/scripts/write_framee_preregistration.py",
+ "what_this_is": "Frame E is a pre-registered METHOD ADAPTATION of the evidence contract, not a new sample. The unit of analysis stays the section, as the owner decided. What changes is the SPAN the verbatim-quote gate reads: the section's own text on the pages that carry its figure regions, instead of the whole section.",
+ "this_is_not_independent_replication": {
+  "why_stated_first": "Frame E re-uses the same corpus and mostly the same chunks as Frame D, after Frame D's null was seen. A second look at the same data cannot be reported as independent confirmation, and this record fixes that reading before any number exists.",
+  "frame_d_chunks": 67,
+  "frame_e_chunks": 60,
+  "units_shared_with_frame_d": 60,
+  "units_in_frame_e_not_in_frame_d": 0,
+  "share_of_frame_e_also_in_frame_d": 1.0,
+  "correction_of_an_earlier_draft_of_this_record": {
+   "was": "chunks_shared_with_frame_d = 0",
+   "now": "units_shared_with_frame_d = 60",
+   "why_it_was_wrong": "Chunk ids differ only by their frameD:: / frameE:: prefix, so a raw set intersection is empty by construction. The overlap is computed on the unit part of the id.",
+   "why_the_direction_matters": "Zero overlap would have implied Frame E is an independent sample, which is the most flattering available reading of a second look at data whose first look was null. It is not one, and the corrected number says so."
+  },
+  "consequence": "Frame D's reported census stands unchanged and is NOT re-analysed. Frame E is reported as a method-adaptation experiment whose evidence value is conditional on the same corpus; a positive result here needs a fresh frame before it can be stated as a general claim."
+ },
+ "the_measured_defect_this_addresses": {
+  "criterion": "C5 of corpus/reports/MULTIMODAL_DATASET_QUALITY.json (verdict: fail)",
+  "full_section_span_chars": {
+   "median": 7530,
+   "max": 265885,
+   "over_20k_chunks": 14
+  },
+  "why_that_breaks_the_gate": "The gate admits an item when its declared quotation reproduces inside the conditioning text. Over a span of that length a valid quotation is nearly free to find, so the gate stops separating prompts.",
+  "evidence_from_the_frame_d_census": {
+   "admission_per_arm": {
+    "direct": 41,
+    "ecm_full": 43,
+    "structured_no_contract": 36
+   },
+   "ecm_vs_direct_paired_exact_p": 1.0,
+   "ecm_vs_structured_paired_exact_p": 1.0,
+   "note": "the census V-endpoint contrasts are quoted as the motivation for this adaptation, not as a result"
+  },
+  "second_defect_addressed": {
+   "criterion": "C4 (warn): only 8.7% of admitted items were figure-attributable",
+   "why_scoping_bears_on_it": "An admitted quotation from anywhere in a section of 265885 characters need not relate to the figure at all. Restricting the span to the figure's own pages makes textual and visual evidence co-located, which is the multimodal claim the method is supposed to make."
+  }
+ },
+ "frame": {
+  "name": "E_hul_law_textbook_sections_figure_scoped",
+  "manifest": "experiment/dataset_framee/dataset_manifest_framee_20260830T093119Z.json",
+  "manifest_sha256": "051db6ac66e09ece70d71391068f32893a76a1fd1186c563b3d24146e78dec52",
+  "manifest_schema": "ecm-tqag.multimodal-inputs.v4-work24",
+  "n": 60,
+  "n_is_fixed_before_the_first_call": true,
+  "unit_of_analysis": "one section of a law textbook (unchanged from Frame D)",
+  "evidence_span": "the section's own lines on its figure-bearing pages, clipped to the section, with the same furniture and watermark templates removed as the full-section build",
+  "span_chars": {
+   "median": 1571,
+   "min": 212,
+   "max": 7634
+  },
+  "question_types": {
+   "multiple_choice": 10,
+   "short_answer": 50
+  },
+  "documents": 13,
+  "source_concentration": {
+   "top1_doc": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "top1_chunks": 21,
+   "top1_share": 0.35
+  },
+  "why_n_is_not_the_frame_d_n": "Frozen rule 4 (prose < 120 chars, or >= 3 enumerated items with prose < 400) is re-applied to the SCOPED span. The Frame-D chunks whose figure pages carry almost no prose fail it and are excluded. Rule 4 was not modified; it was applied to the span the gate actually reads, which is the only consistent choice once the span changes.",
+  "dropped_units": [
+   "T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0154_dec_6_2",
+   "T23_giao_trinh_luat_hinh_su_quoc_te::s0006_dec_1_3",
+   "T23_giao_trinh_luat_hinh_su_quoc_te::s0068_dec_4_3_2",
+   "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0016_dec_2_2_1_1",
+   "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0031_dec_3_2_1_1",
+   "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0132_dec_8_2_3_2",
+   "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0179_dec_10_3_2_4"
+  ]
+ },
+ "what_does_not_change": {
+  "generator": "qwen/qwen3-vl-8b-instruct",
+  "arms": [
+   "ecm_full",
+   "direct",
+   "structured_no_contract"
+  ],
+  "arm_prompts": "the three round-2e prompts with the minimal D3 clarification",
+  "gate": "the round-2 repaired gate, byte-identical code",
+  "judges": [
+   "claude-opus-5",
+   "gpt-5.6-sol"
+  ],
+  "judgement_schema": "the frozen seven-field schema",
+  "endpoints": "V, M, and the three pooling rules, as the parent addendum fixes them",
+  "discipline": "zero retry, no fallback, run lock, per-task O_EXCL claim, ITT accounting",
+  "unit_of_analysis": "the section"
+ },
+ "primary_hypothesis": {
+  "H": "Scoping the evidence span to the figure's own pages restores the gate's ability to separate the evidence contract from its controls.",
+  "prediction_if_H_holds": "the paired exact contrast ECM vs direct on admission reaches a one-directional discordance large enough to reject under Holm at family alpha 0.05",
+  "prediction_if_H_fails": "admission stays statistically indistinguishable across arms, which would mean the effect does not survive at section granularity under any span this corpus supports, and the method's admission claim must be restated as specific to short page-level spans",
+  "direction_not_assumed": "the test is two-sided; a control beating the contract is a valid, reportable outcome",
+  "decision_rule": "The smallest discordant count reaching alpha=0.025 on a two-sided exact test is 7 unidirectional pairs (p=0.0156). Fewer than 7 cannot declare the first contrast significant under Holm, whatever the split looks like."
+ },
+ "secondary_hypothesis_multimodal": {
+  "H2": "Co-locating the quotation with the figure raises the share of admitted items whose figure is measurably necessary.",
+  "measured_how": "a text-only ablation on the Frame-E admitted items, identical in design to the executed Frame-D ablation, so the two are directly comparable",
+  "frame_d_baseline_to_beat": {
+   "measured_visual_necessity_V_star": 0.4261,
+   "figure_attributable_G": 0.087,
+   "n": 115
+  },
+  "status": "declared here so the comparison cannot be assembled after the fact; the ablation needs its own authorization"
+ },
+ "pre_registered_strata": {
+  "why_fixed_now": "Membership is fixed before execution so the split cannot be chosen to produce a result.",
+  "scoped_span_band": {
+   "definition": "raw character length of the scoped evidence span",
+   "sizes": {
+    "over_4000": 6,
+    "from_2000_to_4000": 16,
+    "from_1000_to_2000": 28,
+    "under_1000": 10
+   },
+   "reads_on": "the length mechanism directly: if span length is what broke the gate, admission should be flatter across these bands than across Frame D's"
+  },
+  "chunk_composition": {
+   "definition": "chunk carries at least one embedded raster, versus rendered vector regions only",
+   "sizes": {
+    "has_embedded_raster": 25,
+    "rendered_vector_only": 35
+   },
+   "reads_on": "the owner's table hypothesis, already contradicted on Frame D where vector-only chunks carried the entire measured visual gain"
+  },
+  "stratum_tests_are_descriptive": "no stratum is powered for a confirmatory claim; reported with discordance counts and no significance claim"
+ },
+ "power": {
+  "n": 60,
+  "floor": 40,
+  "target": 46,
+  "reaches_floor": true,
+  "reaches_target": true,
+  "consequence": "n=60 clears the addendum floor of 40 and its target of 46, so section 4's floor clause does not apply and Holm rejection flags are live.",
+  "honest_limit": "The addendum's power table puts ECM-vs-structured near 0.43 at n=46 and needing about n=90. At this n that contrast stays underpowered and a null on it is not evidence of no effect."
+ },
+ "inputs_bound_by_sha256": {
+  "frame_e_manifest_sha256": "051db6ac66e09ece70d71391068f32893a76a1fd1186c563b3d24146e78dec52",
+  "frame_d_manifest_sha256": "2aca4def1d411097ca0917e4398f3bf7ec3c03441aa97ecd71b00b48f56594a2",
+  "frame_d_preregistration_sha256": "b487218b5e0955a74d7f5ade4d32f48f18164cf50aca0c80413b30c2c25384de",
+  "parent_addendum_sha256": "fea9078d43ee5ac32578233805425a83f1453f6fce374c9baf77687e4e9b3dfb",
+  "scoped_spans_report_sha256": "8316c9772abc8a80c483e5fbf0a5af23fc6cfacbf9306eedfe7f4226807b91b8",
+  "dataset_quality_report_sha256": "4208f94043a837fecaf7d9e67d8b4e8341b521d579f9f0673046d88b4bec08e3",
+  "frame_d_census_report": "experiment/runs/round4_framed_census_20260829T200000Z/ROUND4_REPORT.json",
+  "frame_d_ablation_report": "experiment/runs/ablation_framed_20260830T060000Z/ABLATION_REPORT.json"
+ },
+ "budget_and_stop_rules": {
+  "calls_if_executed": 540,
+  "generation_calls": 180,
+  "judge_calls": 360,
+  "authorization_required": "the runner requires --usd-cap and an authorization file naming round4_framee whose cap equals it; without both it makes no call",
+  "budget_cap_behaviour": "remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending"
+ },
+ "pre_committed_reporting": [
+  "Reported whatever it shows.",
+  "If the contrast rejects, the reported claim becomes: the evidence contract discriminates at section granularity ONCE the span is scoped to the figure, and the unscoped null is a property of span length. The dependence on the adaptation is reported, not hidden, and so is the fact that Frame E re-uses Frame D's material.",
+  "If it does not reject, the reported claim becomes: the admission effect does not survive at section granularity, and the method's contribution narrows to the failure-mode result (no image-channel quotation under the contract).",
+  "The Frame-D census and ablation are not re-run, re-analysed, or re-labelled.",
+  "No outcome licenses relaxing rule 4, changing the gate code, or regenerating items."
+ ],
+ "what_would_make_this_record_invalid": [
+  "any paid call before this file is frozen and an authorization exists",
+  "editing n, the span definition, or either stratum after the first call",
+  "modifying the gate, the arm prompts, the judges, or rule 4",
+  "reporting the scoped result without the Frame-D unscoped result beside it",
+  "reporting Frame E as an independent replication of Frame D, which it is not: 60 of its 60 units are Frame-D units"
+ ]
+}

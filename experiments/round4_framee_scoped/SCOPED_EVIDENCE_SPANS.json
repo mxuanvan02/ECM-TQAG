@@ -1,0 +1,1844 @@
+{
+ "schema": "ecm-tqag.scoped-evidence-spans.v1",
+ "unit_of_analysis": "one section of a law textbook (owner decision, unchanged)",
+ "what_changed": "The evidence span quoted by the verbatim gate is narrowed from the whole section to the section's own text on the pages carrying its figure regions. The unit of analysis is not changed.",
+ "why": "Measured on frame D, the section span has median 7530 and maximum 265885 characters. A verbatim gate over a span that long is nearly free to satisfy, so it stops discriminating between prompts; frame-D admission was 0.64 / 0.61 / 0.54 with no separable contrast, and admission by length band runs 1.00 (shortest) to 0.47 (longest). Narrowing the span also forces an admitted quotation to come from the same pages as the figure, which is the multimodal claim the paper makes and which the 8.7% figure-attributable rate did not support.",
+ "method": {
+  "page_selection": "region_pages as recorded by the section builder; nothing re-detected",
+  "text_extraction": "section_tree.section_clips + page_section_lines, the same code the section dataset was built with, so the scoped text is a subset of the section text by construction",
+  "clipping": "required: a page can hold the end of one section and the start of the next, and without clipping the scoped span would import prose from a neighbouring section",
+  "furniture_removal": "identical templates to the full-section build, from its heading cache",
+  "rule4": "frozen ROUND3_FRAMEB_ADDENDUM rule 4, re-applied to the SCOPED span: exclude if prose < 120 chars, or >= 3 enumerated items with prose < 400"
+ },
+ "counts": {
+  "frame_d_chunks": 67,
+  "pass_rule4_scoped": 60,
+  "dropped_by_rule4_scoped": 7,
+  "subset_check_failures": 0
+ },
+ "span_lengths": {
+  "full_median": 7530,
+  "full_max": 265885,
+  "scoped_median": 1571,
+  "scoped_max": 7634,
+  "length_measure": "raw len() of the extracted text, consistent with MULTIMODAL_DATASET_QUALITY.json"
+ },
+ "dropped": [
+  {
+   "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0154_dec_6_2",
+   "prose_chars": 91,
+   "enum_items": 0,
+   "rule4_reason": "insufficient_prose",
+   "scoped_chars": 91,
+   "full_chars": 4753
+  },
+  {
+   "chunk_id": "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0006_dec_1_3",
+   "prose_chars": 31,
+   "enum_items": 0,
+   "rule4_reason": "insufficient_prose",
+   "scoped_chars": 31,
+   "full_chars": 47305
+  },
+  {
+   "chunk_id": "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0068_dec_4_3_2",
+   "prose_chars": 118,
+   "enum_items": 0,
+   "rule4_reason": "insufficient_prose",
+   "scoped_chars": 118,
+   "full_chars": 10979
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0016_dec_2_2_1_1",
+   "prose_chars": 76,
+   "enum_items": 0,
+   "rule4_reason": "insufficient_prose",
+   "scoped_chars": 76,
+   "full_chars": 1527
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0031_dec_3_2_1_1",
+   "prose_chars": 86,
+   "enum_items": 0,
+   "rule4_reason": "insufficient_prose",
+   "scoped_chars": 86,
+   "full_chars": 2135
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0132_dec_8_2_3_2",
+   "prose_chars": 8,
+   "enum_items": 0,
+   "rule4_reason": "insufficient_prose",
+   "scoped_chars": 8,
+   "full_chars": 15376
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0179_dec_10_3_2_4",
+   "prose_chars": 8,
+   "enum_items": 0,
+   "rule4_reason": "insufficient_prose",
+   "scoped_chars": 8,
+   "full_chars": 5359
+  }
+ ],
+ "rows": [
+  {
+   "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+   "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+   "section_label": "dec:2",
+   "section_start_page": 55,
+   "section_end_page": 61,
+   "section_span_pages": 7,
+   "figure_pages": [
+    55,
+    57,
+    58,
+    59
+   ],
+   "figure_page_runs": [
+    [
+     55,
+     55
+    ],
+    [
+     57,
+     59
+    ]
+   ],
+   "full_chars": 10056,
+   "scoped_chars": 6357,
+   "reduction": 0.6322,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 6357,
+   "enum_items": 1
+  },
+  {
+   "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+   "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+   "section_label": "dec:2",
+   "section_start_page": 145,
+   "section_end_page": 159,
+   "section_span_pages": 15,
+   "figure_pages": [
+    145,
+    146,
+    149,
+    150
+   ],
+   "figure_page_runs": [
+    [
+     145,
+     146
+    ],
+    [
+     149,
+     150
+    ]
+   ],
+   "full_chars": 22448,
+   "scoped_chars": 5840,
+   "reduction": 0.2602,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 5840,
+   "enum_items": 1
+  },
+  {
+   "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+   "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+   "section_label": "dec:2",
+   "section_start_page": 166,
+   "section_end_page": 178,
+   "section_span_pages": 13,
+   "figure_pages": [
+    177,
+    178
+   ],
+   "figure_page_runs": [
+    [
+     177,
+     178
+    ]
+   ],
+   "full_chars": 21778,
+   "scoped_chars": 2430,
+   "reduction": 0.1116,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2430,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+   "section_label": "dec:2",
+   "section_start_page": 186,
+   "section_end_page": 200,
+   "section_span_pages": 15,
+   "figure_pages": [
+    199,
+    200
+   ],
+   "figure_page_runs": [
+    [
+     199,
+     200
+    ]
+   ],
+   "full_chars": 23448,
+   "scoped_chars": 1807,
+   "reduction": 0.0771,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1807,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+   "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+   "section_label": "dec:2",
+   "section_start_page": 209,
+   "section_end_page": 233,
+   "section_span_pages": 25,
+   "figure_pages": [
+    230,
+    231,
+    232,
+    233
+   ],
+   "figure_page_runs": [
+    [
+     230,
+     233
+    ]
+   ],
+   "full_chars": 40820,
+   "scoped_chars": 5175,
+   "reduction": 0.1268,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 5175,
+   "enum_items": 3
+  },
+  {
+   "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+   "section_label": "dec:2",
+   "section_start_page": 251,
+   "section_end_page": 278,
+   "section_span_pages": 28,
+   "figure_pages": [
+    274,
+    275,
+    276
+   ],
+   "figure_page_runs": [
+    [
+     274,
+     276
+    ]
+   ],
+   "full_chars": 44218,
+   "scoped_chars": 3457,
+   "reduction": 0.0782,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 3457,
+   "enum_items": 6
+  },
+  {
+   "chunk_id": "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+   "doc_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025",
+   "section_label": "dec:2",
+   "section_start_page": 312,
+   "section_end_page": 326,
+   "section_span_pages": 15,
+   "figure_pages": [
+    324
+   ],
+   "figure_page_runs": [
+    [
+     324,
+     324
+    ]
+   ],
+   "full_chars": 22403,
+   "scoped_chars": 1227,
+   "reduction": 0.0548,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1227,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "doc_id": "T09_giao_trinh_luat_quoc_te_1",
+   "section_label": "dec:6.2.3.3",
+   "section_start_page": 329,
+   "section_end_page": 331,
+   "section_span_pages": 3,
+   "figure_pages": [
+    330
+   ],
+   "figure_page_runs": [
+    [
+     330,
+     330
+    ]
+   ],
+   "full_chars": 1219,
+   "scoped_chars": 913,
+   "reduction": 0.749,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 913,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+   "section_label": "dec:4.2.2",
+   "section_start_page": 157,
+   "section_end_page": 159,
+   "section_span_pages": 3,
+   "figure_pages": [
+    158,
+    159
+   ],
+   "figure_page_runs": [
+    [
+     158,
+     159
+    ]
+   ],
+   "full_chars": 2051,
+   "scoped_chars": 1314,
+   "reduction": 0.6407,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1314,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+   "section_label": "dec:4.2.4",
+   "section_start_page": 167,
+   "section_end_page": 169,
+   "section_span_pages": 3,
+   "figure_pages": [
+    169
+   ],
+   "figure_page_runs": [
+    [
+     169,
+     169
+    ]
+   ],
+   "full_chars": 3533,
+   "scoped_chars": 228,
+   "reduction": 0.0645,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 228,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+   "section_label": "dec:7.3.3.1",
+   "section_start_page": 253,
+   "section_end_page": 257,
+   "section_span_pages": 5,
+   "figure_pages": [
+    255,
+    256
+   ],
+   "figure_page_runs": [
+    [
+     255,
+     256
+    ]
+   ],
+   "full_chars": 5851,
+   "scoped_chars": 2449,
+   "reduction": 0.4186,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2449,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+   "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+   "section_label": "dec:10.1.1.3",
+   "section_start_page": 355,
+   "section_end_page": 356,
+   "section_span_pages": 2,
+   "figure_pages": [
+    355
+   ],
+   "figure_page_runs": [
+    [
+     355,
+     355
+    ]
+   ],
+   "full_chars": 2534,
+   "scoped_chars": 1584,
+   "reduction": 0.6251,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1584,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+   "section_label": "dec:10.1.2",
+   "section_start_page": 358,
+   "section_end_page": 359,
+   "section_span_pages": 2,
+   "figure_pages": [
+    359
+   ],
+   "figure_page_runs": [
+    [
+     359,
+     359
+    ]
+   ],
+   "full_chars": 1758,
+   "scoped_chars": 1047,
+   "reduction": 0.5956,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1047,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+   "section_label": "dec:10.1.3",
+   "section_start_page": 359,
+   "section_end_page": 364,
+   "section_span_pages": 6,
+   "figure_pages": [
+    361
+   ],
+   "figure_page_runs": [
+    [
+     361,
+     361
+    ]
+   ],
+   "full_chars": 5683,
+   "scoped_chars": 556,
+   "reduction": 0.0978,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 556,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+   "section_label": "dec:10.2.3.1",
+   "section_start_page": 366,
+   "section_end_page": 371,
+   "section_span_pages": 6,
+   "figure_pages": [
+    367
+   ],
+   "figure_page_runs": [
+    [
+     367,
+     367
+    ]
+   ],
+   "full_chars": 8103,
+   "scoped_chars": 1118,
+   "reduction": 0.138,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1118,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "doc_id": "T10_giao_trinh_luat_thuong_mai_quoc_te",
+   "section_label": "dec:10.2.4.3",
+   "section_start_page": 374,
+   "section_end_page": 375,
+   "section_span_pages": 2,
+   "figure_pages": [
+    374
+   ],
+   "figure_page_runs": [
+    [
+     374,
+     374
+    ]
+   ],
+   "full_chars": 2315,
+   "scoped_chars": 1114,
+   "reduction": 0.4812,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1114,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T13_r13_p1_04::s0004_alpha_a",
+   "doc_id": "T13_r13_p1_04",
+   "section_label": "alpha:a",
+   "section_start_page": 20,
+   "section_end_page": 33,
+   "section_span_pages": 14,
+   "figure_pages": [
+    26,
+    30
+   ],
+   "figure_page_runs": [
+    [
+     26,
+     26
+    ],
+    [
+     30,
+     30
+    ]
+   ],
+   "full_chars": 20279,
+   "scoped_chars": 2474,
+   "reduction": 0.122,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2474,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T13_r13_p1_04::s0023_dec_3",
+   "doc_id": "T13_r13_p1_04",
+   "section_label": "dec:3",
+   "section_start_page": 55,
+   "section_end_page": 57,
+   "section_span_pages": 3,
+   "figure_pages": [
+    55
+   ],
+   "figure_page_runs": [
+    [
+     55,
+     55
+    ]
+   ],
+   "full_chars": 2129,
+   "scoped_chars": 733,
+   "reduction": 0.3443,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 733,
+   "enum_items": 1
+  },
+  {
+   "chunk_id": "frameD::T13_r13_p1_04::s0106_alpha_b",
+   "doc_id": "T13_r13_p1_04",
+   "section_label": "alpha:b",
+   "section_start_page": 191,
+   "section_end_page": 212,
+   "section_span_pages": 22,
+   "figure_pages": [
+    211
+   ],
+   "figure_page_runs": [
+    [
+     211,
+     211
+    ]
+   ],
+   "full_chars": 36570,
+   "scoped_chars": 1434,
+   "reduction": 0.0392,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1434,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T13_r13_p1_04::s0121_alpha_b",
+   "doc_id": "T13_r13_p1_04",
+   "section_label": "alpha:b",
+   "section_start_page": 234,
+   "section_end_page": 241,
+   "section_span_pages": 8,
+   "figure_pages": [
+    239
+   ],
+   "figure_page_runs": [
+    [
+     239,
+     239
+    ]
+   ],
+   "full_chars": 12865,
+   "scoped_chars": 1371,
+   "reduction": 0.1066,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1371,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T13_r13_p1_04::s0130_alpha_c",
+   "doc_id": "T13_r13_p1_04",
+   "section_label": "alpha:c",
+   "section_start_page": 253,
+   "section_end_page": 267,
+   "section_span_pages": 15,
+   "figure_pages": [
+    265
+   ],
+   "figure_page_runs": [
+    [
+     265,
+     265
+    ]
+   ],
+   "full_chars": 21594,
+   "scoped_chars": 1255,
+   "reduction": 0.0581,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1255,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T13_r13_p1_04::s0135_alpha_a",
+   "doc_id": "T13_r13_p1_04",
+   "section_label": "alpha:a",
+   "section_start_page": 271,
+   "section_end_page": 275,
+   "section_span_pages": 5,
+   "figure_pages": [
+    275
+   ],
+   "figure_page_runs": [
+    [
+     275,
+     275
+    ]
+   ],
+   "full_chars": 6463,
+   "scoped_chars": 212,
+   "reduction": 0.0328,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 212,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "doc_id": "T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n",
+   "section_label": "dec:2.1",
+   "section_start_page": 67,
+   "section_end_page": 74,
+   "section_span_pages": 8,
+   "figure_pages": [
+    71
+   ],
+   "figure_page_runs": [
+    [
+     71,
+     71
+    ]
+   ],
+   "full_chars": 11806,
+   "scoped_chars": 1199,
+   "reduction": 0.1016,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1199,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T15_r13_p1_03::s0057_dec_1_2",
+   "doc_id": "T15_r13_p1_03",
+   "section_label": "dec:1.2",
+   "section_start_page": 197,
+   "section_end_page": 205,
+   "section_span_pages": 9,
+   "figure_pages": [
+    198
+   ],
+   "figure_page_runs": [
+    [
+     198,
+     198
+    ]
+   ],
+   "full_chars": 11620,
+   "scoped_chars": 1073,
+   "reduction": 0.0923,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1073,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T16_r13_p1_05::s0064_dec_2_3",
+   "doc_id": "T16_r13_p1_05",
+   "section_label": "dec:2.3",
+   "section_start_page": 159,
+   "section_end_page": 165,
+   "section_span_pages": 7,
+   "figure_pages": [
+    161,
+    162
+   ],
+   "figure_page_runs": [
+    [
+     161,
+     162
+    ]
+   ],
+   "full_chars": 7530,
+   "scoped_chars": 1359,
+   "reduction": 0.1805,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1359,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T16_r13_p1_05::s0067_roman_ii",
+   "doc_id": "T16_r13_p1_05",
+   "section_label": "roman:II",
+   "section_start_page": 169,
+   "section_end_page": 174,
+   "section_span_pages": 6,
+   "figure_pages": [
+    170
+   ],
+   "figure_page_runs": [
+    [
+     170,
+     170
+    ]
+   ],
+   "full_chars": 4979,
+   "scoped_chars": 1424,
+   "reduction": 0.286,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1424,
+   "enum_items": 2
+  },
+  {
+   "chunk_id": "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "doc_id": "T18_giao_trinh_luat_canh_tranh_2010",
+   "section_label": "dec:2.2",
+   "section_start_page": 38,
+   "section_end_page": 43,
+   "section_span_pages": 6,
+   "figure_pages": [
+    39
+   ],
+   "figure_page_runs": [
+    [
+     39,
+     39
+    ]
+   ],
+   "full_chars": 16584,
+   "scoped_chars": 1576,
+   "reduction": 0.095,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1576,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+   "section_label": "dec:2",
+   "section_start_page": 42,
+   "section_end_page": 47,
+   "section_span_pages": 6,
+   "figure_pages": [
+    43
+   ],
+   "figure_page_runs": [
+    [
+     43,
+     43
+    ]
+   ],
+   "full_chars": 7710,
+   "scoped_chars": 1070,
+   "reduction": 0.1388,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1070,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+   "section_label": "dec:2",
+   "section_start_page": 61,
+   "section_end_page": 63,
+   "section_span_pages": 3,
+   "figure_pages": [
+    62
+   ],
+   "figure_page_runs": [
+    [
+     62,
+     62
+    ]
+   ],
+   "full_chars": 2891,
+   "scoped_chars": 1466,
+   "reduction": 0.5071,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1466,
+   "enum_items": 2
+  },
+  {
+   "chunk_id": "frameD::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c",
+   "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+   "section_label": "alpha:c",
+   "section_start_page": 137,
+   "section_end_page": 148,
+   "section_span_pages": 12,
+   "figure_pages": [
+    145,
+    146
+   ],
+   "figure_page_runs": [
+    [
+     145,
+     146
+    ]
+   ],
+   "full_chars": 16794,
+   "scoped_chars": 2606,
+   "reduction": 0.1552,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2606,
+   "enum_items": 15
+  },
+  {
+   "chunk_id": "frameD::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "doc_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025",
+   "section_label": "dec:4",
+   "section_start_page": 183,
+   "section_end_page": 188,
+   "section_span_pages": 6,
+   "figure_pages": [
+    186,
+    187,
+    188
+   ],
+   "figure_page_runs": [
+    [
+     186,
+     188
+    ]
+   ],
+   "full_chars": 8220,
+   "scoped_chars": 3474,
+   "reduction": 0.4226,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 3474,
+   "enum_items": 8
+  },
+  {
+   "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+   "section_label": "dec:2",
+   "section_start_page": 51,
+   "section_end_page": 56,
+   "section_span_pages": 6,
+   "figure_pages": [
+    52,
+    53
+   ],
+   "figure_page_runs": [
+    [
+     52,
+     53
+    ]
+   ],
+   "full_chars": 9906,
+   "scoped_chars": 3468,
+   "reduction": 0.3501,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 3468,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+   "section_label": "dec:3",
+   "section_start_page": 90,
+   "section_end_page": 95,
+   "section_span_pages": 6,
+   "figure_pages": [
+    91,
+    92,
+    93,
+    94
+   ],
+   "figure_page_runs": [
+    [
+     91,
+     94
+    ]
+   ],
+   "full_chars": 5224,
+   "scoped_chars": 4156,
+   "reduction": 0.7956,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 4156,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+   "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+   "section_label": "dec:5.2",
+   "section_start_page": 197,
+   "section_end_page": 201,
+   "section_span_pages": 5,
+   "figure_pages": [
+    199
+   ],
+   "figure_page_runs": [
+    [
+     199,
+     199
+    ]
+   ],
+   "full_chars": 4294,
+   "scoped_chars": 309,
+   "reduction": 0.072,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 309,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0154_dec_6_2",
+   "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+   "section_label": "dec:6.2",
+   "section_start_page": 286,
+   "section_end_page": 291,
+   "section_span_pages": 6,
+   "figure_pages": [
+    289
+   ],
+   "figure_page_runs": [
+    [
+     289,
+     289
+    ]
+   ],
+   "full_chars": 4753,
+   "scoped_chars": 91,
+   "reduction": 0.0191,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": false,
+   "rule4_reason": "insufficient_prose",
+   "prose_chars": 91,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "doc_id": "T21_giao_trinh_luat_hien_phap_nuoc_ngoai",
+   "section_label": "dec:5.3",
+   "section_start_page": 340,
+   "section_end_page": 345,
+   "section_span_pages": 6,
+   "figure_pages": [
+    341
+   ],
+   "figure_page_runs": [
+    [
+     341,
+     341
+    ]
+   ],
+   "full_chars": 6209,
+   "scoped_chars": 502,
+   "reduction": 0.0809,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 502,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0006_dec_1_3",
+   "doc_id": "T23_giao_trinh_luat_hinh_su_quoc_te",
+   "section_label": "dec:1.3",
+   "section_start_page": 37,
+   "section_end_page": 70,
+   "section_span_pages": 34,
+   "figure_pages": [
+    44
+   ],
+   "figure_page_runs": [
+    [
+     44,
+     44
+    ]
+   ],
+   "full_chars": 47305,
+   "scoped_chars": 31,
+   "reduction": 0.0007,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": false,
+   "rule4_reason": "insufficient_prose",
+   "prose_chars": 31,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "doc_id": "T23_giao_trinh_luat_hinh_su_quoc_te",
+   "section_label": "dec:4.2.4",
+   "section_start_page": 314,
+   "section_end_page": 316,
+   "section_span_pages": 3,
+   "figure_pages": [
+    314,
+    315,
+    316
+   ],
+   "figure_page_runs": [
+    [
+     314,
+     316
+    ]
+   ],
+   "full_chars": 3060,
+   "scoped_chars": 3060,
+   "reduction": 1.0,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 3060,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0068_dec_4_3_2",
+   "doc_id": "T23_giao_trinh_luat_hinh_su_quoc_te",
+   "section_label": "dec:4.3.2",
+   "section_start_page": 320,
+   "section_end_page": 330,
+   "section_span_pages": 11,
+   "figure_pages": [
+    329
+   ],
+   "figure_page_runs": [
+    [
+     329,
+     329
+    ]
+   ],
+   "full_chars": 10979,
+   "scoped_chars": 118,
+   "reduction": 0.0107,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": false,
+   "rule4_reason": "insufficient_prose",
+   "prose_chars": 118,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:1.3",
+   "section_start_page": 24,
+   "section_end_page": 26,
+   "section_span_pages": 3,
+   "figure_pages": [
+    25
+   ],
+   "figure_page_runs": [
+    [
+     25,
+     25
+    ]
+   ],
+   "full_chars": 2509,
+   "scoped_chars": 1146,
+   "reduction": 0.4568,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1146,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:1.4",
+   "section_start_page": 26,
+   "section_end_page": 32,
+   "section_span_pages": 7,
+   "figure_pages": [
+    28
+   ],
+   "figure_page_runs": [
+    [
+     28,
+     28
+    ]
+   ],
+   "full_chars": 6096,
+   "scoped_chars": 1846,
+   "reduction": 0.3028,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1846,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:2.1.1.1",
+   "section_start_page": 32,
+   "section_end_page": 36,
+   "section_span_pages": 5,
+   "figure_pages": [
+    33,
+    35,
+    36
+   ],
+   "figure_page_runs": [
+    [
+     33,
+     33
+    ],
+    [
+     35,
+     36
+    ]
+   ],
+   "full_chars": 6161,
+   "scoped_chars": 2537,
+   "reduction": 0.4118,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2537,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:2.1.1.2",
+   "section_start_page": 36,
+   "section_end_page": 50,
+   "section_span_pages": 15,
+   "figure_pages": [
+    38,
+    41,
+    43,
+    44,
+    47,
+    48
+   ],
+   "figure_page_runs": [
+    [
+     38,
+     38
+    ],
+    [
+     41,
+     41
+    ],
+    [
+     43,
+     44
+    ],
+    [
+     47,
+     48
+    ]
+   ],
+   "full_chars": 22210,
+   "scoped_chars": 7634,
+   "reduction": 0.3437,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 7634,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:2.1.2.3",
+   "section_start_page": 56,
+   "section_end_page": 60,
+   "section_span_pages": 5,
+   "figure_pages": [
+    58,
+    59
+   ],
+   "figure_page_runs": [
+    [
+     58,
+     59
+    ]
+   ],
+   "full_chars": 6302,
+   "scoped_chars": 3408,
+   "reduction": 0.5408,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 3408,
+   "enum_items": 2
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0016_dec_2_2_1_1",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:2.2.1.1",
+   "section_start_page": 60,
+   "section_end_page": 61,
+   "section_span_pages": 2,
+   "figure_pages": [
+    61
+   ],
+   "figure_page_runs": [
+    [
+     61,
+     61
+    ]
+   ],
+   "full_chars": 1527,
+   "scoped_chars": 76,
+   "reduction": 0.0498,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": false,
+   "rule4_reason": "insufficient_prose",
+   "prose_chars": 76,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:2.2.1.2",
+   "section_start_page": 61,
+   "section_end_page": 79,
+   "section_span_pages": 19,
+   "figure_pages": [
+    64,
+    70
+   ],
+   "figure_page_runs": [
+    [
+     64,
+     64
+    ],
+    [
+     70,
+     70
+    ]
+   ],
+   "full_chars": 32169,
+   "scoped_chars": 2257,
+   "reduction": 0.0702,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2257,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:2.2.2.2",
+   "section_start_page": 83,
+   "section_end_page": 92,
+   "section_span_pages": 10,
+   "figure_pages": [
+    84,
+    87
+   ],
+   "figure_page_runs": [
+    [
+     84,
+     84
+    ],
+    [
+     87,
+     87
+    ]
+   ],
+   "full_chars": 13165,
+   "scoped_chars": 2465,
+   "reduction": 0.1872,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2465,
+   "enum_items": 2
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:3.1.1.1",
+   "section_start_page": 92,
+   "section_end_page": 94,
+   "section_span_pages": 3,
+   "figure_pages": [
+    94
+   ],
+   "figure_page_runs": [
+    [
+     94,
+     94
+    ]
+   ],
+   "full_chars": 2506,
+   "scoped_chars": 412,
+   "reduction": 0.1644,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 412,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0031_dec_3_2_1_1",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:3.2.1.1",
+   "section_start_page": 103,
+   "section_end_page": 105,
+   "section_span_pages": 3,
+   "figure_pages": [
+    105
+   ],
+   "figure_page_runs": [
+    [
+     105,
+     105
+    ]
+   ],
+   "full_chars": 2135,
+   "scoped_chars": 86,
+   "reduction": 0.0403,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": false,
+   "rule4_reason": "insufficient_prose",
+   "prose_chars": 86,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:3.2.2.2",
+   "section_start_page": 118,
+   "section_end_page": 121,
+   "section_span_pages": 4,
+   "figure_pages": [
+    121
+   ],
+   "figure_page_runs": [
+    [
+     121,
+     121
+    ]
+   ],
+   "full_chars": 6386,
+   "scoped_chars": 1404,
+   "reduction": 0.2199,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1404,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:1",
+   "section_start_page": 121,
+   "section_end_page": 123,
+   "section_span_pages": 3,
+   "figure_pages": [
+    122
+   ],
+   "figure_page_runs": [
+    [
+     122,
+     122
+    ]
+   ],
+   "full_chars": 2574,
+   "scoped_chars": 1868,
+   "reduction": 0.7257,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1868,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:2",
+   "section_start_page": 123,
+   "section_end_page": 276,
+   "section_span_pages": 154,
+   "figure_pages": [
+    123,
+    124
+   ],
+   "figure_page_runs": [
+    [
+     123,
+     124
+    ]
+   ],
+   "full_chars": 265885,
+   "scoped_chars": 2913,
+   "reduction": 0.011,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2913,
+   "enum_items": 1
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:4.2.3.1",
+   "section_start_page": 144,
+   "section_end_page": 147,
+   "section_span_pages": 4,
+   "figure_pages": [
+    147
+   ],
+   "figure_page_runs": [
+    [
+     147,
+     147
+    ]
+   ],
+   "full_chars": 4495,
+   "scoped_chars": 351,
+   "reduction": 0.0781,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 351,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:4.3.2.4",
+   "section_start_page": 159,
+   "section_end_page": 161,
+   "section_span_pages": 3,
+   "figure_pages": [
+    160,
+    161
+   ],
+   "figure_page_runs": [
+    [
+     160,
+     161
+    ]
+   ],
+   "full_chars": 3044,
+   "scoped_chars": 2164,
+   "reduction": 0.7109,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2164,
+   "enum_items": 2
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:5.4.2",
+   "section_start_page": 209,
+   "section_end_page": 219,
+   "section_span_pages": 11,
+   "figure_pages": [
+    215
+   ],
+   "figure_page_runs": [
+    [
+     215,
+     215
+    ]
+   ],
+   "full_chars": 13415,
+   "scoped_chars": 1463,
+   "reduction": 0.1091,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1463,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:6.3",
+   "section_start_page": 238,
+   "section_end_page": 246,
+   "section_span_pages": 9,
+   "figure_pages": [
+    243
+   ],
+   "figure_page_runs": [
+    [
+     243,
+     243
+    ]
+   ],
+   "full_chars": 13078,
+   "scoped_chars": 2009,
+   "reduction": 0.1536,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2009,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:7.2",
+   "section_start_page": 268,
+   "section_end_page": 276,
+   "section_span_pages": 9,
+   "figure_pages": [
+    273
+   ],
+   "figure_page_runs": [
+    [
+     273,
+     273
+    ]
+   ],
+   "full_chars": 13623,
+   "scoped_chars": 2221,
+   "reduction": 0.163,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 2221,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0132_dec_8_2_3_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:8.2.3.2",
+   "section_start_page": 353,
+   "section_end_page": 362,
+   "section_span_pages": 10,
+   "figure_pages": [
+    362
+   ],
+   "figure_page_runs": [
+    [
+     362,
+     362
+    ]
+   ],
+   "full_chars": 15376,
+   "scoped_chars": 8,
+   "reduction": 0.0005,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": false,
+   "rule4_reason": "insufficient_prose",
+   "prose_chars": 8,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:2",
+   "section_start_page": 363,
+   "section_end_page": 433,
+   "section_span_pages": 71,
+   "figure_pages": [
+    363
+   ],
+   "figure_page_runs": [
+    [
+     363,
+     363
+    ]
+   ],
+   "full_chars": 125157,
+   "scoped_chars": 1730,
+   "reduction": 0.0138,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1730,
+   "enum_items": 1
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:9.1.2.2",
+   "section_start_page": 382,
+   "section_end_page": 384,
+   "section_span_pages": 3,
+   "figure_pages": [
+    383
+   ],
+   "figure_page_runs": [
+    [
+     383,
+     383
+    ]
+   ],
+   "full_chars": 1951,
+   "scoped_chars": 1571,
+   "reduction": 0.8052,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1571,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:9.2.3",
+   "section_start_page": 386,
+   "section_end_page": 393,
+   "section_span_pages": 8,
+   "figure_pages": [
+    387
+   ],
+   "figure_page_runs": [
+    [
+     387,
+     387
+    ]
+   ],
+   "full_chars": 8588,
+   "scoped_chars": 1054,
+   "reduction": 0.1227,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1054,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:9.2.3.4",
+   "section_start_page": 388,
+   "section_end_page": 393,
+   "section_span_pages": 6,
+   "figure_pages": [
+    388,
+    390
+   ],
+   "figure_page_runs": [
+    [
+     388,
+     388
+    ],
+    [
+     390,
+     390
+    ]
+   ],
+   "full_chars": 6199,
+   "scoped_chars": 1586,
+   "reduction": 0.2558,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1586,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0179_dec_10_3_2_4",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:10.3.2.4",
+   "section_start_page": 430,
+   "section_end_page": 433,
+   "section_span_pages": 4,
+   "figure_pages": [
+    433
+   ],
+   "figure_page_runs": [
+    [
+     433,
+     433
+    ]
+   ],
+   "full_chars": 5359,
+   "scoped_chars": 8,
+   "reduction": 0.0015,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": false,
+   "rule4_reason": "insufficient_prose",
+   "prose_chars": 8,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2",
+   "doc_id": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "section_label": "dec:2",
+   "section_start_page": 433,
+   "section_end_page": 440,
+   "section_span_pages": 8,
+   "figure_pages": [
+    434
+   ],
+   "figure_page_runs": [
+    [
+     434,
+     434
+    ]
+   ],
+   "full_chars": 7679,
+   "scoped_chars": 1110,
+   "reduction": 0.1446,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1110,
+   "enum_items": 0
+  },
+  {
+   "chunk_id": "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "doc_id": "T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s",
+   "section_label": "dec:2.2",
+   "section_start_page": 36,
+   "section_end_page": 40,
+   "section_span_pages": 5,
+   "figure_pages": [
+    38,
+    39
+   ],
+   "figure_page_runs": [
+    [
+     38,
+     39
+    ]
+   ],
+   "full_chars": 4795,
+   "scoped_chars": 1370,
+   "reduction": 0.2857,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 1370,
+   "enum_items": 3
+  },
+  {
+   "chunk_id": "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "doc_id": "T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s",
+   "section_label": "dec:4.2",
+   "section_start_page": 53,
+   "section_end_page": 63,
+   "section_span_pages": 11,
+   "figure_pages": [
+    56,
+    57,
+    58,
+    59
+   ],
+   "figure_page_runs": [
+    [
+     56,
+     59
+    ]
+   ],
+   "full_chars": 15542,
+   "scoped_chars": 5871,
+   "reduction": 0.3778,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 5871,
+   "enum_items": 1
+  },
+  {
+   "chunk_id": "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13",
+   "doc_id": "T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s",
+   "section_label": "dec:3.13",
+   "section_start_page": 182,
+   "section_end_page": 185,
+   "section_span_pages": 4,
+   "figure_pages": [
+    185
+   ],
+   "figure_page_runs": [
+    [
+     185,
+     185
+    ]
+   ],
+   "full_chars": 4584,
+   "scoped_chars": 681,
+   "reduction": 0.1486,
+   "scoped_is_subset_of_full": true,
+   "rule4_ok": true,
+   "rule4_reason": null,
+   "prose_chars": 681,
+   "enum_items": 0
+  }
+ ]
+}

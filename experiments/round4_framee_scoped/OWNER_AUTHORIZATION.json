@@ -1,0 +1,17 @@
+{
+ "_published_note": "Published copy. The owner's USD cap and the round name are what the runner binds against; local paths are omitted.",
+ "budget_note": "Same 10.00 USD grant as the frame-D census. Spent so far under it: 0.201778 (frame-D census) + 0.144850 (frame-D ablation) = 0.346628. Projected frame-E census cost is ~0.18 by the frame-D generation rate, so the cap is not expected to bind. If it would, remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending.",
+ "call_cap": 540,
+ "granted_by": "project owner (chat)",
+ "granted_utc": "2026-08-30T09:45:23.f+00:00",
+ "not_authorised_by_this_record": "the frame-E text-only ablation, which needs its own pre-registration and its own authorization",
+ "owner_cap_statement_verbatim": "OK cho em chạy trần 10 đô nhé",
+ "owner_statement_verbatim": "ok vậy làm như em thiết kế đi nhé",
+ "preregistration": "prospective/v3103_round2/ROUND4_FRAMEE_PREREGISTRATION.json",
+ "preregistration_sha256": "000cf1cd50dc190c221880442aa73cdb7dc77c77c91a54cf645f132418eeb024",
+ "round": "round4_framee",
+ "schema": "ecm-tqag.round4.owner-authorization.v1",
+ "scope": "Frame E census: 60 figure-scoped section chunks x 3 arms x (1 generation + 2 judges) = 540 calls. Generator qwen/qwen3-vl-8b-instruct on OpenRouter; judges claude-opus-5 and gpt-5.6-sol on omniproxy, both unchanged from the frame-D census. Zero retry, no fallback, no replacement.",
+ "usd_hard_cap": 10.0,
+ "why_this_run": "The frame-D census returned no separable admission contrast (0.64 / 0.61 / 0.54, p=0.845 and p=0.248). Dataset criterion C5 measured the cause: the section evidence span has median 7530 and maximum 265885 characters, and a verbatim gate over a span that long is nearly free to satisfy. Frame E scopes the span to the figure's own pages (median 1571, max 7634) while keeping the section as the unit of analysis, and tests whether the gate discriminates again."
+}
