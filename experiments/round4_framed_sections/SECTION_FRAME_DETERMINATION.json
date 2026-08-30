@@ -1,0 +1,956 @@
+{
+ "schema": "ecm-tqag.section-frame-determination.v1",
+ "created_utc": "2026-08-29T16:10:01.145386+00:00",
+ "question": "Does the section-level dataset yield enough census-eligible chunks to lift round 4 above the pre-registered floor of 40?",
+ "answer": "NO. Applying the frozen rules unchanged, 60 rights-eligible section units yield 17 gate-passing chunks, of which 3 re-use pages already in the sealed 24-chunk census frame, leaving 14 fresh chunks. That is below the floor of 40 and below the 24 already run. The underpowered-descriptive reporting in main.tex stands unchanged.",
+ "why_the_60_is_not_a_frame": "A section unit is a context unit (whole section + every figure-like region inside it). A census chunk additionally requires a crop that resolves to a hash under eq:crops and a text layer long enough to quote. The 60 was never comparable to the floor of 40; treating it as such was an error corrected here.",
+ "inputs": {
+  "rights_ledger": "corpus/reports/SECTION_DATASET_RIGHTS_RECONCILIATION.json",
+  "eligible_units": "datasets_sections/ELIGIBLE_UNITS.json",
+  "sealed_census_frame": "experiment/dataset_framec/dataset_manifest_rule4_20260816T105100Z.json",
+  "sealed_frame_sha256": "14325616771840623d2dbb8267fea0721255f29178400b1c94732e4b3559d648"
+ },
+ "rules_applied_verbatim": {
+  "rule_3_crop_resolvable": {
+   "frozen_text": "ROUND3_FRAMEB_ADDENDUM.md rule 3 - 'At least one extracted figure crop resolvable on disk; pages without a resolvable crop are EXCLUDED'",
+   "operationalisation": "ROUND4_FRAME_DETERMINATION_v3: largest EMBEDDED RASTER on the page must have min-dimension >= 203 px",
+   "floor_px": 203,
+   "applied_as": "frozen operationalisation, embedded rasters only; not re-derived"
+  },
+  "rule_4_text_sufficiency": {
+   "frozen_text": "ROUND3_FRAMEB_ADDENDUM.md rule 4 (text-sufficiency exclusion)",
+   "thresholds": "EXCLUDE if (enum_items>=3 and prose_chars<400) or prose_chars<120",
+   "note": "min_prose_chars=181 in the sealed preflight is the OBSERVED minimum across the 24 chunks, not the threshold; the runner tests prose < 120"
+  },
+  "addendum_s7_no_reuse": {
+   "frozen_text": "ROUND4_NECESSITY_ADDENDUM.md §7 - the frame must not be the round-1 16, the Frame B 15, or the repaired 16; reusing a seen frame re-tests the data that generated the hypothesis",
+   "applied_as": "a unit whose (source_id, page) appears in the sealed 24-chunk frame is not fresh"
+  }
+ },
+ "counts": {
+  "rights_eligible_units": 60,
+  "pass_rule3": 17,
+  "pass_rule3_and_rule4": 17,
+  "fail_rule3": 43,
+  "fail_rule4_among_rule3_ok": 0,
+  "overlap_with_sealed_frame": 3,
+  "fresh_chunks": 14,
+  "pre_registered_floor": 40,
+  "pre_registered_target": 46,
+  "sealed_frame_n": 24,
+  "below_floor": true
+ },
+ "fresh_chunks": [
+  {
+   "unit_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+   "pages": [
+    324
+   ],
+   "question_type": "short_answer",
+   "text_chars": 22369,
+   "crop_min_dim_px": 451
+  },
+  {
+   "unit_id": "T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "pages": [
+    330
+   ],
+   "question_type": "short_answer",
+   "text_chars": 1219,
+   "crop_min_dim_px": 785
+  },
+  {
+   "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "pages": [
+    158,
+    159
+   ],
+   "question_type": "short_answer",
+   "text_chars": 2024,
+   "crop_min_dim_px": 392
+  },
+  {
+   "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "pages": [
+    169
+   ],
+   "question_type": "short_answer",
+   "text_chars": 3533,
+   "crop_min_dim_px": 460
+  },
+  {
+   "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "pages": [
+    359
+   ],
+   "question_type": "short_answer",
+   "text_chars": 1758,
+   "crop_min_dim_px": 350
+  },
+  {
+   "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "pages": [
+    361
+   ],
+   "question_type": "short_answer",
+   "text_chars": 5683,
+   "crop_min_dim_px": 416
+  },
+  {
+   "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "pages": [
+    367
+   ],
+   "question_type": "multiple_choice",
+   "text_chars": 8103,
+   "crop_min_dim_px": 371
+  },
+  {
+   "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "pages": [
+    374
+   ],
+   "question_type": "multiple_choice",
+   "text_chars": 2315,
+   "crop_min_dim_px": 404
+  },
+  {
+   "unit_id": "T13_r13_p1_04::s0004_alpha_a",
+   "pages": [
+    26,
+    30
+   ],
+   "question_type": "short_answer",
+   "text_chars": 20278,
+   "crop_min_dim_px": 478
+  },
+  {
+   "unit_id": "T13_r13_p1_04::s0023_dec_3",
+   "pages": [
+    55,
+    56
+   ],
+   "question_type": "short_answer",
+   "text_chars": 2129,
+   "crop_min_dim_px": 564
+  },
+  {
+   "unit_id": "T13_r13_p1_04::s0121_alpha_b",
+   "pages": [
+    239
+   ],
+   "question_type": "short_answer",
+   "text_chars": 12864,
+   "crop_min_dim_px": 299
+  },
+  {
+   "unit_id": "T13_r13_p1_04::s0130_alpha_c",
+   "pages": [
+    265
+   ],
+   "question_type": "multiple_choice",
+   "text_chars": 21589,
+   "crop_min_dim_px": 410
+  },
+  {
+   "unit_id": "T13_r13_p1_04::s0135_alpha_a",
+   "pages": [
+    275
+   ],
+   "question_type": "short_answer",
+   "text_chars": 6460,
+   "crop_min_dim_px": 567
+  },
+  {
+   "unit_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "pages": [
+    43
+   ],
+   "question_type": "short_answer",
+   "text_chars": 7710,
+   "crop_min_dim_px": 569
+  }
+ ],
+ "overlap_chunks": [
+  {
+   "unit_id": "T11_r12_p1_03::s0118_dec_7_4",
+   "pages": [
+    380
+   ],
+   "sealed_chunk_ids": [
+    "b7d500b101c9cfa548e2808c8df5bbcee24560964b33fe980b9a562f664f5fc6"
+   ]
+  },
+  {
+   "unit_id": "T11_r12_p1_03::s0131_dec_7_5_4",
+   "pages": [
+    395
+   ],
+   "sealed_chunk_ids": [
+    "3d8b363612c6d38af3f226fb75ffe852591a6cc98e156601387152f2601e628b",
+    "dbf5cef4acd613f1a2503ad050ff3f4e005d82341b95043c6373b6b186b72f1d"
+   ]
+  },
+  {
+   "unit_id": "T17_giao_trinh_xay_dung_van_ban_phap_luat_2025::s0067_dec_1_2_2",
+   "pages": [
+    74
+   ],
+   "sealed_chunk_ids": [
+    "2d82ce4273739d887f41da227bd7145aecd581afa7674c56c656c338596a3ad6"
+   ]
+  }
+ ],
+ "fresh_by_doc": {
+  "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025": 1,
+  "T09_giao_trinh_luat_quoc_te_1": 1,
+  "T10_giao_trinh_luat_thuong_mai_quoc_te": 6,
+  "T13_r13_p1_04": 5,
+  "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025": 1
+ },
+ "fresh_by_question_type": {
+  "short_answer": 11,
+  "multiple_choice": 3
+ },
+ "binding_constraint": {
+  "what": "rule 3, the embedded-raster crop floor",
+  "detail": "43 of 60 rights-eligible units carry no embedded raster at or above 203 px. Every one of their regions is a vector-drawn table or diagram, rendered to PNG by the section builder (43 of the 43 have such a render on disk at >= 203 px).",
+  "counterfactual_not_adopted": {
+   "reading": "the literal text of rule 3 says only 'figure crop resolvable on disk', which a rendered vector region satisfies",
+   "would_yield": "36 gross, 33 fresh after addendum s7 removes the same 3 sealed-frame pages that bind under the frozen reading",
+   "why_not_adopted": "Moot as well as improper. Even the literal reading yields 33 fresh chunks against a floor of 40, so relaxing the gate would not lift round 4 out of underpowered-descriptive; it would only forfeit the frame-C record's 'No rule was relaxed to reach the floor' (ROUND4_FRAME_DETERMINATION_v3) for nothing. Independently of that, widening rule 3 after seeing it is the binding constraint would be a post-hoc gate change. Recorded as an option for the owner, not applied.",
+   "if_ever_adopted": "must be pre-registered as a new frame D with its own determination record before any call, and reported as a deviation, since vector renders were never in the round-1 or Frame-B evidence bundles",
+   "would_yield_gross": 36,
+   "would_yield_fresh_after_s7_no_reuse": 33,
+   "still_below_floor": true,
+   "independent_recheck": {
+    "recomputed_utc": "2026-08-29T17:15:36.102338+00:00",
+    "method": "Re-derived every count from datasets_sections/*/*/unit.json image records and ELIGIBLE_UNITS.json, with sealed-frame overlap resolved by (source_sha256, page) via DATASET_INDEX.json frame_doc_ids rather than by doc_id string",
+    "reproduces": {
+     "rights_eligible_units": 60,
+     "pass_rule3": 17,
+     "fail_rule3": 43,
+     "fail_rule4_among_rule3_ok": 0,
+     "overlap_with_sealed_frame": 3,
+     "fresh_chunks": 14
+    },
+    "all_three_overlaps_confirmed_by_crop_sha256": true,
+    "of_the_43_rule3_failures": {
+     "with_vector_render_ge_203px": 19,
+     "without_any_render_ge_203px": 24,
+     "note": "The 24 carry only short strips, largest min-dimension 67-147 px, mostly 79 px tall. These match the 'decoration' class adjudicated earlier (prose underlines, footnote separators), so both readings of rule 3 exclude them. The 19 are the genuine vector flowcharts and specimen forms."
+    }
+   }
+  }
+ },
+ "consequence": "No change to the submitted paper. The census stays at n=24, below floor, reported as an underpowered descriptive measurement with significance claims suppressed. The section-level dataset remains the better context representation for future work, but it does not enlarge this frame under the frozen rules.",
+ "freshness_audit_s7": {
+  "why": "SECTION_FRAME_DETERMINATION applied addendum §7 against the sealed frame-C 24, but §7 as written forbids the round-1 16, the Frame B 15 and the repaired 16. Those three frames were drawn from a different corpus (the legacy 48 law textbooks) whose doc_id strings collide with the section corpus by title, so freshness against them is established by source bytes and passage text, not by doc_id or page number.",
+  "script": "corpus/scripts/audit_section_frame_freshness.py",
+  "audited": "all 60 rights-eligible units",
+  "addendum_sha256": "fea9078d43ee5ac32578233805425a83f1453f6fce374c9baf77687e4e9b3dfb",
+  "s7_frames_checked": {
+   "round1_16": {
+    "path": "experiment/dataset/dataset_manifest.json",
+    "sha256": "180834565fb990139f6e1edf7a06bb67bd6dd2399b65fdac80971273ba890c3a"
+   },
+   "frameb_15": {
+    "path": "experiment/dataset_frameb/dataset_manifest.json",
+    "sha256": "384101591c6acac2d19a363095b0eac0708945cea55320b4c95ded46b92a4b60"
+   },
+   "repaired_16": {
+    "path": "experiment/dataset_repaired/dataset_manifest.json",
+    "sha256": "1b0f27d655ad9e832ff5790e3f8793e085720f808060c501757c1cd0c13010ac"
+   }
+  },
+  "distinct_prior_chunks": 31,
+  "source_identity_check": {
+   "legacy_corpus_root": "/Users/van/Workspace/Research/03_Datasets/DHH2026_HOEIT_Law_Textbooks/raw",
+   "legacy_pdfs_hashed": 48,
+   "byte_identical_collisions": 0,
+   "collisions": [],
+   "note": "The three §7 frames cite doc_ids such as '34.LUAT THUONG MAI QUOC TE', which collides by title with the section corpus's T10 'Giáo trình luật thương mại quốc tế'. No section source PDF is byte-identical to any legacy PDF, so the collision is of titles, not files."
+  },
+  "content_overlap_check": {
+   "measure": "8-word shingle containment (intersection / min set size), NFC + case + whitespace normalised",
+   "why_containment_not_jaccard": "a short prior chunk fully contained in a long section unit scores 1.0 under containment but low under Jaccard",
+   "review_threshold": 0.05,
+   "max_containment": 0.0227,
+   "units_at_or_above_threshold": 0,
+   "per_unit": [
+    {
+     "unit_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+     "max_containment": 0.0227,
+     "nearest_prior_chunk": "28. LUAT TO TUNG HINH SU VIET NAM_page_409",
+     "nearest_prior_frames": [
+      "frameb_15"
+     ]
+    },
+    {
+     "unit_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+     "max_containment": 0.0227,
+     "nearest_prior_chunk": "28. LUAT TO TUNG HINH SU VIET NAM_page_409",
+     "nearest_prior_frames": [
+      "frameb_15"
+     ]
+    },
+    {
+     "unit_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+     "max_containment": 0.0227,
+     "nearest_prior_chunk": "28. LUAT TO TUNG HINH SU VIET NAM_page_409",
+     "nearest_prior_frames": [
+      "frameb_15"
+     ]
+    },
+    {
+     "unit_id": "T08_giao_trinh_luat_hon_nhan_va_gia_dinh_viet_nam::s0017_dec_1_5_2",
+     "max_containment": 0.0227,
+     "nearest_prior_chunk": "28. LUAT TO TUNG HINH SU VIET NAM_page_409",
+     "nearest_prior_frames": [
+      "frameb_15"
+     ]
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0121_alpha_b",
+     "max_containment": 0.0227,
+     "nearest_prior_chunk": "28. LUAT TO TUNG HINH SU VIET NAM_page_409",
+     "nearest_prior_frames": [
+      "frameb_15"
+     ]
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0130_alpha_c",
+     "max_containment": 0.0227,
+     "nearest_prior_chunk": "28. LUAT TO TUNG HINH SU VIET NAM_page_409",
+     "nearest_prior_frames": [
+      "frameb_15"
+     ]
+    },
+    {
+     "unit_id": "T16_r13_p1_05::s0067_roman_ii",
+     "max_containment": 0.0227,
+     "nearest_prior_chunk": "28. LUAT TO TUNG HINH SU VIET NAM_page_409",
+     "nearest_prior_frames": [
+      "frameb_15"
+     ]
+    },
+    {
+     "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+     "max_containment": 0.0137,
+     "nearest_prior_chunk": "34.LUAT THUONG MAI QUOC TE_chunk_131",
+     "nearest_prior_frames": [
+      "round1_16",
+      "round1_16",
+      "round1_16",
+      "repaired_16",
+      "repaired_16",
+      "repaired_16"
+     ]
+    },
+    {
+     "unit_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+     "max_containment": 0.0114,
+     "nearest_prior_chunk": "28. LUAT TO TUNG HINH SU VIET NAM_page_409",
+     "nearest_prior_frames": [
+      "frameb_15"
+     ]
+    },
+    {
+     "unit_id": "T08_giao_trinh_luat_hon_nhan_va_gia_dinh_viet_nam::s0110_dec_8_1_1",
+     "max_containment": 0.0114,
+     "nearest_prior_chunk": "24. LUAT TO TUNG DAN SU VN_chunk_232",
+     "nearest_prior_frames": [
+      "round1_16",
+      "round1_16",
+      "round1_16",
+      "repaired_16",
+      "repaired_16",
+      "repaired_16"
+     ]
+    },
+    {
+     "unit_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+     "max_containment": 0.0061,
+     "nearest_prior_chunk": "24. LUAT TO TUNG DAN SU VN_chunk_4",
+     "nearest_prior_frames": [
+      "round1_16",
+      "round1_16",
+      "round1_16",
+      "repaired_16",
+      "repaired_16",
+      "repaired_16"
+     ]
+    },
+    {
+     "unit_id": "T16_r13_p1_05::s0029_dec_3_4_2",
+     "max_containment": 0.0045,
+     "nearest_prior_chunk": "24. LUAT TO TUNG DAN SU VN_chunk_4",
+     "nearest_prior_frames": [
+      "round1_16",
+      "round1_16",
+      "round1_16",
+      "repaired_16",
+      "repaired_16",
+      "repaired_16"
+     ]
+    },
+    {
+     "unit_id": "T17_giao_trinh_xay_dung_van_ban_phap_luat_2025::s0113_dec_4_2_3",
+     "max_containment": 0.0032,
+     "nearest_prior_chunk": "24. LUAT TO TUNG DAN SU VN_chunk_232",
+     "nearest_prior_frames": [
+      "round1_16",
+      "round1_16",
+      "round1_16",
+      "repaired_16",
+      "repaired_16",
+      "repaired_16"
+     ]
+    },
+    {
+     "unit_id": "T08_giao_trinh_luat_hon_nhan_va_gia_dinh_viet_nam::s0010_dec_1_3_2",
+     "max_containment": 0.0016,
+     "nearest_prior_chunk": "17,18. LUAT HIEN PHAP VIET NAM_chunk_79",
+     "nearest_prior_frames": [
+      "round1_16",
+      "round1_16",
+      "round1_16",
+      "repaired_16",
+      "repaired_16",
+      "repaired_16"
+     ]
+    },
+    {
+     "unit_id": "T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+     "max_containment": 0.0016,
+     "nearest_prior_chunk": "24. LUAT TO TUNG DAN SU VN_chunk_232",
+     "nearest_prior_frames": [
+      "round1_16",
+      "round1_16",
+      "round1_16",
+      "repaired_16",
+      "repaired_16",
+      "repaired_16"
+     ]
+    },
+    {
+     "unit_id": "T17_giao_trinh_xay_dung_van_ban_phap_luat_2025::s0084_dec_1_2_2",
+     "max_containment": 0.0016,
+     "nearest_prior_chunk": "24. LUAT TO TUNG DAN SU VN_chunk_232",
+     "nearest_prior_frames": [
+      "round1_16",
+      "round1_16",
+      "round1_16",
+      "repaired_16",
+      "repaired_16",
+      "repaired_16"
+     ]
+    },
+    {
+     "unit_id": "T17_giao_trinh_xay_dung_van_ban_phap_luat_2025::s0143_dec_2_2_4",
+     "max_containment": 0.0016,
+     "nearest_prior_chunk": "24. LUAT TO TUNG DAN SU VN_chunk_232",
+     "nearest_prior_frames": [
+      "round1_16",
+      "round1_16",
+      "round1_16",
+      "repaired_16",
+      "repaired_16",
+      "repaired_16"
+     ]
+    },
+    {
+     "unit_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T08_giao_trinh_luat_hon_nhan_va_gia_dinh_viet_nam::s0014_dec_1_4_3",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T08_giao_trinh_luat_hon_nhan_va_gia_dinh_viet_nam::s0016_dec_1_5_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0066_dec_3_2_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T11_r12_p1_03::s0064_dec_4_3_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T11_r12_p1_03::s0116_dec_7_3_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T11_r12_p1_03::s0118_dec_7_4",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T11_r12_p1_03::s0119_dec_7_4_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T11_r12_p1_03::s0127_dec_7_5",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T11_r12_p1_03::s0129_dec_7_5_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T11_r12_p1_03::s0130_dec_7_5_3",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T11_r12_p1_03::s0131_dec_7_5_4",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0004_alpha_a",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0023_dec_3",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0042_dec_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0043_alpha_a",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0090_dec_4",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0106_alpha_b",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0135_alpha_a",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T13_r13_p1_04::s0172_alpha_a",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0086_dec_5_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0089_dec_5_2_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T15_r13_p1_03::s0057_dec_1_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T16_r13_p1_05::s0006_dec_1_2_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T16_r13_p1_05::s0016_dec_2_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T16_r13_p1_05::s0041_dec_3_1",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T16_r13_p1_05::s0064_dec_2_3",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T16_r13_p1_05::s0147_dec_3_1_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T17_giao_trinh_xay_dung_van_ban_phap_luat_2025::s0067_dec_1_2_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    },
+    {
+     "unit_id": "T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+     "max_containment": 0.0,
+     "nearest_prior_chunk": null,
+     "nearest_prior_frames": []
+    }
+   ]
+  },
+  "verdict": "FRESH under §7 as written: no audited unit shares source bytes or any 8-word passage above the review threshold with the round-1 16, the Frame B 15, or the repaired 16.",
+  "does_not_change": "The count of 14 fresh chunks and the below-floor conclusion are unchanged. This audit only widens the no-reuse check from the sealed frame-C 24 to the three frames §7 actually names."
+ },
+ "routes_to_the_floor": {
+  "what": "Enumeration of every route to a round-4 frame at or above the pre-registered floor of 40, with the pre-registration clause that governs each. Routes A-D are counts of material that exists today; route E is an estimate, derived in §route_e_supply.",
+  "floor": 40,
+  "routes": [
+   {
+    "id": "A",
+    "route": "section dataset under the frozen rules (this determination)",
+    "n": 14,
+    "reaches_floor": false,
+    "admissible": true,
+    "verdict": "admissible but below floor; round 4 stays underpowered descriptive"
+   },
+   {
+    "id": "B",
+    "route": "section dataset under the literal reading of rule 3 (would require a pre-registered frame D)",
+    "n": 33,
+    "reaches_floor": false,
+    "admissible": "only if pre-registered before any call",
+    "verdict": "still below floor, so the gate change buys nothing"
+   },
+   {
+    "id": "C",
+    "route": "pool the sealed frame-C 24 with route A",
+    "n": 41,
+    "reaches_floor": true,
+    "admissible": false,
+    "blocked_by": "ROUND4_NECESSITY_ADDENDUM.md §4 'no frame extension after seeing results' and §7 no-reuse",
+    "verdict": "clears 40 arithmetically (41) but is inadmissible: it extends a frame whose results have already been seen"
+   },
+   {
+    "id": "D",
+    "route": "pool the sealed frame-C 24 with route B",
+    "n": 81,
+    "reaches_floor": true,
+    "admissible": false,
+    "blocked_by": "ROUND4_NECESSITY_ADDENDUM.md §4 'no optional stopping ... no frame extension after seeing results'; the sealed 24 already ran, so pooling re-tests seen data",
+    "verdict": "clears 40 arithmetically (81) but is inadmissible on two independent grounds: it extends a frame whose results have already been seen, and it needs the post-hoc widening of rule 3 that this determination declines"
+   },
+   {
+    "id": "E",
+    "route": "further acquisition from the catalogue",
+    "n": 42.5,
+    "reaches_floor": "marginally, and only by exhausting the catalogue",
+    "admissible": true,
+    "verdict": "open but marginal: ~28 further chunks available against 26 needed for the floor and 32 for the target, on an estimate whose dominant term is an upper bound; the target of 46 is not reachable from this catalogue",
+    "n_note": "~28 estimated further chunks if the entire remaining attachment-bearing catalogue is fetched and screened, plus the 14 in hand; see route_e_supply for the derivation and its caveats"
+   }
+  ],
+  "conclusion": "No route reaches the floor of 40 from material already in hand. The two routes whose counts clear it (C at 41, D at 81) both pool the sealed frame-C 24 with new chunks, and that is a frame extension after results were seen, forbidden by ROUND4_NECESSITY_ADDENDUM.md §4 ('no optional stopping ... no frame extension after seeing results') and by §7's no-reuse clause. Route D additionally needs the post-hoc widening of rule 3 that §binding_constraint declines. The two admissible routes from the section dataset are A at 14 and B at 33, both short of 40. Route E, further acquisition, is admissible and is the only open path; it is quantified in §route_e_supply and is marginal — exhausting every attachment-bearing catalogue record not already held yields an estimated ~28 further chunks against the 26 needed for the floor and the 32 needed for the target, so the floor is reachable only by consuming the whole remaining catalogue with no margin, and the target of 46 is not reachable at all. Round 4 therefore remains reportable only as an underpowered descriptive measurement, which is what the submitted manuscript already says.",
+  "correction": {
+   "utc": "2026-08-29T17:40:00Z",
+   "what": "Route C was first written with the verdict 'inadmissible, and below floor anyway'. That was drafted before its count was computed and is wrong: route C is 41 chunks, which clears the floor of 40. The conclusion inherited the error by naming route D as the only route whose count clears 40. A second instance of the same stale claim survived in route D's own verdict string after the conclusion was repaired; it is corrected here too.",
+   "effect_on_the_answer": "none - both C and D are inadmissible for the same reason, so no admissible route reaches 40",
+   "why_recorded": "the determination is the artefact a reviewer would read; a claim that was wrong when written is corrected on the record rather than silently replaced",
+   "utc_second_pass": "2026-08-29T17:52:00Z",
+   "third_pass": {
+    "utc": "2026-08-29T18:20:00Z",
+    "what": "Two claims in this block were stale once route E was quantified. (a) floor_reached_by_any_admissible_route was the flat boolean false, which was true only of material already in hand, not of the admissible acquisition route; it is now three-valued and says which. (b) The conclusion cited '§7 records rounds 12 and 13 returning 5 and 0 candidates' as the state of knowledge about acquisition supply. That was the 2026-08-16 snapshot inside the frozen addendum; rounds 16-18 have since read the catalogue to END_OF_RESULTS and the supply is now measured, so the conclusion cites §route_e_supply instead.",
+    "effect_on_the_answer": "none for the submitted paper: no existing material reaches the floor, and round 4 stays underpowered descriptive. It does change the owner's option set, from 'acquisition supply unknown' to 'acquisition supply measured and marginal'."
+   }
+  },
+  "floor_reached_by_any_admissible_route": {
+   "from_material_already_in_hand": false,
+   "from_further_acquisition": "marginally, on an estimate whose dominant term is an upper bound",
+   "why_not_a_plain_boolean": "Routes A and B are the only routes whose chunks exist today, and both are below 40. Route E is admissible and its estimated ceiling (~28 further chunks on top of the 14 in hand) crosses 40 by ~2.5, so a flat False would overstate the closure. What is settled is that no EXISTING material reaches the floor; whether acquisition does is an estimate, not a count."
+  }
+ },
+ "route_e_supply": {
+  "what": "Quantification of route E (further acquisition), which the routes block left as n=null. Demand and supply are compared per page, not per document.",
+  "script": "corpus/scripts/quantify_route_e_supply.py",
+  "inputs": {
+   "catalogue_supply": "corpus/reports/round18_wide_discovery.json",
+   "catalogue_supply_sha256": "1ad55e90b0829439bc0ba16fa2a1b24e8ae64aedd859bf7fa4738c2be89e4104",
+   "supply_completeness": "round-18 read all three attachment-bearing keyword families to END_OF_RESULTS (giao trinh 319, bai giang 76, tap bai giang 68; pool 391 distinct records)",
+   "holdings": "corpus/DATASET_INDEX.json",
+   "holdings_sha256": "1e0d64645134861344d66256ffd8892b676d2e8dd1c5f64761555349b12d8641"
+  },
+  "rates_measured_per_page": {
+   "frame_c_non_textbook": {
+    "chunks": 24,
+    "pages": 6758,
+    "per_100_pages": 0.355,
+    "pages_per_doc": 193
+   },
+   "law_textbook_section_corpus": {
+    "fresh_chunks": 14,
+    "pages": 8358,
+    "per_100_pages": 0.168,
+    "pages_per_doc": 418
+   },
+   "why_per_page": "A per-document rate does not transfer between classes: frame C's 0.686 chunks/doc was measured at ~193 pp/doc, while the unheld article supply has median 94 pp, so a per-doc rate overstates yield about twofold."
+  },
+  "supply_not_held": {
+   "attachment_bearing_records_not_held": 83,
+   "by_class": {
+    "law_textbook": 7,
+    "article_or_other": 76
+   },
+   "estimates": {
+    "article_or_other": {
+     "records_available": 76,
+     "median_pages_of_held_files_in_class": 94,
+     "held_files_measured": 25,
+     "usable_pages_after_copy_no": 6787,
+     "rate_per_100_pages": 0.355,
+     "estimated_chunks": 24.1
+    },
+    "law_textbook": {
+     "records_available": 7,
+     "median_pages_of_held_files_in_class": 396.0,
+     "held_files_measured": 4,
+     "usable_pages_after_copy_no": 2633,
+     "rate_per_100_pages": 0.168,
+     "estimated_chunks": 4.4
+    }
+   },
+   "estimated_total_chunks_if_exhausted": 28.5
+  },
+  "demand": {
+   "floor": {
+    "n": 40,
+    "additional_chunks_needed": 26,
+    "estimated_available": 28.5,
+    "reachable": true,
+    "margin_chunks": 2.5
+   },
+   "target": {
+    "n": 46,
+    "additional_chunks_needed": 32,
+    "estimated_available": 28.5,
+    "reachable": false,
+    "margin_chunks": -3.5
+   }
+  },
+  "chunks_in_hand": 14,
+  "caveats": [
+   "Page counts of unfetched records are unknown; the class median of already-held files is imputed. Article page counts range 7-802 in the held sample, so the estimate is order-of-magnitude, not a projection.",
+   "The frame-C rate of 0.355 chunks/100 pp is conditional on the screening that produced frame C: its 35 documents were themselves picked as figure-bearing candidates. Applied to an unscreened pool the rate is optimistic, so the article_or_other estimate is an upper bound.",
+   "The copy:no deduction is 1 of 20 observed in one class; it is not a measured rate for the article class.",
+   "Reaching the floor consumes essentially the whole remaining attachment-bearing catalogue, leaving nothing for a later round and no margin for rule-3 or rule-4 attrition.",
+   "Yield is not the only gate: the round-4 addendum's own caution is that this document class has figures the text already restates, so admitted chunks may still not move judged visual necessity."
+  ],
+  "conclusion": "Route E is quantifiable and it is marginal at best. Exhausting every attachment-bearing catalogue record not already held (83 records) yields an estimated ~28 further chunks, against the 26 needed to reach the floor of 40 and the 32 needed to reach the target of 46. The floor is therefore reachable only by consuming the entire remaining catalogue with no margin, on an estimate whose dominant term (article_or_other) is an acknowledged upper bound; the target of 46 is not reachable from this catalogue at all. This supersedes the earlier per-document reading of the same records, which called the floor comfortably feasible.",
+  "supersedes_within_this_session": {
+   "claim": "an earlier per-document reading of these same records reported the floor as FEASIBLE (38 documents required against 76 available)",
+   "why_wrong": "it applied frame C's 0.686 chunks/doc to records whose median length is half that of the documents the rate was measured on",
+   "corrected_to": "marginal, and only by exhausting the catalogue"
+  }
+ },
+ "routes_outcome": {
+  "what": "What actually happened to the routes enumerated in §routes_to_the_floor. Route E was executed and route B was pre-registered, so the estimate no longer stands alone.",
+  "recorded_utc": "2026-08-30T05:17:42Z",
+  "script": "corpus/scripts/record_route_outcome.py",
+  "route_taken": {
+   "routes": [
+    "B",
+    "E"
+   ],
+   "how": "Route E (acquisition) was executed first, then route B (the literal reading of rule 3) was adopted the only admissible way the determination allowed: pre-registered as a new frame D before any paid call. Routes C and D, which pool the sealed frame-C 24, were never used.",
+   "preregistration": "prospective/v3103_round2/ROUND4_FRAMED_PREREGISTRATION.json",
+   "preregistration_sha256": "b487218b5e0955a74d7f5ade4d32f48f18164cf50aca0c80413b30c2c25384de",
+   "frame_manifest_sha256": "2aca4def1d411097ca0917e4398f3bf7ec3c03441aa97ecd71b00b48f56594a2",
+   "n_admitted": 67,
+   "reaches_floor": true
+  },
+  "route_e_as_executed": {
+   "method_changed": "The supply estimate counted attachment-bearing records from a KEYWORD scan. Acquisition instead used the ADVANCED form's resourceCollection filter on the shelf 'Kệ C2-C8 (Giáo trình)', which selects the textbook shelf directly instead of matching a substring in title or author. That is a better instrument for the owner's scope, and it is why the record counts differ.",
+   "discovery": "corpus/reports/round19_shelf_discovery_20260829T183005Z.json",
+   "shelf_records": 49,
+   "with_attachment": 23,
+   "already_held": 17,
+   "new_fetched": 6,
+   "shelf_exhausted": true,
+   "pages_added": 2295
+  },
+  "prediction_vs_actual": {
+   "class": "law_textbook",
+   "predicted_chunks_frozen_reading": 4.4,
+   "predicted_pages": 2633,
+   "predicted_rate_per_100_pages": 0.168,
+   "actual_pages": 2295,
+   "actual_chunks_frozen_reading": 14,
+   "actual_rate_per_100_pages": 0.61,
+   "actual_chunks_literal_reading": 36,
+   "error_decomposition": {
+    "page_imputation_factor": 0.872,
+    "rate_factor": 3.63,
+    "verdict": "The median-page imputation was accurate; the yield RATE was the error, low by about 3.6x under the frozen reading."
+   },
+   "error_is_concentrated_not_systematic": {
+    "t24_doc": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+    "t24_pages": 440,
+    "t24_chunks_frozen": 10,
+    "t24_rate_per_100_pages": 2.273,
+    "other_five_new_pages": 1855,
+    "other_five_new_chunks_frozen": 4,
+    "other_five_new_rate_per_100_pages": 0.216,
+    "pre_r19_rate_per_100_pages": 0.168,
+    "reading": "Excluding T24 the new books yield 0.216 chunks/100pp against the 0.168 assumed, so the class rate was very nearly right. One history-of-law textbook dense in maps and timelines carries 10 of the 14 new frozen-reading chunks. The forecast failed on variance between books, not on the class average."
+   }
+  },
+  "which_earlier_claims_this_corrects": [
+   {
+    "claim": "route_e_supply.conclusion: 'the target of 46 is not reachable from this catalogue at all'",
+    "status": "falsified as stated, but only in combination with route B",
+    "detail": "Under the FROZEN reading route E alone took the count from 14 to 28, still below the floor of 40, so the marginality verdict was directionally right for the reading it was computed under. The floor and the target were cleared only because route B, the literal reading of rule 3, was also adopted and pre-registered. Neither route reached 46 by itself."
+   },
+   {
+    "claim": "routes_to_the_floor.routes[E].n = 42.5 (estimated ceiling)",
+    "status": "superseded by an executed count",
+    "detail": "Frozen reading actual: 28. Literal reading actual: 67. The estimate is retained above as the forecast it was."
+   }
+  ],
+  "counts_are_unchanged": {
+   "statement": "§counts still describes the 60-unit, frozen-reading, pre-round-19 population it was computed on. This block reports a later, larger population and does not restate those numbers.",
+   "recheck_reproduces_all_17": true,
+   "correction": {
+    "utc": "2026-08-30T05:40:00Z",
+    "was": "the recheck script still reproduces all 17 of its values",
+    "why_it_was_wrong_when_written": "It was asserted, not checked. At that moment the recheck was failing 9 of its 17 comparisons, because it resolved its population from whatever datasets_sections/ELIGIBLE_UNITS.json listed. Round-19 acquisition had grown that list from 60 to 92 live units, so the recheck was measuring 100 units against a record computed on 60: rights_eligible_units came out 100 vs 60, fresh_chunks 28 vs 14, still_below_floor False vs True. My own verification command piped the runner through `tail`, so the shell reported tail's exit status and the failure was hidden.",
+    "what_was_changed": "corpus/scripts/recheck_section_frame_determination.py now reconstructs the population AS MEASURED: units relocated out of scope are folded back in, and units whose own recorded source_pdf sits under a post-record staging directory are excluded. Membership is derived from the unit records themselves rather than a hardcoded doc-id list, so a later acquisition round is excluded automatically instead of silently inflating the population.",
+    "verified_after": "recheck exits 0 with all 17 comparisons ok, loading 60 of 100 eligible units and reporting 40 excluded as post-record acquisition. The determination's counts were not edited."
+   }
+  },
+  "downstream": {
+   "census_run": "round4_framed_census_20260829T200000Z",
+   "primary_endpoint_result": "null: no contrast rejected at family alpha 0.05 under Holm",
+   "reported_cost_usd": 0.201778278,
+   "note": "Reaching the floor settled the power question, not the scientific one. Judged visual necessity stayed pinned at 1 for this document class, which is what Frame B already suggested."
+  }
+ }
+}

@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -41,6 +42,10 @@ SEALED = ROOT / "experiment/dataset_framec/dataset_manifest_rule4_20260816T10510
 
 # frozen operationalisation of ROUND3_FRAMEB_ADDENDUM rule 3
 CROP_FLOOR_PX = 203
+
+# Sources acquired AFTER this determination was written. A unit whose source_pdf
+# matches was not in the measured population and must not enter the recheck.
+POST_RECORD_SOURCE_RE = re.compile(r"round(?:19|[2-9]\d)_staging/")
 
 failures: list[str] = []
 
@@ -105,27 +110,45 @@ def main() -> int:
     check("sealed_frame_n", sealed["chunk_count"], counts["sealed_frame_n"])
 
     # ---- load the rights-eligible units ----
+    #
+    # The determination measured a population that has since GROWN: round-19
+    # acquisition added six textbooks after the record was written. Its counts
+    # are dated evidence and are not rewritten, so the recheck must reconstruct
+    # the population AS MEASURED rather than read whatever is live today:
+    #
+    #   * units relocated out of scope (T11, a customs textbook) were part of
+    #     what the record measured, so they are folded back in;
+    #   * units built from round-19 sources were NOT, so they are excluded.
+    #
+    # Round-19 membership is derived from each unit's own recorded source_pdf
+    # path, not from a hardcoded doc-id list, so a later acquisition round under
+    # the same staging convention is excluded automatically instead of silently
+    # inflating the population and failing this guard.
     elig_doc = json.loads(ELIGIBLE.read_text())
     eligible = list(elig_doc["unit_ids"])
-    # Units relocated out of scope were part of the population the record
-    # measured; fold them back in so the recheck tests the record as written.
     for ids in (elig_doc.get("relocated_out_of_scope") or {}).values():
         eligible.extend(ids)
     eligible = sorted(set(eligible))
 
     units = []
+    excluded_later_acquisition = 0
     for uid in eligible:
         doc, sec = uid.split("::")
         for root in SECTION_ROOTS:
             path = root / doc / sec / "unit.json"
             if path.exists():
-                units.append(json.loads(path.read_text()))
+                unit = json.loads(path.read_text())
+                if POST_RECORD_SOURCE_RE.search(str(unit.get("source_pdf") or "")):
+                    excluded_later_acquisition += 1
+                else:
+                    units.append(unit)
                 break
         else:
             failures.append(f"missing unit record for {uid} under "
                             + " or ".join(str(r.relative_to(ROOT)) for r in SECTION_ROOTS))
 
-    print(f"eligible units loaded: {len(units)} of {len(eligible)}")
+    print(f"eligible units loaded: {len(units)} of {len(eligible)} "
+          f"({excluded_later_acquisition} excluded as post-record acquisition)")
     check("rights_eligible_units", len(units), counts["rights_eligible_units"])
 
     # ---- rule 3 / rule 4 / no-reuse, under both readings ----
