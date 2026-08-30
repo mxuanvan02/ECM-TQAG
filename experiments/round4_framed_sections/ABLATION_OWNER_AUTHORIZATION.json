@@ -1,0 +1,17 @@
+{
+ "_published_note": "Published copy. The run-local authorization lives outside the repository; this records the grant that funded the ablation.",
+ "assistant_note": "No new corpus acquisition is authorised by this record, and no gate, census record, manuscript number or sealed report may be modified by this run.",
+ "budget_note": "Draws on the same USD 10 grant as the census, which reported 0.201778278 USD. Per-run cap is 2.00, about 9x the 0.22 projection at the census's measured cost per call. If the cap would bind, remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending.",
+ "call_cap": 244,
+ "granted_by": "project owner (chat)",
+ "granted_utc": "2026-08-30T07:06:28.fZ",
+ "owner_cap_statement_verbatim": "OK cho em chạy trần 10 đô nhé",
+ "owner_statement_verbatim": "tìm hiểu nguyên nhân nhé, anh vẫn muốn tập trung vào giáo trình luật, vì từ đầu đã nhắm vào chủ thể này rồi",
+ "preregistration": "prospective/v3103_round2/ROUND4_FRAMED_ABLATION_PREREGISTRATION.json",
+ "preregistration_sha256": "2bc3eb232353b889d0f388335f793607439d8e791a984adeca47c2dcbab3e7da",
+ "round": "round4_framed_ablation",
+ "schema": "ecm-tqag.ablation.owner-authorization.v1",
+ "scope": "Text-only vs text+image ablation over the 120 gate-passing items of round4_framed_census_20260829T200000Z, 115 of them scored after the exclusion declared in the pre-registration. 120 items x 2 branches = 240 calls, one call per item per branch, zero retry, no fallback. Answerer is the census generator qwen/qwen3-vl-8b-instruct, as in the sealed frame-C ablation, so the two are comparable.",
+ "usd_hard_cap": 2.0,
+ "why_this_run": "The census returned a null on judged visual necessity. This run separates the two candidate causes the census cannot distinguish: the document class restating figures in prose (H1) versus the verbatim-quote gate anchoring questions to a text span (H2). The owner instructed investigating the cause while keeping the scope on law textbooks, which is what this measures - it adds no new source and generates no new item."
+}

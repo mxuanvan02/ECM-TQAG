@@ -1,0 +1,556 @@
+{
+ "PRIMARY_ALL": {
+  "figure_attributable_G": {
+   "ci95": [
+    0.0425,
+    0.1541
+   ],
+   "count": 10,
+   "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+   "item_ids": [
+    "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_full",
+    "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::structured_no_contract",
+    "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_full",
+    "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::structured_no_contract",
+    "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0006_dec_1_3::ecm_full",
+    "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::structured_no_contract",
+    "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_full",
+    "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::direct",
+    "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::direct",
+    "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::structured_no_contract"
+   ],
+   "rate": 0.087
+  },
+  "mcnemar_exact_two_sided_p": 0.038574,
+  "measured_visual_necessity_V_star": {
+   "ci95": [
+    0.3344,
+    0.5217
+   ],
+   "count": 49,
+   "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+   "rate": 0.4261
+  },
+  "n": 115,
+  "paired_table": {
+   "concordant": 103,
+   "discordant": 12,
+   "image_helped_b": 10,
+   "image_hurt_c": 2
+  },
+  "text_image": {
+   "ci95": [
+    0.5488,
+    0.7306
+   ],
+   "correct": 74,
+   "rate": 0.6435
+  },
+  "text_only": {
+   "ci95": [
+    0.4783,
+    0.6656
+   ],
+   "correct": 66,
+   "rate": 0.5739
+  }
+ },
+ "PRIMARY_MCQ": {
+  "chance_level": 0.25,
+  "figure_attributable_G": {
+   "ci95": [
+    0.0,
+    0.2646
+   ],
+   "count": 0,
+   "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+   "item_ids": [],
+   "rate": 0.0
+  },
+  "mcnemar_exact_two_sided_p": 1.0,
+  "measured_visual_necessity_V_star": {
+   "ci95": [
+    0.0,
+    0.2646
+   ],
+   "count": 0,
+   "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+   "rate": 0.0
+  },
+  "n": 12,
+  "paired_table": {
+   "concordant": 12,
+   "discordant": 0,
+   "image_helped_b": 0,
+   "image_hurt_c": 0
+  },
+  "text_image": {
+   "ci95": [
+    0.7354,
+    1.0
+   ],
+   "correct": 12,
+   "rate": 1.0
+  },
+  "text_only": {
+   "ci95": [
+    0.7354,
+    1.0
+   ],
+   "correct": 12,
+   "rate": 1.0
+  },
+  "why_reported_separately": "graded by option index alone, with no string containment heuristic"
+ },
+ "by_arm": {
+  "arms": {
+   "direct": {
+    "figure_attributable_G": {
+     "ci95": [
+      0.0064,
+      0.1775
+     ],
+     "count": 2,
+     "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+     "item_ids": [
+      "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::direct",
+      "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::direct"
+     ],
+     "rate": 0.0526
+    },
+    "mcnemar_exact_two_sided_p": 1.0,
+    "measured_visual_necessity_V_star": {
+     "ci95": [
+      0.2862,
+      0.617
+     ],
+     "count": 17,
+     "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+     "rate": 0.4474
+    },
+    "n": 38,
+    "paired_table": {
+     "concordant": 35,
+     "discordant": 3,
+     "image_helped_b": 2,
+     "image_hurt_c": 1
+    },
+    "text_image": {
+     "ci95": [
+      0.4082,
+      0.7369
+     ],
+     "correct": 22,
+     "rate": 0.5789
+    },
+    "text_only": {
+     "ci95": [
+      0.383,
+      0.7138
+     ],
+     "correct": 21,
+     "rate": 0.5526
+    }
+   },
+   "ecm_full": {
+    "figure_attributable_G": {
+     "ci95": [
+      0.0259,
+      0.2214
+     ],
+     "count": 4,
+     "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+     "item_ids": [
+      "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_full",
+      "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_full",
+      "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0006_dec_1_3::ecm_full",
+      "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_full"
+     ],
+     "rate": 0.093
+    },
+    "mcnemar_exact_two_sided_p": 0.125,
+    "measured_visual_necessity_V_star": {
+     "ci95": [
+      0.2908,
+      0.6012
+     ],
+     "count": 19,
+     "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+     "rate": 0.4419
+    },
+    "n": 43,
+    "paired_table": {
+     "concordant": 39,
+     "discordant": 4,
+     "image_helped_b": 4,
+     "image_hurt_c": 0
+    },
+    "text_image": {
+     "ci95": [
+      0.4907,
+      0.7899
+     ],
+     "correct": 28,
+     "rate": 0.6512
+    },
+    "text_only": {
+     "ci95": [
+      0.3988,
+      0.7092
+     ],
+     "correct": 24,
+     "rate": 0.5581
+    }
+   },
+   "structured_no_contract": {
+    "figure_attributable_G": {
+     "ci95": [
+      0.033,
+      0.2745
+     ],
+     "count": 4,
+     "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+     "item_ids": [
+      "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::structured_no_contract",
+      "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::structured_no_contract",
+      "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::structured_no_contract",
+      "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::structured_no_contract"
+     ],
+     "rate": 0.1176
+    },
+    "mcnemar_exact_two_sided_p": 0.375,
+    "measured_visual_necessity_V_star": {
+     "ci95": [
+      0.2217,
+      0.5644
+     ],
+     "count": 13,
+     "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+     "rate": 0.3824
+    },
+    "n": 34,
+    "paired_table": {
+     "concordant": 29,
+     "discordant": 5,
+     "image_helped_b": 4,
+     "image_hurt_c": 1
+    },
+    "text_image": {
+     "ci95": [
+      0.5252,
+      0.849
+     ],
+     "correct": 24,
+     "rate": 0.7059
+    },
+    "text_only": {
+     "ci95": [
+      0.4356,
+      0.7783
+     ],
+     "correct": 21,
+     "rate": 0.6176
+    }
+   }
+  },
+  "why_confounded": "the arms admit different item sets, so each arm's rate is measured on different items; conditional on admission"
+ },
+ "census_run": "round4_framed_census_20260829T200000Z",
+ "declared_exclusion_applied": {
+  "item_ids": [
+   "frameD::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::direct",
+   "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::direct",
+   "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::direct",
+   "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0016_dec_2_2_1_1::structured_no_contract",
+   "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::structured_no_contract"
+  ],
+  "n": 5,
+  "rule": "a short-answer item whose gold answer normalises to <= 2 characters is excluded from the graded denominator"
+ },
+ "items_with_both_branches": 120,
+ "pre_registered_strata": {
+  "chunk_composition": {
+   "definition": "the chunk carries at least one embedded raster, versus rendered vector regions only",
+   "reads_on": "the owner's hypothesis that necessity fails because the figures are only tables. The census rated table-only chunks vn>=3 five times against once for raster-bearing chunks, which contradicts that hypothesis on ratings; this stratum settles it on a measurement.",
+   "strata": {
+    "has_embedded_raster": {
+     "figure_attributable_G": {
+      "ci95": [
+       0.0005,
+       0.1007
+      ],
+      "count": 1,
+      "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+      "item_ids": [
+       "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::structured_no_contract"
+      ],
+      "rate": 0.0189
+     },
+     "mcnemar_exact_two_sided_p": 1.0,
+     "measured_visual_necessity_V_star": {
+      "ci95": [
+       0.2314,
+       0.502
+      ],
+      "count": 19,
+      "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+      "rate": 0.3585
+     },
+     "n": 53,
+     "paired_table": {
+      "concordant": 50,
+      "discordant": 3,
+      "image_helped_b": 1,
+      "image_hurt_c": 2
+     },
+     "text_image": {
+      "ci95": [
+       0.4789,
+       0.7521
+      ],
+      "correct": 33,
+      "rate": 0.6226
+     },
+     "text_only": {
+      "ci95": [
+       0.498,
+       0.7686
+      ],
+      "correct": 34,
+      "rate": 0.6415
+     }
+    },
+    "rendered_vector_only": {
+     "figure_attributable_G": {
+      "ci95": [
+       0.0686,
+       0.2578
+      ],
+      "count": 9,
+      "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+      "item_ids": [
+       "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_full",
+       "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::structured_no_contract",
+       "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_full",
+       "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::structured_no_contract",
+       "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0006_dec_1_3::ecm_full",
+       "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_full",
+       "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::direct",
+       "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::direct",
+       "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::structured_no_contract"
+      ],
+      "rate": 0.1452
+     },
+     "mcnemar_exact_two_sided_p": 0.003906,
+     "measured_visual_necessity_V_star": {
+      "ci95": [
+       0.355,
+       0.6144
+      ],
+      "count": 30,
+      "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+      "rate": 0.4839
+     },
+     "n": 62,
+     "paired_table": {
+      "concordant": 53,
+      "discordant": 9,
+      "image_helped_b": 9,
+      "image_hurt_c": 0
+     },
+     "text_image": {
+      "ci95": [
+       0.5299,
+       0.7767
+      ],
+      "correct": 41,
+      "rate": 0.6613
+     },
+     "text_only": {
+      "ci95": [
+       0.3856,
+       0.645
+      ],
+      "correct": 32,
+      "rate": 0.5161
+     }
+    }
+   }
+  },
+  "question_reference": {
+   "reads_on": "H2",
+   "regex": "h[ìi]nh|[ảa]nh|s[ơo]\\s*đ[ồo]|b[ảa]ng|bi[ểe]u|đ[ồo]\\s*th[ịi]|minh\\s*h[ọo]a",
+   "strata": {
+    "question_does_not_refer_to_figure": {
+     "figure_attributable_G": {
+      "ci95": [
+       0.0143,
+       0.1277
+      ],
+      "count": 4,
+      "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+      "item_ids": [
+       "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_full",
+       "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::direct",
+       "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::direct",
+       "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::structured_no_contract"
+      ],
+      "rate": 0.0519
+     },
+     "mcnemar_exact_two_sided_p": 0.125,
+     "measured_visual_necessity_V_star": {
+      "ci95": [
+       0.3284,
+       0.5593
+      ],
+      "count": 34,
+      "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+      "rate": 0.4416
+     },
+     "n": 77,
+     "paired_table": {
+      "concordant": 73,
+      "discordant": 4,
+      "image_helped_b": 4,
+      "image_hurt_c": 0
+     },
+     "text_image": {
+      "ci95": [
+       0.4925,
+       0.7195
+      ],
+      "correct": 47,
+      "rate": 0.6104
+     },
+     "text_only": {
+      "ci95": [
+       0.4407,
+       0.6716
+      ],
+      "correct": 43,
+      "rate": 0.5584
+     }
+    },
+    "question_refers_to_figure": {
+     "figure_attributable_G": {
+      "ci95": [
+       0.0602,
+       0.3125
+      ],
+      "count": 6,
+      "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+      "item_ids": [
+       "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_full",
+       "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::structured_no_contract",
+       "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::structured_no_contract",
+       "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0006_dec_1_3::ecm_full",
+       "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::structured_no_contract",
+       "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_full"
+      ],
+      "rate": 0.1579
+     },
+     "mcnemar_exact_two_sided_p": 0.289062,
+     "measured_visual_necessity_V_star": {
+      "ci95": [
+       0.2404,
+       0.5661
+      ],
+      "count": 15,
+      "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+      "rate": 0.3947
+     },
+     "n": 38,
+     "paired_table": {
+      "concordant": 30,
+      "discordant": 8,
+      "image_helped_b": 6,
+      "image_hurt_c": 2
+     },
+     "text_image": {
+      "ci95": [
+       0.541,
+       0.8458
+      ],
+      "correct": 27,
+      "rate": 0.7105
+     },
+     "text_only": {
+      "ci95": [
+       0.4339,
+       0.7596
+      ],
+      "correct": 23,
+      "rate": 0.6053
+     }
+    }
+   }
+  },
+  "why_descriptive": "Each stratum is smaller than the item set and no stratum is powered for a confirmatory claim. Stratum McNemar tests are reported with discordance counts and carry NO significance claim; the confirmatory test is the pooled one."
+ },
+ "preregistration": "ROUND4_FRAMED_ABLATION_PREREGISTRATION.json",
+ "preregistration_sha256": "2bc3eb232353b889d0f388335f793607439d8e791a984adeca47c2dcbab3e7da",
+ "question_this_answers": "The frame-D census returned a null on judged visual necessity. Is that null a property of the DOCUMENT CLASS (law textbook prose is self-sufficient) or of the INSTRUMENT (the verbatim-quote gate anchors questions to a text span, so they are answerable from that span)? The census cannot separate the two; this design can.",
+ "schema": "ecm-tqag.ablation.framed-visual-necessity.v1",
+ "sensitivity_all_items_exclusions_scored_correct": {
+  "endpoint": {
+   "figure_attributable_G": {
+    "ci95": [
+     0.0407,
+     0.1479
+    ],
+    "count": 10,
+    "definition": "image made the item answerable: TEXT wrong and TEXT+IMG right",
+    "item_ids": [
+     "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_full",
+     "frameD::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::structured_no_contract",
+     "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_full",
+     "frameD::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::structured_no_contract",
+     "frameD::T23_giao_trinh_luat_hinh_su_quoc_te::s0006_dec_1_3::ecm_full",
+     "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::structured_no_contract",
+     "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_full",
+     "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::direct",
+     "frameD::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::direct",
+     "frameD::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::structured_no_contract"
+    ],
+    "rate": 0.0833
+   },
+   "mcnemar_exact_two_sided_p": 0.038574,
+   "measured_visual_necessity_V_star": {
+    "ci95": [
+     0.3195,
+     0.5018
+    ],
+    "count": 49,
+    "definition": "V*(i) = 1 - R_TEXT(i): item not answerable from text alone",
+    "rate": 0.4083
+   },
+   "n": 120,
+   "paired_table": {
+    "concordant": 108,
+    "discordant": 12,
+    "image_helped_b": 10,
+    "image_hurt_c": 2
+   },
+   "text_image": {
+    "ci95": [
+     0.5662,
+     0.7424
+    ],
+    "correct": 79,
+    "rate": 0.6583
+   },
+   "text_only": {
+    "ci95": [
+     0.4982,
+     0.6805
+    ],
+    "correct": 71,
+    "rate": 0.5917
+   }
+  },
+  "why": "Both endpoints are additionally reported over all 120 items with the excluded ones scored as correct in both branches. They are concordant by construction, so they cannot move the McNemar test, only the raw rates."
+ },
+ "task_status_counts": {
+  "COMPLETE": 240
+ }
+}

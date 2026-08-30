@@ -265,11 +265,12 @@
   },
   "distinct_prior_chunks": 31,
   "source_identity_check": {
-   "legacy_corpus_root": "/Users/van/Workspace/Research/03_Datasets/DHH2026_HOEIT_Law_Textbooks/raw",
+   "legacy_corpus_root": "<local dataset root, not published>",
    "legacy_pdfs_hashed": 48,
    "byte_identical_collisions": 0,
    "collisions": [],
-   "note": "The three §7 frames cite doc_ids such as '34.LUAT THUONG MAI QUOC TE', which collides by title with the section corpus's T10 'Giáo trình luật thương mại quốc tế'. No section source PDF is byte-identical to any legacy PDF, so the collision is of titles, not files."
+   "note": "The three §7 frames cite doc_ids such as '34.LUAT THUONG MAI QUOC TE', which collides by title with the section corpus's T10 'Giáo trình luật thương mại quốc tế'. No section source PDF is byte-identical to any legacy PDF, so the collision is of titles, not files.",
+   "legacy_corpus_root_redacted": "The private copy of this record names an absolute path under the researcher's home directory. Publishing a home-directory layout serves no reproducibility purpose, so the published copy carries a placeholder. The check itself is reproducible from the recorded sha256 values, which are unchanged."
   },
   "content_overlap_check": {
    "measure": "8-word shingle containment (intersection / min set size), NFC + case + whitespace normalised",
