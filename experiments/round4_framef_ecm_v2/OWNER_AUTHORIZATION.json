@@ -1,0 +1,19 @@
+{
+ "_published_note": "Published copy. The live authorization sits in the private run directory; this records the grant that funded the run.",
+ "budget_note": "Spent so far on this line across the frame-D census, the frame-D ablation and the frame-E census: 0.43976 USD against the owner's standing 10.00 grant. Frame F is projected near 0.15 USD at the measured per-call rate; if the cap would bind, remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending.",
+ "call_cap": 900,
+ "gate_module": "experiment/round2/ecm_v2_gates.py",
+ "gate_module_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828",
+ "granted_by": "project owner (chat)",
+ "granted_utc": "2026-08-30T12:59:03Z",
+ "owner_cap_statement_verbatim": "ok cho em chạy trần 10 đô nhé",
+ "owner_statement_verbatim": "ok vậy em phát triển thêm cho phương pháp ECM đề xuất ở vấn đề này nhé, nhớ code xong thì test được rồi đẩy lên git, soạn lại manuscript cho đúng và triển khai chạy thử nghiệm cuối lấy kết quả",
+ "preregistration": "prospective/v3103_round2/ROUND4_FRAMEF_PREREGISTRATION.json",
+ "preregistration_sha256": "20695651ad624d370a908101a1039f6baddf5723cf99f07b064f7c3ca2832635",
+ "prompt_module": "experiment/round2/ecm_v2_prompt.py",
+ "prompt_module_sha256": "689ec92df45c3afc8dae47be2b8de00b0e149319a3ba9ae1749f4d4f948da467",
+ "round": "round4_framef",
+ "schema": "ecm-tqag.round4.owner-authorization.v1",
+ "scope": "Frame F: 60 role-conditioned section chunks x 5 arms (ecm_v2, ecm_v2_disclosed, ecm_full, direct, structured_no_contract) x (1 generation + 2 judge calls) = 900 calls. Zero retry, no fallback. Primary endpoint A2 = v1 admission AND the three ECM-v2 gates.",
+ "usd_hard_cap": 10.0
+}

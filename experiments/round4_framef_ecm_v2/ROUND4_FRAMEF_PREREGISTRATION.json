@@ -1,0 +1,319 @@
+{
+ "schema": "ecm-tqag.round4.framef-preregistration.v1",
+ "status": "FROZEN, prospective. No paid call is authorised by this document; execution additionally requires an owner authorization naming an explicit USD cap.",
+ "created_utc": "2026-08-30T12:31:15Z",
+ "what_this_is": "Frame F tests ECM-v2: an evidence contract that requires the two channels to DIVIDE LABOUR -- the text quotation establishes what the question is about, the figure supplies what the question asks for -- together with three mechanical gates that check exactly that, and a prompt that states them. The corpus, the unit of analysis and the evidence spans are unchanged from Frame E.",
+ "the_defect_this_addresses": {
+  "found_by": "a clause-by-clause audit of the v1 contract against the v1 gate",
+  "finding": "five of the v1 contract's nine clauses have a mechanical gate; the four without one are exactly the multimodal clauses (the question must need the image, the answer must be supported by both channels, ANSWER-FIRST, SEAL)",
+  "measured_consequence": {
+   "admitted_items_whose_quotation_already_contains_the_whole_answer": {
+    "frame_d_full_section": "70 of 120 = 0.583",
+    "frame_e_figure_scoped": "101 of 128 = 0.789"
+   },
+   "why_that_matters": "such an item is answerable by reading the quotation alone, so the image is decorative and its hash a formality"
+  },
+  "why_the_earlier_nulls_follow": "the instrument enforced provenance and reported multimodality. The provenance endpoint reproduced across frames C, D and E (no image-channel quotation under the contract); every multimodal endpoint returned null. Frame F changes what is enforced."
+ },
+ "frame": {
+  "name": "F_hul_law_textbook_sections_role_conditioned",
+  "manifest": "experiment/dataset_framef/dataset_manifest_framef_20260830T122835Z.json",
+  "manifest_sha256": "5e667745e7ba5b1989bdfd7cd2ba36bb84eca420062a0f693a2cd8f9d552d943",
+  "manifest_schema": "ecm-tqag.multimodal-inputs.v4-work24",
+  "n": 60,
+  "n_is_fixed_before_the_first_call": true,
+  "unit_of_analysis": "one section of a law textbook (unchanged)",
+  "evidence_span": "the section's own lines on its figure-bearing pages, unchanged from Frame E",
+  "span_chars": {
+   "median": 1571,
+   "min": 212,
+   "max": 7634
+  },
+  "question_types": {
+   "multiple_choice": 10,
+   "short_answer": 50
+  },
+  "documents": 13,
+  "source_concentration": {
+   "top1_doc": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+   "top1_chunks": 21,
+   "top1_share": 0.35
+  },
+  "figure_roles": {
+   "table": 36,
+   "pictorial": 24
+  },
+  "figure_role_rule": "kind of the largest region by area on the unit's figure-bearing pages, from the section builder's own regions[].kind; nothing re-detected",
+  "mixed_role_chunks": {
+   "n": 5,
+   "chunk_ids": [
+    "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+    "frameF::T13_r13_p1_04::s0023_dec_3",
+    "frameF::T13_r13_p1_04::s0106_alpha_b",
+    "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+    "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4"
+   ],
+   "why_declared": "five chunks carry more than one figure kind; the largest-area rule assigns one role and the choice is recorded per package in figure_role_provenance"
+  }
+ },
+ "this_is_not_independent_replication": {
+  "why_stated_first": "Frame F re-uses the same 60 units as Frame E, after Frame E's null was seen. This is a method-development experiment on the same corpus, not independent confirmation, and the record fixes that reading before any number exists.",
+  "units_shared_with_frame_e": 60,
+  "share_of_frame_f_also_in_frame_e": 1.0,
+  "consequence": "A positive result licenses the claim that ECM-v2 discriminates on THIS corpus at section granularity with figure-scoped spans. It does not license a general claim; that needs a fresh frame.",
+  "frames_not_re_analysed": [
+   "C",
+   "D",
+   "E"
+  ]
+ },
+ "arms": {
+  "list": [
+   "ecm_v2",
+   "ecm_v2_disclosed",
+   "ecm_full",
+   "direct",
+   "structured_no_contract"
+  ],
+  "new_in_frame_f": [
+   "ecm_v2",
+   "ecm_v2_disclosed"
+  ],
+  "carried_unchanged": [
+   "ecm_full",
+   "direct",
+   "structured_no_contract"
+  ],
+  "paired": "every chunk is attempted by all five arms, so each chunk is its own control and only the prompt varies",
+  "prompt_lengths_chars": {
+   "ecm_v2": {
+    "system": 1487,
+    "user_template": 569,
+    "total": 2056
+   },
+   "ecm_v2_disclosed": {
+    "system": 1528,
+    "user_template": 563,
+    "total": 2091
+   }
+  },
+  "length_match": {
+   "ecm_v2_vs_its_disclosure_control": 35,
+   "why": "prompt length is a confound: a longer prompt could raise admission by attention alone. The reported census handles this with a disclosure control at matched length, and Frame F reproduces that design.",
+   "what_differs_between_them": "ONLY the ordering clauses. The control names the same division of labour, states G6/G7/G8 verbatim, and carries the same role guidance, but leaves the order of work free: no figure-first step, no answer-first plan, no seal."
+  },
+  "why_ecm_v2_is_a_new_arm_not_an_edited_prompt": "official/PROMPT_SCHEMA_CONTRACT.json and the frozen ARMS tuple are audit-bound and are not modified; ECM-v2 ships a local prompt and a local request builder, as round2c_routes did for judge routes."
+ },
+ "primary_endpoint": {
+  "name": "A2 -- multimodal admission",
+  "definition": "A2(c,a) = 1 iff the item passes ALL v1 gates AND the three ECM-v2 gates. No v1 condition is relaxed: A2 is a strict subset of v1 admission.",
+  "gates": {
+   "g6_answer_not_in_quote": "the normalised answer is not a case-insensitive substring of the normalised quotation",
+   "g7_answer_meets_figure": ">= 2 content words of the answer occur in the recognised lettering of the chunk's figures",
+   "g8_description_meets_figure": ">= 3 content words of visual_evidence.description occur in that lettering"
+  },
+  "gate_module": "experiment/round2/ecm_v2_gates.py",
+  "gate_module_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828",
+  "test": "paired two-sided exact McNemar on discordant chunks, one contrast per control arm, Holm step-down at family-wise alpha 0.05",
+  "family": [
+   "ecm_v2_vs_ecm_full",
+   "ecm_v2_vs_ecm_v2_disclosed",
+   "ecm_v2_vs_direct",
+   "ecm_v2_vs_structured_no_contract"
+  ],
+  "holm_thresholds": {
+   "rank_1": 0.0125,
+   "rank_2": 0.016667,
+   "rank_3": 0.025,
+   "rank_4": 0.05
+  },
+  "decision_rule": {
+   "smallest_family_alpha": 0.0125,
+   "min_unidirectional_discordance_to_reject_first": 8,
+   "note": "with fewer unidirectional discordant chunks than that, the first contrast cannot be declared significant whatever the split looks like"
+  },
+  "direction_not_assumed": "two-sided; a control beating ECM-v2 is a valid, reportable outcome"
+ },
+ "gate_validity_stated_before_execution": {
+  "g6_is_load_bearing": "a structural relation between two returned fields; no external reference, no chance baseline",
+  "g7_g8_are_weak_and_measured": {
+   "method": "400 permutations pairing each item with another chunk's figure lettering; frame-E admitted items, n=128",
+   "g7_answer_meets_figure": {
+    "1_word": {
+     "observed": 0.828,
+     "chance_mean": 0.627,
+     "chance_p95": 0.677
+    },
+    "2_words": {
+     "observed": 0.766,
+     "chance_mean": 0.457,
+     "chance_p95": 0.508
+    },
+    "3_words": {
+     "observed": 0.672,
+     "chance_mean": 0.343,
+     "chance_p95": 0.394
+    }
+   },
+   "g8_description_meets_figure": {
+    "3_words": {
+     "observed": 0.852,
+     "chance_mean": 0.518,
+     "chance_p95": 0.565
+    },
+    "5_words": {
+     "observed": 0.758,
+     "chance_mean": 0.366,
+     "chance_p95": 0.409
+    }
+   },
+   "rejected_variant_answer_meets_surplus_only": {
+    "observed": 0.023,
+    "chance_mean": 0.032,
+    "chance_p95": 0.056,
+    "why_rejected": "below chance; 26 of 60 frame-E chunks carry no figure lettering absent from the prose, so the gate would reject items for a corpus property"
+   }
+  },
+  "consequence_for_interpretation": "G7 and G8 are corroborating, not decisive. A result that depends on them rather than on G6 must be reported as such, and the per-gate pass rates are reported for every arm so a reader can see which gate carried the contrast.",
+  "rejected_stricter_variant": {
+   "observed": 0.023,
+   "chance_mean": 0.032,
+   "chance_p95": 0.056,
+   "why_rejected": "below chance; 26 of 60 frame-E chunks carry no figure lettering absent from the prose, so the gate would reject items for a corpus property"
+  }
+ },
+ "secondary_endpoints": [
+  {
+   "name": "v1 admission A",
+   "why": "ECM-v2 must not buy multimodality by breaking provenance. A is reported per arm with Clopper-Pearson intervals and paired contrasts, exactly as in frames C-E.",
+   "confirmatory": false
+  },
+  {
+   "name": "per-gate pass rates G6, G7, G8 per arm",
+   "why": "shows which gate carries any contrast",
+   "confirmatory": false
+  },
+  {
+   "name": "quotation provenance taxonomy",
+   "why": "the one endpoint that reproduced across frames C, D and E: share of non-reproducing quotations traced to the image channel, per arm, counted strictly (a distinctive figure word absent from the prose)",
+   "confirmatory": false
+  },
+  {
+   "name": "judged endpoints V and M with all three pooling rules",
+   "why": "as the parent addendum fixes them; unchanged",
+   "confirmatory": false
+  },
+  {
+   "name": "the four other judged vectors, unaveraged, per arm",
+   "why": "addendum section 2.1 item 4",
+   "confirmatory": false
+  },
+  {
+   "name": "judge-record completeness per arm",
+   "why": "addendum section 2.1 item 5",
+   "confirmatory": false
+  }
+ ],
+ "pre_registered_strata": {
+  "why_fixed_now": "membership is fixed before execution so no split can be chosen after seeing the numbers",
+  "figure_role": {
+   "definition": "the role assigned by the largest-area rule",
+   "sizes": {
+    "table": 36,
+    "pictorial": 24
+   },
+   "reads_on": "whether the effect depends on figure kind. On frame D the measured visual gain sat entirely in vector-rendered regions, i.e. tables and drawings, which contradicts the intuition that tables are uninformative."
+  },
+  "question_type": {
+   "definition": "the frozen question-type assignment",
+   "sizes": {
+    "multiple_choice": 10,
+    "short_answer": 50
+   },
+   "reads_on": "multiple-choice items are graded without any string heuristic, so they are the cleanest subset"
+  },
+  "stratum_tests_are_descriptive": "no stratum reaches the floor of 40; stratum contrasts are reported with discordance counts and carry no significance claim"
+ },
+ "planned_ablation": {
+  "what": "a text-only ablation on the Frame-F admitted items, identical in design to the executed Frame-D ablation",
+  "grading_defect_to_fix_first": {
+   "found_in": "the executed Frame-D ablation",
+   "defect": "the frozen containment rule is lenient on substrings but STRICT on insertions, so an answer differing by one inserted function word scores wrong. Three of the ten figure-attributable items were of that shape.",
+   "sensitivity_already_measured": {
+    "containment_preregistered": {
+     "v_star": 0.4261,
+     "mcnemar_p": 0.0386
+    },
+    "word_f1_ge_0.70": {
+     "v_star": 0.3217,
+     "mcnemar_p": 0.3877
+    },
+    "word_f1_ge_0.60": {
+     "v_star": 0.2696,
+     "mcnemar_p": 1.0
+    }
+   },
+   "consequence": "the Frame-D ablation result does not survive its own sensitivity analysis and is reported that way; any Frame-F ablation must pre-register a grading rule that is symmetric to insertion"
+  },
+  "status": "declared here so the comparison cannot be assembled after the fact; the ablation needs its own authorization"
+ },
+ "power": {
+  "n": 60,
+  "floor": 40,
+  "target": 46,
+  "reaches_floor": true,
+  "reaches_target": true,
+  "consequence": "n=60 clears the addendum floor of 40 and its target of 46, so the floor clause does not apply and Holm rejection flags are live.",
+  "honest_limit": "the family has four contrasts, so the Holm-first threshold is 0.0125 and needs 8 unidirectional discordant chunks. A null on the later contrasts is not evidence of no effect."
+ },
+ "what_does_not_change": {
+  "generator": "qwen/qwen3-vl-8b-instruct",
+  "judges": [
+   "claude-opus-5",
+   "gpt-5.6-sol"
+  ],
+  "judgement_schema": "the frozen seven-field schema",
+  "v1_gates": "the round-2 repaired gate, byte-identical code",
+  "rule_4": "frozen thresholds, already applied to the scoped spans",
+  "discipline": "zero retry, no fallback, run lock, per-task O_EXCL claim, ITT accounting",
+  "evidence_bundle": "identical bytes and identical evidence digest across all five arms, verified offline",
+  "figure_text_channel": "evidence.figure_text is NOT in any prompt payload and is not quotable as prose; it is read only by G7/G8 as a reference"
+ },
+ "budget_and_stop_rules": {
+  "calls_if_executed": 900,
+  "generation_calls": 300,
+  "judge_calls": 600,
+  "authorization_required": "the runner requires --usd-cap and an authorization naming round round4_framef whose cap equals it; without both it makes no call",
+  "budget_cap_behaviour": "remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending",
+  "spend_so_far_on_this_line_usd": 0.43976
+ },
+ "pre_committed_reporting": [
+  "Reported whatever it shows.",
+  "If ECM-v2 separates from ecm_full on A2, the claim becomes: making the division of labour a checked condition rather than a requested property is what produces multimodal items, on this corpus.",
+  "If ECM-v2 separates from the baselines but NOT from its length-matched disclosure control, the honest claim is that stating the conditions suffices and fixing the construction order adds nothing measurable. That is weaker and it is what gets written.",
+  "If ECM-v2 does not separate at all, the reported contribution of the method narrows to the provenance result that reproduced across frames C, D and E, and the paper says the multimodal claim was not established on this corpus.",
+  "If A2 is near zero in every arm, that is reported as the corpus being unable to support figure-answered items at this granularity, with the per-gate rates showing which condition was binding.",
+  "Any result that rests on G7/G8 rather than G6 is reported with the chance baselines beside it.",
+  "No outcome licenses relaxing a v1 gate, changing rule 4, or regenerating items."
+ ],
+ "what_would_make_this_record_invalid": [
+  "any paid call before this file is frozen and an authorization exists",
+  "editing n, the arms, the gates, the thresholds or either stratum after the first call",
+  "modifying the v1 gate, the judges, rule 4 or the evidence bundle",
+  "reporting Frame F without the Frame-D and Frame-E results beside it",
+  "presenting Frame F as independent replication"
+ ],
+ "inputs_bound_by_sha256": {
+  "frame_f_manifest": "experiment/dataset_framef/dataset_manifest_framef_20260830T122835Z.json",
+  "frame_f_manifest_sha256": "5e667745e7ba5b1989bdfd7cd2ba36bb84eca420062a0f693a2cd8f9d552d943",
+  "frame_e_manifest_sha256": "051db6ac66e09ece70d71391068f32893a76a1fd1186c563b3d24146e78dec52",
+  "frame_d_manifest_sha256": "2aca4def1d411097ca0917e4398f3bf7ec3c03441aa97ecd71b00b48f56594a2",
+  "frame_e_preregistration_sha256": "000cf1cd50dc190c221880442aa73cdb7dc77c77c91a54cf645f132418eeb024",
+  "parent_addendum_sha256": "fea9078d43ee5ac32578233805425a83f1453f6fce374c9baf77687e4e9b3dfb",
+  "ecm_v2_gates_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828",
+  "ecm_v2_prompt_sha256": "689ec92df45c3afc8dae47be2b8de00b0e149319a3ba9ae1749f4d4f948da467",
+  "dataset_quality_report_sha256": "4208f94043a837fecaf7d9e67d8b4e8341b521d579f9f0673046d88b4bec08e3",
+  "frame_e_census_report_sha256": "93c2660d2fa2425cc2491d3e30b9dab0a78e40bec8bd03bd072ddfa4b8823c38",
+  "frame_d_census_report_sha256": "a6ac01516ec2831adb8d03af566a83d8956a6c9d590b0fb47e51c3f24f20b2d7"
+ }
+}

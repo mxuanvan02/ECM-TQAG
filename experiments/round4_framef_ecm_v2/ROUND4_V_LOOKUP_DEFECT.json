@@ -1,0 +1,66 @@
+{
+ "schema": "ecm-tqag.defect.v-lookup-prefix.v1",
+ "recorded_utc": "2026-08-30T15:43:32Z",
+ "severity": "published numbers wrong for a code reason; no conclusion changes",
+ "what_the_defect_is": "The frame-C census runner looks up judge records with the literal task-id prefix `judge::r4c::`. Every later runner was DERIVED from it by frame rebinding, and that literal was not rebound, while each runner wrote its judge ids under its own mode (`r4d`, `r4e`). The lookup therefore matched nothing, every chunk failed the `judges_ok` test, and the thresholded endpoint V was published as 0 for every arm.",
+ "how_it_was_found": "While rebinding the same runner for frame F, the mode segment was grepped across all four derived runners and found hardcoded to r4c in all of them; the actual judge ids on disk were then counted per prefix.",
+ "why_it_survived_review": "V flooring at 0 was the expected result for this corpus -- the frames B/C discussion already predicted low visual necessity -- so a floored V looked like a measurement instead of a lookup failure. A plausible expected value is exactly the condition under which a silent bug is not noticed.",
+ "affected_runs": [
+  {
+   "run": "round4_framed_census_20260829T200000Z",
+   "mode": "r4d",
+   "n": 67,
+   "published_hard_valid_per_arm": {
+    "direct": 0,
+    "ecm_full": 0,
+    "structured_no_contract": 0
+   },
+   "recomputed_with_correct_prefix": {
+    "ecm_full": 0,
+    "direct": 1,
+    "structured_no_contract": 0
+   },
+   "recomputed_with_buggy_prefix": {
+    "ecm_full": 0,
+    "direct": 0,
+    "structured_no_contract": 0
+   },
+   "published_matches_buggy": true,
+   "changes_any_conclusion": false,
+   "why_not": "V floors in both readings: the largest corrected count is 1 of 60, every paired contrast stays at p=1.0, and V was reported as a SECONDARY endpoint in both frames. The published tables are wrong in the counts and right in the conclusion."
+  },
+  {
+   "run": "round4_framee_census_20260830T100000Z",
+   "mode": "r4e",
+   "n": 60,
+   "published_hard_valid_per_arm": {
+    "direct": 0,
+    "ecm_full": 0,
+    "structured_no_contract": 0
+   },
+   "recomputed_with_correct_prefix": {
+    "ecm_full": 1,
+    "direct": 1,
+    "structured_no_contract": 1
+   },
+   "recomputed_with_buggy_prefix": {
+    "ecm_full": 0,
+    "direct": 0,
+    "structured_no_contract": 0
+   },
+   "published_matches_buggy": true,
+   "changes_any_conclusion": false,
+   "why_not": "V floors in both readings: the largest corrected count is 1 of 60, every paired contrast stays at p=1.0, and V was reported as a SECONDARY endpoint in both frames. The published tables are wrong in the counts and right in the conclusion."
+  }
+ ],
+ "frame_c_is_unaffected": "round4_framec_census_20260816T105300Z runs under mode r4c, so its literal matched its own ids. The census the manuscript reports is not affected.",
+ "fix": "run_round4_framef_census.py derives the prefix from FRAMEF_MODE. The three earlier runners are sealed evidence and are NOT edited; this record carries their corrected values instead.",
+ "sealed_reports_not_rewritten": "ROUND4_REPORT.json of frames D and E keeps its published values. A sealed report is dated evidence; the correction lives here and any use of those V numbers must cite this record.",
+ "inputs_bound_by_sha256": {
+  "framef_runner": "experiment/round2/run_round4_framef_census.py",
+  "framef_runner_sha256": "05b8876191bd0144e0896727cf7bd330c4a103be0bec358eaaad0b1e59696aa6",
+  "framed_runner_sha256": "7ca25ceec285d2a79d853ce6143c8c7260bab10f88125a824d8dd46e3120aeb2",
+  "framee_runner_sha256": "a69d452b9dda9d9daf807d327e5e2ac656623901812d90bb626ba9b7b6c9c317",
+  "framec_runner_sha256": "f3e5c12604e403569de5be1fa3441b32ed67e2992c0876f2266f9abf44977a15"
+ }
+}
