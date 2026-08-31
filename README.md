@@ -141,7 +141,68 @@ python -m pip install -e '.[test]'
 
 This installs the `ecm-tqag` command-line entry point.
 
-## 6. Reproduce the complete offline software check
+## 6. Quick start: input → TQA output
+
+There are two supported workflows:
+
+### A. Generate a TQA item from a normalized document (offline)
+
+Prepare one JSON document that follows
+[`schemas/normalized-document.schema.json`](schemas/normalized-document.schema.json).
+It must contain a document ID, typed layout nodes/edges, and at least one
+supported evidence motif. Then run:
+
+```bash
+ecm-tqag generate path/to/document.json output/
+ecm-tqag validate-generated output/ --source path/to/document.json
+```
+
+The command writes a generated TQA item, matched evidence packages for
+`text_only`, `text_layout`, and `full_pixels` when available, and a manifest
+with SHA-256 receipts. The included examples are runnable immediately:
+
+```bash
+ecm-tqag generate fixtures/documents/layout.json run-output/generated-layout
+```
+
+This workflow is deterministic and uses no model or network. It is intended
+for the documented normalized JSON input, not for arbitrary PDF files.
+
+### B. Run an answerer on evidence packages (offline or with a model)
+
+Prepare a directory of JSON evidence packages following
+[`schemas/condition-package.schema.json`](schemas/condition-package.schema.json),
+then create a run configuration containing:
+
+- `packages`: the package directory;
+- `conditions`: one or more of `text_only`, `text_layout`, `full_pixels`;
+- `output`: where to write the run summary;
+- `mode`: `offline` or `openai-compatible`.
+
+Run it with:
+
+```bash
+ecm-tqag run path/to/config.json
+ecm-tqag verify-run path/to/summary.json --config path/to/config.json
+ecm-tqag export-dataset path/to/summary.json path/to/dataset.jsonl
+```
+
+In `offline` mode, the runner validates the packages and produces a
+structural test answer; it does not call a model. In `openai-compatible` mode,
+add `endpoint`, `model`, and `api_key_env` to the config, export the named API
+key in the environment, and run the same command:
+
+```bash
+export ECM_TQAG_API_KEY='your-key'
+ecm-tqag run configs/openai-compatible.local.json
+```
+
+The output is a JSON summary containing one answer record per package and
+condition, package/config receipts, and a summary SHA-256. The repository does
+not include a PDF-to-package converter, an OCR pipeline, a provider key, or
+restricted textbook data; those must be supplied by the user.
+
+## 7. Reproduce the complete offline software check
 
 Run from the repository root:
 
@@ -158,7 +219,7 @@ python tools/machine_semantic_audit.py --repo . --output machine-policy-audit.js
 
 Successful commands return exit code `0`; malformed input or failed verification returns non-zero. The offline runner does not call a model or make a network request.
 
-## 7. Command reference
+## 8. Command reference
 
 | Command | Input | Output/check |
 |---|---|---|
@@ -255,7 +316,7 @@ independent human behavior, or annotation truth. SHA-256 values are consistency
 checksums, not signatures. Consequently this report is not evidence of answer
 correctness, modality necessity, baseline superiority, or generalization.
 
-## 8. Repository layout
+## 9. Repository layout
 
 ```text
 src/ecm_tqag/                Installable library and CLI
@@ -283,12 +344,12 @@ python3 artifacts/stage_b_model_evaluation/reproduce_stage_b.py
 
 These are model-based protocol checks, not human/expert ratings, semantic validation, or factual/legal accuracy. Evidence text, trace text, source images, free-text notes, raw provider envelopes, credentials, and restricted materials are excluded.
 
-## 9. Reproducibility and data boundary
+## 10. Reproducibility and data boundary
 
 The public release contains source code, schemas, documentation, and synthetic fixtures. It does not redistribute textbook PDFs, source-derived chunks, source images, historical model outputs, private experiment records, credentials, or deployment-specific endpoints. Users are responsible for obtaining permission before adding external material and for keeping restricted inputs and outputs outside public repositories.
 
 The software checks structure and provenance completeness. Independent human or domain review is required for semantic/legal correctness, answer quality, educational usefulness, and visual-grounding claims.
 
-## Citation and license
+## 11. Citation and license
 
 Use the repository metadata in [`CITATION.cff`](CITATION.cff) when citing this software. Code and documentation are released under the [Apache-2.0 License](LICENSE).
