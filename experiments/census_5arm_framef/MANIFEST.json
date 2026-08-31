@@ -37,8 +37,8 @@
    "sha256": "633cefc3027ba8f065f3631a586194e6f6912a980556c7fd9bc94494f1c49fe7"
   },
   "verify_reported_quantities.py": {
-   "bytes": 40501,
-   "sha256": "54cea72a9a15a3b55a97161edaea6f46c20ba94c2cc53582c3ed65b5f228a925"
+   "bytes": 43585,
+   "sha256": "290e55ec4c8d05d2f82fa6d3969876b9b4d92fc4727d9381ceeb5fa2cb5893f9"
   }
  },
  "not_redistributed": [

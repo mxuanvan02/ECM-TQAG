@@ -376,6 +376,61 @@ def report_ablation(which: str, threshold: str = PRIMARY) -> dict[str, Any]:
     }
 
 
+def report_within_arm(which: str, threshold: str = PRIMARY) -> dict[str, Any]:
+    """V* split by admission status, computed SEPARATELY INSIDE each arm.
+
+    The pooled contingency table cannot separate condition selection from an arm
+    effect, because admission correlates with arm by construction: the contract
+    supplies 24 of the 57 admitted items. Inside one arm that confound is absent,
+    which is the only thing the manuscript claims from these cells. Every cell is
+    small and none carries a significance claim, so only the direction is stated.
+    """
+    rec = load(f"ablation_{which}.json")
+    dropped = excluded_ids()
+    status = a2_status()
+
+    per_arm: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    for item_id, row in rec["rows"].items():
+        if item_id in dropped:
+            continue
+        cells = {}
+        for branch in BRANCHES:
+            cell = row.get(branch) or {}
+            if cell.get("status") != "COMPLETE":
+                cells = {}
+                break
+            grid = cell.get("correct_by_threshold") or {}
+            if threshold not in grid:
+                cells = {}
+                break
+            cells[branch] = bool(grid[threshold])
+        if len(cells) != len(BRANCHES):
+            continue
+        arm = row["arm"]
+        v_star = not cells["text_only"]
+        key = ("pass" if status.get(item_id) else "fail") + (
+            "_needs_figure" if v_star else "_answerable")
+        per_arm[arm][key] += 1
+
+    out: dict[str, Any] = {}
+    holds = []
+    for arm in sorted(per_arm):
+        t = per_arm[arm]
+        n_pass = t["pass_needs_figure"] + t["pass_answerable"]
+        n_fail = t["fail_needs_figure"] + t["fail_answerable"]
+        vp = round(t["pass_needs_figure"] / n_pass, 4) if n_pass else None
+        vf = round(t["fail_needs_figure"] / n_fail, 4) if n_fail else None
+        if vp is not None and vf is not None and vp > vf:
+            holds.append(arm)
+        out[arm] = {"contingency_table": dict(sorted(t.items())),
+                    "n_a2_pass": n_pass, "n_a2_fail": n_fail,
+                    "v_star_a2_pass": vp, "v_star_a2_fail": vf}
+    return {"arms": out, "n_arms": len(out), "n_direction_holds": len(holds),
+            "arms_holding": sorted(holds),
+            "why": ("direction only; every cell is small and the manuscript "
+                    "rests no significance claim on them")}
+
+
 def report_mcq(which: str) -> dict[str, Any]:
     rec = load(f"ablation_{which}.json")
     dropped = excluded_ids()
@@ -630,6 +685,8 @@ def build() -> dict[str, Any]:
         "strata": report_strata(),
         "ablation_generator_answerer": report_ablation("generator_answerer"),
         "ablation_independent_answerer": report_ablation("independent_answerer"),
+        "within_arm_generator": report_within_arm("generator_answerer"),
+        "within_arm_independent": report_within_arm("independent_answerer"),
         "mcq_generator_answerer": report_mcq("generator_answerer"),
         "threshold_curve_shared_grid": report_threshold_curve_shared(),
         "containment_rule_independent": report_containment_rule("independent_answerer"),
@@ -666,6 +723,12 @@ PAPER: list[tuple[str, str, Any]] = [
     ("Holm DISC p=0.0013", A + "confirmatory_family.ecm_v2_vs_ecm_v2_disclosed.p_two_sided_exact", 0.001312),
     ("Holm PROV p=0.011", A + "confirmatory_family.ecm_v2_vs_ecm_full.p_two_sided_exact", 0.010622),
     ("all four reject", A + "holm.ecm_v2_vs_ecm_full.rejected", True),
+
+    ("generator within-arm ECM", "within_arm_generator.arms.ecm_v2.v_star_a2_pass", 0.5833),
+    ("generator within-arm disclosure", "within_arm_generator.arms.ecm_v2_disclosed.v_star_a2_pass", 0.6),
+    ("generator within-arm provenance", "within_arm_generator.arms.ecm_full.v_star_a2_pass", 0.6364),
+    ("generator within-arm direct", "within_arm_generator.arms.direct.v_star_a2_pass", 0.5),
+    ("generator within-arm structured", "within_arm_generator.arms.structured_no_contract.v_star_a2_fail", 0.3243),
 
     # provenance group is not traded away
     ("A_P ECM 50/60", A + "provenance_group.ecm_v2.admitted", 50),
