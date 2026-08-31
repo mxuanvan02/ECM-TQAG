@@ -198,9 +198,7 @@ ecm-tqag run configs/openai-compatible.local.json
 ```
 
 The output is a JSON summary containing one answer record per package and
-condition, package/config receipts, and a summary SHA-256. The repository does
-not include a PDF-to-package converter, an OCR pipeline, a provider key, or
-restricted textbook data; those must be supplied by the user.
+condition, package/config receipts, and a summary SHA-256.
 
 ## 7. Reproduce the complete offline software check
 
