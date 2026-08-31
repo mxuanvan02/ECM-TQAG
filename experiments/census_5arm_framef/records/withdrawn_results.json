@@ -1,0 +1,602 @@
+{
+ "document": {
+  "ablation_task_statuses": {
+   "COMPLETE": 271,
+   "TERMINAL_FAILURE": 1
+  },
+  "admitted_items_in_census": 68,
+  "answerers": [
+   "google/gemini-2.5-flash",
+   "qwen/qwen3-vl-8b-instruct"
+  ],
+  "calls_made": 0,
+  "gold_source_census": "census_4arm_framec_20260824T120000Z",
+  "grading_function_source": "experiment/round2/run_ablation_framef.py (imported, not reimplemented)",
+  "per_answerer": {
+   "google/gemini-2.5-flash": {
+    "all_items": {
+     "containment_original_rule": {
+      "V_star_not_answerable_from_text": 0.5373,
+      "concordant_both": 30,
+      "concordant_neither": 25,
+      "figure_attributable_b": 11,
+      "figure_attributable_item_ids": [
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::gate_disclosed",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::P4_001::p0273::direct",
+       "framec::R12_P1_03::p0395::direct",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0306::ecm_full"
+      ],
+      "image_hurt_c": 1,
+      "n": 67,
+      "p_two_sided_exact_mcnemar": 0.006348,
+      "text_image_correct": 41,
+      "text_only_correct": 31
+     },
+     "f1_0.50": {
+      "V_star_not_answerable_from_text": 0.5075,
+      "concordant_both": 33,
+      "concordant_neither": 28,
+      "figure_attributable_b": 6,
+      "figure_attributable_item_ids": [
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::structured_no_contract",
+       "framec::R15_P1_03::p0306::ecm_full"
+      ],
+      "image_hurt_c": 0,
+      "n": 67,
+      "p_two_sided_exact_mcnemar": 0.03125,
+      "text_image_correct": 39,
+      "text_only_correct": 33
+     },
+     "f1_0.60": {
+      "V_star_not_answerable_from_text": 0.5373,
+      "concordant_both": 30,
+      "concordant_neither": 29,
+      "figure_attributable_b": 7,
+      "figure_attributable_item_ids": [
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::gate_disclosed",
+       "framec::R15_P1_03::p0231::structured_no_contract",
+       "framec::R15_P1_03::p0306::ecm_full"
+      ],
+      "image_hurt_c": 1,
+      "n": 67,
+      "p_two_sided_exact_mcnemar": 0.070312,
+      "text_image_correct": 37,
+      "text_only_correct": 31
+     },
+     "f1_0.65": {
+      "V_star_not_answerable_from_text": 0.5672,
+      "concordant_both": 28,
+      "concordant_neither": 30,
+      "figure_attributable_b": 8,
+      "figure_attributable_item_ids": [
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::gate_disclosed",
+       "framec::R15_P1_03::p0231::structured_no_contract",
+       "framec::R15_P1_03::p0237::ecm_full",
+       "framec::R15_P1_03::p0306::ecm_full"
+      ],
+      "image_hurt_c": 1,
+      "n": 67,
+      "p_two_sided_exact_mcnemar": 0.039062,
+      "text_image_correct": 36,
+      "text_only_correct": 29
+     },
+     "f1_0.70": {
+      "V_star_not_answerable_from_text": 0.5672,
+      "concordant_both": 28,
+      "concordant_neither": 31,
+      "figure_attributable_b": 7,
+      "figure_attributable_item_ids": [
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::gate_disclosed",
+       "framec::R15_P1_03::p0231::structured_no_contract",
+       "framec::R15_P1_03::p0306::ecm_full"
+      ],
+      "image_hurt_c": 1,
+      "n": 67,
+      "p_two_sided_exact_mcnemar": 0.070312,
+      "text_image_correct": 35,
+      "text_only_correct": 29
+     },
+     "f1_0.75": {
+      "V_star_not_answerable_from_text": 0.6269,
+      "concordant_both": 25,
+      "concordant_neither": 35,
+      "figure_attributable_b": 7,
+      "figure_attributable_item_ids": [
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::gate_disclosed",
+       "framec::R15_P1_03::p0231::structured_no_contract",
+       "framec::R15_P1_03::p0306::ecm_full"
+      ],
+      "image_hurt_c": 0,
+      "n": 67,
+      "p_two_sided_exact_mcnemar": 0.015625,
+      "text_image_correct": 32,
+      "text_only_correct": 25
+     },
+     "f1_0.80": {
+      "V_star_not_answerable_from_text": 0.6269,
+      "concordant_both": 25,
+      "concordant_neither": 35,
+      "figure_attributable_b": 7,
+      "figure_attributable_item_ids": [
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::gate_disclosed",
+       "framec::R15_P1_03::p0231::structured_no_contract",
+       "framec::R15_P1_03::p0306::ecm_full"
+      ],
+      "image_hurt_c": 0,
+      "n": 67,
+      "p_two_sided_exact_mcnemar": 0.015625,
+      "text_image_correct": 32,
+      "text_only_correct": 25
+     },
+     "f1_0.90": {
+      "V_star_not_answerable_from_text": 0.6269,
+      "concordant_both": 24,
+      "concordant_neither": 36,
+      "figure_attributable_b": 6,
+      "figure_attributable_item_ids": [
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::structured_no_contract",
+       "framec::R15_P1_03::p0306::ecm_full"
+      ],
+      "image_hurt_c": 1,
+      "n": 67,
+      "p_two_sided_exact_mcnemar": 0.125,
+      "text_image_correct": 30,
+      "text_only_correct": 25
+     }
+    },
+    "multiple_choice_only": {
+     "V_star_not_answerable_from_text": 0.2105,
+     "concordant_both": 15,
+     "concordant_neither": 2,
+     "figure_attributable_b": 2,
+     "figure_attributable_item_ids": [
+      "framec::P3_003::p0027::structured_no_contract",
+      "framec::R15_P1_03::p0306::ecm_full"
+     ],
+     "image_hurt_c": 0,
+     "n": 19,
+     "p_two_sided_exact_mcnemar": 0.5,
+     "text_image_correct": 17,
+     "text_only_correct": 15
+    },
+    "short_answer_only": {
+     "containment_original_rule": {
+      "V_star_not_answerable_from_text": 0.6667,
+      "concordant_both": 15,
+      "concordant_neither": 23,
+      "figure_attributable_b": 9,
+      "figure_attributable_item_ids": [
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::gate_disclosed",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::P4_001::p0273::direct",
+       "framec::R12_P1_03::p0395::direct",
+       "framec::R15_P1_03::p0059::gate_disclosed"
+      ],
+      "image_hurt_c": 1,
+      "n": 48,
+      "p_two_sided_exact_mcnemar": 0.021484,
+      "text_image_correct": 24,
+      "text_only_correct": 16
+     },
+     "f1_0.70": {
+      "V_star_not_answerable_from_text": 0.7083,
+      "concordant_both": 13,
+      "concordant_neither": 29,
+      "figure_attributable_b": 5,
+      "figure_attributable_item_ids": [
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P4_001::p0272::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::gate_disclosed",
+       "framec::R15_P1_03::p0231::structured_no_contract"
+      ],
+      "image_hurt_c": 1,
+      "n": 48,
+      "p_two_sided_exact_mcnemar": 0.21875,
+      "text_image_correct": 18,
+      "text_only_correct": 14
+     }
+    }
+   },
+   "qwen/qwen3-vl-8b-instruct": {
+    "all_items": {
+     "containment_original_rule": {
+      "V_star_not_answerable_from_text": 0.5147,
+      "concordant_both": 31,
+      "concordant_neither": 19,
+      "figure_attributable_b": 16,
+      "figure_attributable_item_ids": [
+       "framec::P1_008::p0042::ecm_full",
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R12_P1_03::p0395::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::structured_no_contract",
+       "framec::R15_P1_03::p0237::gate_disclosed"
+      ],
+      "image_hurt_c": 2,
+      "n": 68,
+      "p_two_sided_exact_mcnemar": 0.001312,
+      "text_image_correct": 47,
+      "text_only_correct": 33
+     },
+     "f1_0.50": {
+      "V_star_not_answerable_from_text": 0.4118,
+      "concordant_both": 39,
+      "concordant_neither": 15,
+      "figure_attributable_b": 13,
+      "figure_attributable_item_ids": [
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::structured_no_contract"
+      ],
+      "image_hurt_c": 1,
+      "n": 68,
+      "p_two_sided_exact_mcnemar": 0.001831,
+      "text_image_correct": 52,
+      "text_only_correct": 40
+     },
+     "f1_0.60": {
+      "V_star_not_answerable_from_text": 0.4853,
+      "concordant_both": 34,
+      "concordant_neither": 18,
+      "figure_attributable_b": 15,
+      "figure_attributable_item_ids": [
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R12_P1_03::p0395::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::ecm_full",
+       "framec::R15_P1_03::p0231::structured_no_contract"
+      ],
+      "image_hurt_c": 1,
+      "n": 68,
+      "p_two_sided_exact_mcnemar": 0.000519,
+      "text_image_correct": 49,
+      "text_only_correct": 35
+     },
+     "f1_0.65": {
+      "V_star_not_answerable_from_text": 0.5147,
+      "concordant_both": 32,
+      "concordant_neither": 19,
+      "figure_attributable_b": 16,
+      "figure_attributable_item_ids": [
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::gate_disclosed",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R12_P1_03::p0395::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::ecm_full",
+       "framec::R15_P1_03::p0231::structured_no_contract"
+      ],
+      "image_hurt_c": 1,
+      "n": 68,
+      "p_two_sided_exact_mcnemar": 0.000275,
+      "text_image_correct": 48,
+      "text_only_correct": 33
+     },
+     "f1_0.70": {
+      "V_star_not_answerable_from_text": 0.5294,
+      "concordant_both": 30,
+      "concordant_neither": 20,
+      "figure_attributable_b": 16,
+      "figure_attributable_item_ids": [
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::gate_disclosed",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R12_P1_03::p0395::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::ecm_full",
+       "framec::R15_P1_03::p0231::structured_no_contract"
+      ],
+      "image_hurt_c": 2,
+      "n": 68,
+      "p_two_sided_exact_mcnemar": 0.001312,
+      "text_image_correct": 46,
+      "text_only_correct": 32
+     },
+     "f1_0.75": {
+      "V_star_not_answerable_from_text": 0.5588,
+      "concordant_both": 28,
+      "concordant_neither": 20,
+      "figure_attributable_b": 18,
+      "figure_attributable_item_ids": [
+       "framec::P1_008::p0042::gate_disclosed",
+       "framec::P1_008::p0042::structured_no_contract",
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::gate_disclosed",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R12_P1_03::p0395::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::ecm_full",
+       "framec::R15_P1_03::p0231::structured_no_contract"
+      ],
+      "image_hurt_c": 2,
+      "n": 68,
+      "p_two_sided_exact_mcnemar": 0.000402,
+      "text_image_correct": 46,
+      "text_only_correct": 30
+     },
+     "f1_0.80": {
+      "V_star_not_answerable_from_text": 0.5735,
+      "concordant_both": 27,
+      "concordant_neither": 20,
+      "figure_attributable_b": 19,
+      "figure_attributable_item_ids": [
+       "framec::P1_008::p0042::gate_disclosed",
+       "framec::P1_008::p0042::structured_no_contract",
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::gate_disclosed",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0014::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R12_P1_03::p0395::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::ecm_full",
+       "framec::R15_P1_03::p0231::structured_no_contract"
+      ],
+      "image_hurt_c": 2,
+      "n": 68,
+      "p_two_sided_exact_mcnemar": 0.000221,
+      "text_image_correct": 46,
+      "text_only_correct": 29
+     },
+     "f1_0.90": {
+      "V_star_not_answerable_from_text": 0.5882,
+      "concordant_both": 24,
+      "concordant_neither": 20,
+      "figure_attributable_b": 20,
+      "figure_attributable_item_ids": [
+       "framec::P1_008::p0042::gate_disclosed",
+       "framec::P1_008::p0042::structured_no_contract",
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::gate_disclosed",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0014::ecm_full",
+       "framec::P3_002::p0014::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P3_003::p0027::structured_no_contract",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R12_P1_03::p0395::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::ecm_full",
+       "framec::R15_P1_03::p0231::structured_no_contract"
+      ],
+      "image_hurt_c": 4,
+      "n": 68,
+      "p_two_sided_exact_mcnemar": 0.001544,
+      "text_image_correct": 44,
+      "text_only_correct": 28
+     }
+    },
+    "multiple_choice_only": {
+     "V_star_not_answerable_from_text": 0.1,
+     "concordant_both": 17,
+     "concordant_neither": 1,
+     "figure_attributable_b": 1,
+     "figure_attributable_item_ids": [
+      "framec::P3_003::p0027::structured_no_contract"
+     ],
+     "image_hurt_c": 1,
+     "n": 20,
+     "p_two_sided_exact_mcnemar": 1.0,
+     "text_image_correct": 18,
+     "text_only_correct": 18
+    },
+    "short_answer_only": {
+     "containment_original_rule": {
+      "V_star_not_answerable_from_text": 0.6875,
+      "concordant_both": 14,
+      "concordant_neither": 18,
+      "figure_attributable_b": 15,
+      "figure_attributable_item_ids": [
+       "framec::P1_008::p0042::ecm_full",
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R12_P1_03::p0395::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::structured_no_contract",
+       "framec::R15_P1_03::p0237::gate_disclosed"
+      ],
+      "image_hurt_c": 1,
+      "n": 48,
+      "p_two_sided_exact_mcnemar": 0.000519,
+      "text_image_correct": 29,
+      "text_only_correct": 15
+     },
+     "f1_0.70": {
+      "V_star_not_answerable_from_text": 0.7083,
+      "concordant_both": 13,
+      "concordant_neither": 19,
+      "figure_attributable_b": 15,
+      "figure_attributable_item_ids": [
+       "framec::P2_006::p0093::direct",
+       "framec::P2_006::p0093::ecm_full",
+       "framec::P2_006::p0093::gate_disclosed",
+       "framec::P2_007::p0063::direct",
+       "framec::P2_007::p0063::ecm_full",
+       "framec::P2_007::p0063::gate_disclosed",
+       "framec::P2_007::p0063::structured_no_contract",
+       "framec::P3_002::p0015::ecm_full",
+       "framec::P4_001::p0273::direct",
+       "framec::P4_001::p0273::gate_disclosed",
+       "framec::R12_P1_03::p0395::ecm_full",
+       "framec::R15_P1_03::p0059::gate_disclosed",
+       "framec::R15_P1_03::p0231::direct",
+       "framec::R15_P1_03::p0231::ecm_full",
+       "framec::R15_P1_03::p0231::structured_no_contract"
+      ],
+      "image_hurt_c": 1,
+      "n": 48,
+      "p_two_sided_exact_mcnemar": 0.000519,
+      "text_image_correct": 28,
+      "text_only_correct": 14
+     }
+    }
+   }
+  },
+  "question_this_answers": "The manuscript's measured-visual-necessity result is graded by the containment rule that the frame-F record shows manufactured the frame-D result. Does the frame-C result survive symmetric re-grading?",
+  "regraded_run": "ablation_2answerer_20260824T130000Z",
+  "schema": "ecm-tqag.audit.framec-ablation-regrade.v1",
+  "sealed_records_modified": false,
+  "thresholds_reported": [
+   "containment (original)",
+   "f1_0.50",
+   "f1_0.60",
+   "f1_0.65",
+   "f1_0.70",
+   "f1_0.75",
+   "f1_0.80",
+   "f1_0.90"
+  ],
+  "usd_spent": 0.0,
+  "verdict": {
+   "google/gemini-2.5-flash": {
+    "direction_holds_at_all_f1_thresholds": true,
+    "n_f1_thresholds": 7,
+    "n_f1_thresholds_significant": 4,
+    "p_range_under_symmetric_f1": [
+     0.015625,
+     0.125
+    ],
+    "p_under_original_containment": 0.006348,
+    "significant_at_all_f1_thresholds": false,
+    "significant_at_any_f1_threshold": true
+   },
+   "qwen/qwen3-vl-8b-instruct": {
+    "direction_holds_at_all_f1_thresholds": true,
+    "n_f1_thresholds": 7,
+    "n_f1_thresholds_significant": 7,
+    "p_range_under_symmetric_f1": [
+     0.000221,
+     0.001831
+    ],
+    "p_under_original_containment": 0.001312,
+    "significant_at_all_f1_thresholds": true,
+    "significant_at_any_f1_threshold": true
+   }
+  }
+ },
+ "fields_redacted": [],
+ "schema": "ecm-tqag.public.withdrawn-results.v1",
+ "sha256_of_sealed_file": "0a574171fe572202062b8ff0a5ef5f0704bd8c07999f81313c9e4cdc479cf18e",
+ "source_filename": "FRAMEC_ABLATION_REGRADE.json",
+ "what": "the re-grading that withdrew an earlier measured-necessity result. The manuscript states the withdrawal; this is the record it rests on.",
+ "why_it_is_published": "a withdrawal a reader cannot check is an assertion, not a correction"
+}

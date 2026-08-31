@@ -1,8 +1,8 @@
 {
  "files": {
   "README.md": {
-   "bytes": 3200,
-   "sha256": "999a62ec4fdb550c3c8f85973e1113eca0a67541d0c2faa2f795d7d39d08c66f"
+   "bytes": 3354,
+   "sha256": "22fa697177e00c38123a66f47fc3fd9975f80ed23166c5cbec254d93bfc5e2bc"
   },
   "RIGHTS_AND_LIMITATIONS.md": {
    "bytes": 2052,
@@ -31,6 +31,10 @@
   "records/protocol.json": {
    "bytes": 52430,
    "sha256": "c503ce07d198eaa6e2c5f0db083bd6069daec3d4a61159cbc9ec8539b329f2ae"
+  },
+  "records/withdrawn_results.json": {
+   "bytes": 21767,
+   "sha256": "633cefc3027ba8f065f3631a586194e6f6912a980556c7fd9bc94494f1c49fe7"
   },
   "verify_reported_quantities.py": {
    "bytes": 40501,
