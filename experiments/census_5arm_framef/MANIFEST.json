@@ -1,0 +1,55 @@
+{
+ "files": {
+  "README.md": {
+   "bytes": 3200,
+   "sha256": "999a62ec4fdb550c3c8f85973e1113eca0a67541d0c2faa2f795d7d39d08c66f"
+  },
+  "RIGHTS_AND_LIMITATIONS.md": {
+   "bytes": 2052,
+   "sha256": "bad06de47fa5399775aa73228e4a45e9e533368360894bde567cc547a34a5cb5"
+  },
+  "records/ablation_generator_answerer.json": {
+   "bytes": 196649,
+   "sha256": "2710caf0c95d56dc7c3ce1f29754b3845d66b7c320def2e1127954e397029465"
+  },
+  "records/ablation_independent_answerer.json": {
+   "bytes": 240621,
+   "sha256": "7cbf6619e91fb6a6d1a5e39e3f22f0aa1aca1ccb9a09aa2a6936e2f519347578"
+  },
+  "records/admission_decisions.json": {
+   "bytes": 91255,
+   "sha256": "3c7786b594cf2d020de93b0f782ddd77bf1ff2ca949641d0e83edd1e34d9aced"
+  },
+  "records/frame_strata.json": {
+   "bytes": 10661,
+   "sha256": "7e22d705c22bbfcd3e3fd648a703092f46bc1efd95722125b33cd4ecc93e04af"
+  },
+  "records/judged_scores.json": {
+   "bytes": 115933,
+   "sha256": "b4b237d7c377cd34f172b9675edac02ab4ceefc3423136bb24fda27722aed030"
+  },
+  "records/protocol.json": {
+   "bytes": 52430,
+   "sha256": "c503ce07d198eaa6e2c5f0db083bd6069daec3d4a61159cbc9ec8539b329f2ae"
+  },
+  "verify_reported_quantities.py": {
+   "bytes": 40501,
+   "sha256": "54cea72a9a15a3b55a97161edaea6f46c20ba94c2cc53582c3ed65b5f228a925"
+  }
+ },
+ "not_redistributed": [
+  "page images and figure crops (copyright: University of Law, Hue University)",
+  "raw provider responses",
+  "object.text_evidence_quote, object.question, object.answer, object.visual_evidence",
+  "returned.answer (the answerer's text; published as graded decisions instead)",
+  "object.rationale from the raters",
+  "owner authorisation conversation"
+ ],
+ "schema": "ecm-tqag.public.release-manifest.v1",
+ "source_runs": {
+  "ablation": "ablation_framef_20260831T020000Z",
+  "census": "round4_framef_census_20260830T140000Z",
+  "independent_answerer_replication": "ablation_secondary_answerer_20260831T140000Z"
+ },
+ "what": "derived decision records for the frame-F census reported in the ACIIDS 2027 submission. Every published quantity is recomputable from these files by verify_reported_quantities.py."
+}
