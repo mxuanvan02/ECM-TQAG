@@ -376,6 +376,98 @@ def report_ablation(which: str, threshold: str = PRIMARY) -> dict[str, Any]:
     }
 
 
+def report_answer_in_question(threshold: str = PRIMARY) -> dict[str, Any]:
+    """The gate's own gap: the answer legible inside the question wording.
+
+    G6 relates the answer to the declared QUOTATION and says nothing about the
+    QUESTION, so an item can satisfy every condition while its answer sits in
+    the wording shown to the learner. That is a second escape route, not an
+    instance of the first, which is why the cross-tabulation against G6 status
+    is recomputed here rather than asserted.
+
+    The published record carries the per-item boolean, not the answer or the
+    question text, so the flag itself cannot be re-derived from this directory;
+    what recomputes here are the counts, the cross-tabulation, the per-arm
+    split, and the post-hoc leave-out endpoint.
+    """
+    rec = load("answer_in_question.json")
+    rows = rec["rows"]
+
+    cross = {"answer_in_question": {"g6_passed": 0, "g6_failed": 0},
+             "answer_not_in_question": {"g6_passed": 0, "g6_failed": 0}}
+    per_arm: dict[str, dict[str, int]] = {}
+    flagged: set[str] = set()
+    for item_id, row in rows.items():
+        hit = bool(row["answer_in_question"])
+        key = "answer_in_question" if hit else "answer_not_in_question"
+        cross[key]["g6_passed" if row["g6_passed"] else "g6_failed"] += 1
+        block = per_arm.setdefault(row["arm"], {
+            "provenance_admitted": 0, "answer_in_question": 0,
+            "answer_in_question_and_passed_all_eight": 0})
+        block["provenance_admitted"] += 1
+        if hit:
+            flagged.add(item_id)
+            block["answer_in_question"] += 1
+            if row["passed_all_eight"]:
+                block["answer_in_question_and_passed_all_eight"] += 1
+
+    def endpoint(which: str, drop: set[str]) -> dict[str, Any]:
+        abl = load(f"ablation_{which}.json")
+        dropped = excluded_ids()
+        status = a2_status()
+        a = b = c = d = 0
+        for item_id, row in abl["rows"].items():
+            if item_id in dropped or item_id in drop:
+                continue
+            cells = {}
+            for branch in BRANCHES:
+                cell = row.get(branch) or {}
+                grid = cell.get("correct_by_threshold") or {}
+                if cell.get("status") != "COMPLETE" or threshold not in grid:
+                    cells = {}
+                    break
+                cells[branch] = bool(grid[threshold])
+            if len(cells) != len(BRANCHES):
+                continue
+            needs = not cells["text_only"]
+            if status.get(item_id):
+                a, b = (a + 1, b) if needs else (a, b + 1)
+            else:
+                c, d = (c + 1, d) if needs else (c, d + 1)
+        return {"n": a + b + c + d,
+                "v_star_a2_pass": round(a / (a + b), 4) if a + b else None,
+                "v_star_a2_fail": round(c / (c + d), 4) if c + d else None,
+                "fisher_exact_two_sided_p": round(
+                    fisher_exact_two_sided(a, b, c, d), 6)}
+
+    sensitivity = {}
+    for which in ("generator_answerer", "independent_answerer"):
+        kept, cut = endpoint(which, set()), endpoint(which, flagged)
+        sensitivity[which] = {
+            "pre_registered": kept,
+            "flagged_items_removed": cut,
+            "direction_preserved": bool(
+                cut["v_star_a2_pass"] > cut["v_star_a2_fail"]),
+            "still_significant_at_0.05": bool(
+                cut["fisher_exact_two_sided_p"] <= 0.05),
+        }
+
+    n_flagged = len(flagged)
+    return {
+        "n_provenance_admitted": len(rows),
+        "n_answer_in_question": n_flagged,
+        "n_answer_in_question_passing_all_eight": sum(
+            1 for r in rows.values()
+            if r["answer_in_question"] and r["passed_all_eight"]),
+        "cross_tabulation_against_g6": cross,
+        "per_arm": dict(sorted(per_arm.items())),
+        "post_hoc_sensitivity": sensitivity,
+        "post_hoc_disclaimer": ("the leave-out recomputation is post hoc and "
+                                "carries no confirmatory claim; the reported "
+                                "endpoint is the pre-registered one"),
+    }
+
+
 def report_within_arm(which: str, threshold: str = PRIMARY) -> dict[str, Any]:
     """V* split by admission status, computed SEPARATELY INSIDE each arm.
 
@@ -692,6 +784,7 @@ def build() -> dict[str, Any]:
         "containment_rule_independent": report_containment_rule("independent_answerer"),
         "judged": report_judged(),
         "rated_vs_measured": report_rated_vs_measured(),
+        "answer_in_question": report_answer_in_question(),
     }
 
 
@@ -700,6 +793,7 @@ G = "ablation_generator_answerer."
 I = "ablation_independent_answerer."
 J = "judged.paired_criteria.evidence_correctness."
 S = "threshold_curve_shared_grid."
+Q = "answer_in_question."
 
 # (label, dotted path into the recomputed tree, the value printed in the paper)
 PAPER: list[tuple[str, str, Any]] = [
@@ -833,6 +927,26 @@ PAPER: list[tuple[str, str, Any]] = [
     ("kappa_w visual necessity 0.59", "judged.rater_agreement_qwk.visual_necessity.qwk", 0.5899),
     ("kappa_w evidence correctness 0.65", "judged.rater_agreement_qwk.evidence_correctness.qwk", 0.653),
     ("kappa_w pedagogical value 0.20", "judged.rater_agreement_qwk.pedagogical_value.qwk", 0.1969),
+
+    # the gate's own gap: the answer legible inside the QUESTION. G6 constrains
+    # the quotation and says nothing about the question, so most of these items
+    # pass G6 -- a second escape route, not an instance of the first.
+    ("answer-in-question 14", Q + "n_answer_in_question", 14),
+    ("answer-in-question denominator 227", Q + "n_provenance_admitted", 227),
+    ("of those, 8 pass G6", Q + "cross_tabulation_against_g6.answer_in_question.g6_passed", 8),
+    ("of those, 4 pass all eight", Q + "n_answer_in_question_passing_all_eight", 4),
+    ("none under direct", Q + "per_arm.direct.answer_in_question", 0),
+    ("none under structured", Q + "per_arm.structured_no_contract.answer_in_question", 0),
+    ("leave-out generator p = 0.0035",
+     Q + "post_hoc_sensitivity.generator_answerer.flagged_items_removed.fisher_exact_two_sided_p",
+     0.003453),
+    ("leave-out independent p = 0.016",
+     Q + "post_hoc_sensitivity.independent_answerer.flagged_items_removed.fisher_exact_two_sided_p",
+     0.015973),
+    ("leave-out keeps direction, generator",
+     Q + "post_hoc_sensitivity.generator_answerer.direction_preserved", True),
+    ("leave-out keeps direction, independent",
+     Q + "post_hoc_sensitivity.independent_answerer.direction_preserved", True),
 ]
 
 

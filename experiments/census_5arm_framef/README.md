@@ -24,6 +24,7 @@ script doubles as a regression test on these records.
 | `records/ablation_independent_answerer.json` | the replication under an answerer from an unrelated family, same shape |
 | `records/judged_scores.json` | per (chunk, arm): both raters' five ordinal scores and the critical-provenance flag |
 | `records/frame_strata.json` | per chunk: figure role, question type, conditioning length |
+| `records/answer_in_question.json` | per item: whether the recorded answer sits inside its own question wording, with its G6 status and whether it cleared all eight conditions |
 | `records/withdrawn_results.json` | the symmetric re-grading that withdrew an earlier result of ours; recomputed from sealed records with no new calls |
 | `records/protocol.json` | the three pre-registrations, the three execution authorisations, and the route-deviation record, each with the sha256 of the sealed file |
 | `MANIFEST.json` | sha256 and byte length of every file here |
