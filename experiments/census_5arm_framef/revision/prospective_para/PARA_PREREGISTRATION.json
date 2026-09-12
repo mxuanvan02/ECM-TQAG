@@ -1,0 +1,128 @@
+{
+  "schema": "ecm-tqag.para-arm.preregistration.v1",
+  "status": "SEALED_BEFORE_ANY_CALL",
+  "written_utc": "2026-09-11T06:30:00Z",
+  "written_before_first_call": true,
+  "authored_by": "revision analyst, on instruction of the corresponding author",
+
+  "what_this_is": "A sixth arm for the ECM-TQAG Frame-F census, added after the five-arm census was executed and reported. It exists to answer one question the sealed design cannot answer: whether the admission advantage of the ordered contract can be reproduced by an instruction that only asks the generator to word the answer so that it does not appear verbatim in the declared quotation.",
+
+  "why_it_is_needed": {
+    "finding_that_motivates_it": "Admission factors exactly into three stages, and the arm ordering is produced almost entirely by the G6 stage. The G6 pass rate spans 0.159 (direct) to 0.700 (contract), while the conditional G7^G8 rate shows no arm ordering (Fisher p = 0.15, 0.38, 0.65 for the ECM comparisons).",
+    "the_alternative_explanation": "G6 is literal non-containment of the answer string in the declared quotation. A paraphrase evades it. If a prompt that asks only for rewording matches the contract on admission, then G6 measures rewording rather than a division of labour.",
+    "supporting_evidence_already_in_hand": "Question-side leakage is monotone in contract strength: 7 items under the contract, 5 under disclosure, 2 under provenance-only, 0 under each unconstrained control. Three of the four leaked-and-fully-admitted items fall under the contract, so 3/24 of ECM admissions carry the answer inside their own question wording.",
+    "what_this_arm_cannot_settle": "It cannot establish that the contract causes visual necessity. It can only separate 'ordering buys a division of labour' from 'ordering buys a paraphrase'."
+  },
+
+  "arm_definition": {
+    "name": "para_rewording_only",
+    "short_name": "PARA",
+    "prompt_construction_rule": "Take the provenance clauses of the ECM prompt verbatim (question type, verbatim quotation, crop identity by content hash, response schema, answer/options validity). Append exactly one additional sentence instructing that the answer be worded so that it does not appear verbatim inside the declared quotation. Add nothing else.",
+    "must_not_contain": [
+      "any division-of-labour clause",
+      "any statement that the two channels have distinct roles",
+      "any ordering of selection, planning and realisation",
+      "any mention of the figure supplying what the question asks for",
+      "any mention of G7 or G8 or figure-lettering overlap",
+      "any disclosure of the eight admission conditions as a set"
+    ],
+    "length_matching": {
+      "rule": "Record the character length of the PARA prompt alongside the sealed ECM prompt (2056 characters) and the disclosure prompt (2091 characters). No padding is permitted to force a match; the observed length is reported as-is and interpreted as a covariate, not controlled.",
+      "why": "Padding a prompt to hit a target length would introduce content that is not part of the stated intervention."
+    }
+  },
+
+  "execution_parameters_inherited_from_sealed_census": {
+    "generator": "qwen/qwen3-vl-8b-instruct",
+    "decoding": "greedy",
+    "temperature": 0,
+    "response_token_cap": 1024,
+    "attempts_per_cell": 1,
+    "retry": 0,
+    "fallback_model": false,
+    "frame": "Frame-F, the same 60 figure-bearing sections, in the same order",
+    "bundle": "the same evidence bundle per chunk: page text layer, structural regions, figure crops named by SHA-256",
+    "gate_module_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828",
+    "gate_module_verified_byte_identical": true,
+    "planned_paid_calls": 60
+  },
+
+  "known_deviation_from_the_sealed_census": {
+    "prompt_module_sha256_sealed": "689ec92df45c3afc8dae47be2b8de00b0e149319a3ba9ae1749f4d4f948da467",
+    "prompt_module_sha256_available": "fd026a857d58cbdd203a7180c996a0c9b876e37237c0edc87c4ac62018fd5bd0",
+    "status": "MISMATCH",
+    "consequence": "The prompt module reachable in the repository is a different revision from the one the sealed census bound. Unless the sealed revision is recovered, the PARA arm is built on a different prompt builder than the five published arms, and any PARA-versus-ECM contrast is a fresh comparison rather than an extension of the sealed design.",
+    "required_before_execution": "Either recover the prompt module whose sha256 is 689ec92d..., or re-run the ECM arm under the available prompt module in the same batch as PARA so that the contrast is internally consistent. The second option costs 60 additional calls (120 total).",
+    "if_neither_is_done": "The arm must be reported as a separate exploratory experiment and must not be placed in the same table as the sealed five arms."
+  },
+
+  "endpoint": {
+    "primary": "full admission A, the conjunction of all eight conditions, computed by the sealed gate module",
+    "comparison": "PARA versus ECM, paired on chunk",
+    "test": "two-sided exact McNemar on discordant pairs",
+    "alpha": 0.05,
+    "multiplicity": "none: this is a single contrast, declared here as the only confirmatory comparison for this arm",
+    "secondary_descriptive": [
+      "the three-stage factorisation of PARA admission (A_P, then G6 | A_P, then G7^G8 | G6)",
+      "the question-side leakage count for PARA, graded by the same rule as the sealed census"
+    ],
+    "not_measured": [
+      "judged evidence correctness (no rater budget declared for this arm)",
+      "text-only ablation (no answerer budget declared for this arm)"
+    ]
+  },
+
+  "power_and_mde": {
+    "n": 60,
+    "computed_by": "exact enumeration over the trinomial distribution of discordant pairs, alpha = 0.05, two-sided exact McNemar",
+    "ecm_admission_sealed": "24/60 = 0.400",
+    "scenarios": [
+      {"para_admission": "24/60 = 0.40", "b": 8,  "d": 8, "power": 0.028, "note": "null true; power equals the test's size against no difference"},
+      {"para_admission": "20/60 = 0.33", "b": 10, "d": 6, "power": 0.115},
+      {"para_admission": "17/60 = 0.28", "b": 12, "d": 5, "power": 0.317},
+      {"para_admission": "14/60 = 0.23", "b": 14, "d": 4, "power": 0.602},
+      {"para_admission": "11/60 = 0.18", "b": 16, "d": 3, "power": 0.848, "note": "matches the observed provenance-only rate; first scenario clearing 0.80"},
+      {"para_admission": "8/60 = 0.13",  "b": 18, "d": 2, "power": 0.969},
+      {"para_admission": "6/60 = 0.10",  "b": 20, "d": 2, "power": 0.987, "note": "matches the observed direct and structured rates"}
+    ],
+    "mde_statement": "At n = 60 this arm has power 0.85 to detect a PARA admission rate at or below the observed provenance-only rate of 0.18, and power 0.60 at 0.23. It is not powered for a partial gap: if PARA lands near 0.28 to 0.33, power is 0.12 to 0.32 and the comparison will be inconclusive by construction.",
+    "declared_consequence_of_low_power": "A non-rejection at n = 60 must be reported as inconclusive for intermediate PARA rates and must not be reported as evidence that PARA matches the contract."
+  },
+
+  "interpretation_rules_fixed_in_advance": {
+    "if_para_matches_ecm": "If the contrast does not reject and the PARA point estimate is within 0.07 of 0.400, the manuscript must state that a rewording instruction reproduces the admission advantage, that G6 therefore measures rewording rather than a division of labour on this corpus, and that contribution C1 is narrowed accordingly.",
+    "if_para_is_clearly_lower": "If the contrast rejects with ECM higher, the manuscript may state that the admission advantage is not reproduced by a rewording instruction alone, bounded by this arm's power and by the prompt-module deviation above.",
+    "if_para_is_intermediate": "If the point estimate falls between 0.23 and 0.33 and the contrast does not reject, the result is reported as inconclusive with its power stated, and no claim is made in either direction.",
+    "if_para_exceeds_ecm": "Reported as observed, with the explicit note that no mechanism in the protocol predicts it and that the arm was not powered for a difference in that direction.",
+    "no_outcome_permits": [
+      "revising the sealed five-arm result",
+      "moving this arm into the confirmatory family of the sealed census",
+      "re-running PARA with a different prompt after seeing the result"
+    ]
+  },
+
+  "stopping_and_integrity_rules": {
+    "single_batch": "All 60 calls are issued in one batch. No inspection of partial results before the batch completes.",
+    "no_prompt_revision_after_seeing_results": true,
+    "no_frame_extension": "The frame is the sealed 60 chunks. No chunk may be added or dropped.",
+    "failed_call_policy": "A call that returns no parseable response is recorded as a provenance failure, exactly as the sealed census records it. No retry.",
+    "record_output": "One row per chunk: the eight gate booleans, which conditions failed, provenance admission, full admission, and the question-side leakage flag. No source text, no quotation, no crop bytes, no raw provider response, consistent with RIGHTS_AND_LIMITATIONS.md.",
+    "hash_this_file_before_running": "The sha256 of this file must be recorded in the run output, and this file must not be edited afterwards."
+  },
+
+  "blockers_outstanding_at_sealing_time": [
+    {
+      "blocker": "Frame-F evidence bundle",
+      "detail": "The 60-chunk bundle (page text layer, structural regions, figure crops) is not present on this workstation and is not in any branch of the repository. RIGHTS_AND_LIMITATIONS.md states page images and figure crops are copyright of the University of Law, Hue University and are not redistributed.",
+      "verified_how": "listed every blob on all 7 refs of the repository; searched the workstation for the 26 declared source PDFs by sha256",
+      "local_pdf_check": "48 law-textbook PDFs exist under /media/SAS/Van/DeTai2026/BloomDepthLegalQA/data/raw/institute, and 0 of 26 declared source sha256 values match any of them, so the local corpus is a different edition set and cannot rebuild the sealed frame"
+    },
+    {
+      "blocker": "OPENROUTER_API_KEY",
+      "detail": "Hermes stores a pointer (source=env:OPENROUTER_API_KEY), not a value, and the variable is not set in this shell.",
+      "verified_how": "read the credential pool structure with values masked; checked the environment and shell rc files"
+    }
+  ],
+
+  "cost_note": "60 calls on qwen/qwen3-vl-8b-instruct with a 1024-token cap. No cost figure is stated here because current OpenRouter pricing for this model was not verified."
+}

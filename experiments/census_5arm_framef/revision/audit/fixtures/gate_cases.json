@@ -1,0 +1,55 @@
+{
+  "schema": "ecm-tqag.synthetic-gate-fixtures.v1",
+  "rights": "Synthetic; no corpus text or crop data.",
+  "cases": [
+    {
+      "name": "all_three_pass",
+      "item": {
+        "answer": "Hội đồng xét xử",
+        "text_evidence_quote": "Sơ đồ mô tả cơ cấu giải quyết vụ án.",
+        "visual_evidence": {"description": "Hội đồng thực hiện xét xử"}
+      },
+      "figure_text": {"words": ["Hội", "đồng", "xét", "xử", "thực", "hiện"]},
+      "expected": {"g6": true, "g7": true, "g8": true, "passed": true}
+    },
+    {
+      "name": "g6_rejects_literal_answer_in_quote",
+      "item": {
+        "answer": "Hội đồng xét xử",
+        "text_evidence_quote": "Cơ quan này là Hội đồng xét xử theo sơ đồ.",
+        "visual_evidence": {"description": "Hội đồng thực hiện xét xử"}
+      },
+      "figure_text": {"words": ["Hội", "đồng", "xét", "xử", "thực", "hiện"]},
+      "expected": {"g6": false, "g7": true, "g8": true, "passed": false}
+    },
+    {
+      "name": "g6_does_not_inspect_question",
+      "question": "Cơ quan nào là Hội đồng xét xử?",
+      "item": {
+        "answer": "Hội đồng xét xử",
+        "text_evidence_quote": "Sơ đồ mô tả cơ cấu giải quyết vụ án.",
+        "visual_evidence": {"description": "Hội đồng thực hiện xét xử"}
+      },
+      "figure_text": {"words": ["Hội", "đồng", "xét", "xử", "thực", "hiện"]},
+      "expected": {"g6": true, "g7": true, "g8": true, "passed": true},
+      "demonstrates": "The question contains the answer, but evaluate() never receives or checks question text."
+    },
+    {
+      "name": "chunk_pool_can_pass_from_unselected_crop",
+      "selected_crop_hash": "sha256:selected-synthetic",
+      "selected_crop_words": ["Sơ", "đồ", "khác"],
+      "other_crop_words": ["Hội", "đồng", "xét", "xử", "thực", "hiện"],
+      "item": {
+        "answer": "Hội đồng xét xử",
+        "text_evidence_quote": "Sơ đồ mô tả cơ cấu giải quyết vụ án.",
+        "visual_evidence": {
+          "crop_sha256": "sha256:selected-synthetic",
+          "description": "Hội đồng thực hiện xét xử"
+        }
+      },
+      "figure_text": {"words": ["Sơ", "đồ", "khác", "Hội", "đồng", "xét", "xử", "thực", "hiện"]},
+      "expected": {"g6": true, "g7": true, "g8": true, "passed": true},
+      "demonstrates": "The historical API receives one chunk-level word pool, not a hash-to-crop mapping."
+    }
+  ]
+}
