@@ -19,10 +19,15 @@ From `experiments/census_5arm_framef`:
 python3 verify_reported_quantities.py --check
 python3 revision/verify_revision_quantities.py --check
 python3 -m unittest discover -s revision/audit -p 'test_*.py' -v
+# Diagnostic only: expected to exit 1 while the documented blockers remain.
 python3 revision/prospective_para/preflight_para.py --json
 ```
 
 Expected results are 119/119 original quantities, 122/122 revision quantities, and 5/5 synthetic tests. The PARA preflight is expected to exit non-zero without the exact sealed prompt revision, authorised Frame-F bundle, and runtime credential; it performs no provider call and writes nothing.
+
+Run the first three commands as the passing regression suite. Run the preflight
+separately and inspect its JSON `executable`, `n_blockers`, and `checks` fields;
+its non-zero exit is intentional in the public artifact and is not a test failure.
 
 ## Interpretation limits
 

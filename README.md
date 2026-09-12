@@ -6,6 +6,22 @@ This repository is the reproducible **research-software artifact** for ECM-TQAG.
 
 > **Scope.** The software verifies structural and provenance-recording invariants. A successful verification is not, by itself, evidence of legal or semantic correctness, pedagogical quality, distractor quality, or visual necessity.
 
+## ACIIDS five-arm census and revision audit
+
+The rights-cleared decision records for the paired five-arm, 60-section Frame-F
+census are available under
+[`experiments/census_5arm_framef/`](experiments/census_5arm_framef/). The original
+verifier deterministically recomputes 119 quantities from those records without a
+network connection or model call.
+
+The ACIIDS review supplement is under
+[`experiments/census_5arm_framef/revision/`](experiments/census_5arm_framef/revision/).
+It adds a 122-check verifier for post-hoc sensitivity analyses, synthetic tests
+that document the implemented scope of G6--G8, and prospective PARA and expert
+evaluation protocols. PARA and expert evaluation were **not executed**, and no
+outcomes from either are claimed. The supplement does not alter the sealed census
+records or their manifest.
+
 ## 1. Research pipeline: input → output
 
 ```text
@@ -329,6 +345,10 @@ artifacts/stage_a_model_evaluation/
                              De-identified Stage A ratings and reproducible model-family agreement summary
 artifacts/stage_b_model_evaluation/
                              De-identified Stage B trace ratings and reproducible agreement summary
+experiments/census_5arm_framef/
+                             Released five-arm decision records and original verifier
+experiments/census_5arm_framef/revision/
+                             ACIIDS post-hoc verifier, synthetic gate audit, and prospective protocols
 ```
 
 ### Stage A and Stage B model-based evaluation artifacts

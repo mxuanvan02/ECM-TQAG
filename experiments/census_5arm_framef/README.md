@@ -15,6 +15,20 @@ python3 verify_reported_quantities.py --check  # also assert them against the pa
 `--check` exits non-zero if any published quantity fails to reproduce, so the
 script doubles as a regression test on these records.
 
+## ACIIDS revision audit supplement
+
+The [`revision/`](revision/) directory contains rights-cleared materials added in
+response to peer review. Its verifier recomputes 122 post-hoc quantities from the
+same released records, including exact admission intervals, answer-in-question
+sensitivity, and an admission-plus-correctness sensitivity analysis. It also
+contains synthetic gate-scope tests and prospective PARA and expert-evaluation
+protocols.
+
+These additions do not change the sealed five-arm results, records, or
+`MANIFEST.json`. PARA and expert evaluation were not executed; no result from
+either protocol is reported. See [`revision/README.md`](revision/README.md) for
+commands and interpretation limits.
+
 ## What is here
 
 | File | Holds |
