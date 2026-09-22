@@ -19,8 +19,48 @@ FORBIDDEN={
  "secret": re.compile(r"(?:gho_|hf_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,})"),
  "absolute_private_path": re.compile(r"/(?:home|workspace|Users)/[A-Za-z0-9_.-]+/"),
 }
+# The committed audit receipt records this digest, so it cannot also be an input
+# to it: hashing it in makes the digest change on every write, so no committed
+# receipt could ever match and the file is unsatisfiable by construction. It is
+# excluded from the digest ONLY -- it is still scanned for forbidden strings and
+# secrets like any other text file.
+RECEIPT="machine-policy-audit.json"
+# Directory components never counted as repository content. Matching is per path
+# component, so an entry containing a separator could never match: the previous
+# "src/ecm_tqag.egg-info" literal silently excluded nothing, and the editable
+# install's egg-info files entered the digest. A reviewer who follows README
+# section 7 after `pip install -e .` therefore computed a different digest from
+# the committed receipt, which made the receipt irreproducible.
+EXCLUDED_PARTS={".git",".venv","build","dist","__pycache__",".pytest_cache",
+                "ecm_tqag.egg-info"}
 ALLOWED_MEDIA={
  "fixtures/tiny-grid.png", # optional future synthetic fixture
+ # Rights-cleared synthetic contract fixture for the six-arm experiment.
+ # Verified synthetic, not source-derived: 96x96 RGB, IDAT 27760/27648 bytes
+ # (compression ratio 0.996) with 9210-9215 distinct colours per 9216 pixels
+ # -- incompressible noise, whereas a page or figure crop compresses 5-50x and
+ # reuses colours. Each file is content-bound by sha256 and byte size in
+ # experiments/six_arm/dataset/dataset_manifest.json, so untracking it would
+ # break that fixture. Listed individually on purpose: an unexpected new image
+ # in this directory must still raise unexpected_media.
+ "experiments/six_arm/dataset/images/synthetic_diagram_01.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_02.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_03.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_04.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_05.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_06.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_07.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_08.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_09.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_10.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_11.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_12.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_13.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_14.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_15.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_16.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_17.png",
+ "experiments/six_arm/dataset/images/synthetic_diagram_18.png",
 }
 
 def sha(p:Path)->str:
@@ -31,7 +71,7 @@ def audit(repo:Path, manuscript:Path|None)->dict:
  roots=[repo]
  for root in roots:
   for p in sorted(root.rglob("*")):
-   if not p.is_file() or any(x in p.parts for x in {".git",".venv","build","dist","__pycache__",".pytest_cache","src/ecm_tqag.egg-info"}): continue
+   if not p.is_file() or any(part in EXCLUDED_PARTS for part in p.parts): continue
    rel=p.relative_to(repo).as_posix(); checked.append(rel)
    if rel == "tools/machine_semantic_audit.py": continue
    if p.suffix.lower() in MEDIA_SUFFIXES and rel not in ALLOWED_MEDIA:
@@ -59,7 +99,7 @@ def audit(repo:Path, manuscript:Path|None)->dict:
   required=["machine-only","fallible machine semantic judgments","no external human annotator"]
   for phrase in required:
    if phrase.lower() not in text.lower(): findings.append({"rule":"missing_machine_only_disclosure","phrase":phrase,"file":"MANUSCRIPT"})
- return {"schema":"ecm-tqag.machine-policy-audit.v1","audit_kind":"deterministic-string-and-boundary-check","semantic_validation":False,"checked_file_count":len(checked),"findings":findings,"status":"PASS" if not findings else "FAIL","repo_tree_digest":hashlib.sha256("\n".join(f"{x}\0{sha(repo/x)}" for x in checked if not x.startswith("/") and (repo/x).is_file()).encode()).hexdigest()}
+ return {"schema":"ecm-tqag.machine-policy-audit.v1","audit_kind":"deterministic-string-and-boundary-check","semantic_validation":False,"checked_file_count":len(checked),"findings":findings,"status":"PASS" if not findings else "FAIL","repo_tree_digest":hashlib.sha256("\n".join(f"{x}\0{sha(repo/x)}" for x in checked if not x.startswith("/") and (repo/x).is_file() and x != RECEIPT).encode()).hexdigest()}
 
 def main()->int:
  ap=argparse.ArgumentParser(); ap.add_argument("--repo",type=Path,default=Path(".")); ap.add_argument("--manuscript",type=Path); ap.add_argument("--output",type=Path)
