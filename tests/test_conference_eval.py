@@ -135,7 +135,7 @@ REAL_INVENTORY = ROOT.parent / "conference_eval/inventory_v1.json"
 
 @pytest.mark.skipif(
     not REAL_INVENTORY.is_file(),
-    reason="conference_eval/inventory_v1.json is a restricted Gate-1 inventory kept outside this public repository (see README section 9); this check runs only where that private input is present",
+    reason="conference_eval/inventory_v1.json is a restricted Gate-1 inventory kept outside this public repository (see README section 10); this check runs only where that private input is present",
 )
 def test_real_data_inventory_is_fail_closed():
     inventory = REAL_INVENTORY

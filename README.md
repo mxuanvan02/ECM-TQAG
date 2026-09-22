@@ -2,7 +2,7 @@
 
 **Evidence-first construction and structural audit of traceable multimodal textbook question-answering (TQA) items.**
 
-This repository is the reproducible **research-software artifact** for ECM-TQAG. It contains executable contracts, validators, deterministic receipt logic, a command-line runner, JSON Schemas, tests, documentation, and synthetic fixtures. It does **not** contain source textbooks, restricted page images, private experiment records, credentials, or manuscript files.
+This repository is the reproducible **research-software artifact** for ECM-TQAG. It contains executable contracts, validators, deterministic receipt logic, a command-line runner, JSON Schemas, tests, documentation, synthetic fixtures, and one directory of **derived** evaluation records ([`experiments/census_5arm_framef/records/`](experiments/census_5arm_framef/records/); see §10 for the boundary). It does **not** contain source textbooks, restricted page images, raw model outputs, credentials, or manuscript files.
 
 > **Scope.** The software verifies structural and provenance-recording invariants. A successful verification is not, by itself, evidence of legal or semantic correctness, pedagogical quality, distractor quality, or visual necessity.
 
@@ -329,6 +329,10 @@ artifacts/stage_a_model_evaluation/
                              De-identified Stage A ratings and reproducible model-family agreement summary
 artifacts/stage_b_model_evaluation/
                              De-identified Stage B trace ratings and reproducible agreement summary
+experiments/census_5arm_framef/
+                             Derived item-level records for the five-arm census,
+                             plus the verifier that recomputes every published
+                             quantity from them (see §10)
 ```
 
 ### Stage A and Stage B model-based evaluation artifacts
@@ -344,9 +348,35 @@ These are model-based protocol checks, not human/expert ratings, semantic valida
 
 ## 10. Reproducibility and data boundary
 
-The public release contains source code, schemas, documentation, and synthetic fixtures. It does not redistribute textbook PDFs, source-derived chunks, source images, historical model outputs, private experiment records, credentials, or deployment-specific endpoints. Users are responsible for obtaining permission before adding external material and for keeping restricted inputs and outputs outside public repositories.
+The public release contains source code, schemas, documentation, synthetic
+fixtures, and **derived evaluation records**. It does not redistribute textbook
+PDFs, source-derived chunks, source images, raw model outputs, credentials, or
+deployment-specific endpoints. Users are responsible for obtaining permission
+before adding external material and for keeping restricted inputs and outputs
+outside public repositories.
 
-The software checks structure and provenance completeness. Independent human or domain review is required for semantic/legal correctness, answer quality, educational usefulness, and visual-grounding claims.
+**The line is raw versus derived.** Published under
+[`experiments/census_5arm_framef/records/`](experiments/census_5arm_framef/records/)
+are item-level *decisions* — per `(chunk, arm)` gate verdicts, per-item graded
+correct/incorrect booleans for both ablation branches, and per-item ordinal rater
+scores. They are published deliberately, because the reported endpoints cannot be
+recomputed without them, and `verify_reported_quantities.py --check` recomputes
+all 119 of them from these files alone. What is *not* published is any string
+that carries source text: the verbatim quotation, the generated question, answer
+and visual-evidence text, the answerer's own response, rater rationales, page
+images, figure crops, and raw provider envelopes. Every removed field is listed in
+`records/protocol.json` under `fields_redacted` and in `MANIFEST.json` under
+`not_redistributed`. Consistent with that boundary, none of the eight record
+files contains a single Vietnamese-diacritic character; the builder that emitted
+them is documented as failing closed on that check, but the builder itself is not
+part of this release, so the guarantee is the released files as audited, not a
+build rule you can run here. See
+[`experiments/census_5arm_framef/RIGHTS_AND_LIMITATIONS.md`](experiments/census_5arm_framef/RIGHTS_AND_LIMITATIONS.md)
+for the full statement.
+
+The software checks structure and provenance completeness. Independent human or
+domain review is required for semantic/legal correctness, answer quality,
+educational usefulness, and visual-grounding claims.
 
 ## 11. Citation and license
 
