@@ -1,0 +1,777 @@
+{
+ "documents": {
+  "ablation_authorization": {
+   "document": {
+    "assistant_note": "454 calls, not the 450 stated in the pre-registration: the two declared-excluded items are still ATTEMPTED so their records exist, and are excluded from the graded denominator rather than from the call plan. The pre-registration's sensitivity analysis scores them correct in both branches regardless, so the extra records cannot change any endpoint; they cost about 0.004 USD.",
+    "budget_note": "this run is capped at 2.00 USD inside the owner's 10.00 grant; 0.670375 USD reported spent across all prior runs",
+    "call_cap": 454,
+    "gate_module_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828",
+    "granted_by": "owner (project principal), in-session",
+    "granted_utc": "2026-08-30T16:28:48Z",
+    "preregistration": "ROUND4_FRAMEF_ABLATION_PREREGISTRATION.json",
+    "preregistration_sha256": "15ea6979578a7a202ba845b06df5f0e16398b5ae8cab12e8987b67becabbe752",
+    "round": "round4_framef_ablation",
+    "schema": "ecm-tqag.round4.owner-authorization.v1",
+    "scope": "Text-only ablation over the 227 v1-admitted items of the frame-F census, two branches per item. Tests whether the items A2 admits actually need the figure, i.e. the construct validity of the A2 endpoint.",
+    "usd_hard_cap": 2.0
+   },
+   "sha256_of_sealed_file": "59fc04b3049177cd374cef53d86f9f197f0481ebb3e546060e5985be1f8be6fc",
+   "source_filename": "ablation_framef_20260831T020000Z/OWNER_AUTHORIZATION.json"
+  },
+  "ablation_preregistration": {
+   "document": {
+    "budget_and_stop_rules": {
+     "authorization_required": "the runner requires --usd-cap and an authorization naming round round4_framef_ablation whose cap equals it",
+     "budget_cap_behaviour": "remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending",
+     "calls_if_executed": 450
+    },
+    "created_utc": "2026-08-30T16:08:25Z",
+    "declared_exclusion_before_execution": {
+     "item_ids": [
+      "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::direct",
+      "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::structured_no_contract"
+     ],
+     "n_excluded": 2,
+     "rule": "a short-answer item whose gold answer folds to <= 2 characters is excluded",
+     "why": "such a gold is contained in almost any returned string, so the item auto-passes both branches under the containment rule and would enter as evidence that the figure was unnecessary. That is a generation defect read as a measurement."
+    },
+    "design": {
+     "answerer_model": "qwen/qwen3-vl-8b-instruct",
+     "branches": {
+      "TEXT": "the chunk's scoped evidence text plus the question. No image, no figure description, no declared quotation, no rationale.",
+      "TEXT_IMG": "the same text, the same question, plus the chunk's own figure crops"
+     },
+     "fallback": false,
+     "identical_between_branches": "prompt text, response schema, decoding settings. Only the image content blocks differ.",
+     "paired_within_item": true,
+     "retry": 0,
+     "temperature": 0,
+     "why_the_control_branch_is_required": "without TEXT_IMG a wrong answer under TEXT is ambiguous between 'the item needs the figure' and 'the item is unanswerable'",
+     "why_the_generator_answers_its_own_items": "it is the census generator, so the measurement is on the same model whose output was gated; a different answerer would confound answerer capability with figure dependence. Same choice as the sealed frame-C and frame-D ablations, retained for comparability."
+    },
+    "grading": {
+     "f1_threshold": 0.7,
+     "multiple_choice": "correct iff the returned option_index equals the recorded correct_option; no string heuristic, chance level 0.25",
+     "primary_rule": "symmetric word-F1 over accent- and case-folded content tokens; an answer is correct iff F1(returned, gold) >= 0.70",
+     "secondary_rule_reported_beside_it": "containment in either direction, the frame-D primary, reported for comparability only and carrying no claim here",
+     "why_the_rule_changed": {
+      "consequence_for_the_published_frame_d_number": "the frame-D ablation reported V*=0.4261 and exact McNemar p=0.0386 as evidence that figures were measurably necessary. Re-graded under symmetric word-F1 at eight thresholds from 0.50 to 0.90, NO threshold reproduces significance. That result is therefore a grading artefact and is corrected on the record here rather than left standing.",
+      "defect": "containment is lenient on substrings but STRICT on insertions: one inserted function word scores an otherwise identical answer wrong",
+      "example": "[redacted: source-derived text, see RIGHTS.md]",
+      "found_in": "the executed frame-D ablation",
+      "sensitivity_table_recomputed_on_the_sealed_frame_d_pairs": {
+       "containment_frame_d_primary": {
+        "p": 0.0386,
+        "v_star": 0.4261
+       },
+       "f1_0.50": {
+        "p": 0.7266,
+        "v_star": 0.287
+       },
+       "f1_0.60": {
+        "p": 0.1797,
+        "v_star": 0.383
+       },
+       "f1_0.65": {
+        "p": 0.2891,
+        "v_star": 0.426
+       },
+       "f1_0.70": {
+        "p": 1.0,
+        "v_star": 0.461
+       },
+       "f1_0.75": {
+        "p": 1.0,
+        "v_star": 0.504
+       },
+       "f1_0.80": {
+        "p": 0.6875,
+        "v_star": 0.53
+       },
+       "f1_0.90": {
+        "p": 0.125,
+        "v_star": 0.574
+       },
+       "n_pairs": 115
+      },
+      "why_0.70_and_not_the_threshold_with_the_smallest_p": "0.70 is the knee where a single inserted or dropped function word no longer flips a verdict, and it is chosen for that structural reason. Choosing the threshold with the smallest p-value would be the same defect in the opposite direction; all eight thresholds are reported as a sensitivity curve whatever the primary shows."
+     }
+    },
+    "inputs_bound_by_sha256": {
+     "census_run": "round4_framef_census_20260830T140000Z",
+     "frame_manifest": "experiment/dataset_framef/dataset_manifest_framef_20260830T122835Z.json",
+     "frame_manifest_sha256": "5e667745e7ba5b1989bdfd7cd2ba36bb84eca420062a0f693a2cd8f9d552d943",
+     "framef_preregistration": "prospective/v3103_round2/ROUND4_FRAMEF_PREREGISTRATION.json",
+     "framef_preregistration_sha256": "20695651ad624d370a908101a1039f6baddf5723cf99f07b064f7c3ca2832635",
+     "gate_module": "experiment/round2/ecm_v2_gates.py",
+     "gate_module_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828"
+    },
+    "items": {
+     "a2_split": {
+      "fail": 168,
+      "pass": 57
+     },
+     "a2_split_by_arm": {
+      "direct": {
+       "fail": 37,
+       "pass": 6
+      },
+      "ecm_full": {
+       "fail": 30,
+       "pass": 11
+      },
+      "ecm_v2": {
+       "fail": 26,
+       "pass": 24
+      },
+      "ecm_v2_disclosed": {
+       "fail": 38,
+       "pass": 10
+      },
+      "structured_no_contract": {
+       "fail": 37,
+       "pass": 6
+      }
+     },
+     "by_arm": {
+      "direct": 43,
+      "ecm_full": 41,
+      "ecm_v2": 50,
+      "ecm_v2_disclosed": 48,
+      "structured_no_contract": 43
+     },
+     "by_question_type": {
+      "multiple_choice": 30,
+      "short_answer": 195
+     },
+     "calls": 450,
+     "n_fixed_before_the_first_call": true,
+     "n_scored": 225,
+     "n_v1_admitted": 227,
+     "population": "every generation that passed the v1 gate in round4_framef_census_20260830T140000Z, across all five arms"
+    },
+    "power": {
+     "honest_limit": "the within-arm tables are small: outside ECM-v2 no arm has more than 11 A2-pass items, so within-arm comparisons are descriptive and carry no significance claim. Only the pooled table is powered, and only the pooled table carries the confound above.",
+     "n_a2_fail": 168,
+     "n_a2_pass": 57,
+     "n_scored": 225
+    },
+    "pre_committed_reporting": [
+     "Reported whatever it shows.",
+     "If A2-admitted items are more figure-dependent than A2-rejected ones, A2 has construct validity as a multimodality gate and the Frame-F result reads as intended.",
+     "If they are not, A2 is reported as a compliance gate: it measures whether the generator followed the division-of-labour instruction, not whether the resulting item needs the figure. The Frame-F contrasts stand as measured and their INTERPRETATION narrows.",
+     "If the pooled table separates but the within-arm tables do not, the result is reported as confounded with arm and not as gate validity.",
+     "The frame-D ablation's published V*=0.4261 / p=0.0386 is corrected on the record as a grading artefact, whatever this ablation shows.",
+     "No outcome licenses changing the gates, the frame, the census, or regenerating items."
+    ],
+    "primary_endpoint": {
+     "alpha": 0.05,
+     "confound_declared_now": "A2 status correlates with arm by construction: ECM-v2 supplies 24 of the 57 A2-pass items. The pooled test therefore cannot separate 'A2 selects figure-dependent items' from 'the ECM-v2 arm writes figure-dependent items'. Both readings are reported, and the WITHIN-ARM version of the same table is reported for every arm with enough items, which is the form that breaks the confound.",
+     "definition": "V*(i) = 1 - R_TEXT(i) is 1 when item i is NOT answerable from text alone. The endpoint is the difference in V* between the items A2 admitted and the items A2 rejected.",
+     "direction_not_assumed": "two-sided. A2-admitted items being LESS figure-dependent is a valid and reportable outcome, and would mean the gates select against the property they were built for.",
+     "n_a2_fail": 168,
+     "n_a2_pass": 57,
+     "name": "A2 construct validity",
+     "test": "Fisher exact two-sided on the 2x2 table of A2 status against V*, over all scored items pooled across arms",
+     "why_unpaired": "A2 status is a property of an item, not a condition applied to a chunk, so A2-pass and A2-fail items are different items and the comparison is unpaired. The paired quantity is reported separately as the branch contrast below."
+    },
+    "question_this_answers": "Frame F showed ECM-v2 raises A2 against every control. A2 is built from three gates that are PROXIES for multimodality: G6 is a structural relation between two returned fields, and G7/G8 are OCR-overlap tests with measured chance rates far above zero. This ablation asks whether the items A2 admits actually need the figure. If they do not, A2 measures prompt compliance rather than multimodality, and the Frame-F result must be restated as such.",
+    "schema": "ecm-tqag.round4.framef-ablation-preregistration.v1",
+    "secondary_endpoints": [
+     {
+      "confirmatory": false,
+      "definition": "Gamma(i) = R_TEXT_IMG(i) - R_TEXT(i); exact two-sided McNemar on the branch-discordant items",
+      "name": "branch contrast within items",
+      "why": "the paired form: does supplying the figure change the outcome"
+     },
+     {
+      "confirmatory": false,
+      "name": "V* and Gamma per arm",
+      "why": "shows whether any effect is arm-specific"
+     },
+     {
+      "confirmatory": false,
+      "name": "V* by A2 status WITHIN each arm",
+      "why": "the form that separates gate selection from arm effect; reported for every arm, with its n, however small"
+     },
+     {
+      "confirmatory": false,
+      "name": "the eight-threshold F1 sensitivity curve",
+      "why": "so no reader has to trust the single frozen threshold; the frame-D failure was invisible without exactly this"
+     },
+     {
+      "confirmatory": false,
+      "name": "PRIMARY_MCQ",
+      "why": "graded by option index alone, with no string heuristic"
+     }
+    ],
+    "status": "FROZEN, prospective. No paid call is authorised by this document; execution additionally requires an owner authorization naming an explicit USD cap.",
+    "what_would_make_this_record_invalid": [
+     "any paid call before this file is frozen and an authorization exists",
+     "editing the grading rule, the threshold, or the item set after the first call",
+     "reporting the pooled table without the within-arm tables beside it",
+     "presenting the frame-D correction as anything other than a correction"
+    ],
+    "why_this_is_not_a_second_chance_at_the_frame_f_result": "The Frame-F census is sealed and is NOT re-analysed by this record. A2 rates, the confirmatory family and its Holm flags stand as reported whatever this ablation shows. What is at stake here is the INTERPRETATION of A2, not its measured values."
+   },
+   "sha256_of_sealed_file": "15ea6979578a7a202ba845b06df5f0e16398b5ae8cab12e8987b67becabbe752",
+   "source_filename": "ROUND4_FRAMEF_ABLATION_PREREGISTRATION.json"
+  },
+  "census_authorization": {
+   "document": {
+    "assistant_note": "Judges are the two families frozen since round 2c (claude-opus-5, gpt-5.6-sol), both on omniproxy as the owner asked. The generator route is unchanged and is not on omniproxy; addendum section 3 freezes it, so no substitution was made.",
+    "budget_note": "Spent so far on this line across the frame-D census, the frame-D ablation and the frame-E census: 0.43976 USD against the owner's standing 10.00 grant. Frame F is projected near 0.15 USD at the measured per-call rate; if the cap would bind, remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending.",
+    "call_cap": 900,
+    "gate_module": "experiment/round2/ecm_v2_gates.py",
+    "gate_module_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828",
+    "granted_by": "project owner (chat)",
+    "granted_utc": "2026-08-30T12:59:03Z",
+    "preregistration": "prospective/v3103_round2/ROUND4_FRAMEF_PREREGISTRATION.json",
+    "preregistration_sha256": "20695651ad624d370a908101a1039f6baddf5723cf99f07b064f7c3ca2832635",
+    "prompt_module": "experiment/round2/ecm_v2_prompt.py",
+    "prompt_module_sha256": "689ec92df45c3afc8dae47be2b8de00b0e149319a3ba9ae1749f4d4f948da467",
+    "round": "round4_framef",
+    "schema": "ecm-tqag.round4.owner-authorization.v1",
+    "scope": "Frame F: 60 role-conditioned section chunks x 5 arms (ecm_v2, ecm_v2_disclosed, ecm_full, direct, structured_no_contract) x (1 generation + 2 judge calls) = 900 calls. Zero retry, no fallback. Primary endpoint A2 = v1 admission AND the three ECM-v2 gates.",
+    "usd_hard_cap": 10.0
+   },
+   "sha256_of_sealed_file": "498ce0e2fc0490d509e9144d8c3bd8ad5aa01d57a5902fc17e84f9f43eeb2034",
+   "source_filename": "round4_framef_census_20260830T140000Z/OWNER_AUTHORIZATION.json"
+  },
+  "census_preregistration": {
+   "document": {
+    "arms": {
+     "carried_unchanged": [
+      "ecm_full",
+      "direct",
+      "structured_no_contract"
+     ],
+     "length_match": {
+      "ecm_v2_vs_its_disclosure_control": 35,
+      "what_differs_between_them": "ONLY the ordering clauses. The control names the same division of labour, states G6/G7/G8 verbatim, and carries the same role guidance, but leaves the order of work free: no figure-first step, no answer-first plan, no seal.",
+      "why": "prompt length is a confound: a longer prompt could raise admission by attention alone. The reported census handles this with a disclosure control at matched length, and Frame F reproduces that design."
+     },
+     "list": [
+      "ecm_v2",
+      "ecm_v2_disclosed",
+      "ecm_full",
+      "direct",
+      "structured_no_contract"
+     ],
+     "new_in_frame_f": [
+      "ecm_v2",
+      "ecm_v2_disclosed"
+     ],
+     "paired": "every chunk is attempted by all five arms, so each chunk is its own control and only the prompt varies",
+     "prompt_lengths_chars": {
+      "ecm_v2": {
+       "system": 1487,
+       "total": 2056,
+       "user_template": 569
+      },
+      "ecm_v2_disclosed": {
+       "system": 1528,
+       "total": 2091,
+       "user_template": 563
+      }
+     },
+     "why_ecm_v2_is_a_new_arm_not_an_edited_prompt": "official/PROMPT_SCHEMA_CONTRACT.json and the frozen ARMS tuple are audit-bound and are not modified; ECM-v2 ships a local prompt and a local request builder, as round2c_routes did for judge routes."
+    },
+    "budget_and_stop_rules": {
+     "authorization_required": "the runner requires --usd-cap and an authorization naming round round4_framef whose cap equals it; without both it makes no call",
+     "budget_cap_behaviour": "remaining tasks are recorded NOT_ATTEMPTED:budget_cap rather than overspending",
+     "calls_if_executed": 900,
+     "generation_calls": 300,
+     "judge_calls": 600,
+     "spend_so_far_on_this_line_usd": 0.43976
+    },
+    "created_utc": "2026-08-30T12:31:15Z",
+    "frame": {
+     "documents": 13,
+     "evidence_span": "the section's own lines on its figure-bearing pages, unchanged from Frame E",
+     "figure_role_rule": "kind of the largest region by area on the unit's figure-bearing pages, from the section builder's own regions[].kind; nothing re-detected",
+     "figure_roles": {
+      "pictorial": 24,
+      "table": 36
+     },
+     "manifest": "experiment/dataset_framef/dataset_manifest_framef_20260830T122835Z.json",
+     "manifest_schema": "ecm-tqag.multimodal-inputs.v4-work24",
+     "manifest_sha256": "5e667745e7ba5b1989bdfd7cd2ba36bb84eca420062a0f693a2cd8f9d552d943",
+     "mixed_role_chunks": {
+      "chunk_ids": [
+       "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+       "frameF::T13_r13_p1_04::s0023_dec_3",
+       "frameF::T13_r13_p1_04::s0106_alpha_b",
+       "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+       "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4"
+      ],
+      "n": 5,
+      "why_declared": "five chunks carry more than one figure kind; the largest-area rule assigns one role and the choice is recorded per package in figure_role_provenance"
+     },
+     "n": 60,
+     "n_is_fixed_before_the_first_call": true,
+     "name": "F_hul_law_textbook_sections_role_conditioned",
+     "question_types": {
+      "multiple_choice": 10,
+      "short_answer": 50
+     },
+     "source_concentration": {
+      "top1_chunks": 21,
+      "top1_doc": "T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat",
+      "top1_share": 0.35
+     },
+     "span_chars": {
+      "max": 7634,
+      "median": 1571,
+      "min": 212
+     },
+     "unit_of_analysis": "one section of a law textbook (unchanged)"
+    },
+    "gate_validity_stated_before_execution": {
+     "consequence_for_interpretation": "G7 and G8 are corroborating, not decisive. A result that depends on them rather than on G6 must be reported as such, and the per-gate pass rates are reported for every arm so a reader can see which gate carried the contrast.",
+     "g6_is_load_bearing": "a structural relation between two returned fields; no external reference, no chance baseline",
+     "g7_g8_are_weak_and_measured": {
+      "g7_answer_meets_figure": {
+       "1_word": {
+        "chance_mean": 0.627,
+        "chance_p95": 0.677,
+        "observed": 0.828
+       },
+       "2_words": {
+        "chance_mean": 0.457,
+        "chance_p95": 0.508,
+        "observed": 0.766
+       },
+       "3_words": {
+        "chance_mean": 0.343,
+        "chance_p95": 0.394,
+        "observed": 0.672
+       }
+      },
+      "g8_description_meets_figure": {
+       "3_words": {
+        "chance_mean": 0.518,
+        "chance_p95": 0.565,
+        "observed": 0.852
+       },
+       "5_words": {
+        "chance_mean": 0.366,
+        "chance_p95": 0.409,
+        "observed": 0.758
+       }
+      },
+      "method": "400 permutations pairing each item with another chunk's figure lettering; frame-E admitted items, n=128",
+      "rejected_variant_answer_meets_surplus_only": {
+       "chance_mean": 0.032,
+       "chance_p95": 0.056,
+       "observed": 0.023,
+       "why_rejected": "below chance; 26 of 60 frame-E chunks carry no figure lettering absent from the prose, so the gate would reject items for a corpus property"
+      }
+     },
+     "rejected_stricter_variant": {
+      "chance_mean": 0.032,
+      "chance_p95": 0.056,
+      "observed": 0.023,
+      "why_rejected": "below chance; 26 of 60 frame-E chunks carry no figure lettering absent from the prose, so the gate would reject items for a corpus property"
+     }
+    },
+    "inputs_bound_by_sha256": {
+     "dataset_quality_report_sha256": "4208f94043a837fecaf7d9e67d8b4e8341b521d579f9f0673046d88b4bec08e3",
+     "ecm_v2_gates_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828",
+     "ecm_v2_prompt_sha256": "689ec92df45c3afc8dae47be2b8de00b0e149319a3ba9ae1749f4d4f948da467",
+     "frame_d_census_report_sha256": "a6ac01516ec2831adb8d03af566a83d8956a6c9d590b0fb47e51c3f24f20b2d7",
+     "frame_d_manifest_sha256": "2aca4def1d411097ca0917e4398f3bf7ec3c03441aa97ecd71b00b48f56594a2",
+     "frame_e_census_report_sha256": "93c2660d2fa2425cc2491d3e30b9dab0a78e40bec8bd03bd072ddfa4b8823c38",
+     "frame_e_manifest_sha256": "051db6ac66e09ece70d71391068f32893a76a1fd1186c563b3d24146e78dec52",
+     "frame_e_preregistration_sha256": "000cf1cd50dc190c221880442aa73cdb7dc77c77c91a54cf645f132418eeb024",
+     "frame_f_manifest": "experiment/dataset_framef/dataset_manifest_framef_20260830T122835Z.json",
+     "frame_f_manifest_sha256": "5e667745e7ba5b1989bdfd7cd2ba36bb84eca420062a0f693a2cd8f9d552d943",
+     "parent_addendum_sha256": "fea9078d43ee5ac32578233805425a83f1453f6fce374c9baf77687e4e9b3dfb"
+    },
+    "planned_ablation": {
+     "grading_defect_to_fix_first": {
+      "consequence": "the Frame-D ablation result does not survive its own sensitivity analysis and is reported that way; any Frame-F ablation must pre-register a grading rule that is symmetric to insertion",
+      "defect": "the frozen containment rule is lenient on substrings but STRICT on insertions, so an answer differing by one inserted function word scores wrong. Three of the ten figure-attributable items were of that shape.",
+      "found_in": "the executed Frame-D ablation",
+      "sensitivity_already_measured": {
+       "containment_preregistered": {
+        "mcnemar_p": 0.0386,
+        "v_star": 0.4261
+       },
+       "word_f1_ge_0.60": {
+        "mcnemar_p": 1.0,
+        "v_star": 0.2696
+       },
+       "word_f1_ge_0.70": {
+        "mcnemar_p": 0.3877,
+        "v_star": 0.3217
+       }
+      }
+     },
+     "status": "declared here so the comparison cannot be assembled after the fact; the ablation needs its own authorization",
+     "what": "a text-only ablation on the Frame-F admitted items, identical in design to the executed Frame-D ablation"
+    },
+    "power": {
+     "consequence": "n=60 clears the addendum floor of 40 and its target of 46, so the floor clause does not apply and Holm rejection flags are live.",
+     "floor": 40,
+     "honest_limit": "the family has four contrasts, so the Holm-first threshold is 0.0125 and needs 8 unidirectional discordant chunks. A null on the later contrasts is not evidence of no effect.",
+     "n": 60,
+     "reaches_floor": true,
+     "reaches_target": true,
+     "target": 46
+    },
+    "pre_committed_reporting": [
+     "Reported whatever it shows.",
+     "If ECM-v2 separates from ecm_full on A2, the claim becomes: making the division of labour a checked condition rather than a requested property is what produces multimodal items, on this corpus.",
+     "If ECM-v2 separates from the baselines but NOT from its length-matched disclosure control, the honest claim is that stating the conditions suffices and fixing the construction order adds nothing measurable. That is weaker and it is what gets written.",
+     "If ECM-v2 does not separate at all, the reported contribution of the method narrows to the provenance result that reproduced across frames C, D and E, and the paper says the multimodal claim was not established on this corpus.",
+     "If A2 is near zero in every arm, that is reported as the corpus being unable to support figure-answered items at this granularity, with the per-gate rates showing which condition was binding.",
+     "Any result that rests on G7/G8 rather than G6 is reported with the chance baselines beside it.",
+     "No outcome licenses relaxing a v1 gate, changing rule 4, or regenerating items."
+    ],
+    "pre_registered_strata": {
+     "figure_role": {
+      "definition": "the role assigned by the largest-area rule",
+      "reads_on": "whether the effect depends on figure kind. On frame D the measured visual gain sat entirely in vector-rendered regions, i.e. tables and drawings, which contradicts the intuition that tables are uninformative.",
+      "sizes": {
+       "pictorial": 24,
+       "table": 36
+      }
+     },
+     "question_type": {
+      "definition": "the frozen question-type assignment",
+      "reads_on": "multiple-choice items are graded without any string heuristic, so they are the cleanest subset",
+      "sizes": {
+       "multiple_choice": 10,
+       "short_answer": 50
+      }
+     },
+     "stratum_tests_are_descriptive": "no stratum reaches the floor of 40; stratum contrasts are reported with discordance counts and carry no significance claim",
+     "why_fixed_now": "membership is fixed before execution so no split can be chosen after seeing the numbers"
+    },
+    "primary_endpoint": {
+     "decision_rule": {
+      "min_unidirectional_discordance_to_reject_first": 8,
+      "note": "with fewer unidirectional discordant chunks than that, the first contrast cannot be declared significant whatever the split looks like",
+      "smallest_family_alpha": 0.0125
+     },
+     "definition": "A2(c,a) = 1 iff the item passes ALL v1 gates AND the three ECM-v2 gates. No v1 condition is relaxed: A2 is a strict subset of v1 admission.",
+     "direction_not_assumed": "two-sided; a control beating ECM-v2 is a valid, reportable outcome",
+     "family": [
+      "ecm_v2_vs_ecm_full",
+      "ecm_v2_vs_ecm_v2_disclosed",
+      "ecm_v2_vs_direct",
+      "ecm_v2_vs_structured_no_contract"
+     ],
+     "gate_module": "experiment/round2/ecm_v2_gates.py",
+     "gate_module_sha256": "7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828",
+     "gates": {
+      "g6_answer_not_in_quote": "the normalised answer is not a case-insensitive substring of the normalised quotation",
+      "g7_answer_meets_figure": ">= 2 content words of the answer occur in the recognised lettering of the chunk's figures",
+      "g8_description_meets_figure": ">= 3 content words of visual_evidence.description occur in that lettering"
+     },
+     "holm_thresholds": {
+      "rank_1": 0.0125,
+      "rank_2": 0.016667,
+      "rank_3": 0.025,
+      "rank_4": 0.05
+     },
+     "name": "A2 -- multimodal admission",
+     "test": "paired two-sided exact McNemar on discordant chunks, one contrast per control arm, Holm step-down at family-wise alpha 0.05"
+    },
+    "schema": "ecm-tqag.round4.framef-preregistration.v1",
+    "secondary_endpoints": [
+     {
+      "confirmatory": false,
+      "name": "v1 admission A",
+      "why": "ECM-v2 must not buy multimodality by breaking provenance. A is reported per arm with Clopper-Pearson intervals and paired contrasts, exactly as in frames C-E."
+     },
+     {
+      "confirmatory": false,
+      "name": "per-gate pass rates G6, G7, G8 per arm",
+      "why": "shows which gate carries any contrast"
+     },
+     {
+      "confirmatory": false,
+      "name": "quotation provenance taxonomy",
+      "why": "the one endpoint that reproduced across frames C, D and E: share of non-reproducing quotations traced to the image channel, per arm, counted strictly (a distinctive figure word absent from the prose)"
+     },
+     {
+      "confirmatory": false,
+      "name": "judged endpoints V and M with all three pooling rules",
+      "why": "as the parent addendum fixes them; unchanged"
+     },
+     {
+      "confirmatory": false,
+      "name": "the four other judged vectors, unaveraged, per arm",
+      "why": "addendum section 2.1 item 4"
+     },
+     {
+      "confirmatory": false,
+      "name": "judge-record completeness per arm",
+      "why": "addendum section 2.1 item 5"
+     }
+    ],
+    "status": "FROZEN, prospective. No paid call is authorised by this document; execution additionally requires an owner authorization naming an explicit USD cap.",
+    "the_defect_this_addresses": {
+     "finding": "five of the v1 contract's nine clauses have a mechanical gate; the four without one are exactly the multimodal clauses (the question must need the image, the answer must be supported by both channels, ANSWER-FIRST, SEAL)",
+     "found_by": "a clause-by-clause audit of the v1 contract against the v1 gate",
+     "measured_consequence": {
+      "admitted_items_whose_quotation_already_contains_the_whole_answer": {
+       "frame_d_full_section": "70 of 120 = 0.583",
+       "frame_e_figure_scoped": "101 of 128 = 0.789"
+      },
+      "why_that_matters": "such an item is answerable by reading the quotation alone, so the image is decorative and its hash a formality"
+     },
+     "why_the_earlier_nulls_follow": "the instrument enforced provenance and reported multimodality. The provenance endpoint reproduced across frames C, D and E (no image-channel quotation under the contract); every multimodal endpoint returned null. Frame F changes what is enforced."
+    },
+    "this_is_not_independent_replication": {
+     "consequence": "A positive result licenses the claim that ECM-v2 discriminates on THIS corpus at section granularity with figure-scoped spans. It does not license a general claim; that needs a fresh frame.",
+     "frames_not_re_analysed": [
+      "C",
+      "D",
+      "E"
+     ],
+     "share_of_frame_f_also_in_frame_e": 1.0,
+     "units_shared_with_frame_e": 60,
+     "why_stated_first": "Frame F re-uses the same 60 units as Frame E, after Frame E's null was seen. This is a method-development experiment on the same corpus, not independent confirmation, and the record fixes that reading before any number exists."
+    },
+    "what_does_not_change": {
+     "discipline": "zero retry, no fallback, run lock, per-task O_EXCL claim, ITT accounting",
+     "evidence_bundle": "identical bytes and identical evidence digest across all five arms, verified offline",
+     "figure_text_channel": "evidence.figure_text is NOT in any prompt payload and is not quotable as prose; it is read only by G7/G8 as a reference",
+     "generator": "qwen/qwen3-vl-8b-instruct",
+     "judgement_schema": "the frozen seven-field schema",
+     "judges": [
+      "claude-opus-5",
+      "gpt-5.6-sol"
+     ],
+     "rule_4": "frozen thresholds, already applied to the scoped spans",
+     "v1_gates": "the round-2 repaired gate, byte-identical code"
+    },
+    "what_this_is": "Frame F tests ECM-v2: an evidence contract that requires the two channels to DIVIDE LABOUR -- the text quotation establishes what the question is about, the figure supplies what the question asks for -- together with three mechanical gates that check exactly that, and a prompt that states them. The corpus, the unit of analysis and the evidence spans are unchanged from Frame E.",
+    "what_would_make_this_record_invalid": [
+     "any paid call before this file is frozen and an authorization exists",
+     "editing n, the arms, the gates, the thresholds or either stratum after the first call",
+     "modifying the v1 gate, the judges, rule 4 or the evidence bundle",
+     "reporting Frame F without the Frame-D and Frame-E results beside it",
+     "presenting Frame F as independent replication"
+    ]
+   },
+   "sha256_of_sealed_file": "20695651ad624d370a908101a1039f6baddf5723cf99f07b064f7c3ca2832635",
+   "source_filename": "ROUND4_FRAMEF_PREREGISTRATION.json"
+  },
+  "independent_answerer_authorization": {
+   "document": {
+    "assistant_note": "454 calls = 225 scored items x 2 branches, plus the 2 declared-excluded items x 2 branches so their records exist, and 0 spare. Zero retry, no fallback, one call per cell. max_tokens is raised from the sealed 512 to 4096 for this answerer only, declared in the pre-registration: the probe measured ~1125 completion tokens for a two-line answer because reasoning tokens count against the completion budget, so the sealed ceiling would truncate mid-JSON in a way correlated with question difficulty. finish_reason is recorded per call and any 'length' outcome is reported and excluded from the graded denominator.",
+    "budget_note": "the local gateway does not report per-call cost in usage, so spend cannot be metered from responses. The owner has stated the gateway is not cost-limited; the run is therefore bounded by the hard CALL cap of 454, and the usd_hard_cap field is retained only to satisfy the sealed runner's authorization check.",
+    "call_cap": 454,
+    "granted_by": "owner (project principal), in-session",
+    "granted_utc": "2026-08-31T14:00:00Z",
+    "preregistration": "SECONDARY_ANSWERER_ABLATION_PREREGISTRATION.json",
+    "preregistration_sha256": "dda1cdcc4e62ec301edf0438c285bbe5e15c07cb3b63c2813ba76b8cddd1e608",
+    "round": "ablation_secondary_answerer",
+    "schema": "ecm-tqag.round4.owner-authorization.v1",
+    "scope": "Re-run the sealed frame-F ablation (227 admitted items x 2 branches) with gemini-3.5-flash as an independent answerer, over the local omniproxy gateway. Tests whether the construct-validity endpoint survives when the answerer is not the model that wrote the items. The generator-answered run is NOT re-executed and NOT modified.",
+    "usd_hard_cap": 10.0
+   },
+   "sha256_of_sealed_file": "78ab3377321f3b754821a8b6b3f482c742c0ae99446d448a323bdf2015d99897",
+   "source_filename": "ablation_secondary_answerer_20260831T140000Z/OWNER_AUTHORIZATION.json"
+  },
+  "independent_answerer_preregistration": {
+   "document": {
+    "answerer": {
+     "family": "Google",
+     "model": "gemini-3.5-flash",
+     "route": "omniproxy, local gateway",
+     "vision_verified_empirically": {
+      "crop_sha256": "76cf82d0a078dfefbb704d734712f8414c93fb0005fc1a64321c5d65142a9770",
+      "models_rejected_by_the_probe": {
+       "deepseek-v4-pro": "returned NO_IMAGE_RECEIVED",
+       "gemini-3.1-pro-preview": "returned a truncated fragment rather than an answer",
+       "glm-5.3": "HTTP 500, upstream route timeout",
+       "kimi-k3": "HTTP 500, upstream route timeout"
+      },
+      "probe": "audit/VISION_PROBE.json",
+      "result": "the model read facts printed only inside the figure crop (parcel 82, map sheet 28, 579.400.000 dong), so it accepts image input and the text_image branch is measurable",
+      "why": "the gateway catalogue reports vision:false for this model, which is metadata from a proxy and not evidence about the upstream model"
+     },
+     "why_a_strong_model": "V* is a NEGATIVE claim ('this information is not in the text'). A weak answerer that fails proves nothing, because it confounds 'needs the figure' with 'reader too weak'. A strong answerer that still fails is evidence the information genuinely is not there, so a strong model yields the conservative lower bound on V*.",
+     "why_this_family": "it is neither the generator family (Qwen) nor either judge family (Anthropic claude-opus-5, OpenAI gpt-5.6-sol). Using a judge family as answerer would make the measured-necessity and rated-necessity endpoints share a model, which would destroy the rated-vs-measured divergence comparison the manuscript reports."
+    },
+    "budget_and_stop_rules": {
+     "authorization_required": "the runner requires an owner authorization whose call cap equals the runner's cap and whose preregistration_sha256 equals this file's digest",
+     "budget_cap_behaviour": "remaining tasks are recorded NOT_ATTEMPTED rather than exceeding the call cap",
+     "calls_if_executed": 454,
+     "cost_visibility": "the local gateway does not report per-call cost in usage, so spend cannot be metered from responses; the run is bounded by a hard CALL cap instead, and the owner has stated the gateway is not cost-limited"
+    },
+    "created_utc": "2026-08-31T05:20:00Z",
+    "declared_after_seeing_the_first_result": {
+     "acknowledged": true,
+     "pre_committed_failure_threshold": "If the Fisher exact two-sided test on the A2-status-by-V* table does NOT reach p <= 0.05 at the primary F1 threshold of 0.70 under this independent answerer, the manuscript must state that construct validity is established only with the generator as answerer, and must not present the pooled or within-arm direction as evidence of multimodality. The reverse reading is forbidden by this record.",
+     "who_fixed_it": "declared in-session before execution, with the owner's explicit agreement to the threshold",
+     "why_this_is_still_admissible": "the endpoint, the population, the grading rule and the test are all inherited unchanged from the sealed record; the only new degree of freedom is the identity of the answerer, and that is fixed by this document before the first call"
+    },
+    "declared_deviation_from_the_sealed_runner": {
+     "everything_else_identical": "prompt text, system message, response schema, temperature 0, zero retry, no fallback, per-item pairing, the two branches, and the image bytes with their hash re-verification",
+     "how_truncation_is_caught_anyway": "finish_reason is recorded per call and reported. Any call with finish_reason='length' is reported and excluded from the graded denominator as a declared instrument failure, not silently graded wrong.",
+     "what": "max_tokens is raised from 512 to 4096 for this answerer only",
+     "why": "the probe shows this model spends ~1125 completion tokens producing a two-line answer, because reasoning tokens are counted against the completion budget. At 512 the model would be cut off mid-JSON and the call would be recorded UNDECODABLE, which would destroy most of the run and, worse, would do so in a way correlated with question difficulty.",
+     "why_this_cannot_bias_the_endpoint": "max_tokens bounds only the length of the returned answer object; the schema requires a single short 'answer' string or one integer option_index. Raising a ceiling that the sealed answerer never approached does not change what either answerer is asked."
+    },
+    "design": {
+     "branches": {
+      "text_image": "identical payload plus the chunk's own figure crops, bytes and sha256 re-verified against the frame manifest",
+      "text_only": "recognised text of the chunk, question, options if any. No image."
+     },
+     "fallback": false,
+     "paired_within_item": true,
+     "retry": 0,
+     "temperature": 0,
+     "withheld_from_the_answerer": "the recorded answer, the declared quotation, the rationale, the arm label, and the admission status"
+    },
+    "grading": {
+     "f1_threshold": 0.7,
+     "imported_not_reimplemented": "the grading functions are imported from the sealed runner module so the two answerers cannot be graded by different code",
+     "multiple_choice": "correct iff the returned option_index equals the recorded correct_option; no string heuristic, chance level 0.25",
+     "primary_rule": "symmetric word-F1 over accent- and case-folded content tokens; an answer is correct iff F1(returned, gold) >= 0.70",
+     "threshold_curve_reported": "every endpoint is additionally reported at eight thresholds from 0.50 to 0.90, so no claim can rest on where the threshold sits"
+    },
+    "inputs_bound_by_sha256": {
+     "census_run": "round4_framef_census_20260830T140000Z",
+     "frame_manifest": "experiment/dataset_framef/dataset_manifest_framef_20260830T122835Z.json",
+     "frame_manifest_sha256": "5e667745e7ba5b1989bdfd7cd2ba36bb84eca420062a0f693a2cd8f9d552d943",
+     "sealed_ablation_preregistration_sha256": "15ea6979578a7a202ba845b06df5f0e16398b5ae8cab12e8987b67becabbe752",
+     "sealed_ablation_run": "ablation_framef_20260831T020000Z",
+     "vision_probe": "audit/VISION_PROBE.json"
+    },
+    "items": {
+     "call_arithmetic": "227 items x 2 branches = 454",
+     "calls": 454,
+     "declared_exclusion_inherited": "the same two short-answer items whose gold answer folds to at most two characters are excluded from the graded denominator; they are still attempted so their records exist",
+     "n_provenance_admitted": 227,
+     "n_scored": 225,
+     "population": "identical to the sealed ablation: every generation that passed the five provenance conditions in round4_framef_census_20260830T140000Z, across all five arms"
+    },
+    "pre_committed_reporting": [
+     "both answerers are reported for every endpoint; neither is dropped for being unfavourable",
+     "if the two answerers disagree in direction, the manuscript reports the disagreement and weakens the claim accordingly",
+     "finish_reason='length' counts are reported per branch",
+     "the number of calls, terminal failures and NOT_ATTEMPTED records is reported"
+    ],
+    "primary_endpoint": {
+     "alpha": 0.05,
+     "comparison_to_the_sealed_result": "reported side by side with the generator-answered table (33/57=0.58 against 64/168=0.38, p=0.013). Agreement between answerers is the evidence that the self-consistency confound is not what produced the result; disagreement is reported as a limit on the claim.",
+     "definition": "V*(i) = 1 - R_text(i) is 1 when item i is NOT answerable from text alone. The endpoint is the difference in V* between admitted items and items the three division-of-labour conditions reject.",
+     "direction_not_assumed": "two-sided. Admitted items being LESS figure-dependent under an independent answerer is a valid and reportable outcome, and would mean the conditions select against the property they name.",
+     "name": "construct validity of admission, re-measured with an independent answerer",
+     "test": "Fisher exact two-sided on the 2x2 table of admission status against V*, over all scored items pooled across arms"
+    },
+    "question_this_answers": "The reported ablation was answered by the census generator itself (qwen3-vl-8b-instruct), so every V* value admits two readings: the information genuinely is not in the text channel, or this one model happened to recover (or fail to recover) its own intent for reasons unrelated to the text. The direction of that bias cannot be settled by argument: a generator may find its own answer easier to reconstruct (inflating R_txt, deflating V*), or it may have deliberately placed the answer in the figure and therefore never read the prose (deflating R_txt, inflating V*). This record measures it with an answerer from a fourth model family.",
+    "schema": "ecm-tqag.round4.secondary-answerer-ablation-preregistration.v1",
+    "secondary_endpoints": [
+     "paired branch contrast Gamma = R_image - R_text over the scored items, exact McNemar, reported beside the sealed run's b=16/d=8/p=0.15",
+     "within-arm V* by admission status for all five arms, descriptive only, no significance claim",
+     "multiple-choice subset answered from text alone, reported beside the sealed run's 28 of 30",
+     "per-answerer agreement: the item-level concordance between the two answerers on R_text, which bounds how much of V* is answerer-specific"
+    ],
+    "status": "FROZEN, prospective. No paid call is authorised by this document; execution additionally requires an owner authorization naming this record by sha256.",
+    "what_this_does_not_do": "The reported ablation is sealed and is NOT re-analysed, re-graded or replaced. Its records, its Fisher table and its branch contrast stand exactly as reported. This is an additional independent measurement of the same endpoint, reported beside the first, not instead of it.",
+    "what_would_make_this_record_invalid": [
+     "changing the answerer model after the first call",
+     "changing the F1 threshold or the grading code after seeing any result",
+     "re-grading or re-analysing the sealed ablation",
+     "reporting only the answerer that agrees with the sealed result",
+     "interpreting a null under this answerer as anything other than the pre-committed failure threshold above"
+    ]
+   },
+   "sha256_of_sealed_file": "dda1cdcc4e62ec301edf0438c285bbe5e15c07cb3b63c2813ba76b8cddd1e608",
+   "source_filename": "SECONDARY_ANSWERER_ABLATION_PREREGISTRATION.json"
+  },
+  "route_deviation": {
+   "document": {
+    "alternatives_examined_and_rejected": {
+     "glm-5.3": "read the figure but misread the counterclaim amount as 1.158.800.000 instead of 579.400.000, exactly double. It sees the image but reasons wrongly about it, which is disqualifying for an endpoint that measures figure dependence.",
+     "kimi-k3": "the only omniproxy candidate that both returned bare json and read all three figure-only facts correctly. Rejected on route stability: it timed out on 3 of 4 attempts today, and a discriminating probe designed to prove whether the schema was actually enforced (same prompt with and without response_format) returned no result on both arms, so enforcement could not be established.",
+     "method": "12 models across 10 families were probed on omniproxy with the sealed runner's exact multiple-choice json_schema; probes ran outside the ledger and spent no cap token",
+     "raw_probe_outputs_not_retained": "the 12-model family sweep ran as ad-hoc non-ledger calls and its raw responses were NOT saved to a file; only the per-model verdicts summarised in this record survive. That is a gap in the audit trail: the verdicts here cannot be recomputed from stored bytes, unlike every ledger-backed call. An earlier version of this record cited audit/OMNIPROXY_FAMILY_SCHEMA_PROBE.json, which was never written.",
+     "rejected_for_shape": {
+      "MiniMax-M2.5": "not bare json",
+      "MiniMax-M3": "not bare json",
+      "deepseek-v4-flash": "wrong or extra keys",
+      "gemini-3.7-flash": "markdown-fenced",
+      "glm-4.6v-flash": "wrong or extra keys",
+      "grok-4.6": "returned {answer: 1} instead of option_index, 997 completion tokens"
+     },
+     "rejected_for_transport": [
+      "deepseek-v4-pro",
+      "doubao-seed-2-0-pro",
+      "mimo-v2.5-pro",
+      "nemotron-vision"
+     ],
+     "residual_uncertainty": "for glm-5.3 and kimi-k3 the mechanism evidence (response_format absent from the omniproxy request path) and the behavioural evidence (bare json returned) point in opposite directions. The discriminating probe was inconclusive due to timeouts, so it remains unresolved whether those two models were schema-constrained or merely well-behaved. This is why neither was adopted.",
+     "returned_bare_json": [
+      "glm-5.3",
+      "kimi-k3"
+     ]
+    },
+    "cost_accounting": {
+     "authorization_usd_hard_cap": 10.0,
+     "basis": "usage x published per-token price, computed by the runner and labelled cost_usd_derived. The provider returns no per-call cost field on this path, so no figure here is a provider quote.",
+     "correction_to_the_authorization_record": "OWNER_AUTHORIZATION.json states the gateway does not report cost so spend cannot be metered. The first half is wrong: omniproxy does compute realCost from a pricing table. The conclusion held for a different reason: gemini-3.5-flash has no pricing entry there, so realCost would have returned 0, and that 0 means 'unpriced', not 'free'. On OpenRouter the model is priced, so spend is computable.",
+     "estimate_454_calls_usd": {
+      "expected_if_schema_enforced": 2.31,
+      "worst_case_from_pilot_token_counts": 8.7
+     },
+     "price_completion_usd_per_token": 9e-06,
+     "price_prompt_usd_per_token": 1.5e-06,
+     "probe_calls_outside_the_authorised_454": "roughly 16 calls on omniproxy, unpriced and therefore not costed, plus 1 OpenRouter call at about USD 0.003. Disclosed rather than absorbed."
+    },
+    "declared_by": "assistant, with the owner's explicit in-session approval",
+    "declared_utc": "2026-08-31T12:00:00Z",
+    "evidence": [
+     "audit/ROUTE_SCHEMA_PROBE.json",
+     "audit/VISION_PROBE_RETRY.json",
+     "audit/SCHEMA_ENFORCEMENT_DISCRIMINATING_PROBE.json"
+    ],
+    "owner_approval_verbatim": "ok e lam di",
+    "pilot_records_removed": {
+     "backup": "audit/pilot_omniproxy_failed_20260831/",
+     "ledger_left_intact": "experiment/runs/ablation_secondary_answerer_20260831T140000Z/ledger.jsonl still contains all 4 pilot records, so the failed attempt stays on the record",
+     "what": "2 task records and 2 claim files from the failed omniproxy pilot",
+     "why": "the ledger permits a re-run because provider is part of the idempotency key, but the task and claim files are keyed on task_id alone. Leaving them would make those 2 cells count as already done, so the census would silently grade 225 of 227 items and lose one item in both branches."
+    },
+    "round": "ablation_secondary_answerer",
+    "schema": "ecm-tqag.audit.route-deviation.v1",
+    "what_a_reader_should_conclude": "this run measures the construct-validity endpoint with an independent answerer, as pre-registered. It does so over a different transport than the pre-registration named, because that transport silently dropped the response schema the pre-registration also required. A reader who regards the route as part of the frozen design should treat this record as a declared deviation rather than a clean prospective execution.",
+    "what_changed": "the egress route for the secondary answerer moves from the local omniproxy gateway to OpenRouter",
+    "what_did_not_change": [
+     "the answerer model is unchanged: gemini-3.5-flash (google/gemini-3.5-flash on OpenRouter)",
+     "the item population, payload builder, image integrity check and grading rule are still imported from the sealed runner, not reimplemented",
+     "temperature 0, zero retry, no fallback, per-item pairing, both branches, image bytes with hash re-verification",
+     "the call cap of 454 and the frozen pre-registration sha256"
+    ],
+    "why": {
+     "observed_consequence": "in the 2-call pilot both calls returned HTTP 200 with finish_reason=stop and were recorded TERMINAL_FAILURE/UNDECODABLE. The text_only call returned the right shape wrapped in a markdown fence; the text_image call returned an entirely different object (tinh_huong_1 -> van_de_phap_ly: [...]) for a multiple-choice item. Under an enforced schema with additionalProperties:false and strict:true that response cannot occur.",
+     "primary_reason": "the pre-registration asserts two things that cannot both hold on the omniproxy chat path: answerer.route = 'omniproxy, local gateway', and everything_else_identical including 'response schema'. On that path response_format is absent from the entire request-translation chain, so the json_schema constraint never reaches the upstream model.",
+     "secondary_reason_route_stability": "across today's probes the omniproxy route failed 3/3 attempts for this model with 'VSLLM: http2 timeout awaiting response headers' and once with 'No available accounts'. The runner uses max_retries=0 and retry_reserve=0, and the ledger counts a CALL_STARTED as a spent cap token, so each timeout would permanently burn one cell of the 454.",
+     "why_not_a_different_family_instead": "the pre-registration's list of conditions that would invalidate this record has, as item 1, 'changing the answerer model after the first call'. The first calls occurred at 12:28Z. Changing route is not on that list; changing the model is. gemini-3.5-flash already satisfies the independence requirement: it is not the generator family (Qwen) and not either judge family (Anthropic, OpenAI).",
+     "why_the_schema_is_the_field_that_must_be_kept": "it defines the endpoint's response space, it is the precondition for importing the sealed runner's grading instead of writing a second parser, and it governs the text_image branch that carries the entire figure-dependence claim. The route is transport."
+    }
+   },
+   "sha256_of_sealed_file": "0d3d67114204ac1a2ddcc087d7fa2e5aadc00405f6d7b8d67adffca8b07cb7e8",
+   "source_filename": "ROUTE_DEVIATION.json"
+  }
+ },
+ "fields_redacted": [
+  "ablation_authorization.owner_cap_statement_verbatim",
+  "ablation_authorization.owner_statement_verbatim",
+  "ablation_preregistration.grading.why_the_rule_changed.example (redacted: source-derived text)",
+  "census_authorization.owner_cap_statement_verbatim",
+  "census_authorization.owner_statement_verbatim",
+  "independent_answerer_authorization.owner_statement_verbatim"
+ ],
+ "redaction_rule": "any string carrying Vietnamese diacritics is replaced, because on this corpus such strings are source-derived or private conversation; the fields removed are listed",
+ "schema": "ecm-tqag.public.protocol.v1",
+ "what": "the frozen pre-registrations, the declared route deviation, and the execution authorisations. Each carries the sha256 of the sealed file so a reviewer can bind a claim to the frozen text."
+}

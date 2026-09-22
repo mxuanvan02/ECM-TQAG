@@ -1,0 +1,2497 @@
+{
+ "census_run": "round4_framef_census_20260830T140000Z",
+ "n_rows": 300,
+ "rows": {
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::direct": {
+   "admitted": true,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::structured_no_contract": {
+   "admitted": true,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::structured_no_contract": {
+   "admitted": true,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::direct": {
+   "admitted": true,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "failed_conditions": [
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "failed_conditions": [
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "failed_conditions": [
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "failed_conditions": [
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::direct": {
+   "admitted": true,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::structured_no_contract": {
+   "admitted": true,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0106_alpha_b",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0106_alpha_b",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0106_alpha_b",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0106_alpha_b",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0106_alpha_b",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0121_alpha_b",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0121_alpha_b",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0121_alpha_b",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0121_alpha_b",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0121_alpha_b",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0130_alpha_c",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0130_alpha_c",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0130_alpha_c",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0130_alpha_c",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0130_alpha_c",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T16_r13_p1_05::s0064_dec_2_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T16_r13_p1_05::s0064_dec_2_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T16_r13_p1_05::s0064_dec_2_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T16_r13_p1_05::s0064_dec_2_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T16_r13_p1_05::s0064_dec_2_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T16_r13_p1_05::s0067_roman_ii",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T16_r13_p1_05::s0067_roman_ii",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T16_r13_p1_05::s0067_roman_ii",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T16_r13_p1_05::s0067_roman_ii",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::structured_no_contract": {
+   "admitted": true,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T16_r13_p1_05::s0067_roman_ii",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::structured_no_contract": {
+   "admitted": true,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::direct": {
+   "admitted": true,
+   "arm": "direct",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::direct": {
+   "admitted": true,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::structured_no_contract": {
+   "admitted": true,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+   "failed_conditions": [
+    "g6_answer_not_in_quote",
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+   "failed_conditions": [
+    "g7_answer_meets_figure",
+    "g8_description_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::direct": {
+   "admitted": true,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "failed_conditions": [
+    "g7_answer_meets_figure"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2::ecm_full": {
+   "admitted": true,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2::ecm_v2": {
+   "admitted": null,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2::ecm_v2_disclosed": {
+   "admitted": null,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::ecm_full": {
+   "admitted": false,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::ecm_v2_disclosed": {
+   "admitted": true,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::direct": {
+   "admitted": false,
+   "arm": "direct",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::ecm_v2": {
+   "admitted": true,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "failed_conditions": [],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::structured_no_contract": {
+   "admitted": false,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::direct": {
+   "admitted": null,
+   "arm": "direct",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::ecm_full": {
+   "admitted": null,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::ecm_v2": {
+   "admitted": false,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::ecm_v2_disclosed": {
+   "admitted": false,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13",
+   "failed_conditions": [
+    "g6_answer_not_in_quote"
+   ],
+   "provenance_admitted": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::structured_no_contract": {
+   "admitted": null,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13",
+   "failed_conditions": [],
+   "provenance_admitted": false
+  }
+ },
+ "schema": "ecm-tqag.public.admission-decisions.v1",
+ "source_text_included": false,
+ "what": "one row per (chunk, arm): whether the returned item passed the five provenance conditions, whether it passed all eight, and which conditions it failed"
+}

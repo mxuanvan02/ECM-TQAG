@@ -1,0 +1,1882 @@
+{
+ "answer_word_lengths": [
+  1,
+  1,
+  2,
+  2,
+  2,
+  2,
+  4,
+  4,
+  5,
+  6,
+  9,
+  9,
+  13,
+  19
+ ],
+ "census_run": "round4_framef_census_20260830T140000Z",
+ "cross_tabulation_against_g6": {
+  "answer_in_question": {
+   "g6_failed": 6,
+   "g6_passed": 8
+  },
+  "answer_not_in_question": {
+   "g6_failed": 139,
+   "g6_passed": 74
+  }
+ },
+ "grading": "word tokens after NFC, case folding and accent folding, using run_ablation_framef.tokens; computed against the sealed records, with only the boolean published",
+ "n_answer_in_question": 14,
+ "n_answer_in_question_passing_all_eight": 4,
+ "n_rows": 227,
+ "per_arm": {
+  "direct": {
+   "answer_in_question": 0,
+   "answer_in_question_and_passed_all_eight": 0,
+   "provenance_admitted": 44
+  },
+  "ecm_full": {
+   "answer_in_question": 2,
+   "answer_in_question_and_passed_all_eight": 0,
+   "provenance_admitted": 41
+  },
+  "ecm_v2": {
+   "answer_in_question": 7,
+   "answer_in_question_and_passed_all_eight": 3,
+   "provenance_admitted": 50
+  },
+  "ecm_v2_disclosed": {
+   "answer_in_question": 5,
+   "answer_in_question_and_passed_all_eight": 1,
+   "provenance_admitted": 48
+  },
+  "structured_no_contract": {
+   "answer_in_question": 0,
+   "answer_in_question_and_passed_all_eight": 0,
+   "provenance_admitted": 44
+  }
+ },
+ "rows": {
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 16,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 16,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 9,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 31,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 60,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 22,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 3,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::ecm_v2_disclosed": {
+   "answer_in_question": true,
+   "answer_words": 13,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 180,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::ecm_v2": {
+   "answer_in_question": true,
+   "answer_words": 19,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 20,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 110,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 21,
+   "arm": "direct",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_full": {
+   "answer_in_question": true,
+   "answer_words": 1,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2": {
+   "answer_in_question": true,
+   "answer_words": 9,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2_disclosed": {
+   "answer_in_question": true,
+   "answer_words": 9,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 21,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2::ecm_full": {
+   "answer_in_question": true,
+   "answer_words": 4,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 16,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::direct": {
+   "answer_in_question": false,
+   "answer_words": 53,
+   "arm": "direct",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2": {
+   "answer_in_question": true,
+   "answer_words": 2,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 2,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 7,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 12,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 11,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 11,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 7,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::direct": {
+   "answer_in_question": false,
+   "answer_words": 29,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 29,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::direct": {
+   "answer_in_question": false,
+   "answer_words": 22,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 22,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 22,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::direct": {
+   "answer_in_question": false,
+   "answer_words": 25,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::ecm_v2": {
+   "answer_in_question": true,
+   "answer_words": 2,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 6,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 16,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 24,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::direct": {
+   "answer_in_question": false,
+   "answer_words": 59,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 23,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::ecm_v2": {
+   "answer_in_question": true,
+   "answer_words": 1,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 59,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::direct": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 26,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::ecm_v2": {
+   "answer_in_question": true,
+   "answer_words": 6,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 6,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::direct": {
+   "answer_in_question": false,
+   "answer_words": 32,
+   "arm": "direct",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 35,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 6,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 32,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::direct": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 11,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::ecm_v2_disclosed": {
+   "answer_in_question": true,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0004_alpha_a",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::direct": {
+   "answer_in_question": false,
+   "answer_words": 36,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 36,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 36,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0023_dec_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 13,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0106_alpha_b",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 13,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0106_alpha_b",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 69,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0106_alpha_b",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::direct": {
+   "answer_in_question": false,
+   "answer_words": 98,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0121_alpha_b",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0121_alpha_b",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 18,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0121_alpha_b",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::direct": {
+   "answer_in_question": false,
+   "answer_words": 58,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0130_alpha_c",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0130_alpha_c",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0130_alpha_c",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::direct": {
+   "answer_in_question": false,
+   "answer_words": 22,
+   "arm": "direct",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 13,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 2,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 2,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 3,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T13_r13_p1_04::s0135_alpha_a",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 35,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 2,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 2,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 7,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 3,
+   "arm": "direct",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 10,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_v2_disclosed": {
+   "answer_in_question": true,
+   "answer_words": 5,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 15,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T15_r13_p1_03::s0057_dec_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::direct": {
+   "answer_in_question": false,
+   "answer_words": 21,
+   "arm": "direct",
+   "chunk_id": "frameF::T16_r13_p1_05::s0064_dec_2_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 15,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T16_r13_p1_05::s0064_dec_2_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 21,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T16_r13_p1_05::s0064_dec_2_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 21,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T16_r13_p1_05::s0064_dec_2_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 21,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T16_r13_p1_05::s0067_roman_ii",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T16_r13_p1_05::s0067_roman_ii",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 42,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T16_r13_p1_05::s0067_roman_ii",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 38,
+   "arm": "direct",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 35,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 38,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 20,
+   "arm": "direct",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 32,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 20,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "direct",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 3,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 3,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 3,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::direct": {
+   "answer_in_question": false,
+   "answer_words": 36,
+   "arm": "direct",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 3,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 23,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 23,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 36,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 32,
+   "arm": "direct",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 17,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 17,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 32,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 23,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 7,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 20,
+   "arm": "direct",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 3,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 3,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::direct": {
+   "answer_in_question": false,
+   "answer_words": 40,
+   "arm": "direct",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 40,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::direct": {
+   "answer_in_question": false,
+   "answer_words": 71,
+   "arm": "direct",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 9,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 36,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 71,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::direct": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 22,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::direct": {
+   "answer_in_question": false,
+   "answer_words": 19,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 19,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 2,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 19,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2": {
+   "answer_in_question": true,
+   "answer_words": 2,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2_disclosed": {
+   "answer_in_question": true,
+   "answer_words": 2,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::direct": {
+   "answer_in_question": false,
+   "answer_words": 49,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 37,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 10,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 49,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 83,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 27,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 25,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 25,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 13,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 13,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 25,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::direct": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 2,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 129,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 7,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 51,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 1,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 42,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 27,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::direct": {
+   "answer_in_question": false,
+   "answer_words": 16,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 16,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::direct": {
+   "answer_in_question": false,
+   "answer_words": 80,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 8,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 35,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 2,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 7,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 35,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 43,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 10,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 10,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 43,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 20,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 27,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 7,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 4,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 20,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 12,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 7,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 6,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::direct": {
+   "answer_in_question": false,
+   "answer_words": 27,
+   "arm": "direct",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 27,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 5,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "g6_passed": true,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 27,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 18,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "direct",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::ecm_full": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "ecm_full",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 14,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::direct": {
+   "answer_in_question": false,
+   "answer_words": 29,
+   "arm": "direct",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 11,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "g6_passed": true,
+   "passed_all_eight": true
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 11,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::structured_no_contract": {
+   "answer_in_question": false,
+   "answer_words": 29,
+   "arm": "structured_no_contract",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::ecm_v2": {
+   "answer_in_question": false,
+   "answer_words": 16,
+   "arm": "ecm_v2",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13",
+   "g6_passed": false,
+   "passed_all_eight": false
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::ecm_v2_disclosed": {
+   "answer_in_question": false,
+   "answer_words": 15,
+   "arm": "ecm_v2_disclosed",
+   "chunk_id": "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13",
+   "g6_passed": false,
+   "passed_all_eight": false
+  }
+ },
+ "schema": "ecm-tqag.public.answer-in-question.v1",
+ "source_text_included": false,
+ "what": "per provenance-admitted item: whether its recorded answer appears as a contiguous word run inside its own question, so the answer is legible from the wording shown to the learner",
+ "why_it_is_not_g6": "G6 relates the answer to the declared quotation; this relates it to the question, which no condition of the gate examines"
+}

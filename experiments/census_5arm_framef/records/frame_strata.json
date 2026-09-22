@@ -1,0 +1,309 @@
+{
+ "frame_manifest": "dataset_manifest_framef_20260830T122835Z.json",
+ "frame_manifest_sha256": "5e667745e7ba5b1989bdfd7cd2ba36bb84eca420062a0f693a2cd8f9d552d943",
+ "n_chunks": 60,
+ "rows": {
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2": {
+   "conditioning_chars": 6357,
+   "figure_role": "table",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2": {
+   "conditioning_chars": 5840,
+   "figure_role": "table",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2": {
+   "conditioning_chars": 2430,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2": {
+   "conditioning_chars": 1807,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2": {
+   "conditioning_chars": 5175,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2": {
+   "conditioning_chars": 3457,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2": {
+   "conditioning_chars": 1227,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3": {
+   "conditioning_chars": 913,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2": {
+   "conditioning_chars": 1314,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4": {
+   "conditioning_chars": 228,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1": {
+   "conditioning_chars": 2449,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3": {
+   "conditioning_chars": 1584,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2": {
+   "conditioning_chars": 1047,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3": {
+   "conditioning_chars": 556,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1": {
+   "conditioning_chars": 1118,
+   "figure_role": "pictorial",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3": {
+   "conditioning_chars": 1114,
+   "figure_role": "pictorial",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a": {
+   "conditioning_chars": 2474,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3": {
+   "conditioning_chars": 733,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b": {
+   "conditioning_chars": 1434,
+   "figure_role": "table",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b": {
+   "conditioning_chars": 1371,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c": {
+   "conditioning_chars": 1255,
+   "figure_role": "pictorial",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a": {
+   "conditioning_chars": 212,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1": {
+   "conditioning_chars": 1199,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2": {
+   "conditioning_chars": 1073,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3": {
+   "conditioning_chars": 1359,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii": {
+   "conditioning_chars": 1424,
+   "figure_role": "table",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2": {
+   "conditioning_chars": 1576,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2": {
+   "conditioning_chars": 1070,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2": {
+   "conditioning_chars": 1466,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0083_alpha_c": {
+   "conditioning_chars": 2606,
+   "figure_role": "table",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4": {
+   "conditioning_chars": 3474,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2": {
+   "conditioning_chars": 3468,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3": {
+   "conditioning_chars": 4156,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2": {
+   "conditioning_chars": 309,
+   "figure_role": "pictorial",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3": {
+   "conditioning_chars": 502,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4": {
+   "conditioning_chars": 3060,
+   "figure_role": "table",
+   "question_type": "multiple_choice"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3": {
+   "conditioning_chars": 1146,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4": {
+   "conditioning_chars": 1846,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1": {
+   "conditioning_chars": 2537,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2": {
+   "conditioning_chars": 7634,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3": {
+   "conditioning_chars": 3408,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2": {
+   "conditioning_chars": 2257,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2": {
+   "conditioning_chars": 2465,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1": {
+   "conditioning_chars": 412,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2": {
+   "conditioning_chars": 1404,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1": {
+   "conditioning_chars": 1868,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2": {
+   "conditioning_chars": 2913,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1": {
+   "conditioning_chars": 351,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4": {
+   "conditioning_chars": 2164,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2": {
+   "conditioning_chars": 1463,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3": {
+   "conditioning_chars": 2009,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2": {
+   "conditioning_chars": 2221,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2": {
+   "conditioning_chars": 1730,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2": {
+   "conditioning_chars": 1571,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3": {
+   "conditioning_chars": 1054,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4": {
+   "conditioning_chars": 1586,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2": {
+   "conditioning_chars": 1110,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2": {
+   "conditioning_chars": 1370,
+   "figure_role": "pictorial",
+   "question_type": "short_answer"
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2": {
+   "conditioning_chars": 5871,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13": {
+   "conditioning_chars": 681,
+   "figure_role": "table",
+   "question_type": "short_answer"
+  }
+ },
+ "schema": "ecm-tqag.public.frame-strata.v1",
+ "what": "per chunk: the two pre-registered strata and the length of the conditioning text. The text itself is not included."
+}

@@ -1,0 +1,4101 @@
+{
+ "census_run": "round4_framef_census_20260830T140000Z",
+ "dropped": "object.rationale is NOT published: it quotes the item and its declared evidence, which are source-derived",
+ "n_cells": 227,
+ "raters": [
+  "claude-opus-5",
+  "gpt-5.6-sol"
+ ],
+ "rows": {
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0027_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0045_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::direct": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0049_dec_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 2,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 2,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0052_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 3,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 3,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 4,
+    "vietnamese_language": 4,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0055_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0058_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T07_giao_trinh_ky_nang_thuc_hanh_nghe_luat_2025::s0068_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T09_giao_trinh_luat_quoc_te_1::s0161_dec_6_2_3_3::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0080_dec_4_2_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 4,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0085_dec_4_2_4::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 3
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0162_dec_7_3_3_1::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::direct": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0275_dec_10_1_1_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0277_dec_10_1_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 2,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 3
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0278_dec_10_1_3::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0288_dec_10_2_3_1::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T10_giao_trinh_luat_thuong_mai_quoc_te::s0292_dec_10_2_4_3::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0004_alpha_a::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 5
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T13_r13_p1_04::s0023_dec_3::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0106_alpha_b::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0121_alpha_b::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T13_r13_p1_04::s0130_alpha_c::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T13_r13_p1_04::s0135_alpha_a::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T14_giao_trinh_quyen_con_nguoi_trong_phap_luat_dan_su_viet_n::s0019_dec_2_1::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T15_r13_p1_03::s0057_dec_1_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T16_r13_p1_05::s0064_dec_2_3::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T16_r13_p1_05::s0067_roman_ii::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T18_giao_trinh_luat_canh_tranh_2010::s0016_dec_2_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0012_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0020_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T19_giao_trinh_huong_nghiep_va_dao_duc_nghe_luat_2025::s0109_dec_4::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0018_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0048_dec_3::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 3,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 2,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 2,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0116_dec_5_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 3,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T21_giao_trinh_luat_hien_phap_nuoc_ngoai::s0199_dec_5_3::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T23_giao_trinh_luat_hinh_su_quoc_te::s0065_dec_4_2_4::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::direct": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0004_dec_1_3::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 3
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0005_dec_1_4::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 3,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0008_dec_2_1_1_1::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::direct": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 1,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 1,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 2,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 1,
+    "visual_necessity": 4
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0009_dec_2_1_1_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0013_dec_2_1_2_3::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0017_dec_2_2_1_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 2,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 2,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0020_dec_2_2_2_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0023_dec_3_1_1_1::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::direct": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0037_dec_3_2_2_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0038_dec_1::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0039_dec_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 2,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 2,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 3
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0054_dec_4_2_3_1::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 2,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::direct": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0062_dec_4_3_2_4::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0101_dec_5_4_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0108_dec_6_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::direct": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0112_dec_7_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 3,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0134_dec_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::direct": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0143_dec_9_1_2_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0151_dec_9_2_3::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::direct": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0155_dec_9_2_3_4::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 4,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 4,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T24_giao_trinh_lich_su_nha_nuoc_va_phap_luat::s0181_dec_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::direct": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 3,
+    "pedagogical_value": 4,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::ecm_full": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 3,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 3
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 1,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0005_dec_2_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::direct": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 5
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 3,
+    "vietnamese_language": 4,
+    "visual_necessity": 4
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": true,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 2
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0009_dec_4_2::structured_no_contract": {
+   "claude-opus-5": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 2,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 1,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 1,
+    "pedagogical_value": 1,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::ecm_v2": {
+   "claude-opus-5": {
+    "answerability": 2,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 2,
+    "pedagogical_value": 2,
+    "vietnamese_language": 4,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 3,
+    "pedagogical_value": 2,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  },
+  "frameF::T25_giao_trinh_quyen_con_nguoi_trong_linh_vuc_tu_phap_hinh_s::s0054_dec_3_13::ecm_v2_disclosed": {
+   "claude-opus-5": {
+    "answerability": 3,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 1,
+    "vietnamese_language": 3,
+    "visual_necessity": 1
+   },
+   "gpt-5.6-sol": {
+    "answerability": 5,
+    "critical_provenance_violation": false,
+    "evidence_correctness": 5,
+    "pedagogical_value": 3,
+    "vietnamese_language": 5,
+    "visual_necessity": 1
+   }
+  }
+ },
+ "scale": "1-5 ordinal per criterion",
+ "schema": "ecm-tqag.public.judged-scores.v1",
+ "source_text_included": false,
+ "what": "per (chunk, arm) and rater: the five criterion scores and the critical-provenance-violation flag"
+}
