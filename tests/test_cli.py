@@ -43,7 +43,7 @@ def test_contract_eval_and_verify_cli(tmp_path, capsys):
 
 @pytest.mark.skipif(
     not REAL_INVENTORY.is_file(),
-    reason="conference_eval/inventory_v1.json is a restricted Gate-1 inventory kept outside this public repository (see README section 9); this check runs only where that private input is present",
+    reason="conference_eval/inventory_v1.json is a restricted Gate-1 inventory kept outside this public repository (see README section 10); this check runs only where that private input is present",
 )
 def test_real_inventory_cli(capsys):
     inventory = REAL_INVENTORY
