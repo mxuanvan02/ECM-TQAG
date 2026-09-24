@@ -228,7 +228,8 @@ Successful commands return exit code `0`; malformed input or failed verification
 | `ecm-tqag verify-run <summary>` | Summary, optionally config/packages | Structural and receipt verification |
 | `ecm-tqag export-dataset <summary> <output>` | Verified summary | Deterministic JSONL answer output |
 
-Detailed semantics are documented in [`docs/cli.md`](docs/cli.md).
+Per-command semantics are documented in the table above and in each command's own help
+(`ecm-tqag <command> --help`).
 
 ### 7.1 End-to-end generator
 
@@ -323,7 +324,6 @@ fixtures/packages/           Synthetic T/TL/TLV evidence packages
 fixtures/constructed-items/  Synthetic traceable constructed item
 configs/                     Offline config and non-routable remote template
 tests/                       Unit and integration tests
-docs/                        CLI, fixture, and reproducibility documentation
 tools/                       Deterministic release-boundary audit
 artifacts/stage_a_model_evaluation/
                              De-identified Stage A ratings and reproducible model-family agreement summary
@@ -337,7 +337,7 @@ experiments/census_5arm_framef/
 
 ### Stage A and Stage B model-based evaluation artifacts
 
-The public artifacts at [`artifacts/stage_a_model_evaluation/`](artifacts/stage_a_model_evaluation/) and [`artifacts/stage_b_model_evaluation/`](artifacts/stage_b_model_evaluation/) contain de-identified protocol fields from independent GPT- and Claude-family ratings. Both model families completed 24/24 locally schema-validated Stage A ratings and 8/8 Stage B trace ratings. The included scripts deterministically regenerate the descriptive agreement summaries:
+The public artifacts at [`artifacts/stage_a_model_evaluation/`](artifacts/stage_a_model_evaluation/) and [`artifacts/stage_b_model_evaluation/`](artifacts/stage_b_model_evaluation/) contain de-identified protocol fields from two independently run model families over the same frozen item packets. The included scripts deterministically regenerate the descriptive agreement summaries from the committed rating tables, so the summary is a recomputation rather than a stored claim:
 
 ```bash
 python3 artifacts/stage_a_model_evaluation/reproduce_stage_a.py
@@ -361,7 +361,7 @@ are item-level *decisions* — per `(chunk, arm)` gate verdicts, per-item graded
 correct/incorrect booleans for both ablation branches, and per-item ordinal rater
 scores. They are published deliberately, because the reported endpoints cannot be
 recomputed without them, and `verify_reported_quantities.py --check` recomputes
-all 119 of them from these files alone. What is *not* published is any string
+every published quantity from these files alone. What is *not* published is any string
 that carries source text: the verbatim quotation, the generated question, answer
 and visual-evidence text, the answerer's own response, rater rationales, page
 images, figure crops, and raw provider envelopes. Every removed field is listed in
@@ -370,14 +370,58 @@ images, figure crops, and raw provider envelopes. Every removed field is listed 
 files contains a single Vietnamese-diacritic character; the builder that emitted
 them is documented as failing closed on that check, but the builder itself is not
 part of this release, so the guarantee is the released files as audited, not a
-build rule you can run here. See
-[`experiments/census_5arm_framef/RIGHTS_AND_LIMITATIONS.md`](experiments/census_5arm_framef/RIGHTS_AND_LIMITATIONS.md)
-for the full statement.
+build rule you can run here. Section 11 states the rights and limitations position in
+full, including the field-level list of what is withheld.
 
 The software checks structure and provenance completeness. Independent human or
 domain review is required for semantic/legal correctness, answer quality,
 educational usefulness, and visual-grounding claims.
 
-## 11. Citation and license
+## 11. Rights, limitations, and citation
 
-Use the repository metadata in [`CITATION.cff`](CITATION.cff) when citing this software. Code and documentation are released under the [Apache-2.0 License](LICENSE).
+This section is the single rights statement for the release. It replaces separate
+per-directory rights documents so that the position is stated once, in the file a reader
+arrives at first.
+
+**What is here.** The executable fixtures are synthetic, original materials provided under
+Apache-2.0. The derived evaluation records under
+[`experiments/census_5arm_framef/records/`](experiments/census_5arm_framef/records/) are
+item-level *decisions*: gate verdicts per `(chunk, arm)`, graded correct/incorrect booleans for
+both ablation branches, and ordinal rater scores. They are published because the endpoints
+cannot be recomputed without them.
+
+**What is not here, and why.** No source text and no source images:
+
+- page images and figure crops (copyright: University of Law, Hue University);
+- raw provider responses and envelopes;
+- the verbatim span quoted from a textbook page;
+- generated question, answer, and visual-evidence text, which carry source terminology — the
+  answer is published only as graded booleans;
+- the answerer's own response text, likewise published only as graded booleans;
+- rater rationales, which quote the item and its evidence;
+- credentials, private endpoints, and private dependencies.
+
+Every removal is recorded in `records/protocol.json` under `fields_redacted` and in
+`MANIFEST.json` under `not_redistributed`.
+
+**Redaction rule.** Any string carrying Vietnamese diacritics was treated as source-derived or
+private and was not emitted. The builder that produced these records fails closed on that
+check, so a release containing such a string cannot be produced by it. The builder itself is
+not part of this release, so the guarantee a reader can verify here is the released files as
+audited, not a build rule that can be re-run.
+
+**What a passing verification establishes.** `verify_reported_quantities.py --check`
+establishes that every quantity printed in the manuscript follows arithmetically from these
+records. It does not establish semantic correctness of an item, legal accuracy of a quotation,
+answer quality, pedagogical value, distractor quality, visual necessity, or generalisation
+beyond this frame. The Stage A and Stage B artifacts are model-based protocol checks, not
+human or expert ratings. Independent human or domain review is required for those claims.
+
+**Remote execution is opt-in.** The tracked remote configuration is a non-routable template
+with placeholders only. A user must create an ignored local configuration and supply their own
+endpoint, model identifier, and an environment-variable credential name. Users are responsible
+for confirming redistribution rights before adding any external document or image.
+
+**Citation and license.** Use the repository metadata in [`CITATION.cff`](CITATION.cff) when
+citing this software. Code and documentation are released under the
+[Apache-2.0 License](LICENSE).
