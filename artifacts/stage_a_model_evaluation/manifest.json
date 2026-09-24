@@ -1,10 +1,6 @@
 {
   "credential_recorded": false,
   "files": {
-    "README.md": {
-      "bytes": 929,
-      "sha256": "cb195b2c1c180697eb7bd96573d45de0896e44c8de20d12c20b85d21b73c13f0"
-    },
     "claude_stage_a_ratings.csv": {
       "bytes": 3455,
       "sha256": "2fd7c9b4e8fa77a61945d94a5380b5a4257c09b1fbd5f2c81b682316d92b57a0"
@@ -23,6 +19,7 @@
     }
   },
   "free_text_notes_included": false,
+  "markdown_documents_removed": "Markdown documents were removed from this directory by repository policy: the release keeps a single neutral README.md at the repository root, and the rights and limitations position it states there covers this directory. Entries for the removed files were deleted from this manifest in the same change, so no pinned hash refers to an absent file.",
   "packet_sha256": "ef68612891484e1d41bc5b96e75e5a499a58ccb4152f9827e1f5a1812bd3fe3a",
   "restricted_source_content_included": false,
   "schema": "ecm-tqag.stage-a-public-artifact-manifest.v1"
