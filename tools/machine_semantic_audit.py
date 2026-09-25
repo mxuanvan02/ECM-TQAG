@@ -2,6 +2,32 @@
 """Deterministic release-boundary and manuscript semantic-policy audit.
 
 This audit checks strings and file classes. It does not make semantic judgments.
+
+INPUT
+  --repo PATH        repository root to audit (default: the current directory)
+  --manuscript PATH  optional manuscript file, additionally scanned and required to
+                     carry the machine-only disclosure phrases
+  --output PATH      optional; also write the payload there
+  No network access, no credentials, no configuration file. Standard library only.
+
+OUTPUT
+  stdout  the audit payload as JSON: schema, audit_kind, semantic_validation (always
+          false -- this audit checks strings and file classes and makes no semantic
+          judgment), status, repo_tree_digest, checked_file_count and findings.
+  file    the same payload at --output when given. The committed receipt
+          machine-policy-audit.json is regenerated with
+          `python tools/machine_semantic_audit.py --repo . --output machine-policy-audit.json`.
+          The receipt is excluded from repo_tree_digest so regeneration is stable; every
+          other text file is hashed into it, so editing any file in the repository
+          changes the digest and the receipt must be regenerated in the same commit.
+
+EXIT CODES
+  0  status == PASS, i.e. findings is empty
+  1  at least one finding (main returns the boolean status != PASS, which SystemExit
+     turns into 1). Each finding names its rule and file, e.g. unexpected_media,
+     absolute_private_path, secret, forbidden_baseline, revoked_artifact,
+     human_workflow_claim, invalid_public_config_json, public_remote_endpoint,
+     public_remote_model, missing_machine_only_disclosure.
 """
 from __future__ import annotations
 import argparse, hashlib, json, re

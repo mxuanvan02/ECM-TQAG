@@ -8,6 +8,31 @@ round-2 gate to each, and report whether the two independent calls agree.
 If they disagree, the recorded task outcome depends on which concurrent process
 wrote last, i.e. the task was sampled twice and the surviving outcome may be the
 luckier of two draws. That would contaminate the round-2 pass rates.
+
+INPUT
+  No arguments. Reads, read-only:
+    experiments/runs/round2_exploratory_census_20260815T020000Z/state/transport/
+      CALL_LEDGER.jsonl      the append-only transport ledger
+    experiments/dataset/dataset_manifest.json
+    the authoritative frame and the packages rebuilt from it
+
+OUTPUT
+  stdout  duplicate-call concordance tables: distinct tasks, tasks with more than one
+          paid call, generation and judge concordance, recorded status versus call
+          outcome, and each discordant generation task with both verdicts.
+  file    runs/round2_exploratory_census_20260815T020000Z/DUPLICATE_CALL_AUDIT.json,
+          the same tables as a machine-readable record. Nothing else is written and
+          no released record is modified.
+
+EXIT CODES
+  0  the audit ran and printed its tables (this is the only code main returns; a
+     missing ledger or manifest surfaces as an uncaught exception, non-zero)
+
+RUNNABILITY IN THIS RELEASE
+  Not runnable as shipped: it imports ecm_tqag.official_outcomes,
+  ecm_tqag.v310_runner, ecm_tqag.v310_validation and round2.round2_validation, none
+  of which are present in this release, and it reads a run directory that is not
+  redistributed. --help fails at import with ModuleNotFoundError.
 """
 from __future__ import annotations
 

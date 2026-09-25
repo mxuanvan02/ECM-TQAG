@@ -1,3 +1,26 @@
+"""Transport invariants for the six-arm runner: idempotency, budget, identity.
+
+ROLE: PYTEST MODULE, NOT A COMMAND-LINE TOOL
+  No __main__ block and no argument parser, so there are no exit codes to document;
+  pytest's own status is the result.
+
+INPUT
+  pytest fixtures tmp_path and monkeypatch. urllib.request.urlopen is monkeypatched in
+  every test, so no network access occurs and no credential is read: _config writes a
+  throwaway key file under tmp_path.
+
+OUTPUT
+  The pytest report. The only files written are RUN_LEDGER.jsonl and the key file, both
+  under tmp_path, which pytest removes.
+
+HOW TO RUN IT
+  cd experiments/six_arm && PYTHONPATH=.:../../src python -m pytest tests/test_run_transport.py
+  Verified: 4 passed. Running it as `pytest experiments/six_arm/tests/test_run_transport.py`
+  from the repository root fails during collection, because the module imports the
+  experiments/six_arm-local ecm_tqag package rather than the src/ one. Note also that
+  pyproject.toml sets testpaths = ["tests"], so the CI invocation of plain `pytest` does
+  not collect this file at all.
+"""
 from __future__ import annotations
 
 import json
