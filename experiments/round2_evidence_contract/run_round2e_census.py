@@ -15,6 +15,40 @@ Phases:
                           sealed as terminal failures (no retry).
 
 Offline import performs no credential or network access.
+
+INPUT
+  --phase qualification | census   required; no other argument is accepted.
+  Reads experiments/dataset/dataset_manifest.json and the authoritative frame, and
+  hashes round2/round2_validation.py (plus this round's prompt module where one
+  applies) to bind the plan.
+
+OUTPUT
+  Everything is written under experiments/runs/round2e_exploratory_census_20260815T051500Z, created 0700:
+    ROUND2_PLAN.json, ROUND2_QUALIFICATION_PLAN.json, ROUND2_REPORT.json
+    state/<case>.json          one record per qualification probe
+    state/responses/<sha256>   raw provider envelopes, via private_write
+    state/tasks/, state/transport/   task claims and the append-only call ledger
+  stdout carries the per-call progress lines. No path outside the run directory is
+  written.
+
+EXIT CODES
+  0  the requested phase completed
+  1  qualification stopped on its first failure, or a previously recorded probe was
+     not PASS (stop-first-failure is deliberate: the phase is not resumable past a
+     failed probe)
+  2  ConcurrentRunBlocked -- another process holds the run lock
+  Any other failure propagates as an uncaught exception (traceback, non-zero).
+
+RUNNABILITY IN THIS RELEASE
+  Not runnable as shipped. Import time needs ecm_tqag.judge_output_contract,
+  official_credentials, official_outcomes, official_transport, v310_contracts,
+  v310_execution, v310_runner, v310_validation, v3102_endpoint_contract and the
+  round2 package; none are present under src/ or experiments/six_arm/ here, and
+  README section 10 states the builder is not part of the release. Invoking this
+  file -- including --help -- therefore fails at import with ModuleNotFoundError
+  before any argument is parsed. Execution additionally requires provider
+  credentials and network access. It is published so the instrument that produced
+  the released records can be read, not so it can be re-run from this checkout.
 """
 from __future__ import annotations
 

@@ -231,6 +231,46 @@ Successful commands return exit code `0`; malformed input or failed verification
 Per-command semantics are documented in the table above and in each command's own help
 (`ecm-tqag <command> --help`).
 
+### 8.1 Released verifier, and instruments published to be read
+
+`experiments/census_5arm_framef/verify_reported_quantities.py` is the entry point for the
+derived records. It is pinned by `experiments/census_5arm_framef/MANIFEST.json`
+(49090 bytes, SHA-256 `20d68f6f…`) alongside the eight record files, so it is deliberately
+not edited: its contract is stated here instead.
+
+| Aspect | Behaviour |
+|---|---|
+| Input | `records/*.json` in that directory only. Standard library; no network, no credentials, no page image or source text. |
+| `--check` | Recomputes every published quantity and compares. Prints `checked: 119   mismatches: 0` and a VERDICT line. |
+| `--json` | Emits the recomputed structure instead: `admission`, `conditions`, `strata`, `judged`, `rated_vs_measured`, `ablation_generator_answerer`, `ablation_independent_answerer`, `answer_in_question`, `containment_rule_independent`, `mcq_generator_answerer`. |
+| Exit `0` | All compared quantities match. |
+| Exit `1` | At least one mismatch, **or** a released record is absent — the script fails closed with `missing released record: records/<name>` rather than reporting over data it could not read. |
+
+The round-2 and six-arm instruments under `experiments/` are published so the procedure that
+produced the released records can be read, not so it can be re-run from this checkout. As
+section 10 states, the builder is not part of the release:
+
+- the four `run_round2*_census.py` scripts and `audit_round2_duplicates.py` import
+  `ecm_tqag.judge_output_contract`, `official_credentials`, `official_outcomes`,
+  `official_transport`, `v310_*` and the `round2` package, none of which are present here, so
+  even `--help` fails at import — with the repository's own environment the missing submodule is
+  named, and in an environment without the `src/` package installed the missing package is named;
+- `run_paid.py` and `run_smoke.py` need Pillow, which `pyproject.toml` does not declare
+  (`dependencies = []`), and run only from `experiments/six_arm`;
+- `experiments/six_arm/tests/test_run_transport.py` is collected only when run from that
+  directory, because `pyproject.toml` sets `testpaths = ["tests"]`.
+
+Each of those files carries an INPUT / OUTPUT / EXIT CODES block, and where it cannot run here,
+a RUNNABILITY block naming exactly what is missing. `tools/machine_semantic_audit.py` is the one
+tool that runs from a plain checkout with no extra dependency.
+
+Any edit to a text file in this repository changes `repo_tree_digest`, so regenerate the receipt
+in the same commit:
+
+```bash
+python tools/machine_semantic_audit.py --repo . --output machine-policy-audit.json
+```
+
 ### 7.1 End-to-end generator
 
 `generate` accepts the versioned `ecm-tqag.normalized-document.v2` JSON contract

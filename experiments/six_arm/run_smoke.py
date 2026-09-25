@@ -1,4 +1,33 @@
 #!/usr/bin/env python3
+"""Run the six frozen role-specific smoke calls that authorize a paid run.
+
+INPUT
+  Required: --freeze, --run-dir, --openrouter-key, --omniproxy-key, --openrouter-url,
+  --omniproxy-url. Optional: --execute; validate_pre_smoke_gate authorizes only this
+  smoke phase and raises BLOCKED_PRE_SMOKE:<reasons> when the frozen plan does not
+  permit it. Key arguments are paths to credential files, never key material.
+  The prompt image is generated in memory (a 640x240 PNG carrying the verification
+  code), so no image file is read from disk.
+
+OUTPUT
+  --run-dir/SMOKE_RESULTS.json, plus one JSON line on stdout with status,
+  passed_roles and http_attempts_used. The run ledger under --run-dir records every
+  HTTP attempt against the cap.
+
+EXIT CODES
+  0  all six role smokes passed
+  non-zero  failures raise rather than return: ValueError BLOCKED_SMOKE:<role>:<outcome>:<reason>
+            for a failed call, BLOCKED_SMOKE:<role>:missing_response_sidecar, and
+            BLOCKED_SMOKE:unsupported_provider / current_ledger_cap_missing /
+            invalid_current_ledger_cap for a malformed frozen plan. The reason is in
+            the exception text; there is no numeric code per class.
+
+RUNNABILITY IN THIS RELEASE
+  Runs only from experiments/six_arm (or with that directory on sys.path) and needs
+  Pillow. pyproject.toml declares dependencies = [], so a fresh environment fails at
+  import with ModuleNotFoundError: No module named 'PIL'; with Pillow present --help
+  exits 0 and prints 16 lines. Credentials and network access are required.
+"""
 from __future__ import annotations
 
 import argparse

@@ -17,6 +17,23 @@ Two properties matter for release:
 2. **Fail-closed composition.** The artifact cannot be built with a partial
    primary table, cannot present a suppressed ``Delta_perm`` as an estimate, and
    cannot mark an exploratory judge dimension as a secondary claim.
+
+ROLE: LIBRARY MODULE, NOT A COMMAND-LINE TOOL
+  This file has no __main__ block and no argument parser, so it has no exit codes and
+  cannot be invoked. It is imported by the six-arm runner and by the release tooling.
+
+INPUT
+  Function arguments only. build_primary_statistics and analyze_run are pure functions
+  of what they are passed: the preregistered statistics inputs, and for analyze_run the
+  run artifacts. Every bootstrap seed is a required argument, so no input is read from
+  the environment, the network or an implicit default.
+
+OUTPUT
+  A JSON-serialisable dict; serialize renders it and stamps artifact_digest as a
+  canonical-JSON SHA-256 over the payload. verify_digest recomputes that digest from the
+  artifact so a replay either matches exactly or the difference is visible. No file is
+  written by this module: the caller decides where the artifact goes and may attach a
+  timestamp outside the digested payload.
 """
 from __future__ import annotations
 

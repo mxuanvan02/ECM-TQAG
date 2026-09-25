@@ -4,6 +4,36 @@
 The command is intentionally boring and fail-closed: it imports the verified smoke,
 then runs extraction -> construction -> sensitivity -> probes -> audit -> judging.
 It never starts a later phase when a prerequisite is incomplete.
+
+INPUT
+  Required: --freeze, --smoke, --manifest, --controls, --run-dir, --openrouter-key,
+  --omniproxy-key, --openrouter-url, --omniproxy-url.
+  Optional: --execute (without it the execution gate blocks), and the paired import
+  arguments --import-extraction-run/--import-extraction-freeze and
+  --import-construction-run/--import-construction-freeze/--import-construction-task-id,
+  which must be supplied as complete pairs.
+  Key arguments are paths to credential files, never key material.
+
+OUTPUT
+  Under --run-dir: SENSITIVITY_VERDICT.json, JUDGING_FRAME.json and
+  PAID_RUN_SUMMARY.json (schema ecm-tqag.paid-run.v1), plus the per-phase reports the
+  runner writes. stdout gets one JSON line:
+  {"status": "COMPLETE", "http_attempts_used": N, "sensitivity_passed": true}
+
+EXIT CODES
+  0  every phase completed and the summary was written
+  non-zero  main has no try block, so a blocked run ends as an uncaught exception:
+            PaidRunBlocked (e.g. BLOCKED_PAID_RUN:sensitivity_floor_failed) or
+            ValueError with a BLOCKED_PAID_CLI:... reason such as key_invalid,
+            provider_invalid or import_arguments_must_be_paired. There is no separate
+            numeric code per failure class; the reason is in the exception text.
+
+RUNNABILITY IN THIS RELEASE
+  Runs only from experiments/six_arm (or with that directory on sys.path) and needs
+  Pillow for image handling. pyproject.toml declares dependencies = [], so a fresh
+  environment fails at import with ModuleNotFoundError: No module named 'PIL'; with
+  Pillow present --help exits 0 and prints 31 lines. Provider credentials, network
+  access and a frozen plan are required for execution.
 """
 from __future__ import annotations
 
