@@ -246,6 +246,21 @@ not edited: its contract is stated here instead.
 | Exit `0` | All compared quantities match. |
 | Exit `1` | At least one mismatch, **or** a released record is absent — the script fails closed with `missing released record: records/<name>` rather than reporting over data it could not read. |
 
+**Verifying the sealed gate module.** The sealed records bind the gate module by hash:
+`records/protocol.json` carries `gate_module_sha256 =
+7f18b0c9ee4543e851985bb00748caf0b3b522098c4199b7a9bb901362db0828` in four documents
+(`census_authorization`, `census_preregistration`, `ablation_authorization`,
+`ablation_preregistration`), alongside the path `experiment/round2/ecm_v2_gates.py`. That path
+does not exist in this repository at any branch — `git log --all -- experiment/round2/ecm_v2_gates.py`
+returns zero commits — so a reader who resolves the seal by the recorded path finds nothing.
+The file whose bytes hash to the sealed value is published at
+`experiments/census_5arm_framef/revision/reference/ecm_v2_gates.py` on the branch
+`revision/aciids-strong-review`; hashing that file reproduces `7f18b0c9…` exactly. Only those
+four documents carry the gate-module hash: the `independent_answerer_*` and `route_deviation`
+documents bind other artifacts (`preregistration_sha256`, `frame_manifest_sha256`,
+`crop_sha256`, `sha256_of_sealed_file`) instead, so "every record carries the gate-module hash"
+is not a true statement about this release.
+
 The round-2 and six-arm instruments under `experiments/` are published so the procedure that
 produced the released records can be read, not so it can be re-run from this checkout. As
 section 10 states, the builder is not part of the release:
@@ -412,6 +427,29 @@ them is documented as failing closed on that check, but the builder itself is no
 part of this release, so the guarantee is the released files as audited, not a
 build rule you can run here. Section 11 states the rights and limitations position in
 full, including the field-level list of what is withheld.
+
+**Which round each record describes.** Two of the released records concern the
+measured-visual-necessity result, and they describe **different evaluation rounds**. Reading
+one as if it were the other inverts its conclusion, so the distinction is stated here:
+
+- `records/withdrawn_results.json` is the symmetric word-F1 re-grading of an **earlier** round:
+  `gold_source_census` is `census_4arm_framec_20260824T120000Z`, `regraded_run` is
+  `ablation_2answerer_20260824T130000Z`, on 68 admitted items, with two answerers
+  (`qwen/qwen3-vl-8b-instruct` and `google/gemini-2.5-flash`). Its `verdict` block reports that
+  the necessity effect **is retained** under symmetric re-grading there: significant at all
+  seven F1 thresholds under the generator (p = 0.000221–0.001831) and at four of seven under
+  the second answerer (p = 0.015625–0.125).
+- The figures the manuscript **withdraws** — a necessity rate of 0.4261 at exact McNemar
+  p = 0.0386 over 115 pairs — come from a different record: `records/protocol.json` at
+  `documents.ablation_preregistration.document.grading.why_the_rule_changed.sensitivity_table_recomputed_on_the_sealed_frame_d_pairs`,
+  which is the frame-D pair set (`n_pairs: 115`). Across its seven F1 thresholds the smallest
+  p is 0.125, so no threshold reproduces significance on those pairs.
+
+The `what` field of `withdrawn_results.json` calls that file "the record the withdrawal rests
+on". That is true of the re-grading programme as a whole, but the 0.4261 figure is not in that
+file: it is the frame-D value in `protocol.json`. Both files are sealed and hash-pinned by
+`MANIFEST.json`, so neither is edited here; this note is the reconciliation a reader needs to
+avoid concluding that the two records contradict each other.
 
 The software checks structure and provenance completeness. Independent human or
 domain review is required for semantic/legal correctness, answer quality,
