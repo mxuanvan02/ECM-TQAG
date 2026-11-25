@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "structured_no_contract",
+ "branch": "text_image",
+ "item_id": "framec::P1_008::p0042::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0005245,
+ "returned": {
+  "answer": "Nội dung của nghị định bao gồm ba phần: cơ sở ban hành, nội dung chính và hiệu lực pháp lý."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::P1_008::p0042::structured_no_contract"
+}

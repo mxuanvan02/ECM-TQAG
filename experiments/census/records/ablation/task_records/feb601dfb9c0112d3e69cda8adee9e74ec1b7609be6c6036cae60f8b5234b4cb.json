@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "direct",
+ "branch": "text_only",
+ "item_id": "framec::P2_007::p0063::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0002147,
+ "returned": {
+  "answer": "Biểu đồ 2.2 không được cung cấp trong văn bản, do đó không thể xác định loại hình tranh chấp nào chiếm tỷ lệ cao nhất."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P2_007::p0063::direct"
+}

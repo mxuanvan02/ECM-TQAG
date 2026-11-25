@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "ecm_full",
+ "branch": "text_image",
+ "item_id": "framec::P4_001::p0272::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0009352,
+ "returned": {
+  "answer": "Đại học"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::P4_001::p0272::ecm_full"
+}

@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "structured_no_contract",
+ "branch": "text_only",
+ "item_id": "framec::P3_002::p0014::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 3.5152e-05,
+ "returned": {
+  "answer": "Hoạt động ra soát để hoàn thiện các biểu mẫu chưa được thực hiện thường xuyên và chưa có tính tổng thể."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::P3_002::p0014::structured_no_contract"
+}

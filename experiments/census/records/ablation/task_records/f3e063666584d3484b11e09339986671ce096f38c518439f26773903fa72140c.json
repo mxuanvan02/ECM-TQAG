@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "ecm_full",
+ "branch": "text_image",
+ "item_id": "framec::R12_P1_03::p0395::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0003727,
+ "returned": {
+  "answer": "Sơ đồ 'Xác định trọng điểm/lựa chọn' không được cung cấp trong văn bản, do đó không thể xác định yếu tố nền tảng cho quá trình lựa chọn mục tiêu kiểm tra."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::R12_P1_03::p0395::ecm_full"
+}

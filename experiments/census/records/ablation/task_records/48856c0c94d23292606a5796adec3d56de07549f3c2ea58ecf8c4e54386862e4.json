@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "direct",
+ "branch": "text_image",
+ "item_id": "framec::P2_006::p0060::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0003525,
+ "returned": {
+  "answer": "Theo Luật Khám bệnh, chữa bệnh, sinh viên khi tham gia BHYT có quyền lựa chọn cơ sở khám, chữa bệnh ban đầu."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::P2_006::p0060::direct"
+}

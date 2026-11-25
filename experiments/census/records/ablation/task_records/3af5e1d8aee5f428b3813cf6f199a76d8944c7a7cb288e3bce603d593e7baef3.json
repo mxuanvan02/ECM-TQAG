@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "direct",
+ "branch": "text_image",
+ "item_id": "framec::P2_007::p0063::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0007615,
+ "returned": {
+  "answer": "Loại hình tranh chấp chiếm tỷ lệ cao nhất tại trung tâm trọng tài quốc tế Việt Nam VIAC là \"Mua bán hàng hóa\" với 35%."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::P2_007::p0063::direct"
+}

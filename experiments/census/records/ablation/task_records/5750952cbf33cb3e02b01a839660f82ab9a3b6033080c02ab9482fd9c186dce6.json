@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "gate_disclosed",
+ "branch": "text_only",
+ "item_id": "framec::P3_003::p0029::gate_disclosed",
+ "question_type": "multiple_choice",
+ "reported_cost_usd": 8.1289e-05,
+ "returned": {
+  "option_index": 2
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::P3_003::p0029::gate_disclosed"
+}

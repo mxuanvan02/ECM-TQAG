@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "ecm_full",
+ "branch": "text_only",
+ "item_id": "framec::P2_007::p0062::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0002327,
+ "returned": {
+  "answer": "Tổng số vụ án tranh chấp được giải quyết tại trung tâm trọng tài quốc tế Việt Nam VIAC vào năm 2019 là khoảng 275 vụ."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P2_007::p0062::ecm_full"
+}

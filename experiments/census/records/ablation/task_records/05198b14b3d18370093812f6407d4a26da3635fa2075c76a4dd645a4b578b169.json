@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "direct",
+ "branch": "text_only",
+ "item_id": "framec::R12_P1_03::p0380::direct",
+ "question_type": "multiple_choice",
+ "reported_cost_usd": 6.3492e-05,
+ "returned": {
+  "option_index": 0
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::R12_P1_03::p0380::direct"
+}

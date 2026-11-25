@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "ecm_full",
+ "branch": "text_image",
+ "item_id": "framec::R15_P1_03::p0231::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0007857,
+ "returned": {
+  "answer": "Kết luận chính (K) được diễn đạt là: \"chính con người là nguyên nhân gây ra thảm họa môi trường đáng báo động hiện nay\"."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::R15_P1_03::p0231::ecm_full"
+}

@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "direct",
+ "branch": "text_only",
+ "item_id": "framec::P4_001::p0274::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0001633,
+ "returned": {
+  "answer": "Lý do chính mà Việt Nam chưa hợp pháp hóa “quyền được chết” là vì vấn đề này còn nhiều tranh cãi."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P4_001::p0274::direct"
+}

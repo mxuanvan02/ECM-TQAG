@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "ecm_full",
+ "branch": "text_only",
+ "item_id": "framec::P4_001::p0274::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 3.952e-05,
+ "returned": {
+  "answer": "Do những tranh cãi pháp lý còn tồn tại."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::P4_001::p0274::ecm_full"
+}

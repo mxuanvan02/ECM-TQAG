@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "structured_no_contract",
+ "branch": "text_image",
+ "item_id": "framec::R15_P1_03::p0059::structured_no_contract",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0002625,
+ "returned": {
+  "answer": "Kết luận được rút ra từ các quan sát cụ thể và tiền đề."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::R15_P1_03::p0059::structured_no_contract"
+}

@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "direct",
+ "branch": "text_image",
+ "item_id": "framec::P4_001::p0273::direct",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0004387,
+ "returned": {
+  "answer": "Theo kết quả khảo sát câu 7, phần lớn người được hỏi biết về 'quyền được chết' từ phương tiện truyền thông (47,4%)."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::P4_001::p0273::direct"
+}

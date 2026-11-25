@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "gate_disclosed",
+ "branch": "text_image",
+ "item_id": "framec::R15_P1_03::p0231::gate_disclosed",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.000112632,
+ "returned": {
+  "answer": "chính con người là nguyên nhân gây ra thảm họa môi trường đáng báo động hiện nay"
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_image::framec::R15_P1_03::p0231::gate_disclosed"
+}

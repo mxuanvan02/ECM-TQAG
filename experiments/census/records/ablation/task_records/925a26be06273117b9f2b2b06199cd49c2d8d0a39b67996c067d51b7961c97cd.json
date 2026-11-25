@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "ecm_full",
+ "branch": "text_only",
+ "item_id": "framec::R12_P1_03::p0395::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0001554,
+ "returned": {
+  "answer": "Hồ sơ rủi ro, các thông tin khác và các hoạt động kiểm soát."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::R12_P1_03::p0395::ecm_full"
+}

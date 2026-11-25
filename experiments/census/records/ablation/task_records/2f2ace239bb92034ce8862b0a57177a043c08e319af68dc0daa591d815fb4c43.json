@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "ecm_full",
+ "branch": "text_only",
+ "item_id": "framec::P4_001::p0273::ecm_full",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0003156,
+ "returned": {
+  "answer": "Không thể xác định được phần lớn người tham gia biết về 'quyền được chết' từ đâu dựa trên văn bản được cung cấp. Văn bản chỉ đề cập đến việc so sánh giữa người trong ngành luật và người ngoài ngành về tính cấp thiết của việc công nhận quyền được chết, và câu hỏi khảo sát nhằm xác định tính phổ biến và sự quan tâm đến vấn đề này."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P4_001::p0273::ecm_full"
+}

@@ -1,0 +1,268 @@
+{
+ "by_category_and_arm": {
+  "case_only_false_reject": {
+   "direct": 2,
+   "ecm_full": 1,
+   "gate_disclosed": 1,
+   "structured_no_contract": 1
+  },
+  "malformed_no_single_json_object": {
+   "direct": 1,
+   "ecm_full": 0,
+   "gate_disclosed": 0,
+   "structured_no_contract": 2
+  },
+  "quotation_of_image_rendered_text": {
+   "direct": 3,
+   "ecm_full": 0,
+   "gate_disclosed": 1,
+   "structured_no_contract": 3
+  },
+  "schema_or_field_violation": {
+   "direct": 1,
+   "ecm_full": 0,
+   "gate_disclosed": 5,
+   "structured_no_contract": 1
+  },
+  "unresolved": {
+   "direct": 2,
+   "ecm_full": 1,
+   "gate_disclosed": 0,
+   "structured_no_contract": 3
+  }
+ },
+ "case_folding_counterfactual": {
+  "direct": {
+   "admitted": 15,
+   "if_case_folded": 17
+  },
+  "ecm_full": {
+   "admitted": 22,
+   "if_case_folded": 23
+  },
+  "gate_disclosed": {
+   "admitted": 17,
+   "if_case_folded": 18
+  },
+  "structured_no_contract": {
+   "admitted": 14,
+   "if_case_folded": 15
+  }
+ },
+ "gate_modified": false,
+ "method": [
+  "Failed responses recovered from sealed transport sidecars.",
+  "Split 0: quotation present in T_c under case folding -> instrument false reject.",
+  "Split 1: quotation searched on the target page +/-2 neighbours of the source PDF text layer (pdftotext -layout) -> tests T_c scoping.",
+  "Split 2: quotation searched in tesseract (vie+eng) OCR of the chunk's own figure crops -> tests the image channel."
+ ],
+ "paid_calls_by_this_audit": 0,
+ "rows": [
+  {
+   "arm": "direct",
+   "category": "case_only_false_reject",
+   "chunk_id": "framec::P2_007::p0068",
+   "detail": "present in T_c under case folding",
+   "quote_chars": 142,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "direct",
+   "category": "case_only_false_reject",
+   "chunk_id": "framec::P3_002::p0014",
+   "detail": "present in T_c under case folding",
+   "quote_chars": 146,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "ecm_full",
+   "category": "case_only_false_reject",
+   "chunk_id": "framec::P2_007::p0068",
+   "detail": "present in T_c under case folding",
+   "quote_chars": 142,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "gate_disclosed",
+   "category": "case_only_false_reject",
+   "chunk_id": "framec::P2_007::p0068",
+   "detail": "present in T_c under case folding",
+   "quote_chars": 142,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "case_only_false_reject",
+   "chunk_id": "framec::P2_007::p0068",
+   "detail": "present in T_c under case folding",
+   "quote_chars": 142,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "direct",
+   "category": "malformed_no_single_json_object",
+   "chunk_id": "framec::R15_P1_03::p0058",
+   "reason": "BLOCKED_V310:JSON_OBJECT"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "malformed_no_single_json_object",
+   "chunk_id": "framec::R12_P1_03::p0380",
+   "reason": "BLOCKED_V310:JSON_OBJECT"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "malformed_no_single_json_object",
+   "chunk_id": "framec::R12_P1_03::p0395",
+   "reason": "BLOCKED_V310:JSON_OBJECT"
+  },
+  {
+   "arm": "direct",
+   "category": "quotation_of_image_rendered_text",
+   "chunk_id": "framec::P3_002::p0015",
+   "quote_chars": 35,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "direct",
+   "category": "quotation_of_image_rendered_text",
+   "chunk_id": "framec::P4_001::p0272",
+   "quote_chars": 70,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "direct",
+   "category": "quotation_of_image_rendered_text",
+   "chunk_id": "framec::P4_001::p0275",
+   "quote_chars": 160,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "gate_disclosed",
+   "category": "quotation_of_image_rendered_text",
+   "chunk_id": "framec::P4_001::p0275",
+   "quote_chars": 164,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "quotation_of_image_rendered_text",
+   "chunk_id": "framec::P3_002::p0015",
+   "quote_chars": 37,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "quotation_of_image_rendered_text",
+   "chunk_id": "framec::P4_001::p0272",
+   "quote_chars": 70,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "quotation_of_image_rendered_text",
+   "chunk_id": "framec::P4_001::p0275",
+   "quote_chars": 160,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "direct",
+   "category": "schema_or_field_violation",
+   "chunk_id": "framec::R15_P1_03::p0306",
+   "reason": "BLOCKED_V310:R2:GENERATION"
+  },
+  {
+   "arm": "gate_disclosed",
+   "category": "schema_or_field_violation",
+   "chunk_id": "framec::P2_006::p0060",
+   "reason": "BLOCKED_V310:R2:GENERATION"
+  },
+  {
+   "arm": "gate_disclosed",
+   "category": "schema_or_field_violation",
+   "chunk_id": "framec::P3_002::p0015",
+   "reason": "BLOCKED_V310:R2:GENERATION"
+  },
+  {
+   "arm": "gate_disclosed",
+   "category": "schema_or_field_violation",
+   "chunk_id": "framec::P4_001::p0272",
+   "reason": "BLOCKED_V310:R2:GENERATION"
+  },
+  {
+   "arm": "gate_disclosed",
+   "category": "schema_or_field_violation",
+   "chunk_id": "framec::R12_P1_03::p0380",
+   "reason": "BLOCKED_V310:R2:GENERATION"
+  },
+  {
+   "arm": "gate_disclosed",
+   "category": "schema_or_field_violation",
+   "chunk_id": "framec::R12_P1_03::p0395",
+   "reason": "BLOCKED_V310:R2:GENERATION"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "schema_or_field_violation",
+   "chunk_id": "framec::P3_003::p0029",
+   "reason": "BLOCKED_V310:R2:GENERATION"
+  },
+  {
+   "arm": "direct",
+   "category": "unresolved",
+   "chunk_id": "framec::P2_007::p0062",
+   "crop_ocr_overlap": 0.0244,
+   "quote_chars": 345,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "direct",
+   "category": "unresolved",
+   "chunk_id": "framec::R15_P1_03::p0059",
+   "crop_ocr_overlap": 0.9375,
+   "quote_chars": 66,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "ecm_full",
+   "category": "unresolved",
+   "chunk_id": "framec::R15_P1_03::p0059",
+   "crop_ocr_overlap": 0.9375,
+   "quote_chars": 66,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "unresolved",
+   "chunk_id": "framec::P1_006::p0074",
+   "crop_ocr_overlap": 0.0,
+   "quote_chars": 12,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "unresolved",
+   "chunk_id": "framec::P4_001::p0273",
+   "crop_ocr_overlap": 1.0,
+   "quote_chars": 56,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  },
+  {
+   "arm": "structured_no_contract",
+   "category": "unresolved",
+   "chunk_id": "framec::R15_P1_03::p0058",
+   "crop_ocr_overlap": 0.3333,
+   "quote_chars": 103,
+   "reason": "BLOCKED_V310:R2:GENERATION:QUOTE_NON_VERBATIM"
+  }
+ ],
+ "run": "census_4arm_framec_20260824T120000Z",
+ "schema": "ecm-tqag.failure-attribution.v2-4arm",
+ "totals": {
+  "case_only_false_reject": 5,
+  "malformed_no_single_json_object": 3,
+  "quotation_of_image_rendered_text": 7,
+  "schema_or_field_violation": 7,
+  "unresolved": 6
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "gate_disclosed",
+ "branch": "text_only",
+ "item_id": "framec::P2_006::p0093::gate_disclosed",
+ "question_type": "short_answer",
+ "reported_cost_usd": 0.0001308,
+ "returned": {
+  "answer": "Không có thông tin về tỷ lệ sinh viên biết về mức hưởng khi tham gia BHYT SV trong biểu đồ được cung cấp."
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_only::framec::P2_006::p0093::gate_disclosed"
+}

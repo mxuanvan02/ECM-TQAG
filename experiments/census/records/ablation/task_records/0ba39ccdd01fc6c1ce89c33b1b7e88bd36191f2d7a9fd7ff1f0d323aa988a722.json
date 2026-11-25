@@ -1,0 +1,13 @@
+{
+ "answerer": "google/gemini-2.5-flash",
+ "arm": "structured_no_contract",
+ "branch": "text_image",
+ "item_id": "framec::R15_P1_03::p0311::structured_no_contract",
+ "question_type": "multiple_choice",
+ "reported_cost_usd": 0.0007293,
+ "returned": {
+  "option_index": 0
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::google/gemini-2.5-flash::text_image::framec::R15_P1_03::p0311::structured_no_contract"
+}

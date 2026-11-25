@@ -1,0 +1,13 @@
+{
+ "answerer": "qwen/qwen3-vl-8b-instruct",
+ "arm": "ecm_full",
+ "branch": "text_only",
+ "item_id": "framec::P3_003::p0027::ecm_full",
+ "question_type": "multiple_choice",
+ "reported_cost_usd": 4.7359e-05,
+ "returned": {
+  "option_index": 2
+ },
+ "status": "COMPLETE",
+ "task_id": "ablation::qwen/qwen3-vl-8b-instruct::text_only::framec::P3_003::p0027::ecm_full"
+}
